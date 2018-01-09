@@ -1,0 +1,25 @@
+['logging_console.py']. WARNING (2015-09-10 09:55:21): test
+['logging_console.py']. WARNING (2015-09-10 09:56:47): test
+['logging_console.py', 'warning'] (2015-09-10 10:10:59). WARNING: test
+['logging_console.py'] (2015-09-10 10:13:21). WARNING: test
+['logging_console.py'] (2015-09-10 10:14:40). WARNING: test
+
+
+NEW LOGGING SESSION BEGIN AT: 2015-09-10 10:17:54
+
+['logging_console.py'] (2015-09-10 10:17:54). WARNING: test
+
+
+NEW LOGGING SESSION BEGIN AT: 2015-09-10 10:18:39
+
+['logging_console.py'] (2015-09-10 10:18:39). WARNING: test
+
+
+NEW LOGGING SESSION BEGIN AT: 2015-09-10 10:18:47
+
+['logging_console.py'] (2015-09-10 10:18:47). WARNING: test
+
+
+NEW LOGGING SESSION BEGIN AT: 2015-09-10 10:19:48
+
+['logging_console.py'] (2015-09-10 10:19:48). WARNING: test

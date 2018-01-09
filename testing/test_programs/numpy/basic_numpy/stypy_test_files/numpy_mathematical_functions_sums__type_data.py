@@ -1,0 +1,35 @@
+from stypy.errors.type_error import StypyTypeError
+from testing.code_generation_testing.codegen_testing_common import instance_of_class_name
+
+test_types = {
+    '__main__': {
+        'r16': instance_of_class_name("ndarray"),
+        'r17': instance_of_class_name("ndarray"),
+        'r14': instance_of_class_name("ndarray"),
+        'r15': instance_of_class_name("ndarray"),
+        'r12': instance_of_class_name("int32"),
+        'r13': instance_of_class_name("int32"),
+        'r11': instance_of_class_name("int32"),
+        '__builtins__': instance_of_class_name("module"),
+        '__file__': instance_of_class_name("str"),
+        'r18': instance_of_class_name("ndarray"),
+        'r19': instance_of_class_name("ndarray"),
+        'r7': instance_of_class_name("ndarray"),
+        'a': instance_of_class_name("list"),
+        '__name__': instance_of_class_name("str"),
+        'r20': instance_of_class_name("float64"),
+        'r4': instance_of_class_name("ndarray"),
+        'r5': instance_of_class_name("ndarray"),
+        'b': instance_of_class_name("list"),
+        'r1': instance_of_class_name("float64"),
+        'r2': instance_of_class_name("float64"),
+        'r3': instance_of_class_name("float64"),
+        '__package__': instance_of_class_name("NoneType"),
+        'np': instance_of_class_name("module"),
+        '__doc__': instance_of_class_name("NoneType"),
+        'r6': StypyTypeError,
+        'r8': StypyTypeError,
+        'r9': StypyTypeError,
+        'r10': StypyTypeError,
+    },
+}

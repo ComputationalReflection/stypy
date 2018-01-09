@@ -1,0 +1,59 @@
+
+# -*- coding: utf-8 -*-
+
+"""
+ORIGINAL PROGRAM SOURCE CODE:
+1: # coding=utf-8
+2: __doc__ = "Import an unexisting module"
+3: 
+4: if __name__ == '__main__':
+5:     # Type error
+6:     import non_existing
+7: 
+
+"""
+
+# Import the stypy library necessary elements
+from stypy.type_inference_programs.type_inference_programs_imports import *
+
+# Create the module type store
+module_type_store = Context(None, __file__)
+
+# ################# Begin of the type inference program ##################
+
+
+# Assigning a Str to a Name (line 2):
+str_1 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 10), 'str', 'Import an unexisting module')
+# Assigning a type to the variable '__doc__' (line 2)
+module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 2, 0), '__doc__', str_1)
+
+if (__name__ == '__main__'):
+    stypy.reporting.localization.Localization.set_current(stypy.reporting.localization.Localization(__file__, 6, 4))
+    
+    # 'import non_existing' statement (line 6)
+    update_path_to_current_file_folder('import_keyword/')
+    import_2 = generate_type_inference_code_for_module(stypy.reporting.localization.Localization(__file__, 6, 4), 'non_existing')
+
+    if (type(import_2) is not StypyTypeError):
+
+        if (import_2 != 'pyd_module'):
+            __import__(import_2)
+            sys_modules_3 = sys.modules[import_2]
+            import_module(stypy.reporting.localization.Localization(__file__, 6, 4), 'non_existing', sys_modules_3.module_type_store, module_type_store)
+        else:
+            import non_existing
+
+            import_module(stypy.reporting.localization.Localization(__file__, 6, 4), 'non_existing', non_existing, module_type_store)
+
+    else:
+        # Assigning a type to the variable 'non_existing' (line 6)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 6, 4), 'non_existing', import_2)
+
+    remove_current_file_folder_from_path('import_keyword/')
+    
+
+
+# ################# End of the type inference program ##################
+
+module_errors = stypy.errors.type_error.StypyTypeError.get_error_msgs()
+module_warnings = stypy.errors.type_warning.TypeWarning.get_warning_msgs()

@@ -1,0 +1,8 @@
+# ----------------------------------
+# Python sys members error rules
+# ----------------------------------
+
+
+['sys', 'call_tracing', ('ExtraTypeDefinitions.formatteriterator', 'tuple'), "<type 'exceptions.TypeError'>: cannot create 'formatteriterator' instances"]
+['sys', 'setprofile', ('ExtraTypeDefinitions.formatteriterator',), "<type 'exceptions.TypeError'>: cannot create 'formatteriterator' instances"]
+['sys', 'settrace', ('ExtraTypeDefinitions.formatteriterator',), "<type 'exceptions.TypeError'>: cannot create 'formatteriterator' instances"]

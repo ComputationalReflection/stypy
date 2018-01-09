@@ -1,0 +1,23 @@
+['logging_console.py']. ERROR (2015-09-10 09:55:21): test
+['logging_console.py']. ERROR (2015-09-10 09:56:47): test
+['logging_console.py'] (2015-09-10 10:14:40). ERROR: test
+
+
+NEW LOGGING SESSION BEGIN AT: 2015-09-10 10:17:54
+
+['logging_console.py'] (2015-09-10 10:17:54). ERROR: test
+
+
+NEW LOGGING SESSION BEGIN AT: 2015-09-10 10:18:39
+
+['logging_console.py'] (2015-09-10 10:18:39). ERROR: test
+
+
+NEW LOGGING SESSION BEGIN AT: 2015-09-10 10:18:47
+
+['logging_console.py'] (2015-09-10 10:18:47). ERROR: test
+
+
+NEW LOGGING SESSION BEGIN AT: 2015-09-10 10:19:48
+
+['logging_console.py'] (2015-09-10 10:19:48). ERROR: test

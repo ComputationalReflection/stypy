@@ -1,0 +1,81 @@
+
+# -*- coding: utf-8 -*-
+
+"""
+ORIGINAL PROGRAM SOURCE CODE:
+1: # coding=utf-8
+2: __doc__ = "compile builtin is invoked, but incorrect parameter types are passed"
+3: 
+4: if __name__ == '__main__':
+5:     # Call options
+6:     # (Str, Str, Str) -> types.CodeType
+7:     # (Str, Str, Str, Integer) -> types.CodeType
+8:     # (Str, Str, Str, Integer, Integer) -> types.CodeType
+9: 
+10: 
+11:     # Call the builtin with correct parameters
+12:     # Type warning
+13:     ret = compile("a = 5", "f.py", "exec")
+14: 
+15:     # Call the builtin with incorrect types of parameters
+16:     # Type error
+17:     ret = compile(3, 4, 5)
+18: 
+
+"""
+
+# Import the stypy library necessary elements
+from stypy.type_inference_programs.type_inference_programs_imports import *
+
+# Create the module type store
+module_type_store = Context(None, __file__)
+
+# ################# Begin of the type inference program ##################
+
+
+# Assigning a Str to a Name (line 2):
+str_1 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 10), 'str', 'compile builtin is invoked, but incorrect parameter types are passed')
+# Assigning a type to the variable '__doc__' (line 2)
+module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 2, 0), '__doc__', str_1)
+
+if (__name__ == '__main__'):
+    
+    # Assigning a Call to a Name (line 13):
+    
+    # Call to compile(...): (line 13)
+    # Processing the call arguments (line 13)
+    str_3 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 13, 18), 'str', 'a = 5')
+    str_4 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 13, 27), 'str', 'f.py')
+    str_5 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 13, 35), 'str', 'exec')
+    # Processing the call keyword arguments (line 13)
+    kwargs_6 = {}
+    # Getting the type of 'compile' (line 13)
+    compile_2 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 13, 10), 'compile', False)
+    # Calling compile(args, kwargs) (line 13)
+    compile_call_result_7 = invoke(stypy.reporting.localization.Localization(__file__, 13, 10), compile_2, *[str_3, str_4, str_5], **kwargs_6)
+    
+    # Assigning a type to the variable 'ret' (line 13)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 13, 4), 'ret', compile_call_result_7)
+    
+    # Assigning a Call to a Name (line 17):
+    
+    # Call to compile(...): (line 17)
+    # Processing the call arguments (line 17)
+    int_9 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 17, 18), 'int')
+    int_10 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 17, 21), 'int')
+    int_11 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 17, 24), 'int')
+    # Processing the call keyword arguments (line 17)
+    kwargs_12 = {}
+    # Getting the type of 'compile' (line 17)
+    compile_8 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 17, 10), 'compile', False)
+    # Calling compile(args, kwargs) (line 17)
+    compile_call_result_13 = invoke(stypy.reporting.localization.Localization(__file__, 17, 10), compile_8, *[int_9, int_10, int_11], **kwargs_12)
+    
+    # Assigning a type to the variable 'ret' (line 17)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 17, 4), 'ret', compile_call_result_13)
+
+
+# ################# End of the type inference program ##################
+
+module_errors = stypy.errors.type_error.StypyTypeError.get_error_msgs()
+module_warnings = stypy.errors.type_warning.TypeWarning.get_warning_msgs()

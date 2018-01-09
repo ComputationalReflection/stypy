@@ -1,0 +1,32 @@
+import types
+
+test_types = {
+    '__main__': {
+        'r23': bool, 
+        'r22': str, 
+        'r21': str, 
+        'r20': str, 
+        'r16': str, 
+        'r17': str, 
+        'r14': str, 
+        'r15': str, 
+        'r12': str, 
+        'r13': str, 
+        'r10': str, 
+        'r11': str, 
+        'r18': str, 
+        'r19': str, 
+        'TypeDataFileWriter': types.ClassType, 
+        'source_file_path': str, 
+        'r4': str, 
+        'r5': str, 
+        'r6': str, 
+        'r7': str, 
+        'r1': str, 
+        'r2': str, 
+        'r3': str, 
+        'stypy_parameters_copy': types.ModuleType, 
+        'r8': str, 
+        'r9': str, 
+    }, 
+}
