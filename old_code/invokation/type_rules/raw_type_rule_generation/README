@@ -1,7 +1,0 @@
-This module is an stand-alone program consisting in old code from a previous version of stypy that has been modified
-to re-enable automatic type rule generation. Generated rules are not automatically usable by stypy, because they require
-manual processing to eliminate certain function return types and use type groups. However, is a very helpful tool to
- generate type rules for Python modules.
-
-
-NOTE: This is not supported temporally as of version 2.2
