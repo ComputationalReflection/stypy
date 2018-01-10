@@ -419,6 +419,9 @@ def get_type_of_for_loop_variable(localization, condition_type):
     if type(condition_type) is StypyTypeError:
         return condition_type
 
+    if type(condition_type) is types.FileType:
+        return str()
+
     if can_store_keypairs(condition_type):
         return wrap_contained_type(get_key_types(condition_type))
 

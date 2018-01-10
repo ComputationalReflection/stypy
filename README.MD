@@ -71,7 +71,12 @@ Main features of the new 0.2 release include:
 - The implementation of the Stypy Global Module Cache (SGMC), that stores each generated type-checker program tied to its corresponding Python source file. Generated files uses the same timestamp as the source one. Therefore, when the source file changes, the discrepancies between timestamps are detected and the type checker file is regenerated. This supposed a major performance upgrade for stypy.
 - The ability to generate type inference code from the full numpy, scipy and matplotlib library sources.
 - The integration of numpy types and functions into type inference programs. Scipy and matplotlib is a work in progress.
+- Show the exact line of source code (with its contents) where the error or warning is detected
 - Numerous bug fixes.
+
+CHANGELOG:
+
+[10/01/2018] Fix for the "for line in file:" idiom to consider file objects as iterables.
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López]
