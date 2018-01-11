@@ -62,7 +62,7 @@ Main features of the new 0.2 release include:
 
 
 
-#CHANGELOG:
+# CHANGELOG:
 
 [10/01/2018] Fix for the "for line in file:" idiom to consider file objects as iterables.
 
