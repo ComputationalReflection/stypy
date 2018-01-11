@@ -62,9 +62,11 @@ Main features of the new 0.2 release include:
 
 
 
+
 # CHANGELOG:
 
 [10/01/2018] Fix for the "for line in file:" idiom to consider file objects as iterables.
+
 [11/01/2018] Fix for the error produced when setting the type of a container when the index is a union type
 
 
