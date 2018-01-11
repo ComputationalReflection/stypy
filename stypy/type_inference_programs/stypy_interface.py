@@ -178,10 +178,42 @@ def get_contained_elements_type(localization, container):
 
     return type_containers.get_contained_elements_type(container)
 
-
 def set_contained_elements_type(localization, container, elements):
     """
-    Modifies the types stored by a container
+    Modifies the types stored by a container, dealing with union type indexes
+    :param localization:
+    :param container:
+    :param elements:
+    :return:
+    """
+    if type(elements) is tuple:
+        if type_inspection.is_union_type(elements[0]):
+            errors = []
+            # For each type of the union, set elements
+            for t in elements[0].types:
+                result = __set_contained_elements_type(localization, container, t)
+                if type_inspection.is_error(result):
+                    errors.append(result)
+
+            # Everything is an error
+            if len(errors) == len(elements[0].types):
+                # Delete errors an produce a single one
+                for e in errors:
+                    StypyTypeError.remove_error_msg(e)
+                return StypyTypeError(localization,
+                                      "Indexes of indexable containers must be Integers or instances that "
+                                      "implement the __index__ method")
+            else:
+                for e in errors:
+                    e.turn_to_warning()
+            return
+
+    return __set_contained_elements_type(localization, container, elements)
+
+
+def __set_contained_elements_type(localization, container, elements):
+    """
+    Modifies the types stored by a container, not dealing with union type indexes
     :param localization:
     :param container:
     :param elements:
