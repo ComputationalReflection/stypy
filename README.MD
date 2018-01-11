@@ -60,9 +60,12 @@ Main features of the new 0.2 release include:
 - The implementation of the stypy global module cache (SGMC), that stores each generated type-checker program. The generated files use the same timestamp as the source ones. Therefore, when the source file changes, the differences between timestamps are detected and the type checker file is regenerated. This implies a major performance upgrade for stypy.
 - Type checking of the ```numpy```, ```scipy``` and ```matplotlib``` libraries. Full support for ```scipy``` and ```matplotlib``` is currently a work in progress.
 
-CHANGELOG:
+
+
+#CHANGELOG:
 
 [10/01/2018] Fix for the "for line in file:" idiom to consider file objects as iterables.
+
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]
