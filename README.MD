@@ -68,7 +68,9 @@ Main features of the new 0.2 release include:
 - [10/01/2018] Fix for the "for line in file:" idiom to consider file objects as iterables.
 - [11/01/2018] Fix for the error produced when setting the type of a container when the index is a union type
 - [12/01/2018] In some particular cases, union types of int and float were reduced to simple float types. This has been fixed.
+
                When creating comprehensions from strings the inner type of the comprehension (str) was not correctly calculated. This has been fixed.
+
                Error reports of invalid calls now specify both the actual parameters passed and the correct expected ones. This is specially useful to analyze type warnings.
 
 
