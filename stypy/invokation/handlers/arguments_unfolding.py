@@ -50,6 +50,36 @@ def clone_dict(dict_):
     return result
 
 
+def __list_contains_type(lst, typ):
+    """
+    Checks if the passed list contains an instance of the provided type
+    :param lst:
+    :param typ:
+    :return:
+    """
+    for t in lst:
+        if type(t) == typ:
+            return True
+    return False
+
+
+def __list_in_list(argument_list, possible_argument_combinations_list):
+    """
+    float and int instances are considered the same type when unfolding union types. Therefore, we need to take the
+    comparison between argument lists carefully. This function ensures that if a list can be considered part of another
+    one, then if this list contains an int the comparison only returns true if the other list contains an int. The
+    same is tested with float types.
+    """
+    if argument_list not in possible_argument_combinations_list:
+        return False
+    else:
+        if __list_contains_type(argument_list, int):
+            return __list_contains_type(possible_argument_combinations_list, int)
+        if __list_contains_type(argument_list, float):
+            return __list_contains_type(possible_argument_combinations_list, float)
+        return True
+
+
 def __unfold_union_types_from_args(argument_list, possible_argument_combinations_list):
     """
     Helper for the following function
@@ -58,7 +88,8 @@ def __unfold_union_types_from_args(argument_list, possible_argument_combinations
     :return:
     """
     if not __has_union_types(argument_list):
-        if argument_list not in possible_argument_combinations_list:
+        #if argument_list not in possible_argument_combinations_list:
+        if not __list_in_list(argument_list, possible_argument_combinations_list):
             possible_argument_combinations_list.append(argument_list)
         return
     for cont in xrange(len(argument_list)):

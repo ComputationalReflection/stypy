@@ -51,6 +51,9 @@ def get_contained_elements_type(proxy_obj):
                     return undefined_type.UndefinedType
             return proxy_obj.get_contained_type()
     else:
+        if type(proxy_obj) is str:
+            return str()
+
         # Error: Containers must be wrapped
         if proxy_obj is not None:
             return StypyTypeError(Localization.get_current(),
