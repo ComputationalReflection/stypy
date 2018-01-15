@@ -155,6 +155,17 @@ class UnionType(TypeWrapper):
         """
         self.types.append(type_)
 
+
+    @staticmethod
+    def __is_same_base_type(a, b):
+        base_types = [int, long, float, str]
+
+        for t in base_types:
+            if type(a) is t and type(b) is t:
+                return True
+
+        return False
+
     @staticmethod
     def __is_operator(element, list_):
         """
@@ -168,6 +179,9 @@ class UnionType(TypeWrapper):
                     invokation.type_rules.type_groups.type_groups.DynamicType:
                 return True
             if element is elem:
+                return True
+
+            if UnionType.__is_same_base_type(element, elem):
                 return True
 
             from stypy.invokation.handlers import call_utilities

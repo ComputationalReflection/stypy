@@ -70,6 +70,6 @@ Main features of the new 0.2 release include:
 - [12/01/2018] In some particular cases, union types of int and float were reduced to simple float types. This has been fixed.
                When creating comprehensions from strings the inner type of the comprehension (str) was not correctly calculated. This has been fixed.
                Error reports of invalid calls now specify both the actual parameters passed and the correct expected ones. This is specially useful to analyze type warnings.
-
+- [15/01/2018] Added the adatron and ac_encode programs from the shedskin benchmark suite to the test battery. Solved type inference problems when code perform calls to the file.read() and file.write() native methods.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]
