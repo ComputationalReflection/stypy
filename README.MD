@@ -71,5 +71,6 @@ Main features of the new 0.2 release include:
                When creating comprehensions from strings the inner type of the comprehension (str) was not correctly calculated. This has been fixed.
                Error reports of invalid calls now specify both the actual parameters passed and the correct expected ones. This is specially useful to analyze type warnings.
 - [15/01/2018] Added the adatron and ac_encode programs from the shedskin benchmark suite to the test battery. Solved type inference problems when code perform calls to the file.read() and file.write() native methods.
+- [16/01/2018] Added the amaze program from the shedskin benchmark suite to the test battery. Type warnings now indicate the operation that caused its triggering. This is useful to identify which operation triggered a warning when a line have multiple ones (such as aritmethic expressions) and several of them may trigger a warning.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

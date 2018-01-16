@@ -240,7 +240,7 @@ class TypeModifiers:
         try:
             return types.CodeType(*arguments)
         except:
-            TypeWarning.enable_usage_of_dynamic_types_warning(localization)
+            TypeWarning.enable_usage_of_dynamic_types_warning(localization, "compile")
             return type_group_generator.DynamicType()
 
     @staticmethod
@@ -355,7 +355,7 @@ class TypeModifiers:
         num_params = arities[-1]
         # If we cannot guess the number of parameters call is impossible, so we cannot check it
         if num_params == -1:
-            TypeWarning.enable_usage_of_dynamic_types_warning(localization)
+            TypeWarning.enable_usage_of_dynamic_types_warning(localization, "apply")
             return type_group_generator.DynamicType()
 
         if varargs:
@@ -1292,12 +1292,12 @@ class TypeModifiers:
 
     @staticmethod
     def eval(localization, proxy_obj, arguments):
-        TypeWarning.enable_usage_of_dynamic_types_warning(localization)
+        TypeWarning.enable_usage_of_dynamic_types_warning(localization, "eval")
         return type_group_generator.DynamicType()
 
     @staticmethod
     def execfile(localization, proxy_obj, arguments):
-        TypeWarning.enable_usage_of_dynamic_types_warning(localization)
+        TypeWarning.enable_usage_of_dynamic_types_warning(localization, "execfile")
         return type_group_generator.DynamicType()
 
     @staticmethod
@@ -1379,7 +1379,7 @@ class TypeModifiers:
     @staticmethod
     def __import__(localization, proxy_obj, arguments):
         if arguments is "":
-            TypeWarning.enable_usage_of_dynamic_types_warning(localization)
+            TypeWarning.enable_usage_of_dynamic_types_warning(localization, "__import__")
             return types.ModuleType
         name = arguments[0]
         name_list = []
@@ -1387,7 +1387,7 @@ class TypeModifiers:
             if isinstance(arg, list):
                 for elem in arg:
                     if elem is "":
-                        TypeWarning.enable_usage_of_dynamic_types_warning(localization)
+                        TypeWarning.enable_usage_of_dynamic_types_warning(localization, "__import__")
                     else:
                         name_list.append(elem)
 
@@ -1408,7 +1408,7 @@ class TypeModifiers:
                         # import_pyd(localization, name, dest_type_store, wrap_contained_type, name_list)
                         return sys.modules[name]
 
-                TypeWarning.enable_usage_of_dynamic_types_warning(localization)
+                TypeWarning.enable_usage_of_dynamic_types_warning(localization, "__import__")
                 return types.ModuleType
             except Exception as e:
                 return StypyTypeError(localization, "Cannot import module {0}: {1}".format(name, str(e)))

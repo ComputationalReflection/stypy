@@ -3,6 +3,7 @@
 
 from stypy.invokation.type_rules.type_groups.type_group import BaseTypeGroup
 from stypy.visitor.type_inference.visitor_utils.stypy_functions import default_lambda_var_name
+from stypy import types
 
 
 def format_function_name(fname):
@@ -102,8 +103,10 @@ def __type_error_str(arg):
     if isinstance(arg, TypeError):
         return "TypeError"
     else:
+        if isinstance(arg, types.union_type.UnionType):
+            return str(arg)
         try:
-            return str(type(arg))
+            return type(arg).__name__
         except:
             return str(arg)
 

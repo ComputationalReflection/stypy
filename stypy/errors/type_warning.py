@@ -23,6 +23,8 @@ class TypeWarning(object):
 
     dynamic_type_warning_included = False
 
+    dynamic_warning = None
+
     def __init__(self, localization, msg, prints_msg=True, snap=None):
         """
         Creates a warning with the provided message.
@@ -183,12 +185,13 @@ class TypeWarning(object):
     # ######################################## PREDEFINED WARNINGS ########################################
 
     @staticmethod
-    def enable_usage_of_dynamic_types_warning(localization):
+    def enable_usage_of_dynamic_types_warning(localization, fname=""):
         if not TypeWarning.dynamic_type_warning_included:
-            TypeWarning(localization, "Usage of Python functions that dynamically evaluates Python code. This Python "
+            t = TypeWarning(localization, "Usage of Python functions that dynamically evaluates Python code. This Python "
                                       "feature is not yet supported. Errors reported from this line on may not be "
                                       "accurate")
             TypeWarning.dynamic_type_warning_included = True
+            TypeWarning.dynamic_warning = t
 
 
 class UnreferencedLocalVariableTypeWarning(TypeWarning):

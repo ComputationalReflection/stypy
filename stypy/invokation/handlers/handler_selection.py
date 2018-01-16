@@ -100,16 +100,18 @@ def invoke(localization, callable_, *args, **kwargs):
                         continue
 
                     # Call the call handler with no union type
-                    undefined_types_in_params = len(filter(lambda p: isinstance(p, UndefinedType) or p is UndefinedType,
-                                                           tuple_[0])) > 0
+                    temp_undef = filter(lambda p: isinstance(p, UndefinedType) or p is UndefinedType, tuple_[0])
+
+                    undefined_types_in_params = len(temp_undef) > 0
                     ret = handler(handler_data, localization, callable_, *tuple_[0], **tuple_[1])
                     if not isinstance(ret, StypyTypeError):
                         # Not an error? accumulate the return type in a return union type. Call is possible with
                         # at least one combination of parameters.
                         if undefined_types_in_params:
+                            call_str = format_call(callable_, args, kwargs)
                             found_errors.append(StypyTypeError(localization,
-                                                               "Undefined types found among the types of the call "
-                                                               "parameters "))
+                                                               "Undefined types found among the parameters of the call: " +
+                                                               call_str))
                         else:
                             found_valid_call = True
 

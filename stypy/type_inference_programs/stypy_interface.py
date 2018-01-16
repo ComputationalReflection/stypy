@@ -741,14 +741,14 @@ def ensure_slice_bounds(localization, lower, upper, step):
         return StypyTypeError(localization, "Type error when specifying slice bounds", prints_msg=False)
 
 
-def enable_usage_of_dynamic_types_warning(localization):
+def enable_usage_of_dynamic_types_warning(localization, fname=""):
     """
     Enable the warning that informs the user that dynamic types are used and therefore type inference results may not
     be accurate
     :param localization:
     :return:
     """
-    TypeWarning.enable_usage_of_dynamic_types_warning(localization)
+    TypeWarning.enable_usage_of_dynamic_types_warning(localization, fname)
 
 
 def is_suitable_condition(localization, cond_type):
