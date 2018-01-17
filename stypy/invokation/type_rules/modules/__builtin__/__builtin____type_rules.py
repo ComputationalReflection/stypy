@@ -497,8 +497,8 @@ type_rules_of_members = {
     ],
 
     'raw_input': [
-        ((), DynamicType),
-        ((AnyType,), DynamicType),
+        ((), str),
+        ((AnyType,), str),
     ],
 
     'bytes': [

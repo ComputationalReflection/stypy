@@ -12,4 +12,8 @@ type_rules_of_members = {
     'write': [
         ((Str,), types.NoneType),
     ],
+
+    'readlines': [
+        ((), DynamicType),
+    ],
 }

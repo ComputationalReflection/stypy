@@ -621,44 +621,6 @@ Exception_34 = module_type_store.get_type_of(stypy.reporting.localization.Locali
 class MazeReaderException(Exception_34, ):
     pass
 
-    @norecursion
-    def __init__(type_of_self, localization, *varargs, **kwargs):
-        global module_type_store
-        # Assign values to the parameters with defaults
-        defaults = []
-        # Create a new context for function '__init__'
-        module_type_store = module_type_store.open_function_context('__init__', 25, 0, False)
-        # Assigning a type to the variable 'self' (line 26)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 26, 0), 'self', type_of_self)
-        
-        # Passed parameters checking function
-        arguments = process_argument_values(localization, type_of_self, module_type_store, 'MazeReaderException.__init__', [], None, None, defaults, varargs, kwargs)
-
-        if is_error_type(arguments):
-            # Destroy the current context
-            module_type_store = module_type_store.close_function_context()
-            return
-
-        # Initialize method data
-        init_call_information(module_type_store, '__init__', localization, [], arguments)
-        
-        # Default return type storage variable (SSA)
-        # Assigning a type to the variable 'stypy_return_type'
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'stypy_return_type', None)
-        
-        
-        # ################# Begin of '__init__(...)' code ##################
-
-        pass
-        
-        # ################# End of '__init__(...)' code ##################
-
-        # Teardown call information
-        teardown_call_information(localization, arguments)
-        # Destroy the current context
-        module_type_store = module_type_store.close_function_context()
-
-
 # Assigning a type to the variable 'MazeReaderException' (line 25)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 25, 0), 'MazeReaderException', MazeReaderException)
 
@@ -1791,44 +1753,6 @@ Exception_229 = module_type_store.get_type_of(stypy.reporting.localization.Local
 
 class MazeError(Exception_229, ):
     pass
-
-    @norecursion
-    def __init__(type_of_self, localization, *varargs, **kwargs):
-        global module_type_store
-        # Assign values to the parameters with defaults
-        defaults = []
-        # Create a new context for function '__init__'
-        module_type_store = module_type_store.open_function_context('__init__', 93, 0, False)
-        # Assigning a type to the variable 'self' (line 94)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 94, 0), 'self', type_of_self)
-        
-        # Passed parameters checking function
-        arguments = process_argument_values(localization, type_of_self, module_type_store, 'MazeError.__init__', [], None, None, defaults, varargs, kwargs)
-
-        if is_error_type(arguments):
-            # Destroy the current context
-            module_type_store = module_type_store.close_function_context()
-            return
-
-        # Initialize method data
-        init_call_information(module_type_store, '__init__', localization, [], arguments)
-        
-        # Default return type storage variable (SSA)
-        # Assigning a type to the variable 'stypy_return_type'
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'stypy_return_type', None)
-        
-        
-        # ################# Begin of '__init__(...)' code ##################
-
-        pass
-        
-        # ################# End of '__init__(...)' code ##################
-
-        # Teardown call information
-        teardown_call_information(localization, arguments)
-        # Destroy the current context
-        module_type_store = module_type_store.close_function_context()
-
 
 # Assigning a type to the variable 'MazeError' (line 93)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 93, 0), 'MazeError', MazeError)
