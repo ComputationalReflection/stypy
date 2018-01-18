@@ -184,6 +184,15 @@ class UnionType(TypeWrapper):
             if UnionType.__is_same_base_type(element, elem):
                 return True
 
+            if isinstance(element, TypeWrapper) and isinstance(elem, TypeWrapper):
+                if element == elem:
+                    return True
+                else:
+                    # Tuples with the same types are considered equal
+                    if isinstance(elem.wrapped_type, tuple) and isinstance(element.wrapped_type, tuple):
+                        if UnionType.compare_tuple_contents(elem.wrapped_type, element.wrapped_type):
+                            return True
+
             from stypy.invokation.handlers import call_utilities
             if call_utilities.is_numpy_array(element) and call_utilities.is_numpy_array(elem):
                 if type(element.contained_types) == type(elem.contained_types):
@@ -274,6 +283,26 @@ class UnionType(TypeWrapper):
         return UnionType.add(type1, type2)
 
     @staticmethod
+    def tuple_contains_type(t, type):
+        for e in t:
+            if not UnionType.__is_same_base_type(e, type):
+                return False
+
+        return True
+
+    @staticmethod
+    def compare_tuple_contents(t1, t2):
+        if len(t1) != len(t2):
+            return False
+
+        for t in t1:
+            # If a type in the first tuple is not contained in the second one, they are not considered equal
+            if not UnionType.tuple_contains_type(t2, t):
+                return False
+        return True
+
+
+    @staticmethod
     def add(type1, type2):
         """
         Adds two types, potentially creating a new union type if they are different and not union types. If both are
@@ -316,6 +345,11 @@ class UnionType(TypeWrapper):
         if isinstance(type1, TypeWrapper) and isinstance(type2, TypeWrapper):
             if type1 == type2:
                 return type1
+            else:
+                # Tuples with the same types are considered equal
+                if isinstance(type1.wrapped_type, tuple) and isinstance(type2.wrapped_type, tuple):
+                    if UnionType.compare_tuple_contents(type1.wrapped_type, type2.wrapped_type):
+                        return type1
 
         # Numpy ndarrays have a different treatment
         if type(type1).__name__ == 'ndarray' and type(type2).__name__ == 'ndarray':

@@ -21,9 +21,9 @@ class ClassInitVisitor(ast.NodeTransformer):
         if len(init_method) > 0:
             return node
 
-        # If the class is an exception subclass, do not add an empty __init__ method
+        # If the class has a parent class and no constructors,, do not add an empty __init__ method
         if len(node.bases) > 0:
-            if node.bases[0].id == 'Exception':
+            if node.bases[0].id != 'object':
                 return node
 
         # If no __init__ method is declared, declare an empty one

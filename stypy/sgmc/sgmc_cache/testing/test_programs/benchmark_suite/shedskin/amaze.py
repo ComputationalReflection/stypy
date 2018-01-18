@@ -7295,44 +7295,6 @@ class FilebasedMazeGame(MazeGame_1160, ):
         return stypy_return_type_1239
 
 
-    @norecursion
-    def __init__(type_of_self, localization, *varargs, **kwargs):
-        global module_type_store
-        # Assign values to the parameters with defaults
-        defaults = []
-        # Create a new context for function '__init__'
-        module_type_store = module_type_store.open_function_context('__init__', 450, 0, False)
-        # Assigning a type to the variable 'self' (line 451)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 451, 0), 'self', type_of_self)
-        
-        # Passed parameters checking function
-        arguments = process_argument_values(localization, type_of_self, module_type_store, 'FilebasedMazeGame.__init__', [], None, None, defaults, varargs, kwargs)
-
-        if is_error_type(arguments):
-            # Destroy the current context
-            module_type_store = module_type_store.close_function_context()
-            return
-
-        # Initialize method data
-        init_call_information(module_type_store, '__init__', localization, [], arguments)
-        
-        # Default return type storage variable (SSA)
-        # Assigning a type to the variable 'stypy_return_type'
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'stypy_return_type', None)
-        
-        
-        # ################# Begin of '__init__(...)' code ##################
-
-        pass
-        
-        # ################# End of '__init__(...)' code ##################
-
-        # Teardown call information
-        teardown_call_information(localization, arguments)
-        # Destroy the current context
-        module_type_store = module_type_store.close_function_context()
-
-
 # Assigning a type to the variable 'FilebasedMazeGame' (line 450)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 450, 0), 'FilebasedMazeGame', FilebasedMazeGame)
 

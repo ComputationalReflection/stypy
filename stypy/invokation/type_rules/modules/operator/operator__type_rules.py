@@ -141,6 +141,8 @@ type_rules_of_members = {
     '__eq__': [
         ((Number, Number), bool),
         ((Str, Number), bool),
+        ((types.NoneType, AnyType), bool),
+        ((AnyType, types.NoneType), bool),
         ((numpy.ndarray, numpy.ndarray), DynamicType),
         ((IterableObject, IterableObject), bool),
         ((Overloads__eq__, AnyType), DynamicType),

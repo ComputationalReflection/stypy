@@ -110,7 +110,7 @@ def invoke(localization, callable_, *args, **kwargs):
                         if undefined_types_in_params:
                             call_str = format_call(callable_, args, kwargs)
                             found_errors.append(StypyTypeError(localization,
-                                                               "Undefined types found among the parameters of the call: " +
+                                                               "Potential undefined types found among the parameters of the call: " +
                                                                call_str))
                         else:
                             found_valid_call = True

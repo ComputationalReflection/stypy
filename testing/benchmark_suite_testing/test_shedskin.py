@@ -21,3 +21,9 @@ class TestShedSkin(TestCommon):
         result = self.run_stypy_with_program(file_path, output_results=True)
 
         self.assertEqual(result, 0)
+
+    def test_ant(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/ant.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)
