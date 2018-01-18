@@ -74,7 +74,7 @@ Main features of the new 0.2 release include:
 - [15/01/2018] Added the 'adatron' and 'ac_encode' programs from the shedskin benchmark suite to the test battery. Solved type inference problems when code perform calls to the file.read() and file.write() native methods.
 - [16/01/2018] Added the 'amaze' program from the shedskin benchmark suite to the test battery. Type warnings now indicate the operation that caused its triggering. This is useful to identify which operation triggered a warning when a line have multiple ones (such as aritmethic expressions) and several of them may trigger a warning.
 - [17/01/2018] Classes inheriting from Exception that do not define a constructor no longer report an error with their argument number. Using raw_input native function no longer returns a dynamic type. Using the method readlines() from the file native type now returns the proper return type.
-- [18/01/2018] Classes that inheriting from other classes but not defining a custom constructor now properly call its parent constructor. Tuples of base Python types are considered equal if they contain the same base types, no matter its order. Added the 'ant' program from the shedskin benchmark suite to the test battery.
+- [18/01/2018] Classes that inheriting from other classes but not defining a custom constructor now properly call its parent constructor. Tuples of base Python types are considered equal if they contain the same base types, no matter its order. Added the 'ant', 'bh' and 'block' programs from the shedskin benchmark suite to the test battery. The builtin function 'sum' now not only infers types with integers.
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

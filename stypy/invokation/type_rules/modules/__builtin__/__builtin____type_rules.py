@@ -168,8 +168,8 @@ type_rules_of_members = {
     ],
 
     'sum': [
-        ((IterableDataStructureWithTypedElements(Integer),), DynamicType),
-        ((IterableDataStructureWithTypedElements(Integer), Integer), DynamicType),
+        ((IterableDataStructureWithTypedElements(Number),), DynamicType),
+        ((IterableDataStructureWithTypedElements(Number), Integer), DynamicType),
     ],
 
     'chr': [

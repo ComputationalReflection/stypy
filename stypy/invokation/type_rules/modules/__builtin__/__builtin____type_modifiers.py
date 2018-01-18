@@ -532,8 +532,13 @@ class TypeModifiers:
 
         ret = None
         for elem in list_elements:
+            if is_undefined(elem):
+                TypeWarning(localization, "Elements of {0} could be undefined types. Sum may be invalid.".format(type(arguments[0])))
+                continue
+
             if ret is None:
                 ret = elem
+
             add_call = get_member(localization, elem, '__add__')
             if not is_error(add_call):
                 ret = python_operator(localization, '+', ret, elem)

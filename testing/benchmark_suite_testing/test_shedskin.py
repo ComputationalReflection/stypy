@@ -27,3 +27,15 @@ class TestShedSkin(TestCommon):
         result = self.run_stypy_with_program(file_path, output_results=True)
 
         self.assertEqual(result, 0)
+
+    def test_bh(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/bh.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)
+
+    def test_block(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/block.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)
