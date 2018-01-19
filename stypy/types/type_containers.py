@@ -20,6 +20,25 @@ These container types store its content types inside them
 types_that_store_contents_directly = [list, bytearray]#, numpy.ndarray]
 
 
+def has_method(obj, m_name):
+    try:
+        return getattr(obj, m_name)
+    except:
+        return False
+
+
+def get_setitem_method(obj):
+    if has_method(obj, '__setitem__'):
+        return getattr(obj, '__setitem__')
+    return None
+
+
+def get_getitem_method(obj):
+    if has_method(obj, '__getitem__'):
+        return getattr(obj, '__getitem__')
+    return None
+
+
 def format_type(obj):
     if type(obj) is types.TypeType:
         return obj.__name__
@@ -53,6 +72,14 @@ def get_contained_elements_type(proxy_obj):
     else:
         if type(proxy_obj) is str:
             return str()
+        else:
+            # Other classes that define __setitem__
+            m_get = get_getitem_method(proxy_obj)
+            if m_get is not None:
+                try:
+                    return m_get(Localization.get_current(), *[int()])
+                except TypeError:
+                    return m_get(*[int()])
 
         # Error: Containers must be wrapped
         if proxy_obj is not None:

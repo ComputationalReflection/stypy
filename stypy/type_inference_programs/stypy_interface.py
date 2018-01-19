@@ -178,6 +178,7 @@ def get_contained_elements_type(localization, container):
 
     return type_containers.get_contained_elements_type(container)
 
+
 def set_contained_elements_type(localization, container, elements):
     """
     Modifies the types stored by a container, dealing with union type indexes
@@ -249,7 +250,16 @@ def __set_contained_elements_type(localization, container, elements):
                                                           "Indexes of indexable containers must be Integers or instances that "
                                                           "implement the __index__ method")
 
-                return type_containers.set_contained_elements_type(container, elements[1])
+            else:
+                # Other classes that define __setitem__
+                m_set = type_containers.get_setitem_method(container)
+                if m_set is not None:
+                    try:
+                        return m_set(localization, *elements)
+                    except TypeError:
+                        return m_set(*elements)
+
+            return type_containers.set_contained_elements_type(container, elements[1])
 
         type_containers.set_contained_elements_type(container, elements)
     except Exception as ex:
