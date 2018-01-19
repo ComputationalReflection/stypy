@@ -265,7 +265,8 @@ class Context(object):
                         # the "global" keyword
                         if check_unreferenced:
                             if not self.has_type_of(localization,
-                                                    type_inspection.get_name(type_)) and self is not global_context:
+                                                    name) and self is not global_context:
+                                                  #  type_inspection.get_name(type_)) and self is not global_context:
                                 # and not type_inspection.is_function(type_) and not type_inspection.is_method(type_):
                                 self.unreferenced_var_warnings.append(
                                     UnreferencedLocalVariableTypeWarning(localization, name, self))

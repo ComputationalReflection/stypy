@@ -190,7 +190,7 @@ class UnionType(TypeWrapper):
                 else:
                     # Tuples with the same types are considered equal
                     if isinstance(elem.wrapped_type, tuple) and isinstance(element.wrapped_type, tuple):
-                        if UnionType.compare_tuple_contents(elem.wrapped_type, element.wrapped_type):
+                        if UnionType.compare_tuple_contents(elem, element):
                             return True
 
             from stypy.invokation.handlers import call_utilities
@@ -292,14 +292,34 @@ class UnionType(TypeWrapper):
 
     @staticmethod
     def compare_tuple_contents(t1, t2):
-        if len(t1) != len(t2):
+        has_contained1 = hasattr(t1, 'contained_types')
+        has_contained2 = hasattr(t2, 'contained_types')
+
+        if has_contained1 != has_contained2:
             return False
 
-        for t in t1:
-            # If a type in the first tuple is not contained in the second one, they are not considered equal
-            if not UnionType.tuple_contains_type(t2, t):
-                return False
-        return True
+        # Both are empty tuples
+        if not has_contained1 and not has_contained2:
+            return True
+
+        if has_contained1 and has_contained2:
+            if t1.contained_types is t2.contained_types:
+                return True
+
+            if isinstance(t1.contained_types, TypeWrapper) and isinstance(t2.contained_types, TypeWrapper):
+                try:
+                    if len(t1.contained_types) != len(t2.contained_types):
+                        return False
+
+                    for t in t1.contained_types:
+                        # If a type in the first tuple is not contained in the second one, they are not considered equal
+                        if not UnionType.tuple_contains_type(t2.contained_types, t):
+                            return False
+                    return True
+                except:
+                    pass
+
+        return False
 
 
     @staticmethod
@@ -319,10 +339,10 @@ class UnionType(TypeWrapper):
             # Nullify possible values of strings when added to the union type to prevent multiple strings in the union
             type2 = type(type2)()
 
-        if type1 is None:
+        if type1 is None or stypy_types.type_inspection.is_recursive_call_result(type1):
             return type2
 
-        if type2 is None:
+        if type2 is None or stypy_types.type_inspection.is_recursive_call_result(type2):
             return type1
 
         # If one of the types is an error (or both) a special treatment is executed
@@ -348,7 +368,7 @@ class UnionType(TypeWrapper):
             else:
                 # Tuples with the same types are considered equal
                 if isinstance(type1.wrapped_type, tuple) and isinstance(type2.wrapped_type, tuple):
-                    if UnionType.compare_tuple_contents(type1.wrapped_type, type2.wrapped_type):
+                    if UnionType.compare_tuple_contents(type1, type2):
                         return type1
 
         # Numpy ndarrays have a different treatment

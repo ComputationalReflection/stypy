@@ -39,3 +39,33 @@ class TestShedSkin(TestCommon):
         result = self.run_stypy_with_program(file_path, output_results=True)
 
         self.assertEqual(result, 0)
+
+    def test_brainfuck(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/brainfuck.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)
+
+    def test_chaos(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/chaos.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)
+
+    def test_chess(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/chess.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)
+
+    def test_dijkstra(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/dijkstra.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)
+
+    def test_dijkstra2(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/dijkstra2.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)

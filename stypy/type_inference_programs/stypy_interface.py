@@ -650,7 +650,7 @@ def ensure_var_of_types(localization, var, var_description, *type_names):
     python_type = type(var)
 
     # It is already a exception type (this is a special case for the raise statement)
-    if python_type is types.TypeType and type(var) is BaseException:
+    if python_type is types.TypeType and (type(var) is BaseException or issubclass(var, BaseException)):
         python_type = var
 
     for type_name in type_names:

@@ -9,6 +9,7 @@ from stypy.stypy_parameters import special_name_method_prefix
 from stypy.types import undefined_type
 from stypy.types import union_type
 from stypy.types.type_wrapper import TypeWrapper
+import stypy
 
 """
 This file contains funcions that provides us introspection capabilities of Python objects.
@@ -240,3 +241,8 @@ def dir_object(obj):
     if isinstance(obj, TypeWrapper):
         return dir(obj.wrapped_type)
     return dir(obj)
+
+
+def is_recursive_call_result(obj):
+    return type(obj) is stypy.types.no_recursion.RecursionType or obj is stypy.types.no_recursion.RecursionType
+

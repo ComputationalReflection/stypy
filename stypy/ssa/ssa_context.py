@@ -260,7 +260,7 @@ class SSAContext(Context):
 
         # Basic if-no else case
         if len(self.ssa_branches) == 1:
-            # Join types
+            # Join types (XXX)
             branch1 = join_ssa_branches(context_previous, branch1, dict())
             # Join types of object members
             branch1_types_of_members = join_ssa_branches_types_of_members(context_previous, branch1_types_of_members,

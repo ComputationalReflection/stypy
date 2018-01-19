@@ -60,8 +60,8 @@ class TypeModifiers:
     def add(localization, proxy_obj, arguments):
         if call_utilities.is_iterable(arguments[0]) and call_utilities.is_iterable(arguments[1]):
             if isinstance(arguments[0].get_wrapped_type(), tuple) and isinstance(arguments[1].get_wrapped_type(), tuple):
-                t1 = call_utilities.get_inner_type(localization, arguments[0])
-                t2 = call_utilities.get_inner_type(localization, arguments[1])
+                t1 = call_utilities.get_contained_elements_type(localization, arguments[0])
+                t2 = call_utilities.get_contained_elements_type(localization, arguments[1])
                 if isinstance(t1, UnionType):
                     t1 = t1.duplicate()
                 tEnd = UnionType.add(t1, t2)

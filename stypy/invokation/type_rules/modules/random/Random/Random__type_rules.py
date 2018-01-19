@@ -14,6 +14,13 @@ type_rules_of_members = {
         ((Integer,), DynamicType),
         ((IterableDataStructure,), DynamicType),
     ],
+
+    'randrange': [
+        ((Integer,), int),
+        ((Integer, Integer), int),
+        ((Integer, Integer, Integer), int),
+    ],
+
     'randint': [
         ((Integer,), numpy.int32),
         ((Integer, AnyType), DynamicType),
