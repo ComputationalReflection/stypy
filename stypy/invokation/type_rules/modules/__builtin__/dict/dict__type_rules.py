@@ -85,7 +85,7 @@ type_rules_of_members = {
     ],
 
     '__getitem__': [
-        ((Hashable,), DynamicType),
+        ((AnyType,), DynamicType),
     ],
 
     'get': [

@@ -271,6 +271,13 @@ class StypyTypeError(TypeError):
 
     @staticmethod
     def member_not_defined_error(localization, obj, member_name):
+        try:
+            if "RecursionType" in type(obj).__name__ :
+                return StypyTypeError(localization,
+                                      "Cannot locate members ('{0}') in results of recursive calls".format(
+                                          member_name))
+        except:
+            pass
         return StypyTypeError(localization,
                               "The member '{0}' of the type '{1}' does not exist in the current context".format(
                                   member_name,

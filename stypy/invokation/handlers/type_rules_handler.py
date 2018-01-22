@@ -116,8 +116,8 @@ class TypeRulesHandler(DataInFilesHandler):
                 type_from_modifier = TypeRulesHandler.get_type_from_type_modifier(localization, callable_entity,
                                                                                   parameters)
                 if type_from_modifier is not None:
-                    if type_from_modifier is types.NoneType:
-                        return None
+                    # if type_from_modifier is types.NoneType:
+                    #     return None
 
                     return type_from_modifier
 

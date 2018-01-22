@@ -153,7 +153,14 @@ def get_contained_elements_type_for_key(proxy_obj, key):
         try:
             if is_type_inference_file_object(proxy_obj):
                 return proxy_obj.__getitem__(Localization.get_current(), key)
-            return proxy_obj.__getitem__(key)
+            try:
+                return proxy_obj.__getitem__(key)
+            except KeyError:
+                ks = proxy_obj.items()
+                for k in ks:
+                    if type(k[0]) is type(key):
+                        return k[1]
+                return undefined_type.UndefinedType
         except Exception as exc:
             return undefined_type.UndefinedType
     else:
