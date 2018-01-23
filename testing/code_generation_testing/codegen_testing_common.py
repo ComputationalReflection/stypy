@@ -61,8 +61,13 @@ class TestCommon(unittest.TestCase):
         if file_ is not None:
             file_.write(str(txt))
 
-    def run_stypy_with_program(self, program_file, verbose=False, generate_type_data_file=False, output_results=False,
-                               output_file=None, time_stypy=False):
+    def run_stypy_with_program(self, program_file,
+                               verbose=False,
+                               generate_type_data_file=False,
+                               output_results=False,
+                               output_file=None,
+                               time_stypy=False,
+                               force_type_data_file=True):
         route = SGMC.get_sgmc_route(program_file)
         destination_file = SGMC.sgmc_cache_absolute_path + route
         init = 0
@@ -130,4 +135,11 @@ class TestCommon(unittest.TestCase):
         if ti_type_store is None:
             return None
         else:
-            return check_type_store(ti_type_store, program_file, verbose)
+            ret = check_type_store(ti_type_store, program_file, verbose, force_type_data_file)
+            if not force_type_data_file:
+                if len(stypy.get_analyzed_program_errors()) > 0:
+                    return -2 # Errors exist in the analysis
+                else:
+                    return 0  # No error
+
+            return ret

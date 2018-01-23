@@ -209,6 +209,12 @@ class TypeModifiers:
 
     @staticmethod
     def sort(localization, proxy_obj, arguments):
+        if len(arguments) == 0:
+            return types.NoneType
+
+        if type(arguments[0]) is dict:
+            return types.NoneType
+
         for arg in arguments:
             if not (is_method(arg) or is_function(arg) or is_class(arg)):
                 return StypyTypeError.wrong_parameter_type_error(localization,

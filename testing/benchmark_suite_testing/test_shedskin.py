@@ -69,3 +69,15 @@ class TestShedSkin(TestCommon):
         result = self.run_stypy_with_program(file_path, output_results=True)
 
         self.assertEqual(result, 0)
+
+    def test_genetic(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/genetic.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_genetic2(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/genetic2.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)

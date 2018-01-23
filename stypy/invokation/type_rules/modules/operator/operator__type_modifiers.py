@@ -70,3 +70,17 @@ class TypeModifiers:
                 return wrap
 
         return None # Type rule results
+
+    @staticmethod
+    def iadd(localization, proxy_obj, arguments):
+        if call_utilities.is_iterable(arguments[0]) and call_utilities.is_iterable(arguments[1]):
+            if isinstance(arguments[0].get_wrapped_type(), list) and isinstance(arguments[1].get_wrapped_type(), tuple):
+                t1 = get_contained_elements_type(localization, arguments[0])
+                t2 = get_contained_elements_type(localization, arguments[1])
+
+                tEnd = UnionType.add(t1, t2)
+
+                set_contained_elements_type(localization, arguments[0], tEnd)
+                return arguments[0]
+
+        return None

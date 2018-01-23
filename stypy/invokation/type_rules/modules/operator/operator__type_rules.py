@@ -228,6 +228,7 @@ type_rules_of_members = {
         ((unicode, buffer), unicode),
         ((unicode, Str), unicode),
         ((Overloads__iadd__, AnyType), DynamicType),
+        ((list, tuple), DynamicType),
         ((Number, Number), TypeOfParam(1)),
     ],
 

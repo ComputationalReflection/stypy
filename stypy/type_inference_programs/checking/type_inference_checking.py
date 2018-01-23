@@ -121,7 +121,7 @@ def __equal_types(expected_var, inferred_context_var):
     return expected_var == type(inferred_context_var)
 
 
-def check_type_store(type_store, executed_file, verbose):
+def check_type_store(type_store, executed_file, verbose, force_type_data_file):
     """
     This functions picks a type store of the source code of a file, calculate its associated type data file, loads
     it and compare variable per variable the type store type of all variables against the one declared in the type
@@ -139,7 +139,8 @@ def check_type_store(type_store, executed_file, verbose):
     result = 0
 
     if not os.path.isfile(dirname + data_file + ".py"):
-        print ("TYPE INFERENCE CHECKER ERROR: Cannot find file '{0}' in path {1}".format(data_file + ".py", dirname))
+        if force_type_data_file:
+            print ("TYPE INFERENCE CHECKER ERROR: Cannot find file '{0}' in path {1}".format(data_file + ".py", dirname))
         return 2
     try:
         data = __import__(data_file)

@@ -3,7 +3,8 @@ import types
 import numpy
 
 from stypy.errors.type_error import StypyTypeError, Localization
-from stypy.invokation.type_rules.type_groups.type_group_generator import Integer, Number, IterableDataStructure, DynamicType, RealNumber, Str
+from stypy.invokation.type_rules.type_groups.type_group_generator import Integer, Number, IterableDataStructure, \
+    DynamicType, RealNumber, Str
 from stypy.type_inference_programs.stypy_interface import wrap_contained_type, get_contained_elements_type
 from stypy.types.standard_wrapper import StandardWrapper
 from stypy.types.union_type import UnionType
@@ -64,8 +65,9 @@ def parse_kwargs(localization, dictionary, names_and_types, func_name, admit_Non
                 accepted_types = names_and_types[key]
 
             for type_ in accepted_types:
-                if isinstance(type_, DynamicType) or type_ == __get_type(dictionary[key]) or (admit_Nones and (dictionary[key] is types.NoneType or
-                                                                                     dictionary[key] is None)):
+                if isinstance(type_, DynamicType) or type_ == __get_type(dictionary[key]) or (
+                        admit_Nones and (dictionary[key] is types.NoneType or
+                                         dictionary[key] is None)):
                     correct_type = True
                     break
 
@@ -170,7 +172,7 @@ def cast_to_greater_numpy_type(type_1, type_2):
         if Integer == type(_t1) and Number == type(_t2):
             return _t2
 
-        #Floats vs complex
+        # Floats vs complex
         if RealNumber == type(_t2) and Number == type(_t1):
             return _t1
         if RealNumber == type(_t1) and Number == type(_t2):
@@ -288,6 +290,7 @@ def create_numpy_array_nowrappers(contained_type, use_list=True, dtype=None):
         return StypyTypeError(Localization.get_current(),
                               "Cannot create numpy array of type {0}".format(str(type(contained_type))))
 
+
 def check_possible_values(dvar, key, values):
     """
     Checks if the key parameter contained in the dict dvar has a value and this value is among the accepted ones.
@@ -372,6 +375,7 @@ def is_ndenumerate(obj):
 def is_ndindex(obj):
     return type(obj).__name__ == 'ndindex' and 'numpy.lib.index_tricks' in type(obj).__module__
 
+
 def is_iterable(obj):
     """
     Determines if an object is an iterable data structure (including numpy)
@@ -394,7 +398,7 @@ def get_dimensions(localization, obj):
     ret = get_contained_elements_type(localization, obj)
     while is_iterable(ret):
         ret = get_contained_elements_type(localization, ret)
-        dim+=1
+        dim += 1
 
     return dim
 

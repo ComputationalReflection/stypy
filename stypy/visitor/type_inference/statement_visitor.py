@@ -665,8 +665,23 @@ class StatementVisitor(ast.NodeVisitor):
                                                                       node.col_offset)
                         assign_target_type.append(type_set)
         else:
-            assign_target_type = stypy_functions.create_set_type_of(node.target.id, target_assign_var, node.lineno,
+            if type(node.target) is ast.Name:
+                assign_target_type = stypy_functions.create_set_type_of(node.target.id, target_assign_var, node.lineno,
                                                                     node.col_offset)
+            else:
+                # for iterating over an attribute
+                get_target_stmts, target_left_var = self.visit(node.target.value, context)
+
+                # assign_target_type = stypy_functions.create_set_type_of(target_left_var.id, target_assign_var, node.lineno,
+                #                                                     node.col_offset)
+
+                set_type_of_member_stmts = stypy_functions.create_set_type_of_member(target_left_var,
+                                                                                               node.target.attr,
+                                                                                               target_assign_var,
+                                                                                               node.lineno,
+                                                                                               node.col_offset)
+
+                assign_target_type = get_target_stmts + [set_type_of_member_stmts]
 
         for_stmt_body.append(assign_target_type)
 
