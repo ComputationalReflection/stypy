@@ -726,8 +726,8 @@ class UnionType(TypeWrapper):
                         continue
                     if getattr(type1, member) is not value_t2:
                         setattr(type1, member, UnionType.add(getattr(type1, member), getattr(type2, member)))
-                    else:
-                        setattr(type1, member, UnionType.add(python_types.NoneType, getattr(type2, member)))
+                    # else:
+                    #     setattr(type1, member, UnionType.add(python_types.NoneType, getattr(type2, member)))
             return type1
         except:
             return None

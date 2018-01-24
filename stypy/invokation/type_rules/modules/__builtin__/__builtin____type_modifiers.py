@@ -512,7 +512,11 @@ class TypeModifiers:
         if has_func:
             func = arguments[-1]['key']
             for arg in arguments[:-1]:
-                result = invoke(localization, func, arg)
+                if can_store_elements(arg):
+                    contained = get_contained_elements_type(arg)
+                    result = invoke(localization, func, contained)
+                else:
+                    result = invoke(localization, func, arg)
                 if is_error(result):
                     return result
 
