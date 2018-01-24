@@ -81,3 +81,17 @@ class TestShedSkin(TestCommon):
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
+
+
+    def test_go(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/go.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_hq2x(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/hq2x.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+

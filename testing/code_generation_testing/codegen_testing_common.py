@@ -67,7 +67,8 @@ class TestCommon(unittest.TestCase):
                                output_results=False,
                                output_file=None,
                                time_stypy=False,
-                               force_type_data_file=True):
+                               force_type_data_file=True,
+                               expected_errors=0):
         route = SGMC.get_sgmc_route(program_file)
         destination_file = SGMC.sgmc_cache_absolute_path + route
         init = 0
@@ -138,6 +139,9 @@ class TestCommon(unittest.TestCase):
             ret = check_type_store(ti_type_store, program_file, verbose, force_type_data_file)
             if not force_type_data_file:
                 if len(stypy.get_analyzed_program_errors()) > 0:
+                    # If no type data file is present, we can test for a number of expected type errors in the programs
+                    if expected_errors == len(stypy.get_analyzed_program_errors()):
+                        return 0
                     return -2 # Errors exist in the analysis
                 else:
                     return 0  # No error
