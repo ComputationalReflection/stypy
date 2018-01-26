@@ -222,3 +222,7 @@ class TypeModifiers:
                                                                  type(arg).__name__)
 
         return types.NoneType
+
+    @staticmethod
+    def pop(localization, proxy_obj, arguments):
+        return get_contained_elements_type(get_self(proxy_obj))

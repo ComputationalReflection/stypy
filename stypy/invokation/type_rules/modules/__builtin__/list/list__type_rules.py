@@ -20,6 +20,7 @@ type_rules_of_members = {
     ],
 
     'pop': [
+        ((), DynamicType),
         ((Integer,), DynamicType),
         ((Overloads__trunc__,), DynamicType)
     ],

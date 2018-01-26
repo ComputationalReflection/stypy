@@ -188,6 +188,8 @@ def set_contained_elements_type(localization, container, elements):
     :return:
     """
     if type(elements) is tuple:
+        if type_inspection.is_error(elements[0]):
+            return elements[0]
         if type_inspection.is_union_type(elements[0]):
             errors = []
             # For each type of the union, set elements
@@ -780,6 +782,15 @@ def is_suitable_for_loop_condition(localization, cond_type):
     """
     return aux_functions.is_suitable_for_loop_condition(localization, cond_type)
 
+
+def will_iterate_loop(localization, cond_type):
+        """
+        Checks if a loop condition is going to iterate. Empty lists or tuples do not iterate
+        :param localization:
+        :param cond_type:
+        :return:
+        """
+        return aux_functions.will_iterate_loop(localization, cond_type)
 
 def get_type_of_for_loop_variable(localization, cond_type):
     """

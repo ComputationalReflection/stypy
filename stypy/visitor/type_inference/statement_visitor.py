@@ -634,6 +634,21 @@ class StatementVisitor(ast.NodeVisitor):
         localization = stypy_functions.create_localization(node.lineno, node.col_offset)
         condition_call = functions.create_call_expression(loop_test_fname, [localization, for_stmt_test])
 
+        # This if controls if the loop is going to be iterated
+        if_node_iteration = ast.If()
+
+        # Check if the for statement is suitable for iteration
+        iteration_comment = stypy_functions.create_src_comment("Testing if the loop is going to be iterated",
+                                                               node.lineno)
+        loop_it_fname = core_language.create_Name("will_iterate_loop")
+        iteration_call = functions.create_call(loop_it_fname, [localization, for_stmt_test])
+
+        if_node_iteration.body = []
+        if_node_iteration.test = iteration_call
+
+        if_node_iteration.orelse = []
+
+
         # Get the type of the loop iteration variable and assign it
         get_target_comment = stypy_functions.create_src_comment("Getting the type of the for loop variable",
                                                                 node.lineno)
@@ -708,12 +723,17 @@ class StatementVisitor(ast.NodeVisitor):
         for_stmt_orelse.append(join_stmt)
 
         for_stmts = for_stmt_body + for_stmt_orelse
-        for_stmt = stypy_functions.flatten_lists(condition_comment, condition_call, for_stmts)
+
+        if_node_iteration.body = [for_stmts]
+        for_stmt = stypy_functions.flatten_lists(condition_comment, condition_call, if_node_iteration)
 
         end_for_comment = stypy_functions.create_blank_line()
 
+
+
         return stypy_functions.flatten_lists(begin_for_comment,
                                              iter_stmt,
+                                             iteration_comment,
                                              for_stmt,
                                              end_for_comment)
 

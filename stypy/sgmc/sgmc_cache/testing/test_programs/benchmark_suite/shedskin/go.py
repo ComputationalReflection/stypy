@@ -1218,136 +1218,140 @@ class Square:
         
         add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 39, 22), list_104, tuple_114)
         
+        # Testing if the loop is going to be iterated (line 39)
         # Testing the type of a for loop iterable (line 39)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 39, 8), list_104)
-        # Getting the type of the for loop variable (line 39)
-        for_loop_var_117 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 39, 8), list_104)
-        # Assigning a type to the variable 'dx' (line 39)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 39, 8), 'dx', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 39, 8), for_loop_var_117))
-        # Assigning a type to the variable 'dy' (line 39)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 39, 8), 'dy', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 39, 8), for_loop_var_117))
-        # SSA begins for a for statement (line 39)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Assigning a Tuple to a Tuple (line 40):
-        
-        # Assigning a BinOp to a Name (line 40):
-        # Getting the type of 'x' (line 40)
-        x_118 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 25), 'x')
-        # Getting the type of 'dx' (line 40)
-        dx_119 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 29), 'dx')
-        # Applying the binary operator '+' (line 40)
-        result_add_120 = python_operator(stypy.reporting.localization.Localization(__file__, 40, 25), '+', x_118, dx_119)
-        
-        # Assigning a type to the variable 'tuple_assignment_9' (line 40)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'tuple_assignment_9', result_add_120)
-        
-        # Assigning a BinOp to a Name (line 40):
-        # Getting the type of 'y' (line 40)
-        y_121 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 33), 'y')
-        # Getting the type of 'dy' (line 40)
-        dy_122 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 37), 'dy')
-        # Applying the binary operator '+' (line 40)
-        result_add_123 = python_operator(stypy.reporting.localization.Localization(__file__, 40, 33), '+', y_121, dy_122)
-        
-        # Assigning a type to the variable 'tuple_assignment_10' (line 40)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'tuple_assignment_10', result_add_123)
-        
-        # Assigning a Name to a Name (line 40):
-        # Getting the type of 'tuple_assignment_9' (line 40)
-        tuple_assignment_9_124 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'tuple_assignment_9')
-        # Assigning a type to the variable 'newx' (line 40)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'newx', tuple_assignment_9_124)
-        
-        # Assigning a Name to a Name (line 40):
-        # Getting the type of 'tuple_assignment_10' (line 40)
-        tuple_assignment_10_125 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'tuple_assignment_10')
-        # Assigning a type to the variable 'newy' (line 40)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 18), 'newy', tuple_assignment_10_125)
-        
-        
-        # Evaluating a boolean operation
-        
-        int_126 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 41, 15), 'int')
-        # Getting the type of 'newx' (line 41)
-        newx_127 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 20), 'newx')
-        # Applying the binary operator '<=' (line 41)
-        result_le_128 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 15), '<=', int_126, newx_127)
-        # Getting the type of 'SIZE' (line 41)
-        SIZE_129 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 27), 'SIZE')
-        # Applying the binary operator '<' (line 41)
-        result_lt_130 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 15), '<', newx_127, SIZE_129)
-        # Applying the binary operator '&' (line 41)
-        result_and__131 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 15), '&', result_le_128, result_lt_130)
-        
-        
-        int_132 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 41, 36), 'int')
-        # Getting the type of 'newy' (line 41)
-        newy_133 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 41), 'newy')
-        # Applying the binary operator '<=' (line 41)
-        result_le_134 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 36), '<=', int_132, newy_133)
-        # Getting the type of 'SIZE' (line 41)
-        SIZE_135 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 48), 'SIZE')
-        # Applying the binary operator '<' (line 41)
-        result_lt_136 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 36), '<', newy_133, SIZE_135)
-        # Applying the binary operator '&' (line 41)
-        result_and__137 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 36), '&', result_le_134, result_lt_136)
-        
-        # Applying the binary operator 'and' (line 41)
-        result_and_keyword_138 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 15), 'and', result_and__131, result_and__137)
-        
-        # Testing the type of an if condition (line 41)
-        if_condition_139 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 41, 12), result_and_keyword_138)
-        # Assigning a type to the variable 'if_condition_139' (line 41)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 41, 12), 'if_condition_139', if_condition_139)
-        # SSA begins for if statement (line 41)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Call to append(...): (line 42)
-        # Processing the call arguments (line 42)
-        
-        # Obtaining the type of the subscript
-        
-        # Call to to_pos(...): (line 42)
-        # Processing the call arguments (line 42)
-        # Getting the type of 'newx' (line 42)
-        newx_144 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 65), 'newx', False)
-        # Getting the type of 'newy' (line 42)
-        newy_145 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 71), 'newy', False)
-        # Processing the call keyword arguments (line 42)
-        kwargs_146 = {}
-        # Getting the type of 'to_pos' (line 42)
-        to_pos_143 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 58), 'to_pos', False)
-        # Calling to_pos(args, kwargs) (line 42)
-        to_pos_call_result_147 = invoke(stypy.reporting.localization.Localization(__file__, 42, 58), to_pos_143, *[newx_144, newy_145], **kwargs_146)
-        
-        # Getting the type of 'self' (line 42)
-        self_148 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 39), 'self', False)
-        # Obtaining the member 'board' of a type (line 42)
-        board_149 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 39), self_148, 'board')
-        # Obtaining the member 'squares' of a type (line 42)
-        squares_150 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 39), board_149, 'squares')
-        # Obtaining the member '__getitem__' of a type (line 42)
-        getitem___151 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 39), squares_150, '__getitem__')
-        # Calling the subscript (__getitem__) to obtain the elements type (line 42)
-        subscript_call_result_152 = invoke(stypy.reporting.localization.Localization(__file__, 42, 39), getitem___151, to_pos_call_result_147)
-        
-        # Processing the call keyword arguments (line 42)
-        kwargs_153 = {}
-        # Getting the type of 'self' (line 42)
-        self_140 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 16), 'self', False)
-        # Obtaining the member 'neighbours' of a type (line 42)
-        neighbours_141 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 16), self_140, 'neighbours')
-        # Obtaining the member 'append' of a type (line 42)
-        append_142 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 16), neighbours_141, 'append')
-        # Calling append(args, kwargs) (line 42)
-        append_call_result_154 = invoke(stypy.reporting.localization.Localization(__file__, 42, 16), append_142, *[subscript_call_result_152], **kwargs_153)
-        
-        # SSA join for if statement (line 41)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 39, 8), list_104):
+            # Getting the type of the for loop variable (line 39)
+            for_loop_var_117 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 39, 8), list_104)
+            # Assigning a type to the variable 'dx' (line 39)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 39, 8), 'dx', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 39, 8), for_loop_var_117))
+            # Assigning a type to the variable 'dy' (line 39)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 39, 8), 'dy', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 39, 8), for_loop_var_117))
+            # SSA begins for a for statement (line 39)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            # Assigning a Tuple to a Tuple (line 40):
+            
+            # Assigning a BinOp to a Name (line 40):
+            # Getting the type of 'x' (line 40)
+            x_118 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 25), 'x')
+            # Getting the type of 'dx' (line 40)
+            dx_119 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 29), 'dx')
+            # Applying the binary operator '+' (line 40)
+            result_add_120 = python_operator(stypy.reporting.localization.Localization(__file__, 40, 25), '+', x_118, dx_119)
+            
+            # Assigning a type to the variable 'tuple_assignment_9' (line 40)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'tuple_assignment_9', result_add_120)
+            
+            # Assigning a BinOp to a Name (line 40):
+            # Getting the type of 'y' (line 40)
+            y_121 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 33), 'y')
+            # Getting the type of 'dy' (line 40)
+            dy_122 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 37), 'dy')
+            # Applying the binary operator '+' (line 40)
+            result_add_123 = python_operator(stypy.reporting.localization.Localization(__file__, 40, 33), '+', y_121, dy_122)
+            
+            # Assigning a type to the variable 'tuple_assignment_10' (line 40)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'tuple_assignment_10', result_add_123)
+            
+            # Assigning a Name to a Name (line 40):
+            # Getting the type of 'tuple_assignment_9' (line 40)
+            tuple_assignment_9_124 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'tuple_assignment_9')
+            # Assigning a type to the variable 'newx' (line 40)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'newx', tuple_assignment_9_124)
+            
+            # Assigning a Name to a Name (line 40):
+            # Getting the type of 'tuple_assignment_10' (line 40)
+            tuple_assignment_10_125 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 12), 'tuple_assignment_10')
+            # Assigning a type to the variable 'newy' (line 40)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 18), 'newy', tuple_assignment_10_125)
+            
+            
+            # Evaluating a boolean operation
+            
+            int_126 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 41, 15), 'int')
+            # Getting the type of 'newx' (line 41)
+            newx_127 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 20), 'newx')
+            # Applying the binary operator '<=' (line 41)
+            result_le_128 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 15), '<=', int_126, newx_127)
+            # Getting the type of 'SIZE' (line 41)
+            SIZE_129 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 27), 'SIZE')
+            # Applying the binary operator '<' (line 41)
+            result_lt_130 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 15), '<', newx_127, SIZE_129)
+            # Applying the binary operator '&' (line 41)
+            result_and__131 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 15), '&', result_le_128, result_lt_130)
+            
+            
+            int_132 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 41, 36), 'int')
+            # Getting the type of 'newy' (line 41)
+            newy_133 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 41), 'newy')
+            # Applying the binary operator '<=' (line 41)
+            result_le_134 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 36), '<=', int_132, newy_133)
+            # Getting the type of 'SIZE' (line 41)
+            SIZE_135 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 48), 'SIZE')
+            # Applying the binary operator '<' (line 41)
+            result_lt_136 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 36), '<', newy_133, SIZE_135)
+            # Applying the binary operator '&' (line 41)
+            result_and__137 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 36), '&', result_le_134, result_lt_136)
+            
+            # Applying the binary operator 'and' (line 41)
+            result_and_keyword_138 = python_operator(stypy.reporting.localization.Localization(__file__, 41, 15), 'and', result_and__131, result_and__137)
+            
+            # Testing the type of an if condition (line 41)
+            if_condition_139 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 41, 12), result_and_keyword_138)
+            # Assigning a type to the variable 'if_condition_139' (line 41)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 41, 12), 'if_condition_139', if_condition_139)
+            # SSA begins for if statement (line 41)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Call to append(...): (line 42)
+            # Processing the call arguments (line 42)
+            
+            # Obtaining the type of the subscript
+            
+            # Call to to_pos(...): (line 42)
+            # Processing the call arguments (line 42)
+            # Getting the type of 'newx' (line 42)
+            newx_144 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 65), 'newx', False)
+            # Getting the type of 'newy' (line 42)
+            newy_145 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 71), 'newy', False)
+            # Processing the call keyword arguments (line 42)
+            kwargs_146 = {}
+            # Getting the type of 'to_pos' (line 42)
+            to_pos_143 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 58), 'to_pos', False)
+            # Calling to_pos(args, kwargs) (line 42)
+            to_pos_call_result_147 = invoke(stypy.reporting.localization.Localization(__file__, 42, 58), to_pos_143, *[newx_144, newy_145], **kwargs_146)
+            
+            # Getting the type of 'self' (line 42)
+            self_148 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 39), 'self', False)
+            # Obtaining the member 'board' of a type (line 42)
+            board_149 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 39), self_148, 'board')
+            # Obtaining the member 'squares' of a type (line 42)
+            squares_150 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 39), board_149, 'squares')
+            # Obtaining the member '__getitem__' of a type (line 42)
+            getitem___151 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 39), squares_150, '__getitem__')
+            # Calling the subscript (__getitem__) to obtain the elements type (line 42)
+            subscript_call_result_152 = invoke(stypy.reporting.localization.Localization(__file__, 42, 39), getitem___151, to_pos_call_result_147)
+            
+            # Processing the call keyword arguments (line 42)
+            kwargs_153 = {}
+            # Getting the type of 'self' (line 42)
+            self_140 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 42, 16), 'self', False)
+            # Obtaining the member 'neighbours' of a type (line 42)
+            neighbours_141 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 16), self_140, 'neighbours')
+            # Obtaining the member 'append' of a type (line 42)
+            append_142 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 42, 16), neighbours_141, 'append')
+            # Calling append(args, kwargs) (line 42)
+            append_call_result_154 = invoke(stypy.reporting.localization.Localization(__file__, 42, 16), append_142, *[subscript_call_result_152], **kwargs_153)
+            
+            # SSA join for if statement (line 41)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # ################# End of 'set_neighbours(...)' code ##################
@@ -1456,117 +1460,121 @@ class Square:
         self_165 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 49, 25), 'self')
         # Obtaining the member 'neighbours' of a type (line 49)
         neighbours_166 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 49, 25), self_165, 'neighbours')
+        # Testing if the loop is going to be iterated (line 49)
         # Testing the type of a for loop iterable (line 49)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 49, 8), neighbours_166)
-        # Getting the type of the for loop variable (line 49)
-        for_loop_var_167 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 49, 8), neighbours_166)
-        # Assigning a type to the variable 'neighbour' (line 49)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 49, 8), 'neighbour', for_loop_var_167)
-        # SSA begins for a for statement (line 49)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 50)
-        neighbour_168 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 50, 15), 'neighbour')
-        # Obtaining the member 'timestamp' of a type (line 50)
-        timestamp_169 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 50, 15), neighbour_168, 'timestamp')
-        # Getting the type of 'TIMESTAMP' (line 50)
-        TIMESTAMP_170 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 50, 38), 'TIMESTAMP')
-        # Applying the binary operator '!=' (line 50)
-        result_ne_171 = python_operator(stypy.reporting.localization.Localization(__file__, 50, 15), '!=', timestamp_169, TIMESTAMP_170)
-        
-        # Testing the type of an if condition (line 50)
-        if_condition_172 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 50, 12), result_ne_171)
-        # Assigning a type to the variable 'if_condition_172' (line 50)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 50, 12), 'if_condition_172', if_condition_172)
-        # SSA begins for if statement (line 50)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Attribute (line 51):
-        
-        # Assigning a Name to a Attribute (line 51):
-        # Getting the type of 'TIMESTAMP' (line 51)
-        TIMESTAMP_173 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 51, 38), 'TIMESTAMP')
-        # Getting the type of 'neighbour' (line 51)
-        neighbour_174 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 51, 16), 'neighbour')
-        # Setting the type of the member 'timestamp' of a type (line 51)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 51, 16), neighbour_174, 'timestamp', TIMESTAMP_173)
-        
-        
-        # Getting the type of 'neighbour' (line 52)
-        neighbour_175 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 52, 19), 'neighbour')
-        # Obtaining the member 'color' of a type (line 52)
-        color_176 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 52, 19), neighbour_175, 'color')
-        # Getting the type of 'EMPTY' (line 52)
-        EMPTY_177 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 52, 38), 'EMPTY')
-        # Applying the binary operator '==' (line 52)
-        result_eq_178 = python_operator(stypy.reporting.localization.Localization(__file__, 52, 19), '==', color_176, EMPTY_177)
-        
-        # Testing the type of an if condition (line 52)
-        if_condition_179 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 52, 16), result_eq_178)
-        # Assigning a type to the variable 'if_condition_179' (line 52)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 52, 16), 'if_condition_179', if_condition_179)
-        # SSA begins for if statement (line 52)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'reference' (line 53)
-        reference_180 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 53, 20), 'reference')
-        # Obtaining the member 'liberties' of a type (line 53)
-        liberties_181 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 53, 20), reference_180, 'liberties')
-        int_182 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 53, 43), 'int')
-        # Applying the binary operator '+=' (line 53)
-        result_iadd_183 = python_operator(stypy.reporting.localization.Localization(__file__, 53, 20), '+=', liberties_181, int_182)
-        # Getting the type of 'reference' (line 53)
-        reference_184 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 53, 20), 'reference')
-        # Setting the type of the member 'liberties' of a type (line 53)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 53, 20), reference_184, 'liberties', result_iadd_183)
-        
-        # SSA branch for the else part of an if statement (line 52)
-        module_type_store.open_ssa_branch('else')
-        
-        
-        # Getting the type of 'neighbour' (line 54)
-        neighbour_185 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 54, 21), 'neighbour')
-        # Obtaining the member 'color' of a type (line 54)
-        color_186 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 54, 21), neighbour_185, 'color')
-        # Getting the type of 'self' (line 54)
-        self_187 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 54, 40), 'self')
-        # Obtaining the member 'color' of a type (line 54)
-        color_188 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 54, 40), self_187, 'color')
-        # Applying the binary operator '==' (line 54)
-        result_eq_189 = python_operator(stypy.reporting.localization.Localization(__file__, 54, 21), '==', color_186, color_188)
-        
-        # Testing the type of an if condition (line 54)
-        if_condition_190 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 54, 21), result_eq_189)
-        # Assigning a type to the variable 'if_condition_190' (line 54)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 54, 21), 'if_condition_190', if_condition_190)
-        # SSA begins for if statement (line 54)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Call to count_liberties(...): (line 55)
-        # Processing the call arguments (line 55)
-        # Getting the type of 'reference' (line 55)
-        reference_193 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 55, 46), 'reference', False)
-        # Processing the call keyword arguments (line 55)
-        kwargs_194 = {}
-        # Getting the type of 'neighbour' (line 55)
-        neighbour_191 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 55, 20), 'neighbour', False)
-        # Obtaining the member 'count_liberties' of a type (line 55)
-        count_liberties_192 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 55, 20), neighbour_191, 'count_liberties')
-        # Calling count_liberties(args, kwargs) (line 55)
-        count_liberties_call_result_195 = invoke(stypy.reporting.localization.Localization(__file__, 55, 20), count_liberties_192, *[reference_193], **kwargs_194)
-        
-        # SSA join for if statement (line 54)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 52)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 50)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 49, 8), neighbours_166):
+            # Getting the type of the for loop variable (line 49)
+            for_loop_var_167 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 49, 8), neighbours_166)
+            # Assigning a type to the variable 'neighbour' (line 49)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 49, 8), 'neighbour', for_loop_var_167)
+            # SSA begins for a for statement (line 49)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'neighbour' (line 50)
+            neighbour_168 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 50, 15), 'neighbour')
+            # Obtaining the member 'timestamp' of a type (line 50)
+            timestamp_169 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 50, 15), neighbour_168, 'timestamp')
+            # Getting the type of 'TIMESTAMP' (line 50)
+            TIMESTAMP_170 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 50, 38), 'TIMESTAMP')
+            # Applying the binary operator '!=' (line 50)
+            result_ne_171 = python_operator(stypy.reporting.localization.Localization(__file__, 50, 15), '!=', timestamp_169, TIMESTAMP_170)
+            
+            # Testing the type of an if condition (line 50)
+            if_condition_172 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 50, 12), result_ne_171)
+            # Assigning a type to the variable 'if_condition_172' (line 50)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 50, 12), 'if_condition_172', if_condition_172)
+            # SSA begins for if statement (line 50)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Attribute (line 51):
+            
+            # Assigning a Name to a Attribute (line 51):
+            # Getting the type of 'TIMESTAMP' (line 51)
+            TIMESTAMP_173 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 51, 38), 'TIMESTAMP')
+            # Getting the type of 'neighbour' (line 51)
+            neighbour_174 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 51, 16), 'neighbour')
+            # Setting the type of the member 'timestamp' of a type (line 51)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 51, 16), neighbour_174, 'timestamp', TIMESTAMP_173)
+            
+            
+            # Getting the type of 'neighbour' (line 52)
+            neighbour_175 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 52, 19), 'neighbour')
+            # Obtaining the member 'color' of a type (line 52)
+            color_176 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 52, 19), neighbour_175, 'color')
+            # Getting the type of 'EMPTY' (line 52)
+            EMPTY_177 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 52, 38), 'EMPTY')
+            # Applying the binary operator '==' (line 52)
+            result_eq_178 = python_operator(stypy.reporting.localization.Localization(__file__, 52, 19), '==', color_176, EMPTY_177)
+            
+            # Testing the type of an if condition (line 52)
+            if_condition_179 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 52, 16), result_eq_178)
+            # Assigning a type to the variable 'if_condition_179' (line 52)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 52, 16), 'if_condition_179', if_condition_179)
+            # SSA begins for if statement (line 52)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Getting the type of 'reference' (line 53)
+            reference_180 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 53, 20), 'reference')
+            # Obtaining the member 'liberties' of a type (line 53)
+            liberties_181 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 53, 20), reference_180, 'liberties')
+            int_182 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 53, 43), 'int')
+            # Applying the binary operator '+=' (line 53)
+            result_iadd_183 = python_operator(stypy.reporting.localization.Localization(__file__, 53, 20), '+=', liberties_181, int_182)
+            # Getting the type of 'reference' (line 53)
+            reference_184 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 53, 20), 'reference')
+            # Setting the type of the member 'liberties' of a type (line 53)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 53, 20), reference_184, 'liberties', result_iadd_183)
+            
+            # SSA branch for the else part of an if statement (line 52)
+            module_type_store.open_ssa_branch('else')
+            
+            
+            # Getting the type of 'neighbour' (line 54)
+            neighbour_185 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 54, 21), 'neighbour')
+            # Obtaining the member 'color' of a type (line 54)
+            color_186 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 54, 21), neighbour_185, 'color')
+            # Getting the type of 'self' (line 54)
+            self_187 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 54, 40), 'self')
+            # Obtaining the member 'color' of a type (line 54)
+            color_188 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 54, 40), self_187, 'color')
+            # Applying the binary operator '==' (line 54)
+            result_eq_189 = python_operator(stypy.reporting.localization.Localization(__file__, 54, 21), '==', color_186, color_188)
+            
+            # Testing the type of an if condition (line 54)
+            if_condition_190 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 54, 21), result_eq_189)
+            # Assigning a type to the variable 'if_condition_190' (line 54)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 54, 21), 'if_condition_190', if_condition_190)
+            # SSA begins for if statement (line 54)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Call to count_liberties(...): (line 55)
+            # Processing the call arguments (line 55)
+            # Getting the type of 'reference' (line 55)
+            reference_193 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 55, 46), 'reference', False)
+            # Processing the call keyword arguments (line 55)
+            kwargs_194 = {}
+            # Getting the type of 'neighbour' (line 55)
+            neighbour_191 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 55, 20), 'neighbour', False)
+            # Obtaining the member 'count_liberties' of a type (line 55)
+            count_liberties_192 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 55, 20), neighbour_191, 'count_liberties')
+            # Calling count_liberties(args, kwargs) (line 55)
+            count_liberties_call_result_195 = invoke(stypy.reporting.localization.Localization(__file__, 55, 20), count_liberties_192, *[reference_193], **kwargs_194)
+            
+            # SSA join for if statement (line 54)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 52)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 50)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # ################# End of 'count_liberties(...)' code ##################
@@ -1640,127 +1648,131 @@ class Square:
         self_199 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 59, 25), 'self')
         # Obtaining the member 'neighbours' of a type (line 59)
         neighbours_200 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 59, 25), self_199, 'neighbours')
+        # Testing if the loop is going to be iterated (line 59)
         # Testing the type of a for loop iterable (line 59)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 59, 8), neighbours_200)
-        # Getting the type of the for loop variable (line 59)
-        for_loop_var_201 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 59, 8), neighbours_200)
-        # Assigning a type to the variable 'neighbour' (line 59)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 59, 8), 'neighbour', for_loop_var_201)
-        # SSA begins for a for statement (line 59)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 60)
-        neighbour_202 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 60, 15), 'neighbour')
-        # Obtaining the member 'findstamp' of a type (line 60)
-        findstamp_203 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 60, 15), neighbour_202, 'findstamp')
-        # Getting the type of 'TIMESTAMP' (line 60)
-        TIMESTAMP_204 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 60, 38), 'TIMESTAMP')
-        # Applying the binary operator '!=' (line 60)
-        result_ne_205 = python_operator(stypy.reporting.localization.Localization(__file__, 60, 15), '!=', findstamp_203, TIMESTAMP_204)
-        
-        # Testing the type of an if condition (line 60)
-        if_condition_206 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 60, 12), result_ne_205)
-        # Assigning a type to the variable 'if_condition_206' (line 60)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 60, 12), 'if_condition_206', if_condition_206)
-        # SSA begins for if statement (line 60)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Attribute (line 61):
-        
-        # Assigning a Name to a Attribute (line 61):
-        # Getting the type of 'TIMESTAMP' (line 61)
-        TIMESTAMP_207 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 61, 38), 'TIMESTAMP')
-        # Getting the type of 'neighbour' (line 61)
-        neighbour_208 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 61, 16), 'neighbour')
-        # Setting the type of the member 'findstamp' of a type (line 61)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 61, 16), neighbour_208, 'findstamp', TIMESTAMP_207)
-        
-        
-        # Getting the type of 'neighbour' (line 62)
-        neighbour_209 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 62, 19), 'neighbour')
-        # Obtaining the member 'color' of a type (line 62)
-        color_210 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 62, 19), neighbour_209, 'color')
-        # Getting the type of 'EMPTY' (line 62)
-        EMPTY_211 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 62, 38), 'EMPTY')
-        # Applying the binary operator '==' (line 62)
-        result_eq_212 = python_operator(stypy.reporting.localization.Localization(__file__, 62, 19), '==', color_210, EMPTY_211)
-        
-        # Testing the type of an if condition (line 62)
-        if_condition_213 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 62, 16), result_eq_212)
-        # Assigning a type to the variable 'if_condition_213' (line 62)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 62, 16), 'if_condition_213', if_condition_213)
-        # SSA begins for if statement (line 62)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        # Getting the type of 'neighbour' (line 63)
-        neighbour_214 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 63, 27), 'neighbour')
-        # Assigning a type to the variable 'stypy_return_type' (line 63)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 63, 20), 'stypy_return_type', neighbour_214)
-        # SSA branch for the else part of an if statement (line 62)
-        module_type_store.open_ssa_branch('else')
-        
-        
-        # Getting the type of 'neighbour' (line 64)
-        neighbour_215 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 64, 21), 'neighbour')
-        # Obtaining the member 'color' of a type (line 64)
-        color_216 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 64, 21), neighbour_215, 'color')
-        # Getting the type of 'self' (line 64)
-        self_217 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 64, 40), 'self')
-        # Obtaining the member 'color' of a type (line 64)
-        color_218 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 64, 40), self_217, 'color')
-        # Applying the binary operator '==' (line 64)
-        result_eq_219 = python_operator(stypy.reporting.localization.Localization(__file__, 64, 21), '==', color_216, color_218)
-        
-        # Testing the type of an if condition (line 64)
-        if_condition_220 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 64, 21), result_eq_219)
-        # Assigning a type to the variable 'if_condition_220' (line 64)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 64, 21), 'if_condition_220', if_condition_220)
-        # SSA begins for if statement (line 64)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Call to a Name (line 65):
-        
-        # Assigning a Call to a Name (line 65):
-        
-        # Call to liberty(...): (line 65)
-        # Processing the call keyword arguments (line 65)
-        kwargs_223 = {}
-        # Getting the type of 'neighbour' (line 65)
-        neighbour_221 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 65, 30), 'neighbour', False)
-        # Obtaining the member 'liberty' of a type (line 65)
-        liberty_222 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 65, 30), neighbour_221, 'liberty')
-        # Calling liberty(args, kwargs) (line 65)
-        liberty_call_result_224 = invoke(stypy.reporting.localization.Localization(__file__, 65, 30), liberty_222, *[], **kwargs_223)
-        
-        # Assigning a type to the variable 'liberty' (line 65)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 65, 20), 'liberty', liberty_call_result_224)
-        
-        # Getting the type of 'liberty' (line 66)
-        liberty_225 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 66, 23), 'liberty')
-        # Testing the type of an if condition (line 66)
-        if_condition_226 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 66, 20), liberty_225)
-        # Assigning a type to the variable 'if_condition_226' (line 66)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 66, 20), 'if_condition_226', if_condition_226)
-        # SSA begins for if statement (line 66)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        # Getting the type of 'liberty' (line 67)
-        liberty_227 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 67, 31), 'liberty')
-        # Assigning a type to the variable 'stypy_return_type' (line 67)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 67, 24), 'stypy_return_type', liberty_227)
-        # SSA join for if statement (line 66)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 64)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 62)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 60)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 59, 8), neighbours_200):
+            # Getting the type of the for loop variable (line 59)
+            for_loop_var_201 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 59, 8), neighbours_200)
+            # Assigning a type to the variable 'neighbour' (line 59)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 59, 8), 'neighbour', for_loop_var_201)
+            # SSA begins for a for statement (line 59)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'neighbour' (line 60)
+            neighbour_202 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 60, 15), 'neighbour')
+            # Obtaining the member 'findstamp' of a type (line 60)
+            findstamp_203 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 60, 15), neighbour_202, 'findstamp')
+            # Getting the type of 'TIMESTAMP' (line 60)
+            TIMESTAMP_204 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 60, 38), 'TIMESTAMP')
+            # Applying the binary operator '!=' (line 60)
+            result_ne_205 = python_operator(stypy.reporting.localization.Localization(__file__, 60, 15), '!=', findstamp_203, TIMESTAMP_204)
+            
+            # Testing the type of an if condition (line 60)
+            if_condition_206 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 60, 12), result_ne_205)
+            # Assigning a type to the variable 'if_condition_206' (line 60)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 60, 12), 'if_condition_206', if_condition_206)
+            # SSA begins for if statement (line 60)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Attribute (line 61):
+            
+            # Assigning a Name to a Attribute (line 61):
+            # Getting the type of 'TIMESTAMP' (line 61)
+            TIMESTAMP_207 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 61, 38), 'TIMESTAMP')
+            # Getting the type of 'neighbour' (line 61)
+            neighbour_208 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 61, 16), 'neighbour')
+            # Setting the type of the member 'findstamp' of a type (line 61)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 61, 16), neighbour_208, 'findstamp', TIMESTAMP_207)
+            
+            
+            # Getting the type of 'neighbour' (line 62)
+            neighbour_209 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 62, 19), 'neighbour')
+            # Obtaining the member 'color' of a type (line 62)
+            color_210 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 62, 19), neighbour_209, 'color')
+            # Getting the type of 'EMPTY' (line 62)
+            EMPTY_211 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 62, 38), 'EMPTY')
+            # Applying the binary operator '==' (line 62)
+            result_eq_212 = python_operator(stypy.reporting.localization.Localization(__file__, 62, 19), '==', color_210, EMPTY_211)
+            
+            # Testing the type of an if condition (line 62)
+            if_condition_213 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 62, 16), result_eq_212)
+            # Assigning a type to the variable 'if_condition_213' (line 62)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 62, 16), 'if_condition_213', if_condition_213)
+            # SSA begins for if statement (line 62)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            # Getting the type of 'neighbour' (line 63)
+            neighbour_214 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 63, 27), 'neighbour')
+            # Assigning a type to the variable 'stypy_return_type' (line 63)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 63, 20), 'stypy_return_type', neighbour_214)
+            # SSA branch for the else part of an if statement (line 62)
+            module_type_store.open_ssa_branch('else')
+            
+            
+            # Getting the type of 'neighbour' (line 64)
+            neighbour_215 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 64, 21), 'neighbour')
+            # Obtaining the member 'color' of a type (line 64)
+            color_216 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 64, 21), neighbour_215, 'color')
+            # Getting the type of 'self' (line 64)
+            self_217 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 64, 40), 'self')
+            # Obtaining the member 'color' of a type (line 64)
+            color_218 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 64, 40), self_217, 'color')
+            # Applying the binary operator '==' (line 64)
+            result_eq_219 = python_operator(stypy.reporting.localization.Localization(__file__, 64, 21), '==', color_216, color_218)
+            
+            # Testing the type of an if condition (line 64)
+            if_condition_220 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 64, 21), result_eq_219)
+            # Assigning a type to the variable 'if_condition_220' (line 64)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 64, 21), 'if_condition_220', if_condition_220)
+            # SSA begins for if statement (line 64)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Call to a Name (line 65):
+            
+            # Assigning a Call to a Name (line 65):
+            
+            # Call to liberty(...): (line 65)
+            # Processing the call keyword arguments (line 65)
+            kwargs_223 = {}
+            # Getting the type of 'neighbour' (line 65)
+            neighbour_221 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 65, 30), 'neighbour', False)
+            # Obtaining the member 'liberty' of a type (line 65)
+            liberty_222 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 65, 30), neighbour_221, 'liberty')
+            # Calling liberty(args, kwargs) (line 65)
+            liberty_call_result_224 = invoke(stypy.reporting.localization.Localization(__file__, 65, 30), liberty_222, *[], **kwargs_223)
+            
+            # Assigning a type to the variable 'liberty' (line 65)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 65, 20), 'liberty', liberty_call_result_224)
+            
+            # Getting the type of 'liberty' (line 66)
+            liberty_225 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 66, 23), 'liberty')
+            # Testing the type of an if condition (line 66)
+            if_condition_226 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 66, 20), liberty_225)
+            # Assigning a type to the variable 'if_condition_226' (line 66)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 66, 20), 'if_condition_226', if_condition_226)
+            # SSA begins for if statement (line 66)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            # Getting the type of 'liberty' (line 67)
+            liberty_227 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 67, 31), 'liberty')
+            # Assigning a type to the variable 'stypy_return_type' (line 67)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 67, 24), 'stypy_return_type', liberty_227)
+            # SSA join for if statement (line 66)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 64)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 62)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 60)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # ################# End of 'liberty(...)' code ##################
@@ -1916,216 +1928,220 @@ class Square:
         self_254 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 79, 25), 'self')
         # Obtaining the member 'neighbours' of a type (line 79)
         neighbours_255 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 79, 25), self_254, 'neighbours')
+        # Testing if the loop is going to be iterated (line 79)
         # Testing the type of a for loop iterable (line 79)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 79, 8), neighbours_255)
-        # Getting the type of the for loop variable (line 79)
-        for_loop_var_256 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 79, 8), neighbours_255)
-        # Assigning a type to the variable 'neighbour' (line 79)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 79, 8), 'neighbour', for_loop_var_256)
-        # SSA begins for a for statement (line 79)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 80)
-        neighbour_257 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 80, 15), 'neighbour')
-        # Obtaining the member 'color' of a type (line 80)
-        color_258 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 80, 15), neighbour_257, 'color')
-        # Getting the type of 'EMPTY' (line 80)
-        EMPTY_259 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 80, 34), 'EMPTY')
-        # Applying the binary operator '!=' (line 80)
-        result_ne_260 = python_operator(stypy.reporting.localization.Localization(__file__, 80, 15), '!=', color_258, EMPTY_259)
-        
-        # Testing the type of an if condition (line 80)
-        if_condition_261 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 80, 12), result_ne_260)
-        # Assigning a type to the variable 'if_condition_261' (line 80)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 80, 12), 'if_condition_261', if_condition_261)
-        # SSA begins for if statement (line 80)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Call to a Name (line 81):
-        
-        # Assigning a Call to a Name (line 81):
-        
-        # Call to find(...): (line 81)
-        # Processing the call keyword arguments (line 81)
-        # Getting the type of 'True' (line 81)
-        True_264 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 81, 54), 'True', False)
-        keyword_265 = True_264
-        kwargs_266 = {'update': keyword_265}
-        # Getting the type of 'neighbour' (line 81)
-        neighbour_262 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 81, 32), 'neighbour', False)
-        # Obtaining the member 'find' of a type (line 81)
-        find_263 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 81, 32), neighbour_262, 'find')
-        # Calling find(args, kwargs) (line 81)
-        find_call_result_267 = invoke(stypy.reporting.localization.Localization(__file__, 81, 32), find_263, *[], **kwargs_266)
-        
-        # Assigning a type to the variable 'neighbour_ref' (line 81)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 81, 16), 'neighbour_ref', find_call_result_267)
-        
-        
-        # Getting the type of 'neighbour_ref' (line 82)
-        neighbour_ref_268 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 82, 19), 'neighbour_ref')
-        # Obtaining the member 'timestamp' of a type (line 82)
-        timestamp_269 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 82, 19), neighbour_ref_268, 'timestamp')
-        # Getting the type of 'TIMESTAMP' (line 82)
-        TIMESTAMP_270 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 82, 46), 'TIMESTAMP')
-        # Applying the binary operator '!=' (line 82)
-        result_ne_271 = python_operator(stypy.reporting.localization.Localization(__file__, 82, 19), '!=', timestamp_269, TIMESTAMP_270)
-        
-        # Testing the type of an if condition (line 82)
-        if_condition_272 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 82, 16), result_ne_271)
-        # Assigning a type to the variable 'if_condition_272' (line 82)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 82, 16), 'if_condition_272', if_condition_272)
-        # SSA begins for if statement (line 82)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Attribute (line 83):
-        
-        # Assigning a Name to a Attribute (line 83):
-        # Getting the type of 'TIMESTAMP' (line 83)
-        TIMESTAMP_273 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 83, 46), 'TIMESTAMP')
-        # Getting the type of 'neighbour_ref' (line 83)
-        neighbour_ref_274 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 83, 20), 'neighbour_ref')
-        # Setting the type of the member 'timestamp' of a type (line 83)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 83, 20), neighbour_ref_274, 'timestamp', TIMESTAMP_273)
-        
-        
-        # Getting the type of 'neighbour' (line 84)
-        neighbour_275 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 84, 23), 'neighbour')
-        # Obtaining the member 'color' of a type (line 84)
-        color_276 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 84, 23), neighbour_275, 'color')
-        # Getting the type of 'color' (line 84)
-        color_277 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 84, 42), 'color')
-        # Applying the binary operator '==' (line 84)
-        result_eq_278 = python_operator(stypy.reporting.localization.Localization(__file__, 84, 23), '==', color_276, color_277)
-        
-        # Testing the type of an if condition (line 84)
-        if_condition_279 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 84, 20), result_eq_278)
-        # Assigning a type to the variable 'if_condition_279' (line 84)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 84, 20), 'if_condition_279', if_condition_279)
-        # SSA begins for if statement (line 84)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Attribute (line 85):
-        
-        # Assigning a Name to a Attribute (line 85):
-        # Getting the type of 'self' (line 85)
-        self_280 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 85, 50), 'self')
-        # Getting the type of 'neighbour_ref' (line 85)
-        neighbour_ref_281 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 85, 24), 'neighbour_ref')
-        # Setting the type of the member 'reference' of a type (line 85)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 85, 24), neighbour_ref_281, 'reference', self_280)
-        
-        # Getting the type of 'self' (line 86)
-        self_282 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 86, 24), 'self')
-        # Obtaining the member 'members' of a type (line 86)
-        members_283 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 86, 24), self_282, 'members')
-        # Getting the type of 'neighbour_ref' (line 86)
-        neighbour_ref_284 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 86, 40), 'neighbour_ref')
-        # Obtaining the member 'members' of a type (line 86)
-        members_285 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 86, 40), neighbour_ref_284, 'members')
-        # Applying the binary operator '+=' (line 86)
-        result_iadd_286 = python_operator(stypy.reporting.localization.Localization(__file__, 86, 24), '+=', members_283, members_285)
-        # Getting the type of 'self' (line 86)
-        self_287 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 86, 24), 'self')
-        # Setting the type of the member 'members' of a type (line 86)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 86, 24), self_287, 'members', result_iadd_286)
-        
-        # SSA branch for the else part of an if statement (line 84)
-        module_type_store.open_ssa_branch('else')
-        
-        # Getting the type of 'neighbour_ref' (line 88)
-        neighbour_ref_288 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 88, 24), 'neighbour_ref')
-        # Obtaining the member 'liberties' of a type (line 88)
-        liberties_289 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 88, 24), neighbour_ref_288, 'liberties')
-        int_290 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 88, 51), 'int')
-        # Applying the binary operator '-=' (line 88)
-        result_isub_291 = python_operator(stypy.reporting.localization.Localization(__file__, 88, 24), '-=', liberties_289, int_290)
-        # Getting the type of 'neighbour_ref' (line 88)
-        neighbour_ref_292 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 88, 24), 'neighbour_ref')
-        # Setting the type of the member 'liberties' of a type (line 88)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 88, 24), neighbour_ref_292, 'liberties', result_isub_291)
-        
-        
-        
-        # Getting the type of 'neighbour_ref' (line 89)
-        neighbour_ref_293 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 89, 27), 'neighbour_ref')
-        # Obtaining the member 'liberties' of a type (line 89)
-        liberties_294 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 89, 27), neighbour_ref_293, 'liberties')
-        int_295 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 89, 54), 'int')
-        # Applying the binary operator '==' (line 89)
-        result_eq_296 = python_operator(stypy.reporting.localization.Localization(__file__, 89, 27), '==', liberties_294, int_295)
-        
-        # Testing the type of an if condition (line 89)
-        if_condition_297 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 89, 24), result_eq_296)
-        # Assigning a type to the variable 'if_condition_297' (line 89)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 89, 24), 'if_condition_297', if_condition_297)
-        # SSA begins for if statement (line 89)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Call to remove(...): (line 90)
-        # Processing the call arguments (line 90)
-        # Getting the type of 'neighbour_ref' (line 90)
-        neighbour_ref_300 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 90, 49), 'neighbour_ref', False)
-        # Processing the call keyword arguments (line 90)
-        # Getting the type of 'True' (line 90)
-        True_301 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 90, 71), 'True', False)
-        keyword_302 = True_301
-        kwargs_303 = {'update': keyword_302}
-        # Getting the type of 'neighbour_ref' (line 90)
-        neighbour_ref_298 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 90, 28), 'neighbour_ref', False)
-        # Obtaining the member 'remove' of a type (line 90)
-        remove_299 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 90, 28), neighbour_ref_298, 'remove')
-        # Calling remove(args, kwargs) (line 90)
-        remove_call_result_304 = invoke(stypy.reporting.localization.Localization(__file__, 90, 28), remove_299, *[neighbour_ref_300], **kwargs_303)
-        
-        # SSA branch for the else part of an if statement (line 89)
-        module_type_store.open_ssa_branch('else')
-        
-        
-        # Getting the type of 'neighbour_ref' (line 91)
-        neighbour_ref_305 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 91, 29), 'neighbour_ref')
-        # Obtaining the member 'liberties' of a type (line 91)
-        liberties_306 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 91, 29), neighbour_ref_305, 'liberties')
-        int_307 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 91, 56), 'int')
-        # Applying the binary operator '==' (line 91)
-        result_eq_308 = python_operator(stypy.reporting.localization.Localization(__file__, 91, 29), '==', liberties_306, int_307)
-        
-        # Testing the type of an if condition (line 91)
-        if_condition_309 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 91, 29), result_eq_308)
-        # Assigning a type to the variable 'if_condition_309' (line 91)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 91, 29), 'if_condition_309', if_condition_309)
-        # SSA begins for if statement (line 91)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Attribute (line 92):
-        
-        # Assigning a Name to a Attribute (line 92):
-        # Getting the type of 'neighbour_ref' (line 92)
-        neighbour_ref_310 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 92, 47), 'neighbour_ref')
-        # Getting the type of 'self' (line 92)
-        self_311 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 92, 28), 'self')
-        # Obtaining the member 'board' of a type (line 92)
-        board_312 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 92, 28), self_311, 'board')
-        # Setting the type of the member 'atari' of a type (line 92)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 92, 28), board_312, 'atari', neighbour_ref_310)
-        # SSA join for if statement (line 91)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 89)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 84)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 82)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 80)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 79, 8), neighbours_255):
+            # Getting the type of the for loop variable (line 79)
+            for_loop_var_256 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 79, 8), neighbours_255)
+            # Assigning a type to the variable 'neighbour' (line 79)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 79, 8), 'neighbour', for_loop_var_256)
+            # SSA begins for a for statement (line 79)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'neighbour' (line 80)
+            neighbour_257 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 80, 15), 'neighbour')
+            # Obtaining the member 'color' of a type (line 80)
+            color_258 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 80, 15), neighbour_257, 'color')
+            # Getting the type of 'EMPTY' (line 80)
+            EMPTY_259 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 80, 34), 'EMPTY')
+            # Applying the binary operator '!=' (line 80)
+            result_ne_260 = python_operator(stypy.reporting.localization.Localization(__file__, 80, 15), '!=', color_258, EMPTY_259)
+            
+            # Testing the type of an if condition (line 80)
+            if_condition_261 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 80, 12), result_ne_260)
+            # Assigning a type to the variable 'if_condition_261' (line 80)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 80, 12), 'if_condition_261', if_condition_261)
+            # SSA begins for if statement (line 80)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Call to a Name (line 81):
+            
+            # Assigning a Call to a Name (line 81):
+            
+            # Call to find(...): (line 81)
+            # Processing the call keyword arguments (line 81)
+            # Getting the type of 'True' (line 81)
+            True_264 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 81, 54), 'True', False)
+            keyword_265 = True_264
+            kwargs_266 = {'update': keyword_265}
+            # Getting the type of 'neighbour' (line 81)
+            neighbour_262 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 81, 32), 'neighbour', False)
+            # Obtaining the member 'find' of a type (line 81)
+            find_263 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 81, 32), neighbour_262, 'find')
+            # Calling find(args, kwargs) (line 81)
+            find_call_result_267 = invoke(stypy.reporting.localization.Localization(__file__, 81, 32), find_263, *[], **kwargs_266)
+            
+            # Assigning a type to the variable 'neighbour_ref' (line 81)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 81, 16), 'neighbour_ref', find_call_result_267)
+            
+            
+            # Getting the type of 'neighbour_ref' (line 82)
+            neighbour_ref_268 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 82, 19), 'neighbour_ref')
+            # Obtaining the member 'timestamp' of a type (line 82)
+            timestamp_269 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 82, 19), neighbour_ref_268, 'timestamp')
+            # Getting the type of 'TIMESTAMP' (line 82)
+            TIMESTAMP_270 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 82, 46), 'TIMESTAMP')
+            # Applying the binary operator '!=' (line 82)
+            result_ne_271 = python_operator(stypy.reporting.localization.Localization(__file__, 82, 19), '!=', timestamp_269, TIMESTAMP_270)
+            
+            # Testing the type of an if condition (line 82)
+            if_condition_272 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 82, 16), result_ne_271)
+            # Assigning a type to the variable 'if_condition_272' (line 82)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 82, 16), 'if_condition_272', if_condition_272)
+            # SSA begins for if statement (line 82)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Attribute (line 83):
+            
+            # Assigning a Name to a Attribute (line 83):
+            # Getting the type of 'TIMESTAMP' (line 83)
+            TIMESTAMP_273 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 83, 46), 'TIMESTAMP')
+            # Getting the type of 'neighbour_ref' (line 83)
+            neighbour_ref_274 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 83, 20), 'neighbour_ref')
+            # Setting the type of the member 'timestamp' of a type (line 83)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 83, 20), neighbour_ref_274, 'timestamp', TIMESTAMP_273)
+            
+            
+            # Getting the type of 'neighbour' (line 84)
+            neighbour_275 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 84, 23), 'neighbour')
+            # Obtaining the member 'color' of a type (line 84)
+            color_276 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 84, 23), neighbour_275, 'color')
+            # Getting the type of 'color' (line 84)
+            color_277 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 84, 42), 'color')
+            # Applying the binary operator '==' (line 84)
+            result_eq_278 = python_operator(stypy.reporting.localization.Localization(__file__, 84, 23), '==', color_276, color_277)
+            
+            # Testing the type of an if condition (line 84)
+            if_condition_279 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 84, 20), result_eq_278)
+            # Assigning a type to the variable 'if_condition_279' (line 84)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 84, 20), 'if_condition_279', if_condition_279)
+            # SSA begins for if statement (line 84)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Attribute (line 85):
+            
+            # Assigning a Name to a Attribute (line 85):
+            # Getting the type of 'self' (line 85)
+            self_280 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 85, 50), 'self')
+            # Getting the type of 'neighbour_ref' (line 85)
+            neighbour_ref_281 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 85, 24), 'neighbour_ref')
+            # Setting the type of the member 'reference' of a type (line 85)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 85, 24), neighbour_ref_281, 'reference', self_280)
+            
+            # Getting the type of 'self' (line 86)
+            self_282 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 86, 24), 'self')
+            # Obtaining the member 'members' of a type (line 86)
+            members_283 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 86, 24), self_282, 'members')
+            # Getting the type of 'neighbour_ref' (line 86)
+            neighbour_ref_284 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 86, 40), 'neighbour_ref')
+            # Obtaining the member 'members' of a type (line 86)
+            members_285 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 86, 40), neighbour_ref_284, 'members')
+            # Applying the binary operator '+=' (line 86)
+            result_iadd_286 = python_operator(stypy.reporting.localization.Localization(__file__, 86, 24), '+=', members_283, members_285)
+            # Getting the type of 'self' (line 86)
+            self_287 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 86, 24), 'self')
+            # Setting the type of the member 'members' of a type (line 86)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 86, 24), self_287, 'members', result_iadd_286)
+            
+            # SSA branch for the else part of an if statement (line 84)
+            module_type_store.open_ssa_branch('else')
+            
+            # Getting the type of 'neighbour_ref' (line 88)
+            neighbour_ref_288 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 88, 24), 'neighbour_ref')
+            # Obtaining the member 'liberties' of a type (line 88)
+            liberties_289 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 88, 24), neighbour_ref_288, 'liberties')
+            int_290 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 88, 51), 'int')
+            # Applying the binary operator '-=' (line 88)
+            result_isub_291 = python_operator(stypy.reporting.localization.Localization(__file__, 88, 24), '-=', liberties_289, int_290)
+            # Getting the type of 'neighbour_ref' (line 88)
+            neighbour_ref_292 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 88, 24), 'neighbour_ref')
+            # Setting the type of the member 'liberties' of a type (line 88)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 88, 24), neighbour_ref_292, 'liberties', result_isub_291)
+            
+            
+            
+            # Getting the type of 'neighbour_ref' (line 89)
+            neighbour_ref_293 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 89, 27), 'neighbour_ref')
+            # Obtaining the member 'liberties' of a type (line 89)
+            liberties_294 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 89, 27), neighbour_ref_293, 'liberties')
+            int_295 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 89, 54), 'int')
+            # Applying the binary operator '==' (line 89)
+            result_eq_296 = python_operator(stypy.reporting.localization.Localization(__file__, 89, 27), '==', liberties_294, int_295)
+            
+            # Testing the type of an if condition (line 89)
+            if_condition_297 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 89, 24), result_eq_296)
+            # Assigning a type to the variable 'if_condition_297' (line 89)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 89, 24), 'if_condition_297', if_condition_297)
+            # SSA begins for if statement (line 89)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Call to remove(...): (line 90)
+            # Processing the call arguments (line 90)
+            # Getting the type of 'neighbour_ref' (line 90)
+            neighbour_ref_300 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 90, 49), 'neighbour_ref', False)
+            # Processing the call keyword arguments (line 90)
+            # Getting the type of 'True' (line 90)
+            True_301 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 90, 71), 'True', False)
+            keyword_302 = True_301
+            kwargs_303 = {'update': keyword_302}
+            # Getting the type of 'neighbour_ref' (line 90)
+            neighbour_ref_298 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 90, 28), 'neighbour_ref', False)
+            # Obtaining the member 'remove' of a type (line 90)
+            remove_299 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 90, 28), neighbour_ref_298, 'remove')
+            # Calling remove(args, kwargs) (line 90)
+            remove_call_result_304 = invoke(stypy.reporting.localization.Localization(__file__, 90, 28), remove_299, *[neighbour_ref_300], **kwargs_303)
+            
+            # SSA branch for the else part of an if statement (line 89)
+            module_type_store.open_ssa_branch('else')
+            
+            
+            # Getting the type of 'neighbour_ref' (line 91)
+            neighbour_ref_305 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 91, 29), 'neighbour_ref')
+            # Obtaining the member 'liberties' of a type (line 91)
+            liberties_306 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 91, 29), neighbour_ref_305, 'liberties')
+            int_307 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 91, 56), 'int')
+            # Applying the binary operator '==' (line 91)
+            result_eq_308 = python_operator(stypy.reporting.localization.Localization(__file__, 91, 29), '==', liberties_306, int_307)
+            
+            # Testing the type of an if condition (line 91)
+            if_condition_309 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 91, 29), result_eq_308)
+            # Assigning a type to the variable 'if_condition_309' (line 91)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 91, 29), 'if_condition_309', if_condition_309)
+            # SSA begins for if statement (line 91)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Attribute (line 92):
+            
+            # Assigning a Name to a Attribute (line 92):
+            # Getting the type of 'neighbour_ref' (line 92)
+            neighbour_ref_310 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 92, 47), 'neighbour_ref')
+            # Getting the type of 'self' (line 92)
+            self_311 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 92, 28), 'self')
+            # Obtaining the member 'board' of a type (line 92)
+            board_312 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 92, 28), self_311, 'board')
+            # Setting the type of the member 'atari' of a type (line 92)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 92, 28), board_312, 'atari', neighbour_ref_310)
+            # SSA join for if statement (line 91)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 89)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 84)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 82)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 80)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # Getting the type of 'TIMESTAMP' (line 93)
@@ -2326,116 +2342,120 @@ class Square:
         self_356 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 111, 29), 'self')
         # Obtaining the member 'neighbours' of a type (line 111)
         neighbours_357 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 111, 29), self_356, 'neighbours')
+        # Testing if the loop is going to be iterated (line 111)
         # Testing the type of a for loop iterable (line 111)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 111, 12), neighbours_357)
-        # Getting the type of the for loop variable (line 111)
-        for_loop_var_358 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 111, 12), neighbours_357)
-        # Assigning a type to the variable 'neighbour' (line 111)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 111, 12), 'neighbour', for_loop_var_358)
-        # SSA begins for a for statement (line 111)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 112)
-        neighbour_359 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 112, 19), 'neighbour')
-        # Obtaining the member 'color' of a type (line 112)
-        color_360 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 112, 19), neighbour_359, 'color')
-        # Getting the type of 'EMPTY' (line 112)
-        EMPTY_361 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 112, 38), 'EMPTY')
-        # Applying the binary operator '!=' (line 112)
-        result_ne_362 = python_operator(stypy.reporting.localization.Localization(__file__, 112, 19), '!=', color_360, EMPTY_361)
-        
-        # Testing the type of an if condition (line 112)
-        if_condition_363 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 112, 16), result_ne_362)
-        # Assigning a type to the variable 'if_condition_363' (line 112)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 112, 16), 'if_condition_363', if_condition_363)
-        # SSA begins for if statement (line 112)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Call to a Name (line 113):
-        
-        # Assigning a Call to a Name (line 113):
-        
-        # Call to find(...): (line 113)
-        # Processing the call arguments (line 113)
-        # Getting the type of 'update' (line 113)
-        update_366 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 113, 51), 'update', False)
-        # Processing the call keyword arguments (line 113)
-        kwargs_367 = {}
-        # Getting the type of 'neighbour' (line 113)
-        neighbour_364 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 113, 36), 'neighbour', False)
-        # Obtaining the member 'find' of a type (line 113)
-        find_365 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 113, 36), neighbour_364, 'find')
-        # Calling find(args, kwargs) (line 113)
-        find_call_result_368 = invoke(stypy.reporting.localization.Localization(__file__, 113, 36), find_365, *[update_366], **kwargs_367)
-        
-        # Assigning a type to the variable 'neighbour_ref' (line 113)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 113, 20), 'neighbour_ref', find_call_result_368)
-        
-        
-        # Evaluating a boolean operation
-        
-        # Getting the type of 'neighbour_ref' (line 114)
-        neighbour_ref_369 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 114, 23), 'neighbour_ref')
-        # Obtaining the member 'pos' of a type (line 114)
-        pos_370 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 114, 23), neighbour_ref_369, 'pos')
-        # Getting the type of 'self' (line 114)
-        self_371 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 114, 44), 'self')
-        # Obtaining the member 'pos' of a type (line 114)
-        pos_372 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 114, 44), self_371, 'pos')
-        # Applying the binary operator '!=' (line 114)
-        result_ne_373 = python_operator(stypy.reporting.localization.Localization(__file__, 114, 23), '!=', pos_370, pos_372)
-        
-        
-        # Getting the type of 'neighbour_ref' (line 114)
-        neighbour_ref_374 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 114, 57), 'neighbour_ref')
-        # Obtaining the member 'removestamp' of a type (line 114)
-        removestamp_375 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 114, 57), neighbour_ref_374, 'removestamp')
-        # Getting the type of 'removestamp' (line 114)
-        removestamp_376 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 114, 86), 'removestamp')
-        # Applying the binary operator '!=' (line 114)
-        result_ne_377 = python_operator(stypy.reporting.localization.Localization(__file__, 114, 57), '!=', removestamp_375, removestamp_376)
-        
-        # Applying the binary operator 'and' (line 114)
-        result_and_keyword_378 = python_operator(stypy.reporting.localization.Localization(__file__, 114, 23), 'and', result_ne_373, result_ne_377)
-        
-        # Testing the type of an if condition (line 114)
-        if_condition_379 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 114, 20), result_and_keyword_378)
-        # Assigning a type to the variable 'if_condition_379' (line 114)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 114, 20), 'if_condition_379', if_condition_379)
-        # SSA begins for if statement (line 114)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Attribute (line 115):
-        
-        # Assigning a Name to a Attribute (line 115):
-        # Getting the type of 'removestamp' (line 115)
-        removestamp_380 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 115, 52), 'removestamp')
-        # Getting the type of 'neighbour_ref' (line 115)
-        neighbour_ref_381 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 115, 24), 'neighbour_ref')
-        # Setting the type of the member 'removestamp' of a type (line 115)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 115, 24), neighbour_ref_381, 'removestamp', removestamp_380)
-        
-        # Getting the type of 'neighbour_ref' (line 116)
-        neighbour_ref_382 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 116, 24), 'neighbour_ref')
-        # Obtaining the member 'liberties' of a type (line 116)
-        liberties_383 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 116, 24), neighbour_ref_382, 'liberties')
-        int_384 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 116, 51), 'int')
-        # Applying the binary operator '+=' (line 116)
-        result_iadd_385 = python_operator(stypy.reporting.localization.Localization(__file__, 116, 24), '+=', liberties_383, int_384)
-        # Getting the type of 'neighbour_ref' (line 116)
-        neighbour_ref_386 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 116, 24), 'neighbour_ref')
-        # Setting the type of the member 'liberties' of a type (line 116)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 116, 24), neighbour_ref_386, 'liberties', result_iadd_385)
-        
-        # SSA join for if statement (line 114)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 112)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 111, 12), neighbours_357):
+            # Getting the type of the for loop variable (line 111)
+            for_loop_var_358 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 111, 12), neighbours_357)
+            # Assigning a type to the variable 'neighbour' (line 111)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 111, 12), 'neighbour', for_loop_var_358)
+            # SSA begins for a for statement (line 111)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'neighbour' (line 112)
+            neighbour_359 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 112, 19), 'neighbour')
+            # Obtaining the member 'color' of a type (line 112)
+            color_360 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 112, 19), neighbour_359, 'color')
+            # Getting the type of 'EMPTY' (line 112)
+            EMPTY_361 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 112, 38), 'EMPTY')
+            # Applying the binary operator '!=' (line 112)
+            result_ne_362 = python_operator(stypy.reporting.localization.Localization(__file__, 112, 19), '!=', color_360, EMPTY_361)
+            
+            # Testing the type of an if condition (line 112)
+            if_condition_363 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 112, 16), result_ne_362)
+            # Assigning a type to the variable 'if_condition_363' (line 112)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 112, 16), 'if_condition_363', if_condition_363)
+            # SSA begins for if statement (line 112)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Call to a Name (line 113):
+            
+            # Assigning a Call to a Name (line 113):
+            
+            # Call to find(...): (line 113)
+            # Processing the call arguments (line 113)
+            # Getting the type of 'update' (line 113)
+            update_366 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 113, 51), 'update', False)
+            # Processing the call keyword arguments (line 113)
+            kwargs_367 = {}
+            # Getting the type of 'neighbour' (line 113)
+            neighbour_364 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 113, 36), 'neighbour', False)
+            # Obtaining the member 'find' of a type (line 113)
+            find_365 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 113, 36), neighbour_364, 'find')
+            # Calling find(args, kwargs) (line 113)
+            find_call_result_368 = invoke(stypy.reporting.localization.Localization(__file__, 113, 36), find_365, *[update_366], **kwargs_367)
+            
+            # Assigning a type to the variable 'neighbour_ref' (line 113)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 113, 20), 'neighbour_ref', find_call_result_368)
+            
+            
+            # Evaluating a boolean operation
+            
+            # Getting the type of 'neighbour_ref' (line 114)
+            neighbour_ref_369 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 114, 23), 'neighbour_ref')
+            # Obtaining the member 'pos' of a type (line 114)
+            pos_370 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 114, 23), neighbour_ref_369, 'pos')
+            # Getting the type of 'self' (line 114)
+            self_371 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 114, 44), 'self')
+            # Obtaining the member 'pos' of a type (line 114)
+            pos_372 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 114, 44), self_371, 'pos')
+            # Applying the binary operator '!=' (line 114)
+            result_ne_373 = python_operator(stypy.reporting.localization.Localization(__file__, 114, 23), '!=', pos_370, pos_372)
+            
+            
+            # Getting the type of 'neighbour_ref' (line 114)
+            neighbour_ref_374 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 114, 57), 'neighbour_ref')
+            # Obtaining the member 'removestamp' of a type (line 114)
+            removestamp_375 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 114, 57), neighbour_ref_374, 'removestamp')
+            # Getting the type of 'removestamp' (line 114)
+            removestamp_376 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 114, 86), 'removestamp')
+            # Applying the binary operator '!=' (line 114)
+            result_ne_377 = python_operator(stypy.reporting.localization.Localization(__file__, 114, 57), '!=', removestamp_375, removestamp_376)
+            
+            # Applying the binary operator 'and' (line 114)
+            result_and_keyword_378 = python_operator(stypy.reporting.localization.Localization(__file__, 114, 23), 'and', result_ne_373, result_ne_377)
+            
+            # Testing the type of an if condition (line 114)
+            if_condition_379 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 114, 20), result_and_keyword_378)
+            # Assigning a type to the variable 'if_condition_379' (line 114)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 114, 20), 'if_condition_379', if_condition_379)
+            # SSA begins for if statement (line 114)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Attribute (line 115):
+            
+            # Assigning a Name to a Attribute (line 115):
+            # Getting the type of 'removestamp' (line 115)
+            removestamp_380 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 115, 52), 'removestamp')
+            # Getting the type of 'neighbour_ref' (line 115)
+            neighbour_ref_381 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 115, 24), 'neighbour_ref')
+            # Setting the type of the member 'removestamp' of a type (line 115)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 115, 24), neighbour_ref_381, 'removestamp', removestamp_380)
+            
+            # Getting the type of 'neighbour_ref' (line 116)
+            neighbour_ref_382 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 116, 24), 'neighbour_ref')
+            # Obtaining the member 'liberties' of a type (line 116)
+            liberties_383 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 116, 24), neighbour_ref_382, 'liberties')
+            int_384 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 116, 51), 'int')
+            # Applying the binary operator '+=' (line 116)
+            result_iadd_385 = python_operator(stypy.reporting.localization.Localization(__file__, 116, 24), '+=', liberties_383, int_384)
+            # Getting the type of 'neighbour_ref' (line 116)
+            neighbour_ref_386 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 116, 24), 'neighbour_ref')
+            # Setting the type of the member 'liberties' of a type (line 116)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 116, 24), neighbour_ref_386, 'liberties', result_iadd_385)
+            
+            # SSA join for if statement (line 114)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 112)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         # SSA join for if statement (line 110)
         module_type_store = module_type_store.join_ssa_context()
@@ -2445,109 +2465,113 @@ class Square:
         self_387 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 117, 25), 'self')
         # Obtaining the member 'neighbours' of a type (line 117)
         neighbours_388 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 117, 25), self_387, 'neighbours')
+        # Testing if the loop is going to be iterated (line 117)
         # Testing the type of a for loop iterable (line 117)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 117, 8), neighbours_388)
-        # Getting the type of the for loop variable (line 117)
-        for_loop_var_389 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 117, 8), neighbours_388)
-        # Assigning a type to the variable 'neighbour' (line 117)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 117, 8), 'neighbour', for_loop_var_389)
-        # SSA begins for a for statement (line 117)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 118)
-        neighbour_390 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 118, 15), 'neighbour')
-        # Obtaining the member 'color' of a type (line 118)
-        color_391 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 118, 15), neighbour_390, 'color')
-        # Getting the type of 'EMPTY' (line 118)
-        EMPTY_392 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 118, 34), 'EMPTY')
-        # Applying the binary operator '!=' (line 118)
-        result_ne_393 = python_operator(stypy.reporting.localization.Localization(__file__, 118, 15), '!=', color_391, EMPTY_392)
-        
-        # Testing the type of an if condition (line 118)
-        if_condition_394 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 118, 12), result_ne_393)
-        # Assigning a type to the variable 'if_condition_394' (line 118)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 118, 12), 'if_condition_394', if_condition_394)
-        # SSA begins for if statement (line 118)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Call to a Name (line 119):
-        
-        # Assigning a Call to a Name (line 119):
-        
-        # Call to find(...): (line 119)
-        # Processing the call arguments (line 119)
-        # Getting the type of 'update' (line 119)
-        update_397 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 119, 47), 'update', False)
-        # Processing the call keyword arguments (line 119)
-        kwargs_398 = {}
-        # Getting the type of 'neighbour' (line 119)
-        neighbour_395 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 119, 32), 'neighbour', False)
-        # Obtaining the member 'find' of a type (line 119)
-        find_396 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 119, 32), neighbour_395, 'find')
-        # Calling find(args, kwargs) (line 119)
-        find_call_result_399 = invoke(stypy.reporting.localization.Localization(__file__, 119, 32), find_396, *[update_397], **kwargs_398)
-        
-        # Assigning a type to the variable 'neighbour_ref' (line 119)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 119, 16), 'neighbour_ref', find_call_result_399)
-        
-        
-        # Evaluating a boolean operation
-        
-        # Getting the type of 'neighbour_ref' (line 120)
-        neighbour_ref_400 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 120, 19), 'neighbour_ref')
-        # Obtaining the member 'pos' of a type (line 120)
-        pos_401 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 120, 19), neighbour_ref_400, 'pos')
-        # Getting the type of 'reference' (line 120)
-        reference_402 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 120, 40), 'reference')
-        # Obtaining the member 'pos' of a type (line 120)
-        pos_403 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 120, 40), reference_402, 'pos')
-        # Applying the binary operator '==' (line 120)
-        result_eq_404 = python_operator(stypy.reporting.localization.Localization(__file__, 120, 19), '==', pos_401, pos_403)
-        
-        
-        # Getting the type of 'neighbour' (line 120)
-        neighbour_405 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 120, 58), 'neighbour')
-        # Obtaining the member 'timestamp2' of a type (line 120)
-        timestamp2_406 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 120, 58), neighbour_405, 'timestamp2')
-        # Getting the type of 'TIMESTAMP' (line 120)
-        TIMESTAMP_407 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 120, 82), 'TIMESTAMP')
-        # Applying the binary operator '!=' (line 120)
-        result_ne_408 = python_operator(stypy.reporting.localization.Localization(__file__, 120, 58), '!=', timestamp2_406, TIMESTAMP_407)
-        
-        # Applying the binary operator 'and' (line 120)
-        result_and_keyword_409 = python_operator(stypy.reporting.localization.Localization(__file__, 120, 19), 'and', result_eq_404, result_ne_408)
-        
-        # Testing the type of an if condition (line 120)
-        if_condition_410 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 120, 16), result_and_keyword_409)
-        # Assigning a type to the variable 'if_condition_410' (line 120)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 120, 16), 'if_condition_410', if_condition_410)
-        # SSA begins for if statement (line 120)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Call to remove(...): (line 121)
-        # Processing the call arguments (line 121)
-        # Getting the type of 'reference' (line 121)
-        reference_413 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 121, 37), 'reference', False)
-        # Getting the type of 'update' (line 121)
-        update_414 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 121, 48), 'update', False)
-        # Processing the call keyword arguments (line 121)
-        kwargs_415 = {}
-        # Getting the type of 'neighbour' (line 121)
-        neighbour_411 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 121, 20), 'neighbour', False)
-        # Obtaining the member 'remove' of a type (line 121)
-        remove_412 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 121, 20), neighbour_411, 'remove')
-        # Calling remove(args, kwargs) (line 121)
-        remove_call_result_416 = invoke(stypy.reporting.localization.Localization(__file__, 121, 20), remove_412, *[reference_413, update_414], **kwargs_415)
-        
-        # SSA join for if statement (line 120)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 118)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 117, 8), neighbours_388):
+            # Getting the type of the for loop variable (line 117)
+            for_loop_var_389 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 117, 8), neighbours_388)
+            # Assigning a type to the variable 'neighbour' (line 117)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 117, 8), 'neighbour', for_loop_var_389)
+            # SSA begins for a for statement (line 117)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'neighbour' (line 118)
+            neighbour_390 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 118, 15), 'neighbour')
+            # Obtaining the member 'color' of a type (line 118)
+            color_391 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 118, 15), neighbour_390, 'color')
+            # Getting the type of 'EMPTY' (line 118)
+            EMPTY_392 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 118, 34), 'EMPTY')
+            # Applying the binary operator '!=' (line 118)
+            result_ne_393 = python_operator(stypy.reporting.localization.Localization(__file__, 118, 15), '!=', color_391, EMPTY_392)
+            
+            # Testing the type of an if condition (line 118)
+            if_condition_394 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 118, 12), result_ne_393)
+            # Assigning a type to the variable 'if_condition_394' (line 118)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 118, 12), 'if_condition_394', if_condition_394)
+            # SSA begins for if statement (line 118)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Call to a Name (line 119):
+            
+            # Assigning a Call to a Name (line 119):
+            
+            # Call to find(...): (line 119)
+            # Processing the call arguments (line 119)
+            # Getting the type of 'update' (line 119)
+            update_397 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 119, 47), 'update', False)
+            # Processing the call keyword arguments (line 119)
+            kwargs_398 = {}
+            # Getting the type of 'neighbour' (line 119)
+            neighbour_395 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 119, 32), 'neighbour', False)
+            # Obtaining the member 'find' of a type (line 119)
+            find_396 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 119, 32), neighbour_395, 'find')
+            # Calling find(args, kwargs) (line 119)
+            find_call_result_399 = invoke(stypy.reporting.localization.Localization(__file__, 119, 32), find_396, *[update_397], **kwargs_398)
+            
+            # Assigning a type to the variable 'neighbour_ref' (line 119)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 119, 16), 'neighbour_ref', find_call_result_399)
+            
+            
+            # Evaluating a boolean operation
+            
+            # Getting the type of 'neighbour_ref' (line 120)
+            neighbour_ref_400 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 120, 19), 'neighbour_ref')
+            # Obtaining the member 'pos' of a type (line 120)
+            pos_401 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 120, 19), neighbour_ref_400, 'pos')
+            # Getting the type of 'reference' (line 120)
+            reference_402 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 120, 40), 'reference')
+            # Obtaining the member 'pos' of a type (line 120)
+            pos_403 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 120, 40), reference_402, 'pos')
+            # Applying the binary operator '==' (line 120)
+            result_eq_404 = python_operator(stypy.reporting.localization.Localization(__file__, 120, 19), '==', pos_401, pos_403)
+            
+            
+            # Getting the type of 'neighbour' (line 120)
+            neighbour_405 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 120, 58), 'neighbour')
+            # Obtaining the member 'timestamp2' of a type (line 120)
+            timestamp2_406 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 120, 58), neighbour_405, 'timestamp2')
+            # Getting the type of 'TIMESTAMP' (line 120)
+            TIMESTAMP_407 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 120, 82), 'TIMESTAMP')
+            # Applying the binary operator '!=' (line 120)
+            result_ne_408 = python_operator(stypy.reporting.localization.Localization(__file__, 120, 58), '!=', timestamp2_406, TIMESTAMP_407)
+            
+            # Applying the binary operator 'and' (line 120)
+            result_and_keyword_409 = python_operator(stypy.reporting.localization.Localization(__file__, 120, 19), 'and', result_eq_404, result_ne_408)
+            
+            # Testing the type of an if condition (line 120)
+            if_condition_410 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 120, 16), result_and_keyword_409)
+            # Assigning a type to the variable 'if_condition_410' (line 120)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 120, 16), 'if_condition_410', if_condition_410)
+            # SSA begins for if statement (line 120)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Call to remove(...): (line 121)
+            # Processing the call arguments (line 121)
+            # Getting the type of 'reference' (line 121)
+            reference_413 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 121, 37), 'reference', False)
+            # Getting the type of 'update' (line 121)
+            update_414 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 121, 48), 'update', False)
+            # Processing the call keyword arguments (line 121)
+            kwargs_415 = {}
+            # Getting the type of 'neighbour' (line 121)
+            neighbour_411 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 121, 20), 'neighbour', False)
+            # Obtaining the member 'remove' of a type (line 121)
+            remove_412 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 121, 20), neighbour_411, 'remove')
+            # Calling remove(args, kwargs) (line 121)
+            remove_call_result_416 = invoke(stypy.reporting.localization.Localization(__file__, 121, 20), remove_412, *[reference_413, update_414], **kwargs_415)
+            
+            # SSA join for if statement (line 120)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 118)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # ################# End of 'remove(...)' code ##################
@@ -3499,41 +3523,45 @@ class ZobristHash:
         board_571 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 171, 22), self_570, 'board')
         # Obtaining the member 'squares' of a type (line 171)
         squares_572 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 171, 22), board_571, 'squares')
+        # Testing if the loop is going to be iterated (line 171)
         # Testing the type of a for loop iterable (line 171)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 171, 8), squares_572)
-        # Getting the type of the for loop variable (line 171)
-        for_loop_var_573 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 171, 8), squares_572)
-        # Assigning a type to the variable 'square' (line 171)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 171, 8), 'square', for_loop_var_573)
-        # SSA begins for a for statement (line 171)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Getting the type of 'self' (line 172)
-        self_574 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 172, 12), 'self')
-        # Obtaining the member 'hash' of a type (line 172)
-        hash_575 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 172, 12), self_574, 'hash')
-        
-        # Obtaining the type of the subscript
-        # Getting the type of 'EMPTY' (line 172)
-        EMPTY_576 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 172, 48), 'EMPTY')
-        # Getting the type of 'square' (line 172)
-        square_577 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 172, 25), 'square')
-        # Obtaining the member 'zobrist_strings' of a type (line 172)
-        zobrist_strings_578 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 172, 25), square_577, 'zobrist_strings')
-        # Obtaining the member '__getitem__' of a type (line 172)
-        getitem___579 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 172, 25), zobrist_strings_578, '__getitem__')
-        # Calling the subscript (__getitem__) to obtain the elements type (line 172)
-        subscript_call_result_580 = invoke(stypy.reporting.localization.Localization(__file__, 172, 25), getitem___579, EMPTY_576)
-        
-        # Applying the binary operator '^=' (line 172)
-        result_ixor_581 = python_operator(stypy.reporting.localization.Localization(__file__, 172, 12), '^=', hash_575, subscript_call_result_580)
-        # Getting the type of 'self' (line 172)
-        self_582 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 172, 12), 'self')
-        # Setting the type of the member 'hash' of a type (line 172)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 172, 12), self_582, 'hash', result_ixor_581)
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 171, 8), squares_572):
+            # Getting the type of the for loop variable (line 171)
+            for_loop_var_573 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 171, 8), squares_572)
+            # Assigning a type to the variable 'square' (line 171)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 171, 8), 'square', for_loop_var_573)
+            # SSA begins for a for statement (line 171)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            # Getting the type of 'self' (line 172)
+            self_574 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 172, 12), 'self')
+            # Obtaining the member 'hash' of a type (line 172)
+            hash_575 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 172, 12), self_574, 'hash')
+            
+            # Obtaining the type of the subscript
+            # Getting the type of 'EMPTY' (line 172)
+            EMPTY_576 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 172, 48), 'EMPTY')
+            # Getting the type of 'square' (line 172)
+            square_577 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 172, 25), 'square')
+            # Obtaining the member 'zobrist_strings' of a type (line 172)
+            zobrist_strings_578 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 172, 25), square_577, 'zobrist_strings')
+            # Obtaining the member '__getitem__' of a type (line 172)
+            getitem___579 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 172, 25), zobrist_strings_578, '__getitem__')
+            # Calling the subscript (__getitem__) to obtain the elements type (line 172)
+            subscript_call_result_580 = invoke(stypy.reporting.localization.Localization(__file__, 172, 25), getitem___579, EMPTY_576)
+            
+            # Applying the binary operator '^=' (line 172)
+            result_ixor_581 = python_operator(stypy.reporting.localization.Localization(__file__, 172, 12), '^=', hash_575, subscript_call_result_580)
+            # Getting the type of 'self' (line 172)
+            self_582 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 172, 12), 'self')
+            # Setting the type of the member 'hash' of a type (line 172)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 172, 12), self_582, 'hash', result_ixor_581)
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # Call to clear(...): (line 173)
@@ -3915,27 +3943,31 @@ class Board:
         self_643 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 190, 22), 'self')
         # Obtaining the member 'squares' of a type (line 190)
         squares_644 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 190, 22), self_643, 'squares')
+        # Testing if the loop is going to be iterated (line 190)
         # Testing the type of a for loop iterable (line 190)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 190, 8), squares_644)
-        # Getting the type of the for loop variable (line 190)
-        for_loop_var_645 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 190, 8), squares_644)
-        # Assigning a type to the variable 'square' (line 190)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 190, 8), 'square', for_loop_var_645)
-        # SSA begins for a for statement (line 190)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Call to set_neighbours(...): (line 191)
-        # Processing the call keyword arguments (line 191)
-        kwargs_648 = {}
-        # Getting the type of 'square' (line 191)
-        square_646 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 191, 12), 'square', False)
-        # Obtaining the member 'set_neighbours' of a type (line 191)
-        set_neighbours_647 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 191, 12), square_646, 'set_neighbours')
-        # Calling set_neighbours(args, kwargs) (line 191)
-        set_neighbours_call_result_649 = invoke(stypy.reporting.localization.Localization(__file__, 191, 12), set_neighbours_647, *[], **kwargs_648)
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 190, 8), squares_644):
+            # Getting the type of the for loop variable (line 190)
+            for_loop_var_645 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 190, 8), squares_644)
+            # Assigning a type to the variable 'square' (line 190)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 190, 8), 'square', for_loop_var_645)
+            # SSA begins for a for statement (line 190)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            # Call to set_neighbours(...): (line 191)
+            # Processing the call keyword arguments (line 191)
+            kwargs_648 = {}
+            # Getting the type of 'square' (line 191)
+            square_646 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 191, 12), 'square', False)
+            # Obtaining the member 'set_neighbours' of a type (line 191)
+            set_neighbours_647 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 191, 12), square_646, 'set_neighbours')
+            # Calling set_neighbours(args, kwargs) (line 191)
+            set_neighbours_call_result_649 = invoke(stypy.reporting.localization.Localization(__file__, 191, 12), set_neighbours_647, *[], **kwargs_648)
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # Call to reset(...): (line 192)
@@ -4001,36 +4033,40 @@ class Board:
         self_654 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 195, 22), 'self')
         # Obtaining the member 'squares' of a type (line 195)
         squares_655 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 195, 22), self_654, 'squares')
+        # Testing if the loop is going to be iterated (line 195)
         # Testing the type of a for loop iterable (line 195)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 195, 8), squares_655)
-        # Getting the type of the for loop variable (line 195)
-        for_loop_var_656 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 195, 8), squares_655)
-        # Assigning a type to the variable 'square' (line 195)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 195, 8), 'square', for_loop_var_656)
-        # SSA begins for a for statement (line 195)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Assigning a Name to a Attribute (line 196):
-        
-        # Assigning a Name to a Attribute (line 196):
-        # Getting the type of 'EMPTY' (line 196)
-        EMPTY_657 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 196, 27), 'EMPTY')
-        # Getting the type of 'square' (line 196)
-        square_658 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 196, 12), 'square')
-        # Setting the type of the member 'color' of a type (line 196)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 196, 12), square_658, 'color', EMPTY_657)
-        
-        # Assigning a Name to a Attribute (line 197):
-        
-        # Assigning a Name to a Attribute (line 197):
-        # Getting the type of 'False' (line 197)
-        False_659 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 197, 26), 'False')
-        # Getting the type of 'square' (line 197)
-        square_660 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 197, 12), 'square')
-        # Setting the type of the member 'used' of a type (line 197)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 197, 12), square_660, 'used', False_659)
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 195, 8), squares_655):
+            # Getting the type of the for loop variable (line 195)
+            for_loop_var_656 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 195, 8), squares_655)
+            # Assigning a type to the variable 'square' (line 195)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 195, 8), 'square', for_loop_var_656)
+            # SSA begins for a for statement (line 195)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            # Assigning a Name to a Attribute (line 196):
+            
+            # Assigning a Name to a Attribute (line 196):
+            # Getting the type of 'EMPTY' (line 196)
+            EMPTY_657 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 196, 27), 'EMPTY')
+            # Getting the type of 'square' (line 196)
+            square_658 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 196, 12), 'square')
+            # Setting the type of the member 'color' of a type (line 196)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 196, 12), square_658, 'color', EMPTY_657)
+            
+            # Assigning a Name to a Attribute (line 197):
+            
+            # Assigning a Name to a Attribute (line 197):
+            # Getting the type of 'False' (line 197)
+            False_659 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 197, 26), 'False')
+            # Getting the type of 'square' (line 197)
+            square_660 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 197, 12), 'square')
+            # Setting the type of the member 'used' of a type (line 197)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 197, 12), square_660, 'used', False_659)
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # Assigning a Call to a Attribute (line 198):
@@ -4519,40 +4555,44 @@ class Board:
         square_743 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 227, 29), 'square')
         # Obtaining the member 'neighbours' of a type (line 227)
         neighbours_744 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 227, 29), square_743, 'neighbours')
+        # Testing if the loop is going to be iterated (line 227)
         # Testing the type of a for loop iterable (line 227)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 227, 12), neighbours_744)
-        # Getting the type of the for loop variable (line 227)
-        for_loop_var_745 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 227, 12), neighbours_744)
-        # Assigning a type to the variable 'neighbour' (line 227)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 227, 12), 'neighbour', for_loop_var_745)
-        # SSA begins for a for statement (line 227)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 228)
-        neighbour_746 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 228, 19), 'neighbour')
-        # Obtaining the member 'color' of a type (line 228)
-        color_747 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 228, 19), neighbour_746, 'color')
-        # Getting the type of 'EMPTY' (line 228)
-        EMPTY_748 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 228, 38), 'EMPTY')
-        # Applying the binary operator '==' (line 228)
-        result_eq_749 = python_operator(stypy.reporting.localization.Localization(__file__, 228, 19), '==', color_747, EMPTY_748)
-        
-        # Testing the type of an if condition (line 228)
-        if_condition_750 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 228, 16), result_eq_749)
-        # Assigning a type to the variable 'if_condition_750' (line 228)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 228, 16), 'if_condition_750', if_condition_750)
-        # SSA begins for if statement (line 228)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        # Getting the type of 'True' (line 229)
-        True_751 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 229, 27), 'True')
-        # Assigning a type to the variable 'stypy_return_type' (line 229)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 229, 20), 'stypy_return_type', True_751)
-        # SSA join for if statement (line 228)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 227, 12), neighbours_744):
+            # Getting the type of the for loop variable (line 227)
+            for_loop_var_745 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 227, 12), neighbours_744)
+            # Assigning a type to the variable 'neighbour' (line 227)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 227, 12), 'neighbour', for_loop_var_745)
+            # SSA begins for a for statement (line 227)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'neighbour' (line 228)
+            neighbour_746 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 228, 19), 'neighbour')
+            # Obtaining the member 'color' of a type (line 228)
+            color_747 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 228, 19), neighbour_746, 'color')
+            # Getting the type of 'EMPTY' (line 228)
+            EMPTY_748 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 228, 38), 'EMPTY')
+            # Applying the binary operator '==' (line 228)
+            result_eq_749 = python_operator(stypy.reporting.localization.Localization(__file__, 228, 19), '==', color_747, EMPTY_748)
+            
+            # Testing the type of an if condition (line 228)
+            if_condition_750 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 228, 16), result_eq_749)
+            # Assigning a type to the variable 'if_condition_750' (line 228)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 228, 16), 'if_condition_750', if_condition_750)
+            # SSA begins for if statement (line 228)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            # Getting the type of 'True' (line 229)
+            True_751 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 229, 27), 'True')
+            # Assigning a type to the variable 'stypy_return_type' (line 229)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 229, 20), 'stypy_return_type', True_751)
+            # SSA join for if statement (line 228)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         # SSA join for if statement (line 226)
         module_type_store = module_type_store.join_ssa_context()
@@ -4744,214 +4784,218 @@ class Board:
         square_785 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 241, 25), 'square')
         # Obtaining the member 'neighbours' of a type (line 241)
         neighbours_786 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 241, 25), square_785, 'neighbours')
+        # Testing if the loop is going to be iterated (line 241)
         # Testing the type of a for loop iterable (line 241)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 241, 8), neighbours_786)
-        # Getting the type of the for loop variable (line 241)
-        for_loop_var_787 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 241, 8), neighbours_786)
-        # Assigning a type to the variable 'neighbour' (line 241)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 241, 8), 'neighbour', for_loop_var_787)
-        # SSA begins for a for statement (line 241)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 242)
-        neighbour_788 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 242, 15), 'neighbour')
-        # Obtaining the member 'color' of a type (line 242)
-        color_789 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 242, 15), neighbour_788, 'color')
-        # Getting the type of 'EMPTY' (line 242)
-        EMPTY_790 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 242, 34), 'EMPTY')
-        # Applying the binary operator '==' (line 242)
-        result_eq_791 = python_operator(stypy.reporting.localization.Localization(__file__, 242, 15), '==', color_789, EMPTY_790)
-        
-        # Testing the type of an if condition (line 242)
-        if_condition_792 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 242, 12), result_eq_791)
-        # Assigning a type to the variable 'if_condition_792' (line 242)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 242, 12), 'if_condition_792', if_condition_792)
-        # SSA begins for if statement (line 242)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'empties' (line 243)
-        empties_793 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 243, 16), 'empties')
-        int_794 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 243, 27), 'int')
-        # Applying the binary operator '+=' (line 243)
-        result_iadd_795 = python_operator(stypy.reporting.localization.Localization(__file__, 243, 16), '+=', empties_793, int_794)
-        # Assigning a type to the variable 'empties' (line 243)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 243, 16), 'empties', result_iadd_795)
-        
-        # SSA branch for the else part of an if statement (line 242)
-        module_type_store.open_ssa_branch('else')
-        
-        # Assigning a Call to a Name (line 245):
-        
-        # Assigning a Call to a Name (line 245):
-        
-        # Call to find(...): (line 245)
-        # Processing the call keyword arguments (line 245)
-        kwargs_798 = {}
-        # Getting the type of 'neighbour' (line 245)
-        neighbour_796 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 245, 32), 'neighbour', False)
-        # Obtaining the member 'find' of a type (line 245)
-        find_797 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 245, 32), neighbour_796, 'find')
-        # Calling find(args, kwargs) (line 245)
-        find_call_result_799 = invoke(stypy.reporting.localization.Localization(__file__, 245, 32), find_797, *[], **kwargs_798)
-        
-        # Assigning a type to the variable 'neighbour_ref' (line 245)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 245, 16), 'neighbour_ref', find_call_result_799)
-        
-        
-        # Getting the type of 'neighbour_ref' (line 246)
-        neighbour_ref_800 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 246, 19), 'neighbour_ref')
-        # Obtaining the member 'timestamp' of a type (line 246)
-        timestamp_801 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 246, 19), neighbour_ref_800, 'timestamp')
-        # Getting the type of 'TIMESTAMP' (line 246)
-        TIMESTAMP_802 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 246, 46), 'TIMESTAMP')
-        # Applying the binary operator '!=' (line 246)
-        result_ne_803 = python_operator(stypy.reporting.localization.Localization(__file__, 246, 19), '!=', timestamp_801, TIMESTAMP_802)
-        
-        # Testing the type of an if condition (line 246)
-        if_condition_804 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 246, 16), result_ne_803)
-        # Assigning a type to the variable 'if_condition_804' (line 246)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 246, 16), 'if_condition_804', if_condition_804)
-        # SSA begins for if statement (line 246)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Attribute (line 247):
-        
-        # Assigning a Name to a Attribute (line 247):
-        # Getting the type of 'TIMESTAMP' (line 247)
-        TIMESTAMP_805 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 247, 46), 'TIMESTAMP')
-        # Getting the type of 'neighbour_ref' (line 247)
-        neighbour_ref_806 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 247, 20), 'neighbour_ref')
-        # Setting the type of the member 'timestamp' of a type (line 247)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 247, 20), neighbour_ref_806, 'timestamp', TIMESTAMP_805)
-        
-        # Assigning a Compare to a Name (line 248):
-        
-        # Assigning a Compare to a Name (line 248):
-        
-        # Getting the type of 'neighbour_ref' (line 248)
-        neighbour_ref_807 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 248, 28), 'neighbour_ref')
-        # Obtaining the member 'liberties' of a type (line 248)
-        liberties_808 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 248, 28), neighbour_ref_807, 'liberties')
-        int_809 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 248, 55), 'int')
-        # Applying the binary operator '==' (line 248)
-        result_eq_810 = python_operator(stypy.reporting.localization.Localization(__file__, 248, 28), '==', liberties_808, int_809)
-        
-        # Assigning a type to the variable 'weak' (line 248)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 248, 20), 'weak', result_eq_810)
-        
-        
-        # Getting the type of 'neighbour' (line 249)
-        neighbour_811 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 249, 23), 'neighbour')
-        # Obtaining the member 'color' of a type (line 249)
-        color_812 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 249, 23), neighbour_811, 'color')
-        # Getting the type of 'self' (line 249)
-        self_813 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 249, 42), 'self')
-        # Obtaining the member 'color' of a type (line 249)
-        color_814 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 249, 42), self_813, 'color')
-        # Applying the binary operator '==' (line 249)
-        result_eq_815 = python_operator(stypy.reporting.localization.Localization(__file__, 249, 23), '==', color_812, color_814)
-        
-        # Testing the type of an if condition (line 249)
-        if_condition_816 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 249, 20), result_eq_815)
-        # Assigning a type to the variable 'if_condition_816' (line 249)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 249, 20), 'if_condition_816', if_condition_816)
-        # SSA begins for if statement (line 249)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'weak' (line 250)
-        weak_817 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 250, 27), 'weak')
-        # Testing the type of an if condition (line 250)
-        if_condition_818 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 250, 24), weak_817)
-        # Assigning a type to the variable 'if_condition_818' (line 250)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 250, 24), 'if_condition_818', if_condition_818)
-        # SSA begins for if statement (line 250)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'weak_neighs' (line 251)
-        weak_neighs_819 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 251, 28), 'weak_neighs')
-        int_820 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 251, 43), 'int')
-        # Applying the binary operator '+=' (line 251)
-        result_iadd_821 = python_operator(stypy.reporting.localization.Localization(__file__, 251, 28), '+=', weak_neighs_819, int_820)
-        # Assigning a type to the variable 'weak_neighs' (line 251)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 251, 28), 'weak_neighs', result_iadd_821)
-        
-        # SSA branch for the else part of an if statement (line 250)
-        module_type_store.open_ssa_branch('else')
-        
-        # Getting the type of 'strong_neighs' (line 253)
-        strong_neighs_822 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 253, 28), 'strong_neighs')
-        int_823 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 253, 45), 'int')
-        # Applying the binary operator '+=' (line 253)
-        result_iadd_824 = python_operator(stypy.reporting.localization.Localization(__file__, 253, 28), '+=', strong_neighs_822, int_823)
-        # Assigning a type to the variable 'strong_neighs' (line 253)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 253, 28), 'strong_neighs', result_iadd_824)
-        
-        # SSA join for if statement (line 250)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA branch for the else part of an if statement (line 249)
-        module_type_store.open_ssa_branch('else')
-        
-        # Getting the type of 'weak' (line 255)
-        weak_825 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 255, 27), 'weak')
-        # Testing the type of an if condition (line 255)
-        if_condition_826 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 255, 24), weak_825)
-        # Assigning a type to the variable 'if_condition_826' (line 255)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 255, 24), 'if_condition_826', if_condition_826)
-        # SSA begins for if statement (line 255)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'weak_opps' (line 256)
-        weak_opps_827 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 256, 28), 'weak_opps')
-        int_828 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 256, 41), 'int')
-        # Applying the binary operator '+=' (line 256)
-        result_iadd_829 = python_operator(stypy.reporting.localization.Localization(__file__, 256, 28), '+=', weak_opps_827, int_828)
-        # Assigning a type to the variable 'weak_opps' (line 256)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 256, 28), 'weak_opps', result_iadd_829)
-        
-        
-        # Call to remove(...): (line 257)
-        # Processing the call arguments (line 257)
-        # Getting the type of 'neighbour_ref' (line 257)
-        neighbour_ref_832 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 257, 49), 'neighbour_ref', False)
-        # Processing the call keyword arguments (line 257)
-        # Getting the type of 'False' (line 257)
-        False_833 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 257, 71), 'False', False)
-        keyword_834 = False_833
-        kwargs_835 = {'update': keyword_834}
-        # Getting the type of 'neighbour_ref' (line 257)
-        neighbour_ref_830 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 257, 28), 'neighbour_ref', False)
-        # Obtaining the member 'remove' of a type (line 257)
-        remove_831 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 257, 28), neighbour_ref_830, 'remove')
-        # Calling remove(args, kwargs) (line 257)
-        remove_call_result_836 = invoke(stypy.reporting.localization.Localization(__file__, 257, 28), remove_831, *[neighbour_ref_832], **kwargs_835)
-        
-        # SSA branch for the else part of an if statement (line 255)
-        module_type_store.open_ssa_branch('else')
-        
-        # Getting the type of 'strong_opps' (line 259)
-        strong_opps_837 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 259, 28), 'strong_opps')
-        int_838 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 259, 43), 'int')
-        # Applying the binary operator '+=' (line 259)
-        result_iadd_839 = python_operator(stypy.reporting.localization.Localization(__file__, 259, 28), '+=', strong_opps_837, int_838)
-        # Assigning a type to the variable 'strong_opps' (line 259)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 259, 28), 'strong_opps', result_iadd_839)
-        
-        # SSA join for if statement (line 255)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 249)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 246)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 242)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 241, 8), neighbours_786):
+            # Getting the type of the for loop variable (line 241)
+            for_loop_var_787 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 241, 8), neighbours_786)
+            # Assigning a type to the variable 'neighbour' (line 241)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 241, 8), 'neighbour', for_loop_var_787)
+            # SSA begins for a for statement (line 241)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'neighbour' (line 242)
+            neighbour_788 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 242, 15), 'neighbour')
+            # Obtaining the member 'color' of a type (line 242)
+            color_789 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 242, 15), neighbour_788, 'color')
+            # Getting the type of 'EMPTY' (line 242)
+            EMPTY_790 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 242, 34), 'EMPTY')
+            # Applying the binary operator '==' (line 242)
+            result_eq_791 = python_operator(stypy.reporting.localization.Localization(__file__, 242, 15), '==', color_789, EMPTY_790)
+            
+            # Testing the type of an if condition (line 242)
+            if_condition_792 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 242, 12), result_eq_791)
+            # Assigning a type to the variable 'if_condition_792' (line 242)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 242, 12), 'if_condition_792', if_condition_792)
+            # SSA begins for if statement (line 242)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Getting the type of 'empties' (line 243)
+            empties_793 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 243, 16), 'empties')
+            int_794 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 243, 27), 'int')
+            # Applying the binary operator '+=' (line 243)
+            result_iadd_795 = python_operator(stypy.reporting.localization.Localization(__file__, 243, 16), '+=', empties_793, int_794)
+            # Assigning a type to the variable 'empties' (line 243)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 243, 16), 'empties', result_iadd_795)
+            
+            # SSA branch for the else part of an if statement (line 242)
+            module_type_store.open_ssa_branch('else')
+            
+            # Assigning a Call to a Name (line 245):
+            
+            # Assigning a Call to a Name (line 245):
+            
+            # Call to find(...): (line 245)
+            # Processing the call keyword arguments (line 245)
+            kwargs_798 = {}
+            # Getting the type of 'neighbour' (line 245)
+            neighbour_796 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 245, 32), 'neighbour', False)
+            # Obtaining the member 'find' of a type (line 245)
+            find_797 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 245, 32), neighbour_796, 'find')
+            # Calling find(args, kwargs) (line 245)
+            find_call_result_799 = invoke(stypy.reporting.localization.Localization(__file__, 245, 32), find_797, *[], **kwargs_798)
+            
+            # Assigning a type to the variable 'neighbour_ref' (line 245)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 245, 16), 'neighbour_ref', find_call_result_799)
+            
+            
+            # Getting the type of 'neighbour_ref' (line 246)
+            neighbour_ref_800 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 246, 19), 'neighbour_ref')
+            # Obtaining the member 'timestamp' of a type (line 246)
+            timestamp_801 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 246, 19), neighbour_ref_800, 'timestamp')
+            # Getting the type of 'TIMESTAMP' (line 246)
+            TIMESTAMP_802 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 246, 46), 'TIMESTAMP')
+            # Applying the binary operator '!=' (line 246)
+            result_ne_803 = python_operator(stypy.reporting.localization.Localization(__file__, 246, 19), '!=', timestamp_801, TIMESTAMP_802)
+            
+            # Testing the type of an if condition (line 246)
+            if_condition_804 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 246, 16), result_ne_803)
+            # Assigning a type to the variable 'if_condition_804' (line 246)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 246, 16), 'if_condition_804', if_condition_804)
+            # SSA begins for if statement (line 246)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Attribute (line 247):
+            
+            # Assigning a Name to a Attribute (line 247):
+            # Getting the type of 'TIMESTAMP' (line 247)
+            TIMESTAMP_805 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 247, 46), 'TIMESTAMP')
+            # Getting the type of 'neighbour_ref' (line 247)
+            neighbour_ref_806 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 247, 20), 'neighbour_ref')
+            # Setting the type of the member 'timestamp' of a type (line 247)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 247, 20), neighbour_ref_806, 'timestamp', TIMESTAMP_805)
+            
+            # Assigning a Compare to a Name (line 248):
+            
+            # Assigning a Compare to a Name (line 248):
+            
+            # Getting the type of 'neighbour_ref' (line 248)
+            neighbour_ref_807 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 248, 28), 'neighbour_ref')
+            # Obtaining the member 'liberties' of a type (line 248)
+            liberties_808 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 248, 28), neighbour_ref_807, 'liberties')
+            int_809 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 248, 55), 'int')
+            # Applying the binary operator '==' (line 248)
+            result_eq_810 = python_operator(stypy.reporting.localization.Localization(__file__, 248, 28), '==', liberties_808, int_809)
+            
+            # Assigning a type to the variable 'weak' (line 248)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 248, 20), 'weak', result_eq_810)
+            
+            
+            # Getting the type of 'neighbour' (line 249)
+            neighbour_811 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 249, 23), 'neighbour')
+            # Obtaining the member 'color' of a type (line 249)
+            color_812 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 249, 23), neighbour_811, 'color')
+            # Getting the type of 'self' (line 249)
+            self_813 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 249, 42), 'self')
+            # Obtaining the member 'color' of a type (line 249)
+            color_814 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 249, 42), self_813, 'color')
+            # Applying the binary operator '==' (line 249)
+            result_eq_815 = python_operator(stypy.reporting.localization.Localization(__file__, 249, 23), '==', color_812, color_814)
+            
+            # Testing the type of an if condition (line 249)
+            if_condition_816 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 249, 20), result_eq_815)
+            # Assigning a type to the variable 'if_condition_816' (line 249)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 249, 20), 'if_condition_816', if_condition_816)
+            # SSA begins for if statement (line 249)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Getting the type of 'weak' (line 250)
+            weak_817 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 250, 27), 'weak')
+            # Testing the type of an if condition (line 250)
+            if_condition_818 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 250, 24), weak_817)
+            # Assigning a type to the variable 'if_condition_818' (line 250)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 250, 24), 'if_condition_818', if_condition_818)
+            # SSA begins for if statement (line 250)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Getting the type of 'weak_neighs' (line 251)
+            weak_neighs_819 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 251, 28), 'weak_neighs')
+            int_820 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 251, 43), 'int')
+            # Applying the binary operator '+=' (line 251)
+            result_iadd_821 = python_operator(stypy.reporting.localization.Localization(__file__, 251, 28), '+=', weak_neighs_819, int_820)
+            # Assigning a type to the variable 'weak_neighs' (line 251)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 251, 28), 'weak_neighs', result_iadd_821)
+            
+            # SSA branch for the else part of an if statement (line 250)
+            module_type_store.open_ssa_branch('else')
+            
+            # Getting the type of 'strong_neighs' (line 253)
+            strong_neighs_822 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 253, 28), 'strong_neighs')
+            int_823 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 253, 45), 'int')
+            # Applying the binary operator '+=' (line 253)
+            result_iadd_824 = python_operator(stypy.reporting.localization.Localization(__file__, 253, 28), '+=', strong_neighs_822, int_823)
+            # Assigning a type to the variable 'strong_neighs' (line 253)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 253, 28), 'strong_neighs', result_iadd_824)
+            
+            # SSA join for if statement (line 250)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA branch for the else part of an if statement (line 249)
+            module_type_store.open_ssa_branch('else')
+            
+            # Getting the type of 'weak' (line 255)
+            weak_825 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 255, 27), 'weak')
+            # Testing the type of an if condition (line 255)
+            if_condition_826 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 255, 24), weak_825)
+            # Assigning a type to the variable 'if_condition_826' (line 255)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 255, 24), 'if_condition_826', if_condition_826)
+            # SSA begins for if statement (line 255)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Getting the type of 'weak_opps' (line 256)
+            weak_opps_827 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 256, 28), 'weak_opps')
+            int_828 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 256, 41), 'int')
+            # Applying the binary operator '+=' (line 256)
+            result_iadd_829 = python_operator(stypy.reporting.localization.Localization(__file__, 256, 28), '+=', weak_opps_827, int_828)
+            # Assigning a type to the variable 'weak_opps' (line 256)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 256, 28), 'weak_opps', result_iadd_829)
+            
+            
+            # Call to remove(...): (line 257)
+            # Processing the call arguments (line 257)
+            # Getting the type of 'neighbour_ref' (line 257)
+            neighbour_ref_832 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 257, 49), 'neighbour_ref', False)
+            # Processing the call keyword arguments (line 257)
+            # Getting the type of 'False' (line 257)
+            False_833 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 257, 71), 'False', False)
+            keyword_834 = False_833
+            kwargs_835 = {'update': keyword_834}
+            # Getting the type of 'neighbour_ref' (line 257)
+            neighbour_ref_830 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 257, 28), 'neighbour_ref', False)
+            # Obtaining the member 'remove' of a type (line 257)
+            remove_831 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 257, 28), neighbour_ref_830, 'remove')
+            # Calling remove(args, kwargs) (line 257)
+            remove_call_result_836 = invoke(stypy.reporting.localization.Localization(__file__, 257, 28), remove_831, *[neighbour_ref_832], **kwargs_835)
+            
+            # SSA branch for the else part of an if statement (line 255)
+            module_type_store.open_ssa_branch('else')
+            
+            # Getting the type of 'strong_opps' (line 259)
+            strong_opps_837 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 259, 28), 'strong_opps')
+            int_838 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 259, 43), 'int')
+            # Applying the binary operator '+=' (line 259)
+            result_iadd_839 = python_operator(stypy.reporting.localization.Localization(__file__, 259, 28), '+=', strong_opps_837, int_838)
+            # Assigning a type to the variable 'strong_opps' (line 259)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 259, 28), 'strong_opps', result_iadd_839)
+            
+            # SSA join for if statement (line 255)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 249)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 246)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 242)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # Assigning a Call to a Name (line 260):
@@ -5182,30 +5226,34 @@ class Board:
         
         # Getting the type of 'history' (line 269)
         history_876 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 269, 19), 'history')
+        # Testing if the loop is going to be iterated (line 269)
         # Testing the type of a for loop iterable (line 269)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 269, 8), history_876)
-        # Getting the type of the for loop variable (line 269)
-        for_loop_var_877 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 269, 8), history_876)
-        # Assigning a type to the variable 'pos' (line 269)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 269, 8), 'pos', for_loop_var_877)
-        # SSA begins for a for statement (line 269)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Call to move(...): (line 270)
-        # Processing the call arguments (line 270)
-        # Getting the type of 'pos' (line 270)
-        pos_880 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 270, 22), 'pos', False)
-        # Processing the call keyword arguments (line 270)
-        kwargs_881 = {}
-        # Getting the type of 'self' (line 270)
-        self_878 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 270, 12), 'self', False)
-        # Obtaining the member 'move' of a type (line 270)
-        move_879 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 270, 12), self_878, 'move')
-        # Calling move(args, kwargs) (line 270)
-        move_call_result_882 = invoke(stypy.reporting.localization.Localization(__file__, 270, 12), move_879, *[pos_880], **kwargs_881)
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 269, 8), history_876):
+            # Getting the type of the for loop variable (line 269)
+            for_loop_var_877 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 269, 8), history_876)
+            # Assigning a type to the variable 'pos' (line 269)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 269, 8), 'pos', for_loop_var_877)
+            # SSA begins for a for statement (line 269)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            # Call to move(...): (line 270)
+            # Processing the call arguments (line 270)
+            # Getting the type of 'pos' (line 270)
+            pos_880 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 270, 22), 'pos', False)
+            # Processing the call keyword arguments (line 270)
+            kwargs_881 = {}
+            # Getting the type of 'self' (line 270)
+            self_878 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 270, 12), 'self', False)
+            # Obtaining the member 'move' of a type (line 270)
+            move_879 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 270, 12), self_878, 'move')
+            # Calling move(args, kwargs) (line 270)
+            move_call_result_882 = invoke(stypy.reporting.localization.Localization(__file__, 270, 12), move_879, *[pos_880], **kwargs_881)
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # ################# End of 'replay(...)' code ##################
@@ -5314,164 +5362,172 @@ class Board:
         self_894 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 22), 'self')
         # Obtaining the member 'squares' of a type (line 277)
         squares_895 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 277, 22), self_894, 'squares')
+        # Testing if the loop is going to be iterated (line 277)
         # Testing the type of a for loop iterable (line 277)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 277, 8), squares_895)
-        # Getting the type of the for loop variable (line 277)
-        for_loop_var_896 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 277, 8), squares_895)
-        # Assigning a type to the variable 'square' (line 277)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 277, 8), 'square', for_loop_var_896)
-        # SSA begins for a for statement (line 277)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Assigning a Attribute to a Name (line 278):
-        
-        # Assigning a Attribute to a Name (line 278):
-        # Getting the type of 'square' (line 278)
-        square_897 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 26), 'square')
-        # Obtaining the member 'color' of a type (line 278)
-        color_898 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 26), square_897, 'color')
-        # Assigning a type to the variable 'squarecolor' (line 278)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 278, 12), 'squarecolor', color_898)
-        
-        
-        # Getting the type of 'squarecolor' (line 279)
-        squarecolor_899 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 15), 'squarecolor')
-        # Getting the type of 'color' (line 279)
-        color_900 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 30), 'color')
-        # Applying the binary operator '==' (line 279)
-        result_eq_901 = python_operator(stypy.reporting.localization.Localization(__file__, 279, 15), '==', squarecolor_899, color_900)
-        
-        # Testing the type of an if condition (line 279)
-        if_condition_902 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 279, 12), result_eq_901)
-        # Assigning a type to the variable 'if_condition_902' (line 279)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 279, 12), 'if_condition_902', if_condition_902)
-        # SSA begins for if statement (line 279)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'count' (line 280)
-        count_903 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 280, 16), 'count')
-        int_904 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 280, 25), 'int')
-        # Applying the binary operator '+=' (line 280)
-        result_iadd_905 = python_operator(stypy.reporting.localization.Localization(__file__, 280, 16), '+=', count_903, int_904)
-        # Assigning a type to the variable 'count' (line 280)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 280, 16), 'count', result_iadd_905)
-        
-        # SSA branch for the else part of an if statement (line 279)
-        module_type_store.open_ssa_branch('else')
-        
-        
-        # Getting the type of 'squarecolor' (line 281)
-        squarecolor_906 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 17), 'squarecolor')
-        # Getting the type of 'EMPTY' (line 281)
-        EMPTY_907 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 32), 'EMPTY')
-        # Applying the binary operator '==' (line 281)
-        result_eq_908 = python_operator(stypy.reporting.localization.Localization(__file__, 281, 17), '==', squarecolor_906, EMPTY_907)
-        
-        # Testing the type of an if condition (line 281)
-        if_condition_909 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 281, 17), result_eq_908)
-        # Assigning a type to the variable 'if_condition_909' (line 281)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 281, 17), 'if_condition_909', if_condition_909)
-        # SSA begins for if statement (line 281)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Num to a Name (line 282):
-        
-        # Assigning a Num to a Name (line 282):
-        int_910 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 282, 27), 'int')
-        # Assigning a type to the variable 'surround' (line 282)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 282, 16), 'surround', int_910)
-        
-        # Getting the type of 'square' (line 283)
-        square_911 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 283, 33), 'square')
-        # Obtaining the member 'neighbours' of a type (line 283)
-        neighbours_912 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 283, 33), square_911, 'neighbours')
-        # Testing the type of a for loop iterable (line 283)
-        is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 283, 16), neighbours_912)
-        # Getting the type of the for loop variable (line 283)
-        for_loop_var_913 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 283, 16), neighbours_912)
-        # Assigning a type to the variable 'neighbour' (line 283)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 283, 16), 'neighbour', for_loop_var_913)
-        # SSA begins for a for statement (line 283)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 284)
-        neighbour_914 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 23), 'neighbour')
-        # Obtaining the member 'color' of a type (line 284)
-        color_915 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 284, 23), neighbour_914, 'color')
-        # Getting the type of 'color' (line 284)
-        color_916 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 42), 'color')
-        # Applying the binary operator '==' (line 284)
-        result_eq_917 = python_operator(stypy.reporting.localization.Localization(__file__, 284, 23), '==', color_915, color_916)
-        
-        # Testing the type of an if condition (line 284)
-        if_condition_918 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 284, 20), result_eq_917)
-        # Assigning a type to the variable 'if_condition_918' (line 284)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 284, 20), 'if_condition_918', if_condition_918)
-        # SSA begins for if statement (line 284)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'surround' (line 285)
-        surround_919 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 285, 24), 'surround')
-        int_920 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 285, 36), 'int')
-        # Applying the binary operator '+=' (line 285)
-        result_iadd_921 = python_operator(stypy.reporting.localization.Localization(__file__, 285, 24), '+=', surround_919, int_920)
-        # Assigning a type to the variable 'surround' (line 285)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 285, 24), 'surround', result_iadd_921)
-        
-        # SSA join for if statement (line 284)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        
-        # Getting the type of 'surround' (line 286)
-        surround_922 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 19), 'surround')
-        
-        # Call to len(...): (line 286)
-        # Processing the call arguments (line 286)
-        # Getting the type of 'square' (line 286)
-        square_924 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 35), 'square', False)
-        # Obtaining the member 'neighbours' of a type (line 286)
-        neighbours_925 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 286, 35), square_924, 'neighbours')
-        # Processing the call keyword arguments (line 286)
-        kwargs_926 = {}
-        # Getting the type of 'len' (line 286)
-        len_923 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 31), 'len', False)
-        # Calling len(args, kwargs) (line 286)
-        len_call_result_927 = invoke(stypy.reporting.localization.Localization(__file__, 286, 31), len_923, *[neighbours_925], **kwargs_926)
-        
-        # Applying the binary operator '==' (line 286)
-        result_eq_928 = python_operator(stypy.reporting.localization.Localization(__file__, 286, 19), '==', surround_922, len_call_result_927)
-        
-        # Testing the type of an if condition (line 286)
-        if_condition_929 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 286, 16), result_eq_928)
-        # Assigning a type to the variable 'if_condition_929' (line 286)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 286, 16), 'if_condition_929', if_condition_929)
-        # SSA begins for if statement (line 286)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'count' (line 287)
-        count_930 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 20), 'count')
-        int_931 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 287, 29), 'int')
-        # Applying the binary operator '+=' (line 287)
-        result_iadd_932 = python_operator(stypy.reporting.localization.Localization(__file__, 287, 20), '+=', count_930, int_931)
-        # Assigning a type to the variable 'count' (line 287)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 287, 20), 'count', result_iadd_932)
-        
-        # SSA join for if statement (line 286)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 281)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 279)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 277, 8), squares_895):
+            # Getting the type of the for loop variable (line 277)
+            for_loop_var_896 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 277, 8), squares_895)
+            # Assigning a type to the variable 'square' (line 277)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 277, 8), 'square', for_loop_var_896)
+            # SSA begins for a for statement (line 277)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            # Assigning a Attribute to a Name (line 278):
+            
+            # Assigning a Attribute to a Name (line 278):
+            # Getting the type of 'square' (line 278)
+            square_897 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 26), 'square')
+            # Obtaining the member 'color' of a type (line 278)
+            color_898 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 26), square_897, 'color')
+            # Assigning a type to the variable 'squarecolor' (line 278)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 278, 12), 'squarecolor', color_898)
+            
+            
+            # Getting the type of 'squarecolor' (line 279)
+            squarecolor_899 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 15), 'squarecolor')
+            # Getting the type of 'color' (line 279)
+            color_900 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 30), 'color')
+            # Applying the binary operator '==' (line 279)
+            result_eq_901 = python_operator(stypy.reporting.localization.Localization(__file__, 279, 15), '==', squarecolor_899, color_900)
+            
+            # Testing the type of an if condition (line 279)
+            if_condition_902 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 279, 12), result_eq_901)
+            # Assigning a type to the variable 'if_condition_902' (line 279)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 279, 12), 'if_condition_902', if_condition_902)
+            # SSA begins for if statement (line 279)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Getting the type of 'count' (line 280)
+            count_903 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 280, 16), 'count')
+            int_904 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 280, 25), 'int')
+            # Applying the binary operator '+=' (line 280)
+            result_iadd_905 = python_operator(stypy.reporting.localization.Localization(__file__, 280, 16), '+=', count_903, int_904)
+            # Assigning a type to the variable 'count' (line 280)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 280, 16), 'count', result_iadd_905)
+            
+            # SSA branch for the else part of an if statement (line 279)
+            module_type_store.open_ssa_branch('else')
+            
+            
+            # Getting the type of 'squarecolor' (line 281)
+            squarecolor_906 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 17), 'squarecolor')
+            # Getting the type of 'EMPTY' (line 281)
+            EMPTY_907 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 32), 'EMPTY')
+            # Applying the binary operator '==' (line 281)
+            result_eq_908 = python_operator(stypy.reporting.localization.Localization(__file__, 281, 17), '==', squarecolor_906, EMPTY_907)
+            
+            # Testing the type of an if condition (line 281)
+            if_condition_909 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 281, 17), result_eq_908)
+            # Assigning a type to the variable 'if_condition_909' (line 281)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 281, 17), 'if_condition_909', if_condition_909)
+            # SSA begins for if statement (line 281)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Num to a Name (line 282):
+            
+            # Assigning a Num to a Name (line 282):
+            int_910 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 282, 27), 'int')
+            # Assigning a type to the variable 'surround' (line 282)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 282, 16), 'surround', int_910)
+            
+            # Getting the type of 'square' (line 283)
+            square_911 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 283, 33), 'square')
+            # Obtaining the member 'neighbours' of a type (line 283)
+            neighbours_912 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 283, 33), square_911, 'neighbours')
+            # Testing if the loop is going to be iterated (line 283)
+            # Testing the type of a for loop iterable (line 283)
+            is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 283, 16), neighbours_912)
+
+            if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 283, 16), neighbours_912):
+                # Getting the type of the for loop variable (line 283)
+                for_loop_var_913 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 283, 16), neighbours_912)
+                # Assigning a type to the variable 'neighbour' (line 283)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 283, 16), 'neighbour', for_loop_var_913)
+                # SSA begins for a for statement (line 283)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+                
+                
+                # Getting the type of 'neighbour' (line 284)
+                neighbour_914 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 23), 'neighbour')
+                # Obtaining the member 'color' of a type (line 284)
+                color_915 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 284, 23), neighbour_914, 'color')
+                # Getting the type of 'color' (line 284)
+                color_916 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 42), 'color')
+                # Applying the binary operator '==' (line 284)
+                result_eq_917 = python_operator(stypy.reporting.localization.Localization(__file__, 284, 23), '==', color_915, color_916)
+                
+                # Testing the type of an if condition (line 284)
+                if_condition_918 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 284, 20), result_eq_917)
+                # Assigning a type to the variable 'if_condition_918' (line 284)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 284, 20), 'if_condition_918', if_condition_918)
+                # SSA begins for if statement (line 284)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+                
+                # Getting the type of 'surround' (line 285)
+                surround_919 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 285, 24), 'surround')
+                int_920 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 285, 36), 'int')
+                # Applying the binary operator '+=' (line 285)
+                result_iadd_921 = python_operator(stypy.reporting.localization.Localization(__file__, 285, 24), '+=', surround_919, int_920)
+                # Assigning a type to the variable 'surround' (line 285)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 285, 24), 'surround', result_iadd_921)
+                
+                # SSA join for if statement (line 284)
+                module_type_store = module_type_store.join_ssa_context()
+                
+                # SSA join for a for statement
+                module_type_store = module_type_store.join_ssa_context()
+
+            
+            
+            
+            # Getting the type of 'surround' (line 286)
+            surround_922 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 19), 'surround')
+            
+            # Call to len(...): (line 286)
+            # Processing the call arguments (line 286)
+            # Getting the type of 'square' (line 286)
+            square_924 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 35), 'square', False)
+            # Obtaining the member 'neighbours' of a type (line 286)
+            neighbours_925 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 286, 35), square_924, 'neighbours')
+            # Processing the call keyword arguments (line 286)
+            kwargs_926 = {}
+            # Getting the type of 'len' (line 286)
+            len_923 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 31), 'len', False)
+            # Calling len(args, kwargs) (line 286)
+            len_call_result_927 = invoke(stypy.reporting.localization.Localization(__file__, 286, 31), len_923, *[neighbours_925], **kwargs_926)
+            
+            # Applying the binary operator '==' (line 286)
+            result_eq_928 = python_operator(stypy.reporting.localization.Localization(__file__, 286, 19), '==', surround_922, len_call_result_927)
+            
+            # Testing the type of an if condition (line 286)
+            if_condition_929 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 286, 16), result_eq_928)
+            # Assigning a type to the variable 'if_condition_929' (line 286)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 286, 16), 'if_condition_929', if_condition_929)
+            # SSA begins for if statement (line 286)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Getting the type of 'count' (line 287)
+            count_930 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 20), 'count')
+            int_931 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 287, 29), 'int')
+            # Applying the binary operator '+=' (line 287)
+            result_iadd_932 = python_operator(stypy.reporting.localization.Localization(__file__, 287, 20), '+=', count_930, int_931)
+            # Assigning a type to the variable 'count' (line 287)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 287, 20), 'count', result_iadd_932)
+            
+            # SSA join for if statement (line 286)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 281)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 279)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         # Getting the type of 'count' (line 288)
         count_933 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 15), 'count')
@@ -5539,504 +5595,532 @@ class Board:
         self_935 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 22), 'self')
         # Obtaining the member 'squares' of a type (line 291)
         squares_936 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 291, 22), self_935, 'squares')
+        # Testing if the loop is going to be iterated (line 291)
         # Testing the type of a for loop iterable (line 291)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 291, 8), squares_936)
-        # Getting the type of the for loop variable (line 291)
-        for_loop_var_937 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 291, 8), squares_936)
-        # Assigning a type to the variable 'square' (line 291)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 291, 8), 'square', for_loop_var_937)
-        # SSA begins for a for statement (line 291)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'square' (line 292)
-        square_938 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 292, 15), 'square')
-        # Obtaining the member 'color' of a type (line 292)
-        color_939 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 292, 15), square_938, 'color')
-        # Getting the type of 'EMPTY' (line 292)
-        EMPTY_940 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 292, 31), 'EMPTY')
-        # Applying the binary operator '==' (line 292)
-        result_eq_941 = python_operator(stypy.reporting.localization.Localization(__file__, 292, 15), '==', color_939, EMPTY_940)
-        
-        # Testing the type of an if condition (line 292)
-        if_condition_942 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 292, 12), result_eq_941)
-        # Assigning a type to the variable 'if_condition_942' (line 292)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 292, 12), 'if_condition_942', if_condition_942)
-        # SSA begins for if statement (line 292)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        # SSA join for if statement (line 292)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Assigning a Call to a Name (line 295):
-        
-        # Assigning a Call to a Name (line 295):
-        
-        # Call to set(...): (line 295)
-        # Processing the call arguments (line 295)
-        
-        # Obtaining an instance of the builtin type 'list' (line 295)
-        list_944 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 295, 27), 'list')
-        # Adding type elements to the builtin type 'list' instance (line 295)
-        # Adding element type (line 295)
-        # Getting the type of 'square' (line 295)
-        square_945 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 295, 28), 'square', False)
-        add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 295, 27), list_944, square_945)
-        
-        # Processing the call keyword arguments (line 295)
-        kwargs_946 = {}
-        # Getting the type of 'set' (line 295)
-        set_943 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 295, 23), 'set', False)
-        # Calling set(args, kwargs) (line 295)
-        set_call_result_947 = invoke(stypy.reporting.localization.Localization(__file__, 295, 23), set_943, *[list_944], **kwargs_946)
-        
-        # Assigning a type to the variable 'members1' (line 295)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 295, 12), 'members1', set_call_result_947)
-        
-        # Assigning a Name to a Name (line 296):
-        
-        # Assigning a Name to a Name (line 296):
-        # Getting the type of 'True' (line 296)
-        True_948 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 296, 22), 'True')
-        # Assigning a type to the variable 'changed' (line 296)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 296, 12), 'changed', True_948)
-        
-        # Getting the type of 'changed' (line 297)
-        changed_949 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 297, 18), 'changed')
-        # Testing the type of an if condition (line 297)
-        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 297, 12), changed_949)
-        # SSA begins for while statement (line 297)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
-        
-        # Assigning a Name to a Name (line 298):
-        
-        # Assigning a Name to a Name (line 298):
-        # Getting the type of 'False' (line 298)
-        False_950 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 298, 26), 'False')
-        # Assigning a type to the variable 'changed' (line 298)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 298, 16), 'changed', False_950)
-        
-        
-        # Call to copy(...): (line 299)
-        # Processing the call keyword arguments (line 299)
-        kwargs_953 = {}
-        # Getting the type of 'members1' (line 299)
-        members1_951 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 299, 30), 'members1', False)
-        # Obtaining the member 'copy' of a type (line 299)
-        copy_952 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 299, 30), members1_951, 'copy')
-        # Calling copy(args, kwargs) (line 299)
-        copy_call_result_954 = invoke(stypy.reporting.localization.Localization(__file__, 299, 30), copy_952, *[], **kwargs_953)
-        
-        # Testing the type of a for loop iterable (line 299)
-        is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 299, 16), copy_call_result_954)
-        # Getting the type of the for loop variable (line 299)
-        for_loop_var_955 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 299, 16), copy_call_result_954)
-        # Assigning a type to the variable 'member' (line 299)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 299, 16), 'member', for_loop_var_955)
-        # SSA begins for a for statement (line 299)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Getting the type of 'member' (line 300)
-        member_956 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 300, 37), 'member')
-        # Obtaining the member 'neighbours' of a type (line 300)
-        neighbours_957 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 300, 37), member_956, 'neighbours')
-        # Testing the type of a for loop iterable (line 300)
-        is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 300, 20), neighbours_957)
-        # Getting the type of the for loop variable (line 300)
-        for_loop_var_958 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 300, 20), neighbours_957)
-        # Assigning a type to the variable 'neighbour' (line 300)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 300, 20), 'neighbour', for_loop_var_958)
-        # SSA begins for a for statement (line 300)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Evaluating a boolean operation
-        
-        # Getting the type of 'neighbour' (line 301)
-        neighbour_959 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 301, 27), 'neighbour')
-        # Obtaining the member 'color' of a type (line 301)
-        color_960 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 301, 27), neighbour_959, 'color')
-        # Getting the type of 'square' (line 301)
-        square_961 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 301, 46), 'square')
-        # Obtaining the member 'color' of a type (line 301)
-        color_962 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 301, 46), square_961, 'color')
-        # Applying the binary operator '==' (line 301)
-        result_eq_963 = python_operator(stypy.reporting.localization.Localization(__file__, 301, 27), '==', color_960, color_962)
-        
-        
-        # Getting the type of 'neighbour' (line 301)
-        neighbour_964 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 301, 63), 'neighbour')
-        # Getting the type of 'members1' (line 301)
-        members1_965 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 301, 80), 'members1')
-        # Applying the binary operator 'notin' (line 301)
-        result_contains_966 = python_operator(stypy.reporting.localization.Localization(__file__, 301, 63), 'notin', neighbour_964, members1_965)
-        
-        # Applying the binary operator 'and' (line 301)
-        result_and_keyword_967 = python_operator(stypy.reporting.localization.Localization(__file__, 301, 27), 'and', result_eq_963, result_contains_966)
-        
-        # Testing the type of an if condition (line 301)
-        if_condition_968 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 301, 24), result_and_keyword_967)
-        # Assigning a type to the variable 'if_condition_968' (line 301)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 301, 24), 'if_condition_968', if_condition_968)
-        # SSA begins for if statement (line 301)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Name (line 302):
-        
-        # Assigning a Name to a Name (line 302):
-        # Getting the type of 'True' (line 302)
-        True_969 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 302, 38), 'True')
-        # Assigning a type to the variable 'changed' (line 302)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 302, 28), 'changed', True_969)
-        
-        # Call to add(...): (line 303)
-        # Processing the call arguments (line 303)
-        # Getting the type of 'neighbour' (line 303)
-        neighbour_972 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 303, 41), 'neighbour', False)
-        # Processing the call keyword arguments (line 303)
-        kwargs_973 = {}
-        # Getting the type of 'members1' (line 303)
-        members1_970 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 303, 28), 'members1', False)
-        # Obtaining the member 'add' of a type (line 303)
-        add_971 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 303, 28), members1_970, 'add')
-        # Calling add(args, kwargs) (line 303)
-        add_call_result_974 = invoke(stypy.reporting.localization.Localization(__file__, 303, 28), add_971, *[neighbour_972], **kwargs_973)
-        
-        # SSA join for if statement (line 301)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for while statement (line 297)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Assigning a Call to a Name (line 304):
-        
-        # Assigning a Call to a Name (line 304):
-        
-        # Call to set(...): (line 304)
-        # Processing the call keyword arguments (line 304)
-        kwargs_976 = {}
-        # Getting the type of 'set' (line 304)
-        set_975 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 304, 25), 'set', False)
-        # Calling set(args, kwargs) (line 304)
-        set_call_result_977 = invoke(stypy.reporting.localization.Localization(__file__, 304, 25), set_975, *[], **kwargs_976)
-        
-        # Assigning a type to the variable 'liberties1' (line 304)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 304, 12), 'liberties1', set_call_result_977)
-        
-        # Getting the type of 'members1' (line 305)
-        members1_978 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 26), 'members1')
-        # Testing the type of a for loop iterable (line 305)
-        is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 305, 12), members1_978)
-        # Getting the type of the for loop variable (line 305)
-        for_loop_var_979 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 305, 12), members1_978)
-        # Assigning a type to the variable 'member' (line 305)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 305, 12), 'member', for_loop_var_979)
-        # SSA begins for a for statement (line 305)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Getting the type of 'member' (line 306)
-        member_980 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 33), 'member')
-        # Obtaining the member 'neighbours' of a type (line 306)
-        neighbours_981 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 306, 33), member_980, 'neighbours')
-        # Testing the type of a for loop iterable (line 306)
-        is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 306, 16), neighbours_981)
-        # Getting the type of the for loop variable (line 306)
-        for_loop_var_982 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 306, 16), neighbours_981)
-        # Assigning a type to the variable 'neighbour' (line 306)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 16), 'neighbour', for_loop_var_982)
-        # SSA begins for a for statement (line 306)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'neighbour' (line 307)
-        neighbour_983 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 307, 23), 'neighbour')
-        # Obtaining the member 'color' of a type (line 307)
-        color_984 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 307, 23), neighbour_983, 'color')
-        # Getting the type of 'EMPTY' (line 307)
-        EMPTY_985 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 307, 42), 'EMPTY')
-        # Applying the binary operator '==' (line 307)
-        result_eq_986 = python_operator(stypy.reporting.localization.Localization(__file__, 307, 23), '==', color_984, EMPTY_985)
-        
-        # Testing the type of an if condition (line 307)
-        if_condition_987 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 307, 20), result_eq_986)
-        # Assigning a type to the variable 'if_condition_987' (line 307)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 307, 20), 'if_condition_987', if_condition_987)
-        # SSA begins for if statement (line 307)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Call to add(...): (line 308)
-        # Processing the call arguments (line 308)
-        # Getting the type of 'neighbour' (line 308)
-        neighbour_990 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 39), 'neighbour', False)
-        # Obtaining the member 'pos' of a type (line 308)
-        pos_991 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 308, 39), neighbour_990, 'pos')
-        # Processing the call keyword arguments (line 308)
-        kwargs_992 = {}
-        # Getting the type of 'liberties1' (line 308)
-        liberties1_988 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 24), 'liberties1', False)
-        # Obtaining the member 'add' of a type (line 308)
-        add_989 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 308, 24), liberties1_988, 'add')
-        # Calling add(args, kwargs) (line 308)
-        add_call_result_993 = invoke(stypy.reporting.localization.Localization(__file__, 308, 24), add_989, *[pos_991], **kwargs_992)
-        
-        # SSA join for if statement (line 307)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Assigning a Call to a Name (line 310):
-        
-        # Assigning a Call to a Name (line 310):
-        
-        # Call to find(...): (line 310)
-        # Processing the call keyword arguments (line 310)
-        kwargs_996 = {}
-        # Getting the type of 'square' (line 310)
-        square_994 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 310, 19), 'square', False)
-        # Obtaining the member 'find' of a type (line 310)
-        find_995 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 310, 19), square_994, 'find')
-        # Calling find(args, kwargs) (line 310)
-        find_call_result_997 = invoke(stypy.reporting.localization.Localization(__file__, 310, 19), find_995, *[], **kwargs_996)
-        
-        # Assigning a type to the variable 'root' (line 310)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 310, 12), 'root', find_call_result_997)
-        
-        # Assigning a Call to a Name (line 315):
-        
-        # Assigning a Call to a Name (line 315):
-        
-        # Call to set(...): (line 315)
-        # Processing the call keyword arguments (line 315)
-        kwargs_999 = {}
-        # Getting the type of 'set' (line 315)
-        set_998 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 315, 23), 'set', False)
-        # Calling set(args, kwargs) (line 315)
-        set_call_result_1000 = invoke(stypy.reporting.localization.Localization(__file__, 315, 23), set_998, *[], **kwargs_999)
-        
-        # Assigning a type to the variable 'members2' (line 315)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 315, 12), 'members2', set_call_result_1000)
-        
-        # Getting the type of 'self' (line 316)
-        self_1001 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 316, 27), 'self')
-        # Obtaining the member 'squares' of a type (line 316)
-        squares_1002 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 316, 27), self_1001, 'squares')
-        # Testing the type of a for loop iterable (line 316)
-        is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 316, 12), squares_1002)
-        # Getting the type of the for loop variable (line 316)
-        for_loop_var_1003 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 316, 12), squares_1002)
-        # Assigning a type to the variable 'square2' (line 316)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 316, 12), 'square2', for_loop_var_1003)
-        # SSA begins for a for statement (line 316)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Evaluating a boolean operation
-        
-        # Getting the type of 'square2' (line 317)
-        square2_1004 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 317, 19), 'square2')
-        # Obtaining the member 'color' of a type (line 317)
-        color_1005 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 317, 19), square2_1004, 'color')
-        # Getting the type of 'EMPTY' (line 317)
-        EMPTY_1006 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 317, 36), 'EMPTY')
-        # Applying the binary operator '!=' (line 317)
-        result_ne_1007 = python_operator(stypy.reporting.localization.Localization(__file__, 317, 19), '!=', color_1005, EMPTY_1006)
-        
-        
-        
-        # Call to find(...): (line 317)
-        # Processing the call keyword arguments (line 317)
-        kwargs_1010 = {}
-        # Getting the type of 'square2' (line 317)
-        square2_1008 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 317, 46), 'square2', False)
-        # Obtaining the member 'find' of a type (line 317)
-        find_1009 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 317, 46), square2_1008, 'find')
-        # Calling find(args, kwargs) (line 317)
-        find_call_result_1011 = invoke(stypy.reporting.localization.Localization(__file__, 317, 46), find_1009, *[], **kwargs_1010)
-        
-        # Getting the type of 'root' (line 317)
-        root_1012 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 317, 64), 'root')
-        # Applying the binary operator '==' (line 317)
-        result_eq_1013 = python_operator(stypy.reporting.localization.Localization(__file__, 317, 46), '==', find_call_result_1011, root_1012)
-        
-        # Applying the binary operator 'and' (line 317)
-        result_and_keyword_1014 = python_operator(stypy.reporting.localization.Localization(__file__, 317, 19), 'and', result_ne_1007, result_eq_1013)
-        
-        # Testing the type of an if condition (line 317)
-        if_condition_1015 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 317, 16), result_and_keyword_1014)
-        # Assigning a type to the variable 'if_condition_1015' (line 317)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 317, 16), 'if_condition_1015', if_condition_1015)
-        # SSA begins for if statement (line 317)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Call to add(...): (line 318)
-        # Processing the call arguments (line 318)
-        # Getting the type of 'square2' (line 318)
-        square2_1018 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 318, 33), 'square2', False)
-        # Processing the call keyword arguments (line 318)
-        kwargs_1019 = {}
-        # Getting the type of 'members2' (line 318)
-        members2_1016 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 318, 20), 'members2', False)
-        # Obtaining the member 'add' of a type (line 318)
-        add_1017 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 318, 20), members2_1016, 'add')
-        # Calling add(args, kwargs) (line 318)
-        add_call_result_1020 = invoke(stypy.reporting.localization.Localization(__file__, 318, 20), add_1017, *[square2_1018], **kwargs_1019)
-        
-        # SSA join for if statement (line 317)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Assigning a Attribute to a Name (line 320):
-        
-        # Assigning a Attribute to a Name (line 320):
-        # Getting the type of 'root' (line 320)
-        root_1021 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 320, 25), 'root')
-        # Obtaining the member 'liberties' of a type (line 320)
-        liberties_1022 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 320, 25), root_1021, 'liberties')
-        # Assigning a type to the variable 'liberties2' (line 320)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 320, 12), 'liberties2', liberties_1022)
-        # Evaluating assert statement condition
-        
-        # Getting the type of 'members1' (line 324)
-        members1_1023 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 324, 19), 'members1')
-        # Getting the type of 'members2' (line 324)
-        members2_1024 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 324, 31), 'members2')
-        # Applying the binary operator '==' (line 324)
-        result_eq_1025 = python_operator(stypy.reporting.localization.Localization(__file__, 324, 19), '==', members1_1023, members2_1024)
-        
-        # Evaluating assert statement condition
-        
-        
-        # Call to len(...): (line 325)
-        # Processing the call arguments (line 325)
-        # Getting the type of 'liberties1' (line 325)
-        liberties1_1027 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 325, 23), 'liberties1', False)
-        # Processing the call keyword arguments (line 325)
-        kwargs_1028 = {}
-        # Getting the type of 'len' (line 325)
-        len_1026 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 325, 19), 'len', False)
-        # Calling len(args, kwargs) (line 325)
-        len_call_result_1029 = invoke(stypy.reporting.localization.Localization(__file__, 325, 19), len_1026, *[liberties1_1027], **kwargs_1028)
-        
-        # Getting the type of 'liberties2' (line 325)
-        liberties2_1030 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 325, 38), 'liberties2')
-        # Applying the binary operator '==' (line 325)
-        result_eq_1031 = python_operator(stypy.reporting.localization.Localization(__file__, 325, 19), '==', len_call_result_1029, liberties2_1030)
-        
-        
-        # Assigning a Call to a Name (line 328):
-        
-        # Assigning a Call to a Name (line 328):
-        
-        # Call to set(...): (line 328)
-        # Processing the call arguments (line 328)
-        # Getting the type of 'self' (line 328)
-        self_1033 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 328, 27), 'self', False)
-        # Obtaining the member 'emptyset' of a type (line 328)
-        emptyset_1034 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 328, 27), self_1033, 'emptyset')
-        # Obtaining the member 'empties' of a type (line 328)
-        empties_1035 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 328, 27), emptyset_1034, 'empties')
-        # Processing the call keyword arguments (line 328)
-        kwargs_1036 = {}
-        # Getting the type of 'set' (line 328)
-        set_1032 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 328, 23), 'set', False)
-        # Calling set(args, kwargs) (line 328)
-        set_call_result_1037 = invoke(stypy.reporting.localization.Localization(__file__, 328, 23), set_1032, *[empties_1035], **kwargs_1036)
-        
-        # Assigning a type to the variable 'empties1' (line 328)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 328, 12), 'empties1', set_call_result_1037)
-        
-        # Assigning a Call to a Name (line 330):
-        
-        # Assigning a Call to a Name (line 330):
-        
-        # Call to set(...): (line 330)
-        # Processing the call keyword arguments (line 330)
-        kwargs_1039 = {}
-        # Getting the type of 'set' (line 330)
-        set_1038 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 330, 23), 'set', False)
-        # Calling set(args, kwargs) (line 330)
-        set_call_result_1040 = invoke(stypy.reporting.localization.Localization(__file__, 330, 23), set_1038, *[], **kwargs_1039)
-        
-        # Assigning a type to the variable 'empties2' (line 330)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 330, 12), 'empties2', set_call_result_1040)
-        
-        # Getting the type of 'self' (line 331)
-        self_1041 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 331, 26), 'self')
-        # Obtaining the member 'squares' of a type (line 331)
-        squares_1042 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 331, 26), self_1041, 'squares')
-        # Testing the type of a for loop iterable (line 331)
-        is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 331, 12), squares_1042)
-        # Getting the type of the for loop variable (line 331)
-        for_loop_var_1043 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 331, 12), squares_1042)
-        # Assigning a type to the variable 'square' (line 331)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 331, 12), 'square', for_loop_var_1043)
-        # SSA begins for a for statement (line 331)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'square' (line 332)
-        square_1044 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 332, 19), 'square')
-        # Obtaining the member 'color' of a type (line 332)
-        color_1045 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 332, 19), square_1044, 'color')
-        # Getting the type of 'EMPTY' (line 332)
-        EMPTY_1046 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 332, 35), 'EMPTY')
-        # Applying the binary operator '==' (line 332)
-        result_eq_1047 = python_operator(stypy.reporting.localization.Localization(__file__, 332, 19), '==', color_1045, EMPTY_1046)
-        
-        # Testing the type of an if condition (line 332)
-        if_condition_1048 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 332, 16), result_eq_1047)
-        # Assigning a type to the variable 'if_condition_1048' (line 332)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 332, 16), 'if_condition_1048', if_condition_1048)
-        # SSA begins for if statement (line 332)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Call to add(...): (line 333)
-        # Processing the call arguments (line 333)
-        # Getting the type of 'square' (line 333)
-        square_1051 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 333, 33), 'square', False)
-        # Obtaining the member 'pos' of a type (line 333)
-        pos_1052 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 333, 33), square_1051, 'pos')
-        # Processing the call keyword arguments (line 333)
-        kwargs_1053 = {}
-        # Getting the type of 'empties2' (line 333)
-        empties2_1049 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 333, 20), 'empties2', False)
-        # Obtaining the member 'add' of a type (line 333)
-        add_1050 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 333, 20), empties2_1049, 'add')
-        # Calling add(args, kwargs) (line 333)
-        add_call_result_1054 = invoke(stypy.reporting.localization.Localization(__file__, 333, 20), add_1050, *[pos_1052], **kwargs_1053)
-        
-        # SSA join for if statement (line 332)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # Evaluating assert statement condition
-        
-        # Getting the type of 'empties1' (line 335)
-        empties1_1055 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 335, 19), 'empties1')
-        # Getting the type of 'empties2' (line 335)
-        empties2_1056 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 335, 31), 'empties2')
-        # Applying the binary operator '==' (line 335)
-        result_eq_1057 = python_operator(stypy.reporting.localization.Localization(__file__, 335, 19), '==', empties1_1055, empties2_1056)
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 291, 8), squares_936):
+            # Getting the type of the for loop variable (line 291)
+            for_loop_var_937 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 291, 8), squares_936)
+            # Assigning a type to the variable 'square' (line 291)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 291, 8), 'square', for_loop_var_937)
+            # SSA begins for a for statement (line 291)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'square' (line 292)
+            square_938 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 292, 15), 'square')
+            # Obtaining the member 'color' of a type (line 292)
+            color_939 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 292, 15), square_938, 'color')
+            # Getting the type of 'EMPTY' (line 292)
+            EMPTY_940 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 292, 31), 'EMPTY')
+            # Applying the binary operator '==' (line 292)
+            result_eq_941 = python_operator(stypy.reporting.localization.Localization(__file__, 292, 15), '==', color_939, EMPTY_940)
+            
+            # Testing the type of an if condition (line 292)
+            if_condition_942 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 292, 12), result_eq_941)
+            # Assigning a type to the variable 'if_condition_942' (line 292)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 292, 12), 'if_condition_942', if_condition_942)
+            # SSA begins for if statement (line 292)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            # SSA join for if statement (line 292)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            
+            # Assigning a Call to a Name (line 295):
+            
+            # Assigning a Call to a Name (line 295):
+            
+            # Call to set(...): (line 295)
+            # Processing the call arguments (line 295)
+            
+            # Obtaining an instance of the builtin type 'list' (line 295)
+            list_944 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 295, 27), 'list')
+            # Adding type elements to the builtin type 'list' instance (line 295)
+            # Adding element type (line 295)
+            # Getting the type of 'square' (line 295)
+            square_945 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 295, 28), 'square', False)
+            add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 295, 27), list_944, square_945)
+            
+            # Processing the call keyword arguments (line 295)
+            kwargs_946 = {}
+            # Getting the type of 'set' (line 295)
+            set_943 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 295, 23), 'set', False)
+            # Calling set(args, kwargs) (line 295)
+            set_call_result_947 = invoke(stypy.reporting.localization.Localization(__file__, 295, 23), set_943, *[list_944], **kwargs_946)
+            
+            # Assigning a type to the variable 'members1' (line 295)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 295, 12), 'members1', set_call_result_947)
+            
+            # Assigning a Name to a Name (line 296):
+            
+            # Assigning a Name to a Name (line 296):
+            # Getting the type of 'True' (line 296)
+            True_948 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 296, 22), 'True')
+            # Assigning a type to the variable 'changed' (line 296)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 296, 12), 'changed', True_948)
+            
+            # Getting the type of 'changed' (line 297)
+            changed_949 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 297, 18), 'changed')
+            # Testing the type of an if condition (line 297)
+            is_suitable_condition(stypy.reporting.localization.Localization(__file__, 297, 12), changed_949)
+            # SSA begins for while statement (line 297)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
+            
+            # Assigning a Name to a Name (line 298):
+            
+            # Assigning a Name to a Name (line 298):
+            # Getting the type of 'False' (line 298)
+            False_950 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 298, 26), 'False')
+            # Assigning a type to the variable 'changed' (line 298)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 298, 16), 'changed', False_950)
+            
+            
+            # Call to copy(...): (line 299)
+            # Processing the call keyword arguments (line 299)
+            kwargs_953 = {}
+            # Getting the type of 'members1' (line 299)
+            members1_951 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 299, 30), 'members1', False)
+            # Obtaining the member 'copy' of a type (line 299)
+            copy_952 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 299, 30), members1_951, 'copy')
+            # Calling copy(args, kwargs) (line 299)
+            copy_call_result_954 = invoke(stypy.reporting.localization.Localization(__file__, 299, 30), copy_952, *[], **kwargs_953)
+            
+            # Testing if the loop is going to be iterated (line 299)
+            # Testing the type of a for loop iterable (line 299)
+            is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 299, 16), copy_call_result_954)
+
+            if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 299, 16), copy_call_result_954):
+                # Getting the type of the for loop variable (line 299)
+                for_loop_var_955 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 299, 16), copy_call_result_954)
+                # Assigning a type to the variable 'member' (line 299)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 299, 16), 'member', for_loop_var_955)
+                # SSA begins for a for statement (line 299)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+                
+                # Getting the type of 'member' (line 300)
+                member_956 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 300, 37), 'member')
+                # Obtaining the member 'neighbours' of a type (line 300)
+                neighbours_957 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 300, 37), member_956, 'neighbours')
+                # Testing if the loop is going to be iterated (line 300)
+                # Testing the type of a for loop iterable (line 300)
+                is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 300, 20), neighbours_957)
+
+                if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 300, 20), neighbours_957):
+                    # Getting the type of the for loop variable (line 300)
+                    for_loop_var_958 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 300, 20), neighbours_957)
+                    # Assigning a type to the variable 'neighbour' (line 300)
+                    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 300, 20), 'neighbour', for_loop_var_958)
+                    # SSA begins for a for statement (line 300)
+                    module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+                    
+                    
+                    # Evaluating a boolean operation
+                    
+                    # Getting the type of 'neighbour' (line 301)
+                    neighbour_959 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 301, 27), 'neighbour')
+                    # Obtaining the member 'color' of a type (line 301)
+                    color_960 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 301, 27), neighbour_959, 'color')
+                    # Getting the type of 'square' (line 301)
+                    square_961 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 301, 46), 'square')
+                    # Obtaining the member 'color' of a type (line 301)
+                    color_962 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 301, 46), square_961, 'color')
+                    # Applying the binary operator '==' (line 301)
+                    result_eq_963 = python_operator(stypy.reporting.localization.Localization(__file__, 301, 27), '==', color_960, color_962)
+                    
+                    
+                    # Getting the type of 'neighbour' (line 301)
+                    neighbour_964 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 301, 63), 'neighbour')
+                    # Getting the type of 'members1' (line 301)
+                    members1_965 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 301, 80), 'members1')
+                    # Applying the binary operator 'notin' (line 301)
+                    result_contains_966 = python_operator(stypy.reporting.localization.Localization(__file__, 301, 63), 'notin', neighbour_964, members1_965)
+                    
+                    # Applying the binary operator 'and' (line 301)
+                    result_and_keyword_967 = python_operator(stypy.reporting.localization.Localization(__file__, 301, 27), 'and', result_eq_963, result_contains_966)
+                    
+                    # Testing the type of an if condition (line 301)
+                    if_condition_968 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 301, 24), result_and_keyword_967)
+                    # Assigning a type to the variable 'if_condition_968' (line 301)
+                    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 301, 24), 'if_condition_968', if_condition_968)
+                    # SSA begins for if statement (line 301)
+                    module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+                    
+                    # Assigning a Name to a Name (line 302):
+                    
+                    # Assigning a Name to a Name (line 302):
+                    # Getting the type of 'True' (line 302)
+                    True_969 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 302, 38), 'True')
+                    # Assigning a type to the variable 'changed' (line 302)
+                    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 302, 28), 'changed', True_969)
+                    
+                    # Call to add(...): (line 303)
+                    # Processing the call arguments (line 303)
+                    # Getting the type of 'neighbour' (line 303)
+                    neighbour_972 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 303, 41), 'neighbour', False)
+                    # Processing the call keyword arguments (line 303)
+                    kwargs_973 = {}
+                    # Getting the type of 'members1' (line 303)
+                    members1_970 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 303, 28), 'members1', False)
+                    # Obtaining the member 'add' of a type (line 303)
+                    add_971 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 303, 28), members1_970, 'add')
+                    # Calling add(args, kwargs) (line 303)
+                    add_call_result_974 = invoke(stypy.reporting.localization.Localization(__file__, 303, 28), add_971, *[neighbour_972], **kwargs_973)
+                    
+                    # SSA join for if statement (line 301)
+                    module_type_store = module_type_store.join_ssa_context()
+                    
+                    # SSA join for a for statement
+                    module_type_store = module_type_store.join_ssa_context()
+
+                
+                # SSA join for a for statement
+                module_type_store = module_type_store.join_ssa_context()
+
+            
+            # SSA join for while statement (line 297)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            
+            # Assigning a Call to a Name (line 304):
+            
+            # Assigning a Call to a Name (line 304):
+            
+            # Call to set(...): (line 304)
+            # Processing the call keyword arguments (line 304)
+            kwargs_976 = {}
+            # Getting the type of 'set' (line 304)
+            set_975 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 304, 25), 'set', False)
+            # Calling set(args, kwargs) (line 304)
+            set_call_result_977 = invoke(stypy.reporting.localization.Localization(__file__, 304, 25), set_975, *[], **kwargs_976)
+            
+            # Assigning a type to the variable 'liberties1' (line 304)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 304, 12), 'liberties1', set_call_result_977)
+            
+            # Getting the type of 'members1' (line 305)
+            members1_978 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 26), 'members1')
+            # Testing if the loop is going to be iterated (line 305)
+            # Testing the type of a for loop iterable (line 305)
+            is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 305, 12), members1_978)
+
+            if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 305, 12), members1_978):
+                # Getting the type of the for loop variable (line 305)
+                for_loop_var_979 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 305, 12), members1_978)
+                # Assigning a type to the variable 'member' (line 305)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 305, 12), 'member', for_loop_var_979)
+                # SSA begins for a for statement (line 305)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+                
+                # Getting the type of 'member' (line 306)
+                member_980 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 33), 'member')
+                # Obtaining the member 'neighbours' of a type (line 306)
+                neighbours_981 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 306, 33), member_980, 'neighbours')
+                # Testing if the loop is going to be iterated (line 306)
+                # Testing the type of a for loop iterable (line 306)
+                is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 306, 16), neighbours_981)
+
+                if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 306, 16), neighbours_981):
+                    # Getting the type of the for loop variable (line 306)
+                    for_loop_var_982 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 306, 16), neighbours_981)
+                    # Assigning a type to the variable 'neighbour' (line 306)
+                    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 16), 'neighbour', for_loop_var_982)
+                    # SSA begins for a for statement (line 306)
+                    module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+                    
+                    
+                    # Getting the type of 'neighbour' (line 307)
+                    neighbour_983 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 307, 23), 'neighbour')
+                    # Obtaining the member 'color' of a type (line 307)
+                    color_984 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 307, 23), neighbour_983, 'color')
+                    # Getting the type of 'EMPTY' (line 307)
+                    EMPTY_985 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 307, 42), 'EMPTY')
+                    # Applying the binary operator '==' (line 307)
+                    result_eq_986 = python_operator(stypy.reporting.localization.Localization(__file__, 307, 23), '==', color_984, EMPTY_985)
+                    
+                    # Testing the type of an if condition (line 307)
+                    if_condition_987 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 307, 20), result_eq_986)
+                    # Assigning a type to the variable 'if_condition_987' (line 307)
+                    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 307, 20), 'if_condition_987', if_condition_987)
+                    # SSA begins for if statement (line 307)
+                    module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+                    
+                    # Call to add(...): (line 308)
+                    # Processing the call arguments (line 308)
+                    # Getting the type of 'neighbour' (line 308)
+                    neighbour_990 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 39), 'neighbour', False)
+                    # Obtaining the member 'pos' of a type (line 308)
+                    pos_991 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 308, 39), neighbour_990, 'pos')
+                    # Processing the call keyword arguments (line 308)
+                    kwargs_992 = {}
+                    # Getting the type of 'liberties1' (line 308)
+                    liberties1_988 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 24), 'liberties1', False)
+                    # Obtaining the member 'add' of a type (line 308)
+                    add_989 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 308, 24), liberties1_988, 'add')
+                    # Calling add(args, kwargs) (line 308)
+                    add_call_result_993 = invoke(stypy.reporting.localization.Localization(__file__, 308, 24), add_989, *[pos_991], **kwargs_992)
+                    
+                    # SSA join for if statement (line 307)
+                    module_type_store = module_type_store.join_ssa_context()
+                    
+                    # SSA join for a for statement
+                    module_type_store = module_type_store.join_ssa_context()
+
+                
+                # SSA join for a for statement
+                module_type_store = module_type_store.join_ssa_context()
+
+            
+            
+            # Assigning a Call to a Name (line 310):
+            
+            # Assigning a Call to a Name (line 310):
+            
+            # Call to find(...): (line 310)
+            # Processing the call keyword arguments (line 310)
+            kwargs_996 = {}
+            # Getting the type of 'square' (line 310)
+            square_994 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 310, 19), 'square', False)
+            # Obtaining the member 'find' of a type (line 310)
+            find_995 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 310, 19), square_994, 'find')
+            # Calling find(args, kwargs) (line 310)
+            find_call_result_997 = invoke(stypy.reporting.localization.Localization(__file__, 310, 19), find_995, *[], **kwargs_996)
+            
+            # Assigning a type to the variable 'root' (line 310)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 310, 12), 'root', find_call_result_997)
+            
+            # Assigning a Call to a Name (line 315):
+            
+            # Assigning a Call to a Name (line 315):
+            
+            # Call to set(...): (line 315)
+            # Processing the call keyword arguments (line 315)
+            kwargs_999 = {}
+            # Getting the type of 'set' (line 315)
+            set_998 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 315, 23), 'set', False)
+            # Calling set(args, kwargs) (line 315)
+            set_call_result_1000 = invoke(stypy.reporting.localization.Localization(__file__, 315, 23), set_998, *[], **kwargs_999)
+            
+            # Assigning a type to the variable 'members2' (line 315)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 315, 12), 'members2', set_call_result_1000)
+            
+            # Getting the type of 'self' (line 316)
+            self_1001 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 316, 27), 'self')
+            # Obtaining the member 'squares' of a type (line 316)
+            squares_1002 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 316, 27), self_1001, 'squares')
+            # Testing if the loop is going to be iterated (line 316)
+            # Testing the type of a for loop iterable (line 316)
+            is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 316, 12), squares_1002)
+
+            if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 316, 12), squares_1002):
+                # Getting the type of the for loop variable (line 316)
+                for_loop_var_1003 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 316, 12), squares_1002)
+                # Assigning a type to the variable 'square2' (line 316)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 316, 12), 'square2', for_loop_var_1003)
+                # SSA begins for a for statement (line 316)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+                
+                
+                # Evaluating a boolean operation
+                
+                # Getting the type of 'square2' (line 317)
+                square2_1004 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 317, 19), 'square2')
+                # Obtaining the member 'color' of a type (line 317)
+                color_1005 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 317, 19), square2_1004, 'color')
+                # Getting the type of 'EMPTY' (line 317)
+                EMPTY_1006 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 317, 36), 'EMPTY')
+                # Applying the binary operator '!=' (line 317)
+                result_ne_1007 = python_operator(stypy.reporting.localization.Localization(__file__, 317, 19), '!=', color_1005, EMPTY_1006)
+                
+                
+                
+                # Call to find(...): (line 317)
+                # Processing the call keyword arguments (line 317)
+                kwargs_1010 = {}
+                # Getting the type of 'square2' (line 317)
+                square2_1008 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 317, 46), 'square2', False)
+                # Obtaining the member 'find' of a type (line 317)
+                find_1009 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 317, 46), square2_1008, 'find')
+                # Calling find(args, kwargs) (line 317)
+                find_call_result_1011 = invoke(stypy.reporting.localization.Localization(__file__, 317, 46), find_1009, *[], **kwargs_1010)
+                
+                # Getting the type of 'root' (line 317)
+                root_1012 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 317, 64), 'root')
+                # Applying the binary operator '==' (line 317)
+                result_eq_1013 = python_operator(stypy.reporting.localization.Localization(__file__, 317, 46), '==', find_call_result_1011, root_1012)
+                
+                # Applying the binary operator 'and' (line 317)
+                result_and_keyword_1014 = python_operator(stypy.reporting.localization.Localization(__file__, 317, 19), 'and', result_ne_1007, result_eq_1013)
+                
+                # Testing the type of an if condition (line 317)
+                if_condition_1015 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 317, 16), result_and_keyword_1014)
+                # Assigning a type to the variable 'if_condition_1015' (line 317)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 317, 16), 'if_condition_1015', if_condition_1015)
+                # SSA begins for if statement (line 317)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+                
+                # Call to add(...): (line 318)
+                # Processing the call arguments (line 318)
+                # Getting the type of 'square2' (line 318)
+                square2_1018 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 318, 33), 'square2', False)
+                # Processing the call keyword arguments (line 318)
+                kwargs_1019 = {}
+                # Getting the type of 'members2' (line 318)
+                members2_1016 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 318, 20), 'members2', False)
+                # Obtaining the member 'add' of a type (line 318)
+                add_1017 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 318, 20), members2_1016, 'add')
+                # Calling add(args, kwargs) (line 318)
+                add_call_result_1020 = invoke(stypy.reporting.localization.Localization(__file__, 318, 20), add_1017, *[square2_1018], **kwargs_1019)
+                
+                # SSA join for if statement (line 317)
+                module_type_store = module_type_store.join_ssa_context()
+                
+                # SSA join for a for statement
+                module_type_store = module_type_store.join_ssa_context()
+
+            
+            
+            # Assigning a Attribute to a Name (line 320):
+            
+            # Assigning a Attribute to a Name (line 320):
+            # Getting the type of 'root' (line 320)
+            root_1021 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 320, 25), 'root')
+            # Obtaining the member 'liberties' of a type (line 320)
+            liberties_1022 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 320, 25), root_1021, 'liberties')
+            # Assigning a type to the variable 'liberties2' (line 320)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 320, 12), 'liberties2', liberties_1022)
+            # Evaluating assert statement condition
+            
+            # Getting the type of 'members1' (line 324)
+            members1_1023 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 324, 19), 'members1')
+            # Getting the type of 'members2' (line 324)
+            members2_1024 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 324, 31), 'members2')
+            # Applying the binary operator '==' (line 324)
+            result_eq_1025 = python_operator(stypy.reporting.localization.Localization(__file__, 324, 19), '==', members1_1023, members2_1024)
+            
+            # Evaluating assert statement condition
+            
+            
+            # Call to len(...): (line 325)
+            # Processing the call arguments (line 325)
+            # Getting the type of 'liberties1' (line 325)
+            liberties1_1027 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 325, 23), 'liberties1', False)
+            # Processing the call keyword arguments (line 325)
+            kwargs_1028 = {}
+            # Getting the type of 'len' (line 325)
+            len_1026 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 325, 19), 'len', False)
+            # Calling len(args, kwargs) (line 325)
+            len_call_result_1029 = invoke(stypy.reporting.localization.Localization(__file__, 325, 19), len_1026, *[liberties1_1027], **kwargs_1028)
+            
+            # Getting the type of 'liberties2' (line 325)
+            liberties2_1030 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 325, 38), 'liberties2')
+            # Applying the binary operator '==' (line 325)
+            result_eq_1031 = python_operator(stypy.reporting.localization.Localization(__file__, 325, 19), '==', len_call_result_1029, liberties2_1030)
+            
+            
+            # Assigning a Call to a Name (line 328):
+            
+            # Assigning a Call to a Name (line 328):
+            
+            # Call to set(...): (line 328)
+            # Processing the call arguments (line 328)
+            # Getting the type of 'self' (line 328)
+            self_1033 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 328, 27), 'self', False)
+            # Obtaining the member 'emptyset' of a type (line 328)
+            emptyset_1034 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 328, 27), self_1033, 'emptyset')
+            # Obtaining the member 'empties' of a type (line 328)
+            empties_1035 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 328, 27), emptyset_1034, 'empties')
+            # Processing the call keyword arguments (line 328)
+            kwargs_1036 = {}
+            # Getting the type of 'set' (line 328)
+            set_1032 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 328, 23), 'set', False)
+            # Calling set(args, kwargs) (line 328)
+            set_call_result_1037 = invoke(stypy.reporting.localization.Localization(__file__, 328, 23), set_1032, *[empties_1035], **kwargs_1036)
+            
+            # Assigning a type to the variable 'empties1' (line 328)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 328, 12), 'empties1', set_call_result_1037)
+            
+            # Assigning a Call to a Name (line 330):
+            
+            # Assigning a Call to a Name (line 330):
+            
+            # Call to set(...): (line 330)
+            # Processing the call keyword arguments (line 330)
+            kwargs_1039 = {}
+            # Getting the type of 'set' (line 330)
+            set_1038 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 330, 23), 'set', False)
+            # Calling set(args, kwargs) (line 330)
+            set_call_result_1040 = invoke(stypy.reporting.localization.Localization(__file__, 330, 23), set_1038, *[], **kwargs_1039)
+            
+            # Assigning a type to the variable 'empties2' (line 330)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 330, 12), 'empties2', set_call_result_1040)
+            
+            # Getting the type of 'self' (line 331)
+            self_1041 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 331, 26), 'self')
+            # Obtaining the member 'squares' of a type (line 331)
+            squares_1042 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 331, 26), self_1041, 'squares')
+            # Testing if the loop is going to be iterated (line 331)
+            # Testing the type of a for loop iterable (line 331)
+            is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 331, 12), squares_1042)
+
+            if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 331, 12), squares_1042):
+                # Getting the type of the for loop variable (line 331)
+                for_loop_var_1043 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 331, 12), squares_1042)
+                # Assigning a type to the variable 'square' (line 331)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 331, 12), 'square', for_loop_var_1043)
+                # SSA begins for a for statement (line 331)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+                
+                
+                # Getting the type of 'square' (line 332)
+                square_1044 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 332, 19), 'square')
+                # Obtaining the member 'color' of a type (line 332)
+                color_1045 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 332, 19), square_1044, 'color')
+                # Getting the type of 'EMPTY' (line 332)
+                EMPTY_1046 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 332, 35), 'EMPTY')
+                # Applying the binary operator '==' (line 332)
+                result_eq_1047 = python_operator(stypy.reporting.localization.Localization(__file__, 332, 19), '==', color_1045, EMPTY_1046)
+                
+                # Testing the type of an if condition (line 332)
+                if_condition_1048 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 332, 16), result_eq_1047)
+                # Assigning a type to the variable 'if_condition_1048' (line 332)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 332, 16), 'if_condition_1048', if_condition_1048)
+                # SSA begins for if statement (line 332)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+                
+                # Call to add(...): (line 333)
+                # Processing the call arguments (line 333)
+                # Getting the type of 'square' (line 333)
+                square_1051 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 333, 33), 'square', False)
+                # Obtaining the member 'pos' of a type (line 333)
+                pos_1052 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 333, 33), square_1051, 'pos')
+                # Processing the call keyword arguments (line 333)
+                kwargs_1053 = {}
+                # Getting the type of 'empties2' (line 333)
+                empties2_1049 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 333, 20), 'empties2', False)
+                # Obtaining the member 'add' of a type (line 333)
+                add_1050 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 333, 20), empties2_1049, 'add')
+                # Calling add(args, kwargs) (line 333)
+                add_call_result_1054 = invoke(stypy.reporting.localization.Localization(__file__, 333, 20), add_1050, *[pos_1052], **kwargs_1053)
+                
+                # SSA join for if statement (line 332)
+                module_type_store = module_type_store.join_ssa_context()
+                
+                # SSA join for a for statement
+                module_type_store = module_type_store.join_ssa_context()
+
+            
+            # Evaluating assert statement condition
+            
+            # Getting the type of 'empties1' (line 335)
+            empties1_1055 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 335, 19), 'empties1')
+            # Getting the type of 'empties2' (line 335)
+            empties2_1056 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 335, 31), 'empties2')
+            # Applying the binary operator '==' (line 335)
+            result_eq_1057 = python_operator(stypy.reporting.localization.Localization(__file__, 335, 19), '==', empties1_1055, empties2_1056)
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # ################# End of 'check(...)' code ##################
@@ -6119,103 +6203,107 @@ class Board:
         # Calling range(args, kwargs) (line 339)
         range_call_result_1063 = invoke(stypy.reporting.localization.Localization(__file__, 339, 17), range_1060, *[SIZE_1061], **kwargs_1062)
         
+        # Testing if the loop is going to be iterated (line 339)
         # Testing the type of a for loop iterable (line 339)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 339, 8), range_call_result_1063)
-        # Getting the type of the for loop variable (line 339)
-        for_loop_var_1064 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 339, 8), range_call_result_1063)
-        # Assigning a type to the variable 'y' (line 339)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 339, 8), 'y', for_loop_var_1064)
-        # SSA begins for a for statement (line 339)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Assigning a Call to a Name (line 340):
-        
-        # Assigning a Call to a Name (line 340):
-        
-        # Call to to_pos(...): (line 340)
-        # Processing the call arguments (line 340)
-        int_1066 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 340, 27), 'int')
-        # Getting the type of 'y' (line 340)
-        y_1067 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 340, 30), 'y', False)
-        # Processing the call keyword arguments (line 340)
-        kwargs_1068 = {}
-        # Getting the type of 'to_pos' (line 340)
-        to_pos_1065 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 340, 20), 'to_pos', False)
-        # Calling to_pos(args, kwargs) (line 340)
-        to_pos_call_result_1069 = invoke(stypy.reporting.localization.Localization(__file__, 340, 20), to_pos_1065, *[int_1066, y_1067], **kwargs_1068)
-        
-        # Assigning a type to the variable 'start' (line 340)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 340, 12), 'start', to_pos_call_result_1069)
-        
-        # Call to append(...): (line 341)
-        # Processing the call arguments (line 341)
-        
-        # Call to join(...): (line 341)
-        # Processing the call arguments (line 341)
-        # Calculating list comprehension
-        # Calculating comprehension expression
-        
-        # Obtaining the type of the subscript
-        # Getting the type of 'start' (line 341)
-        start_1081 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 87), 'start', False)
-        # Getting the type of 'start' (line 341)
-        start_1082 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 93), 'start', False)
-        # Getting the type of 'SIZE' (line 341)
-        SIZE_1083 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 101), 'SIZE', False)
-        # Applying the binary operator '+' (line 341)
-        result_add_1084 = python_operator(stypy.reporting.localization.Localization(__file__, 341, 93), '+', start_1082, SIZE_1083)
-        
-        slice_1085 = ensure_slice_bounds(stypy.reporting.localization.Localization(__file__, 341, 74), start_1081, result_add_1084, None)
-        # Getting the type of 'self' (line 341)
-        self_1086 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 74), 'self', False)
-        # Obtaining the member 'squares' of a type (line 341)
-        squares_1087 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 74), self_1086, 'squares')
-        # Obtaining the member '__getitem__' of a type (line 341)
-        getitem___1088 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 74), squares_1087, '__getitem__')
-        # Calling the subscript (__getitem__) to obtain the elements type (line 341)
-        subscript_call_result_1089 = invoke(stypy.reporting.localization.Localization(__file__, 341, 74), getitem___1088, slice_1085)
-        
-        comprehension_1090 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 341, 35), subscript_call_result_1089)
-        # Assigning a type to the variable 'square' (line 341)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 341, 35), 'square', comprehension_1090)
-        
-        # Obtaining the type of the subscript
-        # Getting the type of 'square' (line 341)
-        square_1074 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 40), 'square', False)
-        # Obtaining the member 'color' of a type (line 341)
-        color_1075 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 40), square_1074, 'color')
-        # Getting the type of 'SHOW' (line 341)
-        SHOW_1076 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 35), 'SHOW', False)
-        # Obtaining the member '__getitem__' of a type (line 341)
-        getitem___1077 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 35), SHOW_1076, '__getitem__')
-        # Calling the subscript (__getitem__) to obtain the elements type (line 341)
-        subscript_call_result_1078 = invoke(stypy.reporting.localization.Localization(__file__, 341, 35), getitem___1077, color_1075)
-        
-        str_1079 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 341, 56), 'str', ' ')
-        # Applying the binary operator '+' (line 341)
-        result_add_1080 = python_operator(stypy.reporting.localization.Localization(__file__, 341, 35), '+', subscript_call_result_1078, str_1079)
-        
-        list_1091 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 341, 35), 'list')
-        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 341, 35), list_1091, result_add_1080)
-        # Processing the call keyword arguments (line 341)
-        kwargs_1092 = {}
-        str_1072 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 341, 26), 'str', '')
-        # Obtaining the member 'join' of a type (line 341)
-        join_1073 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 26), str_1072, 'join')
-        # Calling join(args, kwargs) (line 341)
-        join_call_result_1093 = invoke(stypy.reporting.localization.Localization(__file__, 341, 26), join_1073, *[list_1091], **kwargs_1092)
-        
-        # Processing the call keyword arguments (line 341)
-        kwargs_1094 = {}
-        # Getting the type of 'result' (line 341)
-        result_1070 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 12), 'result', False)
-        # Obtaining the member 'append' of a type (line 341)
-        append_1071 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 12), result_1070, 'append')
-        # Calling append(args, kwargs) (line 341)
-        append_call_result_1095 = invoke(stypy.reporting.localization.Localization(__file__, 341, 12), append_1071, *[join_call_result_1093], **kwargs_1094)
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 339, 8), range_call_result_1063):
+            # Getting the type of the for loop variable (line 339)
+            for_loop_var_1064 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 339, 8), range_call_result_1063)
+            # Assigning a type to the variable 'y' (line 339)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 339, 8), 'y', for_loop_var_1064)
+            # SSA begins for a for statement (line 339)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            # Assigning a Call to a Name (line 340):
+            
+            # Assigning a Call to a Name (line 340):
+            
+            # Call to to_pos(...): (line 340)
+            # Processing the call arguments (line 340)
+            int_1066 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 340, 27), 'int')
+            # Getting the type of 'y' (line 340)
+            y_1067 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 340, 30), 'y', False)
+            # Processing the call keyword arguments (line 340)
+            kwargs_1068 = {}
+            # Getting the type of 'to_pos' (line 340)
+            to_pos_1065 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 340, 20), 'to_pos', False)
+            # Calling to_pos(args, kwargs) (line 340)
+            to_pos_call_result_1069 = invoke(stypy.reporting.localization.Localization(__file__, 340, 20), to_pos_1065, *[int_1066, y_1067], **kwargs_1068)
+            
+            # Assigning a type to the variable 'start' (line 340)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 340, 12), 'start', to_pos_call_result_1069)
+            
+            # Call to append(...): (line 341)
+            # Processing the call arguments (line 341)
+            
+            # Call to join(...): (line 341)
+            # Processing the call arguments (line 341)
+            # Calculating list comprehension
+            # Calculating comprehension expression
+            
+            # Obtaining the type of the subscript
+            # Getting the type of 'start' (line 341)
+            start_1081 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 87), 'start', False)
+            # Getting the type of 'start' (line 341)
+            start_1082 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 93), 'start', False)
+            # Getting the type of 'SIZE' (line 341)
+            SIZE_1083 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 101), 'SIZE', False)
+            # Applying the binary operator '+' (line 341)
+            result_add_1084 = python_operator(stypy.reporting.localization.Localization(__file__, 341, 93), '+', start_1082, SIZE_1083)
+            
+            slice_1085 = ensure_slice_bounds(stypy.reporting.localization.Localization(__file__, 341, 74), start_1081, result_add_1084, None)
+            # Getting the type of 'self' (line 341)
+            self_1086 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 74), 'self', False)
+            # Obtaining the member 'squares' of a type (line 341)
+            squares_1087 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 74), self_1086, 'squares')
+            # Obtaining the member '__getitem__' of a type (line 341)
+            getitem___1088 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 74), squares_1087, '__getitem__')
+            # Calling the subscript (__getitem__) to obtain the elements type (line 341)
+            subscript_call_result_1089 = invoke(stypy.reporting.localization.Localization(__file__, 341, 74), getitem___1088, slice_1085)
+            
+            comprehension_1090 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 341, 35), subscript_call_result_1089)
+            # Assigning a type to the variable 'square' (line 341)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 341, 35), 'square', comprehension_1090)
+            
+            # Obtaining the type of the subscript
+            # Getting the type of 'square' (line 341)
+            square_1074 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 40), 'square', False)
+            # Obtaining the member 'color' of a type (line 341)
+            color_1075 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 40), square_1074, 'color')
+            # Getting the type of 'SHOW' (line 341)
+            SHOW_1076 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 35), 'SHOW', False)
+            # Obtaining the member '__getitem__' of a type (line 341)
+            getitem___1077 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 35), SHOW_1076, '__getitem__')
+            # Calling the subscript (__getitem__) to obtain the elements type (line 341)
+            subscript_call_result_1078 = invoke(stypy.reporting.localization.Localization(__file__, 341, 35), getitem___1077, color_1075)
+            
+            str_1079 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 341, 56), 'str', ' ')
+            # Applying the binary operator '+' (line 341)
+            result_add_1080 = python_operator(stypy.reporting.localization.Localization(__file__, 341, 35), '+', subscript_call_result_1078, str_1079)
+            
+            list_1091 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 341, 35), 'list')
+            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 341, 35), list_1091, result_add_1080)
+            # Processing the call keyword arguments (line 341)
+            kwargs_1092 = {}
+            str_1072 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 341, 26), 'str', '')
+            # Obtaining the member 'join' of a type (line 341)
+            join_1073 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 26), str_1072, 'join')
+            # Calling join(args, kwargs) (line 341)
+            join_call_result_1093 = invoke(stypy.reporting.localization.Localization(__file__, 341, 26), join_1073, *[list_1091], **kwargs_1092)
+            
+            # Processing the call keyword arguments (line 341)
+            kwargs_1094 = {}
+            # Getting the type of 'result' (line 341)
+            result_1070 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 12), 'result', False)
+            # Obtaining the member 'append' of a type (line 341)
+            append_1071 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 341, 12), result_1070, 'append')
+            # Calling append(args, kwargs) (line 341)
+            append_call_result_1095 = invoke(stypy.reporting.localization.Localization(__file__, 341, 12), append_1071, *[join_call_result_1093], **kwargs_1094)
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # Call to join(...): (line 342)
@@ -7068,156 +7156,160 @@ class UCTNode:
         # Calling range(args, kwargs) (line 396)
         range_call_result_1273 = invoke(stypy.reporting.localization.Localization(__file__, 396, 17), range_1270, *[MAXMOVES_1271], **kwargs_1272)
         
+        # Testing if the loop is going to be iterated (line 396)
         # Testing the type of a for loop iterable (line 396)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 396, 8), range_call_result_1273)
-        # Getting the type of the for loop variable (line 396)
-        for_loop_var_1274 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 396, 8), range_call_result_1273)
-        # Assigning a type to the variable 'x' (line 396)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 396, 8), 'x', for_loop_var_1274)
-        # SSA begins for a for statement (line 396)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Getting the type of 'board' (line 397)
-        board_1275 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 397, 15), 'board')
-        # Obtaining the member 'finished' of a type (line 397)
-        finished_1276 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 397, 15), board_1275, 'finished')
-        # Testing the type of an if condition (line 397)
-        if_condition_1277 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 397, 12), finished_1276)
-        # Assigning a type to the variable 'if_condition_1277' (line 397)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 397, 12), 'if_condition_1277', if_condition_1277)
-        # SSA begins for if statement (line 397)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        # SSA join for if statement (line 397)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Assigning a Name to a Name (line 399):
-        
-        # Assigning a Name to a Name (line 399):
-        # Getting the type of 'PASS' (line 399)
-        PASS_1278 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 399, 18), 'PASS')
-        # Assigning a type to the variable 'pos' (line 399)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 399, 12), 'pos', PASS_1278)
-        
-        # Getting the type of 'board' (line 400)
-        board_1279 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 400, 15), 'board')
-        # Obtaining the member 'atari' of a type (line 400)
-        atari_1280 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 400, 15), board_1279, 'atari')
-        # Testing the type of an if condition (line 400)
-        if_condition_1281 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 400, 12), atari_1280)
-        # Assigning a type to the variable 'if_condition_1281' (line 400)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 400, 12), 'if_condition_1281', if_condition_1281)
-        # SSA begins for if statement (line 400)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Call to a Name (line 401):
-        
-        # Assigning a Call to a Name (line 401):
-        
-        # Call to liberty(...): (line 401)
-        # Processing the call keyword arguments (line 401)
-        kwargs_1285 = {}
-        # Getting the type of 'board' (line 401)
-        board_1282 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 401, 26), 'board', False)
-        # Obtaining the member 'atari' of a type (line 401)
-        atari_1283 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 401, 26), board_1282, 'atari')
-        # Obtaining the member 'liberty' of a type (line 401)
-        liberty_1284 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 401, 26), atari_1283, 'liberty')
-        # Calling liberty(args, kwargs) (line 401)
-        liberty_call_result_1286 = invoke(stypy.reporting.localization.Localization(__file__, 401, 26), liberty_1284, *[], **kwargs_1285)
-        
-        # Assigning a type to the variable 'liberty' (line 401)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 401, 16), 'liberty', liberty_call_result_1286)
-        
-        
-        # Call to useful(...): (line 402)
-        # Processing the call arguments (line 402)
-        # Getting the type of 'liberty' (line 402)
-        liberty_1289 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 402, 32), 'liberty', False)
-        # Obtaining the member 'pos' of a type (line 402)
-        pos_1290 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 402, 32), liberty_1289, 'pos')
-        # Processing the call keyword arguments (line 402)
-        kwargs_1291 = {}
-        # Getting the type of 'board' (line 402)
-        board_1287 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 402, 19), 'board', False)
-        # Obtaining the member 'useful' of a type (line 402)
-        useful_1288 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 402, 19), board_1287, 'useful')
-        # Calling useful(args, kwargs) (line 402)
-        useful_call_result_1292 = invoke(stypy.reporting.localization.Localization(__file__, 402, 19), useful_1288, *[pos_1290], **kwargs_1291)
-        
-        # Testing the type of an if condition (line 402)
-        if_condition_1293 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 402, 16), useful_call_result_1292)
-        # Assigning a type to the variable 'if_condition_1293' (line 402)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 402, 16), 'if_condition_1293', if_condition_1293)
-        # SSA begins for if statement (line 402)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Attribute to a Name (line 403):
-        
-        # Assigning a Attribute to a Name (line 403):
-        # Getting the type of 'liberty' (line 403)
-        liberty_1294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 403, 26), 'liberty')
-        # Obtaining the member 'pos' of a type (line 403)
-        pos_1295 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 403, 26), liberty_1294, 'pos')
-        # Assigning a type to the variable 'pos' (line 403)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 403, 20), 'pos', pos_1295)
-        # SSA join for if statement (line 402)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for if statement (line 400)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        
-        # Getting the type of 'pos' (line 404)
-        pos_1296 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 404, 15), 'pos')
-        # Getting the type of 'PASS' (line 404)
-        PASS_1297 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 404, 22), 'PASS')
-        # Applying the binary operator '==' (line 404)
-        result_eq_1298 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 15), '==', pos_1296, PASS_1297)
-        
-        # Testing the type of an if condition (line 404)
-        if_condition_1299 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 404, 12), result_eq_1298)
-        # Assigning a type to the variable 'if_condition_1299' (line 404)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 404, 12), 'if_condition_1299', if_condition_1299)
-        # SSA begins for if statement (line 404)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Call to a Name (line 405):
-        
-        # Assigning a Call to a Name (line 405):
-        
-        # Call to random_move(...): (line 405)
-        # Processing the call keyword arguments (line 405)
-        kwargs_1302 = {}
-        # Getting the type of 'board' (line 405)
-        board_1300 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 405, 22), 'board', False)
-        # Obtaining the member 'random_move' of a type (line 405)
-        random_move_1301 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 405, 22), board_1300, 'random_move')
-        # Calling random_move(args, kwargs) (line 405)
-        random_move_call_result_1303 = invoke(stypy.reporting.localization.Localization(__file__, 405, 22), random_move_1301, *[], **kwargs_1302)
-        
-        # Assigning a type to the variable 'pos' (line 405)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 405, 16), 'pos', random_move_call_result_1303)
-        # SSA join for if statement (line 404)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Call to move(...): (line 407)
-        # Processing the call arguments (line 407)
-        # Getting the type of 'pos' (line 407)
-        pos_1306 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 407, 23), 'pos', False)
-        # Processing the call keyword arguments (line 407)
-        kwargs_1307 = {}
-        # Getting the type of 'board' (line 407)
-        board_1304 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 407, 12), 'board', False)
-        # Obtaining the member 'move' of a type (line 407)
-        move_1305 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 407, 12), board_1304, 'move')
-        # Calling move(args, kwargs) (line 407)
-        move_call_result_1308 = invoke(stypy.reporting.localization.Localization(__file__, 407, 12), move_1305, *[pos_1306], **kwargs_1307)
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 396, 8), range_call_result_1273):
+            # Getting the type of the for loop variable (line 396)
+            for_loop_var_1274 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 396, 8), range_call_result_1273)
+            # Assigning a type to the variable 'x' (line 396)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 396, 8), 'x', for_loop_var_1274)
+            # SSA begins for a for statement (line 396)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            # Getting the type of 'board' (line 397)
+            board_1275 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 397, 15), 'board')
+            # Obtaining the member 'finished' of a type (line 397)
+            finished_1276 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 397, 15), board_1275, 'finished')
+            # Testing the type of an if condition (line 397)
+            if_condition_1277 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 397, 12), finished_1276)
+            # Assigning a type to the variable 'if_condition_1277' (line 397)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 397, 12), 'if_condition_1277', if_condition_1277)
+            # SSA begins for if statement (line 397)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            # SSA join for if statement (line 397)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            
+            # Assigning a Name to a Name (line 399):
+            
+            # Assigning a Name to a Name (line 399):
+            # Getting the type of 'PASS' (line 399)
+            PASS_1278 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 399, 18), 'PASS')
+            # Assigning a type to the variable 'pos' (line 399)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 399, 12), 'pos', PASS_1278)
+            
+            # Getting the type of 'board' (line 400)
+            board_1279 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 400, 15), 'board')
+            # Obtaining the member 'atari' of a type (line 400)
+            atari_1280 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 400, 15), board_1279, 'atari')
+            # Testing the type of an if condition (line 400)
+            if_condition_1281 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 400, 12), atari_1280)
+            # Assigning a type to the variable 'if_condition_1281' (line 400)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 400, 12), 'if_condition_1281', if_condition_1281)
+            # SSA begins for if statement (line 400)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Call to a Name (line 401):
+            
+            # Assigning a Call to a Name (line 401):
+            
+            # Call to liberty(...): (line 401)
+            # Processing the call keyword arguments (line 401)
+            kwargs_1285 = {}
+            # Getting the type of 'board' (line 401)
+            board_1282 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 401, 26), 'board', False)
+            # Obtaining the member 'atari' of a type (line 401)
+            atari_1283 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 401, 26), board_1282, 'atari')
+            # Obtaining the member 'liberty' of a type (line 401)
+            liberty_1284 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 401, 26), atari_1283, 'liberty')
+            # Calling liberty(args, kwargs) (line 401)
+            liberty_call_result_1286 = invoke(stypy.reporting.localization.Localization(__file__, 401, 26), liberty_1284, *[], **kwargs_1285)
+            
+            # Assigning a type to the variable 'liberty' (line 401)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 401, 16), 'liberty', liberty_call_result_1286)
+            
+            
+            # Call to useful(...): (line 402)
+            # Processing the call arguments (line 402)
+            # Getting the type of 'liberty' (line 402)
+            liberty_1289 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 402, 32), 'liberty', False)
+            # Obtaining the member 'pos' of a type (line 402)
+            pos_1290 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 402, 32), liberty_1289, 'pos')
+            # Processing the call keyword arguments (line 402)
+            kwargs_1291 = {}
+            # Getting the type of 'board' (line 402)
+            board_1287 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 402, 19), 'board', False)
+            # Obtaining the member 'useful' of a type (line 402)
+            useful_1288 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 402, 19), board_1287, 'useful')
+            # Calling useful(args, kwargs) (line 402)
+            useful_call_result_1292 = invoke(stypy.reporting.localization.Localization(__file__, 402, 19), useful_1288, *[pos_1290], **kwargs_1291)
+            
+            # Testing the type of an if condition (line 402)
+            if_condition_1293 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 402, 16), useful_call_result_1292)
+            # Assigning a type to the variable 'if_condition_1293' (line 402)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 402, 16), 'if_condition_1293', if_condition_1293)
+            # SSA begins for if statement (line 402)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Attribute to a Name (line 403):
+            
+            # Assigning a Attribute to a Name (line 403):
+            # Getting the type of 'liberty' (line 403)
+            liberty_1294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 403, 26), 'liberty')
+            # Obtaining the member 'pos' of a type (line 403)
+            pos_1295 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 403, 26), liberty_1294, 'pos')
+            # Assigning a type to the variable 'pos' (line 403)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 403, 20), 'pos', pos_1295)
+            # SSA join for if statement (line 402)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for if statement (line 400)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            
+            
+            # Getting the type of 'pos' (line 404)
+            pos_1296 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 404, 15), 'pos')
+            # Getting the type of 'PASS' (line 404)
+            PASS_1297 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 404, 22), 'PASS')
+            # Applying the binary operator '==' (line 404)
+            result_eq_1298 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 15), '==', pos_1296, PASS_1297)
+            
+            # Testing the type of an if condition (line 404)
+            if_condition_1299 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 404, 12), result_eq_1298)
+            # Assigning a type to the variable 'if_condition_1299' (line 404)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 404, 12), 'if_condition_1299', if_condition_1299)
+            # SSA begins for if statement (line 404)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Call to a Name (line 405):
+            
+            # Assigning a Call to a Name (line 405):
+            
+            # Call to random_move(...): (line 405)
+            # Processing the call keyword arguments (line 405)
+            kwargs_1302 = {}
+            # Getting the type of 'board' (line 405)
+            board_1300 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 405, 22), 'board', False)
+            # Obtaining the member 'random_move' of a type (line 405)
+            random_move_1301 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 405, 22), board_1300, 'random_move')
+            # Calling random_move(args, kwargs) (line 405)
+            random_move_call_result_1303 = invoke(stypy.reporting.localization.Localization(__file__, 405, 22), random_move_1301, *[], **kwargs_1302)
+            
+            # Assigning a type to the variable 'pos' (line 405)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 405, 16), 'pos', random_move_call_result_1303)
+            # SSA join for if statement (line 404)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            
+            # Call to move(...): (line 407)
+            # Processing the call arguments (line 407)
+            # Getting the type of 'pos' (line 407)
+            pos_1306 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 407, 23), 'pos', False)
+            # Processing the call keyword arguments (line 407)
+            kwargs_1307 = {}
+            # Getting the type of 'board' (line 407)
+            board_1304 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 407, 12), 'board', False)
+            # Obtaining the member 'move' of a type (line 407)
+            move_1305 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 407, 12), board_1304, 'move')
+            # Calling move(args, kwargs) (line 407)
+            move_call_result_1308 = invoke(stypy.reporting.localization.Localization(__file__, 407, 12), move_1305, *[pos_1306], **kwargs_1307)
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # ################# End of 'random_playout(...)' code ##################
@@ -7318,336 +7410,344 @@ class UCTNode:
         
         # Getting the type of 'path' (line 417)
         path_1322 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 417, 20), 'path')
+        # Testing if the loop is going to be iterated (line 417)
         # Testing the type of a for loop iterable (line 417)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 417, 8), path_1322)
-        # Getting the type of the for loop variable (line 417)
-        for_loop_var_1323 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 417, 8), path_1322)
-        # Assigning a type to the variable 'node' (line 417)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 417, 8), 'node', for_loop_var_1323)
-        # SSA begins for a for statement (line 417)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Getting the type of 'color' (line 418)
-        color_1324 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 418, 15), 'color')
-        # Getting the type of 'BLACK' (line 418)
-        BLACK_1325 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 418, 24), 'BLACK')
-        # Applying the binary operator '==' (line 418)
-        result_eq_1326 = python_operator(stypy.reporting.localization.Localization(__file__, 418, 15), '==', color_1324, BLACK_1325)
-        
-        # Testing the type of an if condition (line 418)
-        if_condition_1327 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 418, 12), result_eq_1326)
-        # Assigning a type to the variable 'if_condition_1327' (line 418)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 418, 12), 'if_condition_1327', if_condition_1327)
-        # SSA begins for if statement (line 418)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Name (line 419):
-        
-        # Assigning a Name to a Name (line 419):
-        # Getting the type of 'WHITE' (line 419)
-        WHITE_1328 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 419, 24), 'WHITE')
-        # Assigning a type to the variable 'color' (line 419)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 419, 16), 'color', WHITE_1328)
-        # SSA branch for the else part of an if statement (line 418)
-        module_type_store.open_ssa_branch('else')
-        
-        # Assigning a Name to a Name (line 421):
-        
-        # Assigning a Name to a Name (line 421):
-        # Getting the type of 'BLACK' (line 421)
-        BLACK_1329 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 421, 24), 'BLACK')
-        # Assigning a type to the variable 'color' (line 421)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 421, 16), 'color', BLACK_1329)
-        # SSA join for if statement (line 418)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        
-        # Getting the type of 'wins' (line 422)
-        wins_1330 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 422, 15), 'wins')
-        
-        # Getting the type of 'color' (line 422)
-        color_1331 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 422, 24), 'color')
-        # Getting the type of 'BLACK' (line 422)
-        BLACK_1332 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 422, 33), 'BLACK')
-        # Applying the binary operator '==' (line 422)
-        result_eq_1333 = python_operator(stypy.reporting.localization.Localization(__file__, 422, 24), '==', color_1331, BLACK_1332)
-        
-        # Applying the binary operator '==' (line 422)
-        result_eq_1334 = python_operator(stypy.reporting.localization.Localization(__file__, 422, 15), '==', wins_1330, result_eq_1333)
-        
-        # Testing the type of an if condition (line 422)
-        if_condition_1335 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 422, 12), result_eq_1334)
-        # Assigning a type to the variable 'if_condition_1335' (line 422)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 422, 12), 'if_condition_1335', if_condition_1335)
-        # SSA begins for if statement (line 422)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'node' (line 423)
-        node_1336 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 423, 16), 'node')
-        # Obtaining the member 'wins' of a type (line 423)
-        wins_1337 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 423, 16), node_1336, 'wins')
-        int_1338 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 29), 'int')
-        # Applying the binary operator '+=' (line 423)
-        result_iadd_1339 = python_operator(stypy.reporting.localization.Localization(__file__, 423, 16), '+=', wins_1337, int_1338)
-        # Getting the type of 'node' (line 423)
-        node_1340 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 423, 16), 'node')
-        # Setting the type of the member 'wins' of a type (line 423)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 423, 16), node_1340, 'wins', result_iadd_1339)
-        
-        # SSA branch for the else part of an if statement (line 422)
-        module_type_store.open_ssa_branch('else')
-        
-        # Getting the type of 'node' (line 425)
-        node_1341 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 425, 16), 'node')
-        # Obtaining the member 'losses' of a type (line 425)
-        losses_1342 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 425, 16), node_1341, 'losses')
-        int_1343 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 425, 31), 'int')
-        # Applying the binary operator '+=' (line 425)
-        result_iadd_1344 = python_operator(stypy.reporting.localization.Localization(__file__, 425, 16), '+=', losses_1342, int_1343)
-        # Getting the type of 'node' (line 425)
-        node_1345 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 425, 16), 'node')
-        # Setting the type of the member 'losses' of a type (line 425)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 425, 16), node_1345, 'losses', result_iadd_1344)
-        
-        # SSA join for if statement (line 422)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Getting the type of 'node' (line 426)
-        node_1346 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 426, 15), 'node')
-        # Obtaining the member 'parent' of a type (line 426)
-        parent_1347 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 426, 15), node_1346, 'parent')
-        # Testing the type of an if condition (line 426)
-        if_condition_1348 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 426, 12), parent_1347)
-        # Assigning a type to the variable 'if_condition_1348' (line 426)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 426, 12), 'if_condition_1348', if_condition_1348)
-        # SSA begins for if statement (line 426)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        
-        # Call to range(...): (line 427)
-        # Processing the call arguments (line 427)
-        # Getting the type of 'histpos' (line 427)
-        histpos_1350 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 31), 'histpos', False)
-        int_1351 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 427, 41), 'int')
-        # Applying the binary operator '+' (line 427)
-        result_add_1352 = python_operator(stypy.reporting.localization.Localization(__file__, 427, 31), '+', histpos_1350, int_1351)
-        
-        
-        # Call to len(...): (line 427)
-        # Processing the call arguments (line 427)
-        # Getting the type of 'board' (line 427)
-        board_1354 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 48), 'board', False)
-        # Obtaining the member 'history' of a type (line 427)
-        history_1355 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 427, 48), board_1354, 'history')
-        # Processing the call keyword arguments (line 427)
-        kwargs_1356 = {}
-        # Getting the type of 'len' (line 427)
-        len_1353 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 44), 'len', False)
-        # Calling len(args, kwargs) (line 427)
-        len_call_result_1357 = invoke(stypy.reporting.localization.Localization(__file__, 427, 44), len_1353, *[history_1355], **kwargs_1356)
-        
-        int_1358 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 427, 64), 'int')
-        # Processing the call keyword arguments (line 427)
-        kwargs_1359 = {}
-        # Getting the type of 'range' (line 427)
-        range_1349 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 25), 'range', False)
-        # Calling range(args, kwargs) (line 427)
-        range_call_result_1360 = invoke(stypy.reporting.localization.Localization(__file__, 427, 25), range_1349, *[result_add_1352, len_call_result_1357, int_1358], **kwargs_1359)
-        
-        # Testing the type of a for loop iterable (line 427)
-        is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 427, 16), range_call_result_1360)
-        # Getting the type of the for loop variable (line 427)
-        for_loop_var_1361 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 427, 16), range_call_result_1360)
-        # Assigning a type to the variable 'i' (line 427)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 427, 16), 'i', for_loop_var_1361)
-        # SSA begins for a for statement (line 427)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        # Assigning a Subscript to a Name (line 428):
-        
-        # Assigning a Subscript to a Name (line 428):
-        
-        # Obtaining the type of the subscript
-        # Getting the type of 'i' (line 428)
-        i_1362 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 428, 40), 'i')
-        # Getting the type of 'board' (line 428)
-        board_1363 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 428, 26), 'board')
-        # Obtaining the member 'history' of a type (line 428)
-        history_1364 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 428, 26), board_1363, 'history')
-        # Obtaining the member '__getitem__' of a type (line 428)
-        getitem___1365 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 428, 26), history_1364, '__getitem__')
-        # Calling the subscript (__getitem__) to obtain the elements type (line 428)
-        subscript_call_result_1366 = invoke(stypy.reporting.localization.Localization(__file__, 428, 26), getitem___1365, i_1362)
-        
-        # Assigning a type to the variable 'pos' (line 428)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 428, 20), 'pos', subscript_call_result_1366)
-        
-        
-        # Getting the type of 'pos' (line 429)
-        pos_1367 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 429, 23), 'pos')
-        # Getting the type of 'PASS' (line 429)
-        PASS_1368 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 429, 30), 'PASS')
-        # Applying the binary operator '==' (line 429)
-        result_eq_1369 = python_operator(stypy.reporting.localization.Localization(__file__, 429, 23), '==', pos_1367, PASS_1368)
-        
-        # Testing the type of an if condition (line 429)
-        if_condition_1370 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 429, 20), result_eq_1369)
-        # Assigning a type to the variable 'if_condition_1370' (line 429)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 429, 20), 'if_condition_1370', if_condition_1370)
-        # SSA begins for if statement (line 429)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        # SSA join for if statement (line 429)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        
-        # Getting the type of 'wins' (line 431)
-        wins_1371 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 23), 'wins')
-        
-        # Getting the type of 'color' (line 431)
-        color_1372 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 32), 'color')
-        # Getting the type of 'BLACK' (line 431)
-        BLACK_1373 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 41), 'BLACK')
-        # Applying the binary operator '==' (line 431)
-        result_eq_1374 = python_operator(stypy.reporting.localization.Localization(__file__, 431, 32), '==', color_1372, BLACK_1373)
-        
-        # Applying the binary operator '==' (line 431)
-        result_eq_1375 = python_operator(stypy.reporting.localization.Localization(__file__, 431, 23), '==', wins_1371, result_eq_1374)
-        
-        # Testing the type of an if condition (line 431)
-        if_condition_1376 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 431, 20), result_eq_1375)
-        # Assigning a type to the variable 'if_condition_1376' (line 431)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 431, 20), 'if_condition_1376', if_condition_1376)
-        # SSA begins for if statement (line 431)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Getting the type of 'node' (line 432)
-        node_1377 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 24), 'node')
-        # Obtaining the member 'parent' of a type (line 432)
-        parent_1378 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), node_1377, 'parent')
-        # Obtaining the member 'pos_amaf_wins' of a type (line 432)
-        pos_amaf_wins_1379 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), parent_1378, 'pos_amaf_wins')
-        
-        # Obtaining the type of the subscript
-        # Getting the type of 'pos' (line 432)
-        pos_1380 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 50), 'pos')
-        # Getting the type of 'node' (line 432)
-        node_1381 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 24), 'node')
-        # Obtaining the member 'parent' of a type (line 432)
-        parent_1382 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), node_1381, 'parent')
-        # Obtaining the member 'pos_amaf_wins' of a type (line 432)
-        pos_amaf_wins_1383 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), parent_1382, 'pos_amaf_wins')
-        # Obtaining the member '__getitem__' of a type (line 432)
-        getitem___1384 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), pos_amaf_wins_1383, '__getitem__')
-        # Calling the subscript (__getitem__) to obtain the elements type (line 432)
-        subscript_call_result_1385 = invoke(stypy.reporting.localization.Localization(__file__, 432, 24), getitem___1384, pos_1380)
-        
-        int_1386 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 432, 58), 'int')
-        # Applying the binary operator '+=' (line 432)
-        result_iadd_1387 = python_operator(stypy.reporting.localization.Localization(__file__, 432, 24), '+=', subscript_call_result_1385, int_1386)
-        # Getting the type of 'node' (line 432)
-        node_1388 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 24), 'node')
-        # Obtaining the member 'parent' of a type (line 432)
-        parent_1389 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), node_1388, 'parent')
-        # Obtaining the member 'pos_amaf_wins' of a type (line 432)
-        pos_amaf_wins_1390 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), parent_1389, 'pos_amaf_wins')
-        # Getting the type of 'pos' (line 432)
-        pos_1391 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 50), 'pos')
-        # Storing an element on a container (line 432)
-        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 432, 24), pos_amaf_wins_1390, (pos_1391, result_iadd_1387))
-        
-        # SSA branch for the else part of an if statement (line 431)
-        module_type_store.open_ssa_branch('else')
-        
-        # Getting the type of 'node' (line 434)
-        node_1392 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 24), 'node')
-        # Obtaining the member 'parent' of a type (line 434)
-        parent_1393 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), node_1392, 'parent')
-        # Obtaining the member 'pos_amaf_losses' of a type (line 434)
-        pos_amaf_losses_1394 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), parent_1393, 'pos_amaf_losses')
-        
-        # Obtaining the type of the subscript
-        # Getting the type of 'pos' (line 434)
-        pos_1395 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 52), 'pos')
-        # Getting the type of 'node' (line 434)
-        node_1396 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 24), 'node')
-        # Obtaining the member 'parent' of a type (line 434)
-        parent_1397 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), node_1396, 'parent')
-        # Obtaining the member 'pos_amaf_losses' of a type (line 434)
-        pos_amaf_losses_1398 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), parent_1397, 'pos_amaf_losses')
-        # Obtaining the member '__getitem__' of a type (line 434)
-        getitem___1399 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), pos_amaf_losses_1398, '__getitem__')
-        # Calling the subscript (__getitem__) to obtain the elements type (line 434)
-        subscript_call_result_1400 = invoke(stypy.reporting.localization.Localization(__file__, 434, 24), getitem___1399, pos_1395)
-        
-        int_1401 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 434, 60), 'int')
-        # Applying the binary operator '+=' (line 434)
-        result_iadd_1402 = python_operator(stypy.reporting.localization.Localization(__file__, 434, 24), '+=', subscript_call_result_1400, int_1401)
-        # Getting the type of 'node' (line 434)
-        node_1403 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 24), 'node')
-        # Obtaining the member 'parent' of a type (line 434)
-        parent_1404 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), node_1403, 'parent')
-        # Obtaining the member 'pos_amaf_losses' of a type (line 434)
-        pos_amaf_losses_1405 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), parent_1404, 'pos_amaf_losses')
-        # Getting the type of 'pos' (line 434)
-        pos_1406 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 52), 'pos')
-        # Storing an element on a container (line 434)
-        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 434, 24), pos_amaf_losses_1405, (pos_1406, result_iadd_1402))
-        
-        # SSA join for if statement (line 431)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Getting the type of 'node' (line 435)
-        node_1407 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 435, 20), 'node')
-        # Obtaining the member 'parent' of a type (line 435)
-        parent_1408 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 435, 20), node_1407, 'parent')
-        # Obtaining the member 'amafvisits' of a type (line 435)
-        amafvisits_1409 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 435, 20), parent_1408, 'amafvisits')
-        int_1410 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 435, 46), 'int')
-        # Applying the binary operator '+=' (line 435)
-        result_iadd_1411 = python_operator(stypy.reporting.localization.Localization(__file__, 435, 20), '+=', amafvisits_1409, int_1410)
-        # Getting the type of 'node' (line 435)
-        node_1412 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 435, 20), 'node')
-        # Obtaining the member 'parent' of a type (line 435)
-        parent_1413 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 435, 20), node_1412, 'parent')
-        # Setting the type of the member 'amafvisits' of a type (line 435)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 435, 20), parent_1413, 'amafvisits', result_iadd_1411)
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
-        
-        
-        # Assigning a Call to a Attribute (line 436):
-        
-        # Assigning a Call to a Attribute (line 436):
-        
-        # Call to best_child(...): (line 436)
-        # Processing the call keyword arguments (line 436)
-        kwargs_1417 = {}
-        # Getting the type of 'node' (line 436)
-        node_1414 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 436, 40), 'node', False)
-        # Obtaining the member 'parent' of a type (line 436)
-        parent_1415 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 436, 40), node_1414, 'parent')
-        # Obtaining the member 'best_child' of a type (line 436)
-        best_child_1416 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 436, 40), parent_1415, 'best_child')
-        # Calling best_child(args, kwargs) (line 436)
-        best_child_call_result_1418 = invoke(stypy.reporting.localization.Localization(__file__, 436, 40), best_child_1416, *[], **kwargs_1417)
-        
-        # Getting the type of 'node' (line 436)
-        node_1419 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 436, 16), 'node')
-        # Obtaining the member 'parent' of a type (line 436)
-        parent_1420 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 436, 16), node_1419, 'parent')
-        # Setting the type of the member 'bestchild' of a type (line 436)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 436, 16), parent_1420, 'bestchild', best_child_call_result_1418)
-        # SSA join for if statement (line 426)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 417, 8), path_1322):
+            # Getting the type of the for loop variable (line 417)
+            for_loop_var_1323 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 417, 8), path_1322)
+            # Assigning a type to the variable 'node' (line 417)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 417, 8), 'node', for_loop_var_1323)
+            # SSA begins for a for statement (line 417)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Getting the type of 'color' (line 418)
+            color_1324 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 418, 15), 'color')
+            # Getting the type of 'BLACK' (line 418)
+            BLACK_1325 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 418, 24), 'BLACK')
+            # Applying the binary operator '==' (line 418)
+            result_eq_1326 = python_operator(stypy.reporting.localization.Localization(__file__, 418, 15), '==', color_1324, BLACK_1325)
+            
+            # Testing the type of an if condition (line 418)
+            if_condition_1327 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 418, 12), result_eq_1326)
+            # Assigning a type to the variable 'if_condition_1327' (line 418)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 418, 12), 'if_condition_1327', if_condition_1327)
+            # SSA begins for if statement (line 418)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Name (line 419):
+            
+            # Assigning a Name to a Name (line 419):
+            # Getting the type of 'WHITE' (line 419)
+            WHITE_1328 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 419, 24), 'WHITE')
+            # Assigning a type to the variable 'color' (line 419)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 419, 16), 'color', WHITE_1328)
+            # SSA branch for the else part of an if statement (line 418)
+            module_type_store.open_ssa_branch('else')
+            
+            # Assigning a Name to a Name (line 421):
+            
+            # Assigning a Name to a Name (line 421):
+            # Getting the type of 'BLACK' (line 421)
+            BLACK_1329 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 421, 24), 'BLACK')
+            # Assigning a type to the variable 'color' (line 421)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 421, 16), 'color', BLACK_1329)
+            # SSA join for if statement (line 418)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            
+            
+            # Getting the type of 'wins' (line 422)
+            wins_1330 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 422, 15), 'wins')
+            
+            # Getting the type of 'color' (line 422)
+            color_1331 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 422, 24), 'color')
+            # Getting the type of 'BLACK' (line 422)
+            BLACK_1332 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 422, 33), 'BLACK')
+            # Applying the binary operator '==' (line 422)
+            result_eq_1333 = python_operator(stypy.reporting.localization.Localization(__file__, 422, 24), '==', color_1331, BLACK_1332)
+            
+            # Applying the binary operator '==' (line 422)
+            result_eq_1334 = python_operator(stypy.reporting.localization.Localization(__file__, 422, 15), '==', wins_1330, result_eq_1333)
+            
+            # Testing the type of an if condition (line 422)
+            if_condition_1335 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 422, 12), result_eq_1334)
+            # Assigning a type to the variable 'if_condition_1335' (line 422)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 422, 12), 'if_condition_1335', if_condition_1335)
+            # SSA begins for if statement (line 422)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Getting the type of 'node' (line 423)
+            node_1336 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 423, 16), 'node')
+            # Obtaining the member 'wins' of a type (line 423)
+            wins_1337 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 423, 16), node_1336, 'wins')
+            int_1338 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 29), 'int')
+            # Applying the binary operator '+=' (line 423)
+            result_iadd_1339 = python_operator(stypy.reporting.localization.Localization(__file__, 423, 16), '+=', wins_1337, int_1338)
+            # Getting the type of 'node' (line 423)
+            node_1340 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 423, 16), 'node')
+            # Setting the type of the member 'wins' of a type (line 423)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 423, 16), node_1340, 'wins', result_iadd_1339)
+            
+            # SSA branch for the else part of an if statement (line 422)
+            module_type_store.open_ssa_branch('else')
+            
+            # Getting the type of 'node' (line 425)
+            node_1341 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 425, 16), 'node')
+            # Obtaining the member 'losses' of a type (line 425)
+            losses_1342 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 425, 16), node_1341, 'losses')
+            int_1343 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 425, 31), 'int')
+            # Applying the binary operator '+=' (line 425)
+            result_iadd_1344 = python_operator(stypy.reporting.localization.Localization(__file__, 425, 16), '+=', losses_1342, int_1343)
+            # Getting the type of 'node' (line 425)
+            node_1345 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 425, 16), 'node')
+            # Setting the type of the member 'losses' of a type (line 425)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 425, 16), node_1345, 'losses', result_iadd_1344)
+            
+            # SSA join for if statement (line 422)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            
+            # Getting the type of 'node' (line 426)
+            node_1346 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 426, 15), 'node')
+            # Obtaining the member 'parent' of a type (line 426)
+            parent_1347 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 426, 15), node_1346, 'parent')
+            # Testing the type of an if condition (line 426)
+            if_condition_1348 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 426, 12), parent_1347)
+            # Assigning a type to the variable 'if_condition_1348' (line 426)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 426, 12), 'if_condition_1348', if_condition_1348)
+            # SSA begins for if statement (line 426)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            
+            # Call to range(...): (line 427)
+            # Processing the call arguments (line 427)
+            # Getting the type of 'histpos' (line 427)
+            histpos_1350 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 31), 'histpos', False)
+            int_1351 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 427, 41), 'int')
+            # Applying the binary operator '+' (line 427)
+            result_add_1352 = python_operator(stypy.reporting.localization.Localization(__file__, 427, 31), '+', histpos_1350, int_1351)
+            
+            
+            # Call to len(...): (line 427)
+            # Processing the call arguments (line 427)
+            # Getting the type of 'board' (line 427)
+            board_1354 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 48), 'board', False)
+            # Obtaining the member 'history' of a type (line 427)
+            history_1355 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 427, 48), board_1354, 'history')
+            # Processing the call keyword arguments (line 427)
+            kwargs_1356 = {}
+            # Getting the type of 'len' (line 427)
+            len_1353 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 44), 'len', False)
+            # Calling len(args, kwargs) (line 427)
+            len_call_result_1357 = invoke(stypy.reporting.localization.Localization(__file__, 427, 44), len_1353, *[history_1355], **kwargs_1356)
+            
+            int_1358 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 427, 64), 'int')
+            # Processing the call keyword arguments (line 427)
+            kwargs_1359 = {}
+            # Getting the type of 'range' (line 427)
+            range_1349 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 25), 'range', False)
+            # Calling range(args, kwargs) (line 427)
+            range_call_result_1360 = invoke(stypy.reporting.localization.Localization(__file__, 427, 25), range_1349, *[result_add_1352, len_call_result_1357, int_1358], **kwargs_1359)
+            
+            # Testing if the loop is going to be iterated (line 427)
+            # Testing the type of a for loop iterable (line 427)
+            is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 427, 16), range_call_result_1360)
+
+            if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 427, 16), range_call_result_1360):
+                # Getting the type of the for loop variable (line 427)
+                for_loop_var_1361 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 427, 16), range_call_result_1360)
+                # Assigning a type to the variable 'i' (line 427)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 427, 16), 'i', for_loop_var_1361)
+                # SSA begins for a for statement (line 427)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+                
+                # Assigning a Subscript to a Name (line 428):
+                
+                # Assigning a Subscript to a Name (line 428):
+                
+                # Obtaining the type of the subscript
+                # Getting the type of 'i' (line 428)
+                i_1362 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 428, 40), 'i')
+                # Getting the type of 'board' (line 428)
+                board_1363 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 428, 26), 'board')
+                # Obtaining the member 'history' of a type (line 428)
+                history_1364 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 428, 26), board_1363, 'history')
+                # Obtaining the member '__getitem__' of a type (line 428)
+                getitem___1365 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 428, 26), history_1364, '__getitem__')
+                # Calling the subscript (__getitem__) to obtain the elements type (line 428)
+                subscript_call_result_1366 = invoke(stypy.reporting.localization.Localization(__file__, 428, 26), getitem___1365, i_1362)
+                
+                # Assigning a type to the variable 'pos' (line 428)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 428, 20), 'pos', subscript_call_result_1366)
+                
+                
+                # Getting the type of 'pos' (line 429)
+                pos_1367 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 429, 23), 'pos')
+                # Getting the type of 'PASS' (line 429)
+                PASS_1368 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 429, 30), 'PASS')
+                # Applying the binary operator '==' (line 429)
+                result_eq_1369 = python_operator(stypy.reporting.localization.Localization(__file__, 429, 23), '==', pos_1367, PASS_1368)
+                
+                # Testing the type of an if condition (line 429)
+                if_condition_1370 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 429, 20), result_eq_1369)
+                # Assigning a type to the variable 'if_condition_1370' (line 429)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 429, 20), 'if_condition_1370', if_condition_1370)
+                # SSA begins for if statement (line 429)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+                # SSA join for if statement (line 429)
+                module_type_store = module_type_store.join_ssa_context()
+                
+                
+                
+                # Getting the type of 'wins' (line 431)
+                wins_1371 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 23), 'wins')
+                
+                # Getting the type of 'color' (line 431)
+                color_1372 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 32), 'color')
+                # Getting the type of 'BLACK' (line 431)
+                BLACK_1373 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 41), 'BLACK')
+                # Applying the binary operator '==' (line 431)
+                result_eq_1374 = python_operator(stypy.reporting.localization.Localization(__file__, 431, 32), '==', color_1372, BLACK_1373)
+                
+                # Applying the binary operator '==' (line 431)
+                result_eq_1375 = python_operator(stypy.reporting.localization.Localization(__file__, 431, 23), '==', wins_1371, result_eq_1374)
+                
+                # Testing the type of an if condition (line 431)
+                if_condition_1376 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 431, 20), result_eq_1375)
+                # Assigning a type to the variable 'if_condition_1376' (line 431)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 431, 20), 'if_condition_1376', if_condition_1376)
+                # SSA begins for if statement (line 431)
+                module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+                
+                # Getting the type of 'node' (line 432)
+                node_1377 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 24), 'node')
+                # Obtaining the member 'parent' of a type (line 432)
+                parent_1378 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), node_1377, 'parent')
+                # Obtaining the member 'pos_amaf_wins' of a type (line 432)
+                pos_amaf_wins_1379 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), parent_1378, 'pos_amaf_wins')
+                
+                # Obtaining the type of the subscript
+                # Getting the type of 'pos' (line 432)
+                pos_1380 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 50), 'pos')
+                # Getting the type of 'node' (line 432)
+                node_1381 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 24), 'node')
+                # Obtaining the member 'parent' of a type (line 432)
+                parent_1382 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), node_1381, 'parent')
+                # Obtaining the member 'pos_amaf_wins' of a type (line 432)
+                pos_amaf_wins_1383 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), parent_1382, 'pos_amaf_wins')
+                # Obtaining the member '__getitem__' of a type (line 432)
+                getitem___1384 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), pos_amaf_wins_1383, '__getitem__')
+                # Calling the subscript (__getitem__) to obtain the elements type (line 432)
+                subscript_call_result_1385 = invoke(stypy.reporting.localization.Localization(__file__, 432, 24), getitem___1384, pos_1380)
+                
+                int_1386 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 432, 58), 'int')
+                # Applying the binary operator '+=' (line 432)
+                result_iadd_1387 = python_operator(stypy.reporting.localization.Localization(__file__, 432, 24), '+=', subscript_call_result_1385, int_1386)
+                # Getting the type of 'node' (line 432)
+                node_1388 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 24), 'node')
+                # Obtaining the member 'parent' of a type (line 432)
+                parent_1389 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), node_1388, 'parent')
+                # Obtaining the member 'pos_amaf_wins' of a type (line 432)
+                pos_amaf_wins_1390 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 24), parent_1389, 'pos_amaf_wins')
+                # Getting the type of 'pos' (line 432)
+                pos_1391 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 50), 'pos')
+                # Storing an element on a container (line 432)
+                set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 432, 24), pos_amaf_wins_1390, (pos_1391, result_iadd_1387))
+                
+                # SSA branch for the else part of an if statement (line 431)
+                module_type_store.open_ssa_branch('else')
+                
+                # Getting the type of 'node' (line 434)
+                node_1392 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 24), 'node')
+                # Obtaining the member 'parent' of a type (line 434)
+                parent_1393 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), node_1392, 'parent')
+                # Obtaining the member 'pos_amaf_losses' of a type (line 434)
+                pos_amaf_losses_1394 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), parent_1393, 'pos_amaf_losses')
+                
+                # Obtaining the type of the subscript
+                # Getting the type of 'pos' (line 434)
+                pos_1395 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 52), 'pos')
+                # Getting the type of 'node' (line 434)
+                node_1396 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 24), 'node')
+                # Obtaining the member 'parent' of a type (line 434)
+                parent_1397 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), node_1396, 'parent')
+                # Obtaining the member 'pos_amaf_losses' of a type (line 434)
+                pos_amaf_losses_1398 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), parent_1397, 'pos_amaf_losses')
+                # Obtaining the member '__getitem__' of a type (line 434)
+                getitem___1399 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), pos_amaf_losses_1398, '__getitem__')
+                # Calling the subscript (__getitem__) to obtain the elements type (line 434)
+                subscript_call_result_1400 = invoke(stypy.reporting.localization.Localization(__file__, 434, 24), getitem___1399, pos_1395)
+                
+                int_1401 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 434, 60), 'int')
+                # Applying the binary operator '+=' (line 434)
+                result_iadd_1402 = python_operator(stypy.reporting.localization.Localization(__file__, 434, 24), '+=', subscript_call_result_1400, int_1401)
+                # Getting the type of 'node' (line 434)
+                node_1403 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 24), 'node')
+                # Obtaining the member 'parent' of a type (line 434)
+                parent_1404 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), node_1403, 'parent')
+                # Obtaining the member 'pos_amaf_losses' of a type (line 434)
+                pos_amaf_losses_1405 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 434, 24), parent_1404, 'pos_amaf_losses')
+                # Getting the type of 'pos' (line 434)
+                pos_1406 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 434, 52), 'pos')
+                # Storing an element on a container (line 434)
+                set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 434, 24), pos_amaf_losses_1405, (pos_1406, result_iadd_1402))
+                
+                # SSA join for if statement (line 431)
+                module_type_store = module_type_store.join_ssa_context()
+                
+                
+                # Getting the type of 'node' (line 435)
+                node_1407 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 435, 20), 'node')
+                # Obtaining the member 'parent' of a type (line 435)
+                parent_1408 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 435, 20), node_1407, 'parent')
+                # Obtaining the member 'amafvisits' of a type (line 435)
+                amafvisits_1409 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 435, 20), parent_1408, 'amafvisits')
+                int_1410 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 435, 46), 'int')
+                # Applying the binary operator '+=' (line 435)
+                result_iadd_1411 = python_operator(stypy.reporting.localization.Localization(__file__, 435, 20), '+=', amafvisits_1409, int_1410)
+                # Getting the type of 'node' (line 435)
+                node_1412 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 435, 20), 'node')
+                # Obtaining the member 'parent' of a type (line 435)
+                parent_1413 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 435, 20), node_1412, 'parent')
+                # Setting the type of the member 'amafvisits' of a type (line 435)
+                module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 435, 20), parent_1413, 'amafvisits', result_iadd_1411)
+                
+                # SSA join for a for statement
+                module_type_store = module_type_store.join_ssa_context()
+
+            
+            
+            # Assigning a Call to a Attribute (line 436):
+            
+            # Assigning a Call to a Attribute (line 436):
+            
+            # Call to best_child(...): (line 436)
+            # Processing the call keyword arguments (line 436)
+            kwargs_1417 = {}
+            # Getting the type of 'node' (line 436)
+            node_1414 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 436, 40), 'node', False)
+            # Obtaining the member 'parent' of a type (line 436)
+            parent_1415 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 436, 40), node_1414, 'parent')
+            # Obtaining the member 'best_child' of a type (line 436)
+            best_child_1416 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 436, 40), parent_1415, 'best_child')
+            # Calling best_child(args, kwargs) (line 436)
+            best_child_call_result_1418 = invoke(stypy.reporting.localization.Localization(__file__, 436, 40), best_child_1416, *[], **kwargs_1417)
+            
+            # Getting the type of 'node' (line 436)
+            node_1419 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 436, 16), 'node')
+            # Obtaining the member 'parent' of a type (line 436)
+            parent_1420 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 436, 16), node_1419, 'parent')
+            # Setting the type of the member 'bestchild' of a type (line 436)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 436, 16), parent_1420, 'bestchild', best_child_call_result_1418)
+            # SSA join for if statement (line 426)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         
         # ################# End of 'update_path(...)' code ##################
@@ -8127,75 +8227,79 @@ class UCTNode:
         self_1535 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 458, 21), 'self')
         # Obtaining the member 'pos_child' of a type (line 458)
         pos_child_1536 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 458, 21), self_1535, 'pos_child')
+        # Testing if the loop is going to be iterated (line 458)
         # Testing the type of a for loop iterable (line 458)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 458, 8), pos_child_1536)
-        # Getting the type of the for loop variable (line 458)
-        for_loop_var_1537 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 458, 8), pos_child_1536)
-        # Assigning a type to the variable 'child' (line 458)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 458, 8), 'child', for_loop_var_1537)
-        # SSA begins for a for statement (line 458)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Evaluating a boolean operation
-        # Getting the type of 'child' (line 459)
-        child_1538 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 459, 15), 'child')
-        
-        
-        # Call to score(...): (line 459)
-        # Processing the call keyword arguments (line 459)
-        kwargs_1541 = {}
-        # Getting the type of 'child' (line 459)
-        child_1539 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 459, 25), 'child', False)
-        # Obtaining the member 'score' of a type (line 459)
-        score_1540 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 459, 25), child_1539, 'score')
-        # Calling score(args, kwargs) (line 459)
-        score_call_result_1542 = invoke(stypy.reporting.localization.Localization(__file__, 459, 25), score_1540, *[], **kwargs_1541)
-        
-        # Getting the type of 'maxscore' (line 459)
-        maxscore_1543 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 459, 41), 'maxscore')
-        # Applying the binary operator '>' (line 459)
-        result_gt_1544 = python_operator(stypy.reporting.localization.Localization(__file__, 459, 25), '>', score_call_result_1542, maxscore_1543)
-        
-        # Applying the binary operator 'and' (line 459)
-        result_and_keyword_1545 = python_operator(stypy.reporting.localization.Localization(__file__, 459, 15), 'and', child_1538, result_gt_1544)
-        
-        # Testing the type of an if condition (line 459)
-        if_condition_1546 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 459, 12), result_and_keyword_1545)
-        # Assigning a type to the variable 'if_condition_1546' (line 459)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 459, 12), 'if_condition_1546', if_condition_1546)
-        # SSA begins for if statement (line 459)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Name to a Name (line 460):
-        
-        # Assigning a Name to a Name (line 460):
-        # Getting the type of 'child' (line 460)
-        child_1547 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 460, 27), 'child')
-        # Assigning a type to the variable 'maxchild' (line 460)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 460, 16), 'maxchild', child_1547)
-        
-        # Assigning a Call to a Name (line 461):
-        
-        # Assigning a Call to a Name (line 461):
-        
-        # Call to score(...): (line 461)
-        # Processing the call keyword arguments (line 461)
-        kwargs_1550 = {}
-        # Getting the type of 'child' (line 461)
-        child_1548 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 461, 27), 'child', False)
-        # Obtaining the member 'score' of a type (line 461)
-        score_1549 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 461, 27), child_1548, 'score')
-        # Calling score(args, kwargs) (line 461)
-        score_call_result_1551 = invoke(stypy.reporting.localization.Localization(__file__, 461, 27), score_1549, *[], **kwargs_1550)
-        
-        # Assigning a type to the variable 'maxscore' (line 461)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 461, 16), 'maxscore', score_call_result_1551)
-        # SSA join for if statement (line 459)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 458, 8), pos_child_1536):
+            # Getting the type of the for loop variable (line 458)
+            for_loop_var_1537 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 458, 8), pos_child_1536)
+            # Assigning a type to the variable 'child' (line 458)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 458, 8), 'child', for_loop_var_1537)
+            # SSA begins for a for statement (line 458)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Evaluating a boolean operation
+            # Getting the type of 'child' (line 459)
+            child_1538 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 459, 15), 'child')
+            
+            
+            # Call to score(...): (line 459)
+            # Processing the call keyword arguments (line 459)
+            kwargs_1541 = {}
+            # Getting the type of 'child' (line 459)
+            child_1539 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 459, 25), 'child', False)
+            # Obtaining the member 'score' of a type (line 459)
+            score_1540 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 459, 25), child_1539, 'score')
+            # Calling score(args, kwargs) (line 459)
+            score_call_result_1542 = invoke(stypy.reporting.localization.Localization(__file__, 459, 25), score_1540, *[], **kwargs_1541)
+            
+            # Getting the type of 'maxscore' (line 459)
+            maxscore_1543 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 459, 41), 'maxscore')
+            # Applying the binary operator '>' (line 459)
+            result_gt_1544 = python_operator(stypy.reporting.localization.Localization(__file__, 459, 25), '>', score_call_result_1542, maxscore_1543)
+            
+            # Applying the binary operator 'and' (line 459)
+            result_and_keyword_1545 = python_operator(stypy.reporting.localization.Localization(__file__, 459, 15), 'and', child_1538, result_gt_1544)
+            
+            # Testing the type of an if condition (line 459)
+            if_condition_1546 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 459, 12), result_and_keyword_1545)
+            # Assigning a type to the variable 'if_condition_1546' (line 459)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 459, 12), 'if_condition_1546', if_condition_1546)
+            # SSA begins for if statement (line 459)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Name to a Name (line 460):
+            
+            # Assigning a Name to a Name (line 460):
+            # Getting the type of 'child' (line 460)
+            child_1547 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 460, 27), 'child')
+            # Assigning a type to the variable 'maxchild' (line 460)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 460, 16), 'maxchild', child_1547)
+            
+            # Assigning a Call to a Name (line 461):
+            
+            # Assigning a Call to a Name (line 461):
+            
+            # Call to score(...): (line 461)
+            # Processing the call keyword arguments (line 461)
+            kwargs_1550 = {}
+            # Getting the type of 'child' (line 461)
+            child_1548 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 461, 27), 'child', False)
+            # Obtaining the member 'score' of a type (line 461)
+            score_1549 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 461, 27), child_1548, 'score')
+            # Calling score(args, kwargs) (line 461)
+            score_call_result_1551 = invoke(stypy.reporting.localization.Localization(__file__, 461, 27), score_1549, *[], **kwargs_1550)
+            
+            # Assigning a type to the variable 'maxscore' (line 461)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 461, 16), 'maxscore', score_call_result_1551)
+            # SSA join for if statement (line 459)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         # Getting the type of 'maxchild' (line 462)
         maxchild_1552 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 462, 15), 'maxchild')
@@ -8278,85 +8382,89 @@ class UCTNode:
         self_1556 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 467, 21), 'self')
         # Obtaining the member 'pos_child' of a type (line 467)
         pos_child_1557 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 467, 21), self_1556, 'pos_child')
+        # Testing if the loop is going to be iterated (line 467)
         # Testing the type of a for loop iterable (line 467)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 467, 8), pos_child_1557)
-        # Getting the type of the for loop variable (line 467)
-        for_loop_var_1558 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 467, 8), pos_child_1557)
-        # Assigning a type to the variable 'child' (line 467)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 467, 8), 'child', for_loop_var_1558)
-        # SSA begins for a for statement (line 467)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-        
-        
-        # Evaluating a boolean operation
-        # Getting the type of 'child' (line 470)
-        child_1559 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 15), 'child')
-        
-        # Getting the type of 'child' (line 470)
-        child_1560 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 26), 'child')
-        # Obtaining the member 'wins' of a type (line 470)
-        wins_1561 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 470, 26), child_1560, 'wins')
-        # Getting the type of 'child' (line 470)
-        child_1562 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 39), 'child')
-        # Obtaining the member 'losses' of a type (line 470)
-        losses_1563 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 470, 39), child_1562, 'losses')
-        # Applying the binary operator '+' (line 470)
-        result_add_1564 = python_operator(stypy.reporting.localization.Localization(__file__, 470, 26), '+', wins_1561, losses_1563)
-        
-        # Getting the type of 'maxvisits' (line 470)
-        maxvisits_1565 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 55), 'maxvisits')
-        # Applying the binary operator '>' (line 470)
-        result_gt_1566 = python_operator(stypy.reporting.localization.Localization(__file__, 470, 25), '>', result_add_1564, maxvisits_1565)
-        
-        # Applying the binary operator 'and' (line 470)
-        result_and_keyword_1567 = python_operator(stypy.reporting.localization.Localization(__file__, 470, 15), 'and', child_1559, result_gt_1566)
-        
-        # Testing the type of an if condition (line 470)
-        if_condition_1568 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 470, 12), result_and_keyword_1567)
-        # Assigning a type to the variable 'if_condition_1568' (line 470)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 470, 12), 'if_condition_1568', if_condition_1568)
-        # SSA begins for if statement (line 470)
-        module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
-        
-        # Assigning a Tuple to a Tuple (line 471):
-        
-        # Assigning a BinOp to a Name (line 471):
-        # Getting the type of 'child' (line 471)
-        child_1569 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 39), 'child')
-        # Obtaining the member 'wins' of a type (line 471)
-        wins_1570 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 39), child_1569, 'wins')
-        # Getting the type of 'child' (line 471)
-        child_1571 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 52), 'child')
-        # Obtaining the member 'losses' of a type (line 471)
-        losses_1572 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 52), child_1571, 'losses')
-        # Applying the binary operator '+' (line 471)
-        result_add_1573 = python_operator(stypy.reporting.localization.Localization(__file__, 471, 39), '+', wins_1570, losses_1572)
-        
-        # Assigning a type to the variable 'tuple_assignment_11' (line 471)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'tuple_assignment_11', result_add_1573)
-        
-        # Assigning a Name to a Name (line 471):
-        # Getting the type of 'child' (line 471)
-        child_1574 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 67), 'child')
-        # Assigning a type to the variable 'tuple_assignment_12' (line 471)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'tuple_assignment_12', child_1574)
-        
-        # Assigning a Name to a Name (line 471):
-        # Getting the type of 'tuple_assignment_11' (line 471)
-        tuple_assignment_11_1575 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'tuple_assignment_11')
-        # Assigning a type to the variable 'maxvisits' (line 471)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'maxvisits', tuple_assignment_11_1575)
-        
-        # Assigning a Name to a Name (line 471):
-        # Getting the type of 'tuple_assignment_12' (line 471)
-        tuple_assignment_12_1576 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'tuple_assignment_12')
-        # Assigning a type to the variable 'maxchild' (line 471)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 471, 27), 'maxchild', tuple_assignment_12_1576)
-        # SSA join for if statement (line 470)
-        module_type_store = module_type_store.join_ssa_context()
-        
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
+
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 467, 8), pos_child_1557):
+            # Getting the type of the for loop variable (line 467)
+            for_loop_var_1558 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 467, 8), pos_child_1557)
+            # Assigning a type to the variable 'child' (line 467)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 467, 8), 'child', for_loop_var_1558)
+            # SSA begins for a for statement (line 467)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+            
+            
+            # Evaluating a boolean operation
+            # Getting the type of 'child' (line 470)
+            child_1559 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 15), 'child')
+            
+            # Getting the type of 'child' (line 470)
+            child_1560 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 26), 'child')
+            # Obtaining the member 'wins' of a type (line 470)
+            wins_1561 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 470, 26), child_1560, 'wins')
+            # Getting the type of 'child' (line 470)
+            child_1562 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 39), 'child')
+            # Obtaining the member 'losses' of a type (line 470)
+            losses_1563 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 470, 39), child_1562, 'losses')
+            # Applying the binary operator '+' (line 470)
+            result_add_1564 = python_operator(stypy.reporting.localization.Localization(__file__, 470, 26), '+', wins_1561, losses_1563)
+            
+            # Getting the type of 'maxvisits' (line 470)
+            maxvisits_1565 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 55), 'maxvisits')
+            # Applying the binary operator '>' (line 470)
+            result_gt_1566 = python_operator(stypy.reporting.localization.Localization(__file__, 470, 25), '>', result_add_1564, maxvisits_1565)
+            
+            # Applying the binary operator 'and' (line 470)
+            result_and_keyword_1567 = python_operator(stypy.reporting.localization.Localization(__file__, 470, 15), 'and', child_1559, result_gt_1566)
+            
+            # Testing the type of an if condition (line 470)
+            if_condition_1568 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 470, 12), result_and_keyword_1567)
+            # Assigning a type to the variable 'if_condition_1568' (line 470)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 470, 12), 'if_condition_1568', if_condition_1568)
+            # SSA begins for if statement (line 470)
+            module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
+            
+            # Assigning a Tuple to a Tuple (line 471):
+            
+            # Assigning a BinOp to a Name (line 471):
+            # Getting the type of 'child' (line 471)
+            child_1569 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 39), 'child')
+            # Obtaining the member 'wins' of a type (line 471)
+            wins_1570 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 39), child_1569, 'wins')
+            # Getting the type of 'child' (line 471)
+            child_1571 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 52), 'child')
+            # Obtaining the member 'losses' of a type (line 471)
+            losses_1572 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 52), child_1571, 'losses')
+            # Applying the binary operator '+' (line 471)
+            result_add_1573 = python_operator(stypy.reporting.localization.Localization(__file__, 471, 39), '+', wins_1570, losses_1572)
+            
+            # Assigning a type to the variable 'tuple_assignment_11' (line 471)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'tuple_assignment_11', result_add_1573)
+            
+            # Assigning a Name to a Name (line 471):
+            # Getting the type of 'child' (line 471)
+            child_1574 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 67), 'child')
+            # Assigning a type to the variable 'tuple_assignment_12' (line 471)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'tuple_assignment_12', child_1574)
+            
+            # Assigning a Name to a Name (line 471):
+            # Getting the type of 'tuple_assignment_11' (line 471)
+            tuple_assignment_11_1575 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'tuple_assignment_11')
+            # Assigning a type to the variable 'maxvisits' (line 471)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'maxvisits', tuple_assignment_11_1575)
+            
+            # Assigning a Name to a Name (line 471):
+            # Getting the type of 'tuple_assignment_12' (line 471)
+            tuple_assignment_12_1576 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 16), 'tuple_assignment_12')
+            # Assigning a type to the variable 'maxchild' (line 471)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 471, 27), 'maxchild', tuple_assignment_12_1576)
+            # SSA join for if statement (line 470)
+            module_type_store = module_type_store.join_ssa_context()
+            
+            # SSA join for a for statement
+            module_type_store = module_type_store.join_ssa_context()
+
         
         # Getting the type of 'maxchild' (line 472)
         maxchild_1577 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 15), 'maxchild')
@@ -8643,65 +8751,69 @@ def computer_move(localization, *varargs, **kwargs):
     # Calling range(args, kwargs) (line 506)
     range_call_result_1624 = invoke(stypy.reporting.localization.Localization(__file__, 506, 16), range_1621, *[GAMES_1622], **kwargs_1623)
     
+    # Testing if the loop is going to be iterated (line 506)
     # Testing the type of a for loop iterable (line 506)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 506, 4), range_call_result_1624)
-    # Getting the type of the for loop variable (line 506)
-    for_loop_var_1625 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 506, 4), range_call_result_1624)
-    # Assigning a type to the variable 'game' (line 506)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 506, 4), 'game', for_loop_var_1625)
-    # SSA begins for a for statement (line 506)
-    module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
-    
-    # Assigning a Name to a Name (line 507):
-    
-    # Assigning a Name to a Name (line 507):
-    # Getting the type of 'tree' (line 507)
-    tree_1626 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 507, 15), 'tree')
-    # Assigning a type to the variable 'node' (line 507)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 507, 8), 'node', tree_1626)
-    
-    # Call to reset(...): (line 508)
-    # Processing the call keyword arguments (line 508)
-    kwargs_1629 = {}
-    # Getting the type of 'nboard' (line 508)
-    nboard_1627 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 508, 8), 'nboard', False)
-    # Obtaining the member 'reset' of a type (line 508)
-    reset_1628 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 508, 8), nboard_1627, 'reset')
-    # Calling reset(args, kwargs) (line 508)
-    reset_call_result_1630 = invoke(stypy.reporting.localization.Localization(__file__, 508, 8), reset_1628, *[], **kwargs_1629)
-    
-    
-    # Call to replay(...): (line 509)
-    # Processing the call arguments (line 509)
-    # Getting the type of 'board' (line 509)
-    board_1633 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 509, 22), 'board', False)
-    # Obtaining the member 'history' of a type (line 509)
-    history_1634 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 509, 22), board_1633, 'history')
-    # Processing the call keyword arguments (line 509)
-    kwargs_1635 = {}
-    # Getting the type of 'nboard' (line 509)
-    nboard_1631 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 509, 8), 'nboard', False)
-    # Obtaining the member 'replay' of a type (line 509)
-    replay_1632 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 509, 8), nboard_1631, 'replay')
-    # Calling replay(args, kwargs) (line 509)
-    replay_call_result_1636 = invoke(stypy.reporting.localization.Localization(__file__, 509, 8), replay_1632, *[history_1634], **kwargs_1635)
-    
-    
-    # Call to play(...): (line 510)
-    # Processing the call arguments (line 510)
-    # Getting the type of 'nboard' (line 510)
-    nboard_1639 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 510, 18), 'nboard', False)
-    # Processing the call keyword arguments (line 510)
-    kwargs_1640 = {}
-    # Getting the type of 'node' (line 510)
-    node_1637 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 510, 8), 'node', False)
-    # Obtaining the member 'play' of a type (line 510)
-    play_1638 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 510, 8), node_1637, 'play')
-    # Calling play(args, kwargs) (line 510)
-    play_call_result_1641 = invoke(stypy.reporting.localization.Localization(__file__, 510, 8), play_1638, *[nboard_1639], **kwargs_1640)
-    
-    # SSA join for a for statement
-    module_type_store = module_type_store.join_ssa_context()
+
+    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 506, 4), range_call_result_1624):
+        # Getting the type of the for loop variable (line 506)
+        for_loop_var_1625 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 506, 4), range_call_result_1624)
+        # Assigning a type to the variable 'game' (line 506)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 506, 4), 'game', for_loop_var_1625)
+        # SSA begins for a for statement (line 506)
+        module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
+        
+        # Assigning a Name to a Name (line 507):
+        
+        # Assigning a Name to a Name (line 507):
+        # Getting the type of 'tree' (line 507)
+        tree_1626 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 507, 15), 'tree')
+        # Assigning a type to the variable 'node' (line 507)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 507, 8), 'node', tree_1626)
+        
+        # Call to reset(...): (line 508)
+        # Processing the call keyword arguments (line 508)
+        kwargs_1629 = {}
+        # Getting the type of 'nboard' (line 508)
+        nboard_1627 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 508, 8), 'nboard', False)
+        # Obtaining the member 'reset' of a type (line 508)
+        reset_1628 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 508, 8), nboard_1627, 'reset')
+        # Calling reset(args, kwargs) (line 508)
+        reset_call_result_1630 = invoke(stypy.reporting.localization.Localization(__file__, 508, 8), reset_1628, *[], **kwargs_1629)
+        
+        
+        # Call to replay(...): (line 509)
+        # Processing the call arguments (line 509)
+        # Getting the type of 'board' (line 509)
+        board_1633 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 509, 22), 'board', False)
+        # Obtaining the member 'history' of a type (line 509)
+        history_1634 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 509, 22), board_1633, 'history')
+        # Processing the call keyword arguments (line 509)
+        kwargs_1635 = {}
+        # Getting the type of 'nboard' (line 509)
+        nboard_1631 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 509, 8), 'nboard', False)
+        # Obtaining the member 'replay' of a type (line 509)
+        replay_1632 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 509, 8), nboard_1631, 'replay')
+        # Calling replay(args, kwargs) (line 509)
+        replay_call_result_1636 = invoke(stypy.reporting.localization.Localization(__file__, 509, 8), replay_1632, *[history_1634], **kwargs_1635)
+        
+        
+        # Call to play(...): (line 510)
+        # Processing the call arguments (line 510)
+        # Getting the type of 'nboard' (line 510)
+        nboard_1639 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 510, 18), 'nboard', False)
+        # Processing the call keyword arguments (line 510)
+        kwargs_1640 = {}
+        # Getting the type of 'node' (line 510)
+        node_1637 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 510, 8), 'node', False)
+        # Obtaining the member 'play' of a type (line 510)
+        play_1638 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 510, 8), node_1637, 'play')
+        # Calling play(args, kwargs) (line 510)
+        play_call_result_1641 = invoke(stypy.reporting.localization.Localization(__file__, 510, 8), play_1638, *[nboard_1639], **kwargs_1640)
+        
+        # SSA join for a for statement
+        module_type_store = module_type_store.join_ssa_context()
+
     
     
     # Call to best_visited(...): (line 514)

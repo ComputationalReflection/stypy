@@ -13,6 +13,7 @@ from stypy.reporting.print_utils import format_function_name
 from stypy.stypy_parameters import ENABLE_CODING_ADVICES
 from stypy.types import type_intercession
 from stypy.types import union_type
+from stypy.types import undefined_type
 from stypy.types.standard_wrapper import wrap_contained_type
 from stypy.types.type_containers import get_contained_elements_type, can_store_elements, \
     set_contained_elements_type_for_key, can_store_keypairs, get_key_types
@@ -397,7 +398,7 @@ def can_represent_type(type_to_represent, type_to_compare):
 
 def is_suitable_for_loop_condition(localization, condition_type):
     """
-    A loop must iterate an iterable object or data structure or an string. This function checks this fact
+    A loop must iterate an iterable object or data structure or an string. This function checks this
     :param localization: Caller information
     :param condition_type: Type of the condition
     :return:
@@ -412,6 +413,30 @@ def is_suitable_for_loop_condition(localization, condition_type):
 
     return True
 
+
+def will_iterate_loop(localization, condition_type):
+    """
+    A loop must iterate an iterable object or data structure or an string. This function checks if the iterable object
+    is empty (its contents are of the type UndefinedType). In that case, it does not iterate
+    :param localization: Caller information
+    :param condition_type: Type of the condition
+    :return:
+    """
+    if is_error_type(condition_type):
+        return False
+
+    if (can_store_elements(condition_type) or (
+            can_represent_type(IterableObject, condition_type)) or handlers.call_utilities.is_iterable(condition_type)):
+        try:
+            t = get_contained_elements_type(condition_type)
+            if type(t) is undefined_type.UndefinedType or t is undefined_type.UndefinedType:
+                return False
+        except:
+            pass
+
+        return True
+
+    return True
 
 def get_type_of_for_loop_variable(localization, condition_type):
     """
