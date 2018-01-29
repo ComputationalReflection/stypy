@@ -773,6 +773,16 @@ def is_suitable_condition(localization, cond_type):
     return aux_functions.is_suitable_condition(localization, cond_type)
 
 
+def evaluates_to_none(localization, cond_type):
+    """
+    Checks if a conditional condition is a NoneType
+    :param localization:
+    :param cond_type:
+    :return:
+    """
+    return aux_functions.evaluates_to_none(localization, cond_type)
+
+
 def is_suitable_for_loop_condition(localization, cond_type):
     """
     Checks if a loop condition has a suitable type
@@ -791,6 +801,7 @@ def will_iterate_loop(localization, cond_type):
         :return:
         """
         return aux_functions.will_iterate_loop(localization, cond_type)
+
 
 def get_type_of_for_loop_variable(localization, cond_type):
     """

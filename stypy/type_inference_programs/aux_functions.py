@@ -355,6 +355,10 @@ def create_call_to_type_inference_code(func, localization, keywords=list(), kwar
 # ########################### VARIABLES FOR CONDITIONS TYPE CHECKING ############################
 
 
+def evaluates_to_none(localization, condition_type):
+    return condition_type is types.NoneType
+
+
 def is_suitable_condition(localization, condition_type):
     """
     Checks if the type of a condition is suitable. Only checks if the type of a condition is an error, except if

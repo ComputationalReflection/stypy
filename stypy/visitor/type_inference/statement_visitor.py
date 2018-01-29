@@ -423,6 +423,9 @@ class StatementVisitor(ast.NodeVisitor):
         """
 
         if_stmt_body = []
+        ev_none_test_condition = None
+        else_stmts = []
+        ev_none_condition_comment = []
 
         begin_if_comment = stypy_functions.create_blank_line()
 
@@ -464,6 +467,12 @@ class StatementVisitor(ast.NodeVisitor):
                                                                               node.col_offset, "if_condition")
             condition_type = stypy_functions.create_set_type_of(assign_var.id, assign_var, node.lineno, node.col_offset)
             test_condition_call = [condition_assign, condition_type]
+
+            # Test if the condition dynamically evaluates to None
+            ev_none_condition_comment = stypy_functions.create_src_comment("Testing if the type of an if condition is none", node.lineno)
+            ev_none_attribute = core_language.create_Name("evaluates_to_none")
+
+            ev_none_test_condition = functions.create_call(ev_none_attribute, [localization, if_stmt_test])
 
         more_types_temp_var = None
         if is_an_idiom:
@@ -569,7 +578,8 @@ class StatementVisitor(ast.NodeVisitor):
                 body_stmts_location = if_stmt_body
 
             # Process else body sentences
-            body_stmts_location.extend(self.__visit_instruction_body(node.orelse, context))
+            else_stmts = self.__visit_instruction_body(node.orelse, context)
+            body_stmts_location.extend(else_stmts)
 
         if is_an_idiom:
             if len(node.orelse) == 0:
@@ -604,10 +614,27 @@ class StatementVisitor(ast.NodeVisitor):
 
         end_if_comment = stypy_functions.create_blank_line()
 
-        return stypy_functions.flatten_lists(begin_if_comment,
+        if ev_none_test_condition is None:
+            return stypy_functions.flatten_lists(begin_if_comment,
                                              condition_stmt,
                                              if_stmt,
                                              end_if_comment)
+        else:
+            # This if controls a runtime idiom when an if only executes its else part if its condition dynamically
+            # evaluates to None
+            if_none = ast.If()
+
+            if len(else_stmts) == 0:
+                if_none.body = [ast.Pass()]
+            else:
+                if_none.body = else_stmts
+            if_none.test = ev_none_test_condition
+
+            if_none.orelse = stypy_functions.flatten_lists(begin_if_comment,
+                                             if_stmt,
+                                             end_if_comment)
+
+            return stypy_functions.flatten_lists(condition_stmt, [ev_none_condition_comment, if_none])
 
     # ################################################ FOR #####################################################
 
@@ -621,6 +648,7 @@ class StatementVisitor(ast.NodeVisitor):
 
         for_stmt_body = []
         for_stmt_orelse = []
+        else_inst = []
 
         begin_for_comment = stypy_functions.create_blank_line()
 
@@ -638,7 +666,7 @@ class StatementVisitor(ast.NodeVisitor):
         if_node_iteration = ast.If()
 
         # Check if the for statement is suitable for iteration
-        iteration_comment = stypy_functions.create_src_comment("Testing if the loop is going to be iterated",
+        iteration_comment = stypy_functions.create_src_comment("Testing if the for loop is going to be iterated",
                                                                node.lineno)
         loop_it_fname = core_language.create_Name("will_iterate_loop")
         iteration_call = functions.create_call(loop_it_fname, [localization, for_stmt_test])
@@ -709,27 +737,33 @@ class StatementVisitor(ast.NodeVisitor):
         for_stmt_body.extend(self.__visit_instruction_body(node.body, context))
 
         if len(node.orelse) > 0:
-            for_stmt_body.append(
+            for_stmt_orelse.append(
                 stypy_functions.create_src_comment("SSA branch for the else part of a for statement", node.lineno))
             clone_stmt2 = stypy_functions.create_open_ssa_branch("for loop else")
-            for_stmt_body.append(clone_stmt2)
+            for_stmt_orelse.append(clone_stmt2)
 
             # Else part of a for statement
-            for_stmt_orelse.extend(self.__visit_instruction_body(node.orelse, context))
+            else_inst = self.__visit_instruction_body(node.orelse, context)
+            for_stmt_orelse.extend(else_inst)
+
+            # # Join and finish for
+            # for_stmt_orelse.append(stypy_functions.create_src_comment("SSA join for a for else statement"))
+            # join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
+            # for_stmt_orelse.append(join_stmt)
 
         # Join and finish for
-        for_stmt_orelse.append(stypy_functions.create_src_comment("SSA join for a for statement"))
+        for_stmt_body.append(stypy_functions.create_src_comment("SSA join for a for statement"))
         join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
-        for_stmt_orelse.append(join_stmt)
+        for_stmt_body.append(join_stmt)
 
         for_stmts = for_stmt_body + for_stmt_orelse
 
         if_node_iteration.body = [for_stmts]
+        if_node_iteration.orelse = else_inst
+
         for_stmt = stypy_functions.flatten_lists(condition_comment, condition_call, if_node_iteration)
 
         end_for_comment = stypy_functions.create_blank_line()
-
-
 
         return stypy_functions.flatten_lists(begin_for_comment,
                                              iter_stmt,
@@ -749,6 +783,7 @@ class StatementVisitor(ast.NodeVisitor):
 
         while_stmt_body = []
         while_stmt_orelse = []
+        else_inst = []
 
         begin_while_comment = stypy_functions.create_blank_line()
 
@@ -761,6 +796,21 @@ class StatementVisitor(ast.NodeVisitor):
         localization = stypy_functions.create_localization(node.lineno, node.col_offset)
         condition_call = functions.create_call_expression(attribute, [localization, while_stmt_test])
 
+        # This if controls if the loop is going to be iterated
+        if_node_iteration = ast.If()
+
+        # Check if the for statement is suitable for iteration
+        iteration_comment = stypy_functions.create_src_comment("Testing if the while is going to be iterated",
+                                                               node.lineno)
+        loop_it_fname = core_language.create_Name("will_iterate_loop")
+        iteration_call = functions.create_call(loop_it_fname, [localization, while_stmt_test])
+
+        if_node_iteration.body = []
+        if_node_iteration.test = iteration_call
+
+        if_node_iteration.orelse = []
+
+
         # Process the body of the while statement
         while_stmt_body.append(stypy_functions.create_src_comment("SSA begins for while statement", node.lineno))
         clone_stmt1, type_store_var1 = stypy_functions.create_open_ssa_context("while loop")
@@ -771,27 +821,39 @@ class StatementVisitor(ast.NodeVisitor):
 
         if len(node.orelse) > 0:
             # Else part of the while statements
-            while_stmt_body.append(
+            while_stmt_orelse.append(
                 stypy_functions.create_src_comment("SSA branch for the else part of a while statement",
                                                    node.lineno))
             clone_stmt2 = stypy_functions.create_open_ssa_branch("while loop else")
-            while_stmt_body.append(clone_stmt2)
+            while_stmt_orelse.append(clone_stmt2)
 
             # While else part
-            while_stmt_orelse.extend(self.__visit_instruction_body(node.orelse, context))
+            else_inst = self.__visit_instruction_body(node.orelse, context)
+            while_stmt_orelse.extend(else_inst)
+
+            # # Join type stores and finish while
+            # while_stmt_orelse.append(stypy_functions.create_src_comment("SSA join for while else statement", node.lineno))
+            #
+            # join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
+            # while_stmt_orelse.append(join_stmt)
 
         # Join type stores and finish while
-        while_stmt_orelse.append(stypy_functions.create_src_comment("SSA join for while statement", node.lineno))
+        while_stmt_body.append(stypy_functions.create_src_comment("SSA join for while statement", node.lineno))
 
         join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
-        while_stmt_orelse.append(join_stmt)
+        while_stmt_body.append(join_stmt)
 
         all_while_stmts = while_stmt_body + while_stmt_orelse
-        while_stmt = stypy_functions.flatten_lists(condition_comment, condition_call, all_while_stmts)
+
+        if_node_iteration.body = [all_while_stmts]
+        if_node_iteration.orelse = else_inst
+
+        while_stmt = stypy_functions.flatten_lists(condition_comment, condition_call, if_node_iteration)
 
         end_while_comment = stypy_functions.create_blank_line()
         return stypy_functions.flatten_lists(begin_while_comment,
                                              condition_stmt,
+                                             iteration_comment,
                                              while_stmt,
                                              end_while_comment)
 
