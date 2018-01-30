@@ -675,7 +675,8 @@ class TypeGroups(object):
         memoryview,
         types.DictProxyType,
         numpyarray,
-        file]
+        file,
+        ]
 
 
 """

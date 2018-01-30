@@ -147,7 +147,8 @@ type_rules_of_members = {
         ((IterableObject, IterableObject), bool),
         ((Overloads__eq__, AnyType), DynamicType),
         ((Overloads__cmp__, AnyType), DynamicType),
-        ((DontHaveMember(["__cmp__"], 1), AnyType), bool)
+        ((DontHaveMember(["__cmp__"], 1), AnyType), bool),
+        ((AnyType, DontHaveMember(["__cmp__"], 1)), bool)
     ],
 
     '__floordiv__': [
@@ -544,6 +545,7 @@ type_rules_of_members = {
         ((Overloads__ne__, AnyType), DynamicType),
         ((Overloads__cmp__, AnyType), DynamicType),
         ((DontHaveMember(["__cmp__"], 1), AnyType), bool),
+        ((AnyType, DontHaveMember(["__cmp__"], 1)), bool),
     ],
 
     '__neg__': {

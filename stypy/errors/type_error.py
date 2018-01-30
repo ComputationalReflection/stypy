@@ -132,6 +132,7 @@ class StypyTypeError(TypeError):
         source_code = ModuleLineNumbering.get_line_from_module_code(self.localization.file_name, self.localization.line)
         col_offset = ModuleLineNumbering.get_column_from_module_code(self.localization.file_name,
                                                                      self.localization.line, self.localization.column)
+
         if source_code is not None:
             return "Compiler error in file '%s' (line %s, column %s):\n%s\n%s\n\t%s.\n\n%s" % \
                    (file_name, self.localization.line, self.localization.column,

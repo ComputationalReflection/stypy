@@ -81,6 +81,6 @@ Main features of the new 0.2 release include:
 - [24/01/2018] Added the full programs section of shedskin benchmark suite to the test battery (54 programs). Test battery code now accepts a number of user-defined expected errors to consider certain tests correct. max and min builtin functions now correctly process the type of its parameters. Union types of instances of the same type are now properly mergued (an unique instance of the type is generated with the union types of its members)
 - [26/01/2018] Fixed type inference for the list.pop method. If position of a container is a type error when writing to it, this type error is now propagated and a new one is not generated. Loops over empty data structures (type of contents if UndefinedType) will not iterate. Therefore, stypy now did not process the loop body in these cases. This removes a lot of false positives.
 - [29/01/2018] Fixed code generation for the else statement of the for clauses not closing correctly its SSA contexts. Added while loop to the "loop over empty data structures will not iterate" optimization of the 26/01/2018. If conditions that dynamically evaluates to NoneType only execute the else part. This is a runtime idiom.
-
+- [30/01/2018] Tested the type inference of the shedskin kanoodle, kmeansapp programs. Inequality operators can now be applied to any object.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

@@ -18,7 +18,7 @@ from stypy.types.standard_wrapper import wrap_contained_type
 from stypy.types.type_containers import get_contained_elements_type, can_store_elements, \
     set_contained_elements_type_for_key, can_store_keypairs, get_key_types
 from stypy.visitor.type_inference.visitor_utils import core_language, data_structures
-from stypy.invokation import handlers
+from stypy.invokation.handlers import call_utilities
 
 import numpy
 
@@ -411,7 +411,7 @@ def is_suitable_for_loop_condition(localization, condition_type):
         return False
 
     if not (can_store_elements(condition_type) or can_represent_type(Str, condition_type) or (
-            can_represent_type(IterableObject, condition_type)) or handlers.call_utilities.is_iterable(condition_type)):
+            can_represent_type(IterableObject, condition_type)) or call_utilities.is_iterable(condition_type)):
         StypyTypeError(localization, "The type of this for loop condition is erroneous")
         return False
 
@@ -430,7 +430,7 @@ def will_iterate_loop(localization, condition_type):
         return False
 
     if (can_store_elements(condition_type) or (
-            can_represent_type(IterableObject, condition_type)) or handlers.call_utilities.is_iterable(condition_type)):
+            can_represent_type(IterableObject, condition_type)) or call_utilities.is_iterable(condition_type)):
         try:
             t = get_contained_elements_type(condition_type)
             if type(t) is undefined_type.UndefinedType or t is undefined_type.UndefinedType:
@@ -441,6 +441,7 @@ def will_iterate_loop(localization, condition_type):
         return True
 
     return True
+
 
 def get_type_of_for_loop_variable(localization, condition_type):
     """
@@ -473,9 +474,9 @@ def get_type_of_for_loop_variable(localization, condition_type):
         iter_method = condition_type.get_type_of_member(localization, "__iter__")
         return wrap_contained_type(stypy_interface.invoke(localization, iter_method))
 
-    if handlers.call_utilities.is_numpy_array(condition_type):
+    if call_utilities.is_numpy_array(condition_type):
         return condition_type.get_contained_type()
-    if handlers.call_utilities.is_ndenumerate(condition_type):
+    if call_utilities.is_ndenumerate(condition_type):
         contained = None
         for typ in condition_type.iter.coords:
             contained = union_type.UnionType.add(contained, typ)
@@ -484,7 +485,7 @@ def get_type_of_for_loop_variable(localization, condition_type):
         t.set_contained_type(contained)
         return union_type.UnionType.add(t, numpy.int32)
 
-    if handlers.call_utilities.is_ndindex(condition_type):
+    if call_utilities.is_ndindex(condition_type):
         t = wrap_contained_type((numpy.int32(),))
         t.set_contained_type(numpy.int32())
         return t
