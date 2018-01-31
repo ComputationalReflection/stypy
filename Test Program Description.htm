@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+    <title>Computational Reflection Research Group</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="keywords" content="Computational Reflection, StaDyn, Computational Reflection Research Group, StaDyn Programming Language, StaDyn, Dynamic Language, Francisco Ortin">
+    <meta name="description" content="The StaDyn Programming Language Research Project">
+    <meta name="Author" content="Francisco Ortin">
+    <link rel="stylesheet" type="text/css" href="Test%20Program%20Description_files/reflection.css">
+    <style type="text/css">
+        h3 {
+            margin-top: 40px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+
+        table {
+            margin: 30px 10% 30px 10%;
+            border-collapse: collapse;
+        }
+
+
+        th {
+            text-align: center;
+            font-size: large;
+            vertical-align: middle;
+            font-weight: bold;
+            background-color: #b0e0e6;
+        }
+
+        td {
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        ul {
+            font-style: normal;
+        }
+
+        ul {
+            text-align: left;
+            font-weight: normal;
+        }
+
+        .sourceCode {
+            font-family: "Courier New";
+        }
+
+        .tableSeparator {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="total">
+
+
+        <div id="menu">
+            <div id="leftmenu">
+
+            </div>
+            <!-- leftmenu -->
+            <div id="rightmenu">
+
+            </div>
+            <!-- rightmenu -->
+        </div>
+        <!-- menu -->
+
+
+
+        <div id="project">
+            <div id="leftproject">
+                <img src="Test%20Program%20Description_files/logo2.gif" alt="projectlogo">
+            </div>
+            <!-- leftproject -->
+            <div id="rightproject">
+                <div id="projecttitle">
+                    Computational Reflection Research Group
+                </div>
+                <!-- projecttitle -->
+                <div id="projectsubtitle">
+                    <h1>Home</h1>
+                </div>
+                <!-- projectsubtitle -->
+            </div>
+            <!-- rightproject -->
+        </div>
+        <!-- project -->
+
+        <div id="projectmenu">
+            <a href="http://www.reflection.uniovi.es">Home</a><br>
+                <!--<a href="file:///D:/DatosEnNube/OneDriveBusiness/OneDrive%20-%20Universidad%20de%20Oviedo/Articulos%20ya%20publicados/5%20(python)/web/Benchmarking%20code%20suites.html">Program suites</a><br>-->
+            <!--<a href="http://www.reflection.uniovi.es/projects.shtml">Details</a><br>-->
+            <!--<a href="http://www.reflection.uniovi.es/projects.shtml">Functionalities</a><br>-->
+            <!--<a href="http://www.reflection.uniovi.es/projects.shtml">Profiling</a><br>-->
+            <a href="http://www.reflection.uniovi.es/projects.shtml">Project Funds</a><br>
+            <a href="http://www.reflection.uniovi.es/members.shtml">Members</a><br>
+            <a href="http://www.reflection.uniovi.es/contact.us.shtml">Contact Us</a><br>
+        </div>
+        <!-- projectmenu -->
+
+
+        <div id="projectdescription">
+            <h2>Test suites</h2>
+            <p>
+                This section describes the different test types we used to test stypy.
+            </p>
+            <ol>
+                <li><a href="#Model">Stypy model testing</a></li>
+                <li><a href="#Code">Code generation testing</a></li>
+                <li><a href="#Programs">Real Programs</a></li>
+                <li><a href="#Numpy">Usage of the Numpy library features</a></li>
+            </ol>
+
+            <h3><a id="Model">Stypy model testing</a></h3>
+            <p>
+                Stypy works by generating a Python program from any Python program it processes. This new Python
+                program calculates the types of the original one. To do this, certain assumptions and concepts must
+                be implemented: Contexts for function calls, SSA algorithm to calculate possible types when dealing
+                with conditionals, dealing with data structures...This test block checks that these concepts are
+                correctly implemented and test them using direct calls to their methods, simulating the calls that
+                the code of the generated type-inference programs will do to them.
+            </p>
+            <h3><a id="Code">Stypy code generation testing</a></h3>
+            <p>
+                One of the most important parts of Stypy is the ability to generate a new Python program from the ones
+                it processes. To achieve this, Stypy implements a Python 3-way code generator able to generate
+                type-inference code from any Python syntactic construction. This test group checks this code generator
+                by using small programs that use different Python constructs (calls, assignments, generators,...),
+                so we can check if the generated code correctly checks the different Python types used in
+                these constructs.
+            </p>
+
+            <h3><a id="Programs">Programs</a></h3>
+            <p>
+                This group is composed by applications that are created for a specific and realistic
+                purpose: perform scientific calculations, popular problem solving, data manipulation
+                and parsing, etc. These programs serve much different purposes and have different
+                sizes, due to the different complexity required by each solved problem. The programs
+                in this group are not specifically designed as benchmarks, but as Python applications
+                that, independently of its size, were designed with a real purpose in mind. We used stypy to check
+                if the code of these programs has potential runtime errors.
+            </p>
+            <p>
+                To obtain programs that fit in this category we used the program collection provided
+                by the Shed Skin Python compiler distribution. Shed Skin (<a href="http://code.google.com/p/shedskin/">http://code.google.com/p/shedskin/</a>)
+                is an experimental compiler that can translate pure, but implicitly statically typed
+                Python programs into optimized C++. Although this distribution is promising, it
+                lacks support for certain Python programming language features at this moment, so
+                we decided not to include it yet in our measurements. However, the example library
+                it provides (<a href="http://code.google.com/p/shedskin/downloads/list">http://code.google.com/p/shedskin/downloads/list
+                </a>) is excellent, and suits to our purposes.
+            </p>
+            <p>
+                The Shed Skin program collection is composed by a wide variety of programs of different
+                nature and authors. We adapted the majority of them to perform our measures. The
+                following table describes each one of the 52 programs we used:
+            </p>
+            <table>
+                <tbody><tr>
+                    <th>Program
+                    </th>
+                    <th>Description
+                    </th>
+                    <th>Found Type Errors</th>
+                    <th>Found Type Warnings</th>
+                </tr>
+                <tr>
+                    <td>Adatron Support Vector Machine
+                    </td>
+                    <td>
+                        <p>
+                            An Adatron Support Vector Machine with polynomial kernel placed in the public domain
+                            by Stavros Korokithakis.
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Ambient Occlusion Renderer
+                    </td>
+                    <td>
+                        <p>
+                            This program is an ambient occlusion renderer written by Syoyo Fujita <a href="http://syoyo.wordpress.com/2009/01/26/ao-bench-is-evolving/">http://syoyo.wordpress.com/2009/01/26/ao-bench-is-evolving/ </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Ant colony optimization
+                    </td>
+                    <td>
+                        <p>
+                            This program generates a random array of distances between cities, then uses Ant
+                            Colony Optimization to find a short path traversing all the cities the Travelling
+                            Salesman Problem. By Eric Rollins <a href="http://eric_rollins.home.mindspring.com/">http://eric_rollins.home.mindspring.com/ </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Arithmetic compressor encoder and decoder
+                    </td>
+                    <td>
+                        <p>
+                            Arithmetic coding compressor and uncompressor for binary data by David MacKay <a href="http://www.inference.phy.cam.ac.uk/mackay/python/compress/">http://www.inference.phy.cam.ac.uk/mackay/python/compress/
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Barnes-Hut
+                    </td>
+                    <td>
+                        <p>
+                            A Python implementation of the BH* Olden benchmark (<a href="http://www.irisa.fr/caps/people/truong/M2COct99/Benchmarks/Olden/">
+                                http://www.irisa.fr/caps/people/truong/M2COct99/Benchmarks/Olden/ </a>). It
+                            implements the Barnes-Hut benchmark that is described in: <em>A hierarchical o(N log
+                                N) force-calculation algorithm,</em>
+                        ; Barnes, J., Hut, P., Nature, 324:446-449, Dec. 1986
+                    </p></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Block compression
+                    </td>
+                    <td>
+                        <p>
+                            A Huffman block compression algorithm by David MacKay <a href="http://www.inference.phy.cam.ac.uk/mackay/python/compress/">http://www.inference.phy.cam.ac.uk/mackay/python/compress/ </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Brainfuck interpreter
+                    </td>
+                    <td>
+                        <p>
+                            A Brainfuck programming language (<a href="http://www.muppetlabs.com/~breadbox/bf/">http://www.muppetlabs.com/~breadbox/bf/
+                            </a>) interpreter by Philippe Biondi <a href="http://www.secdev.org/">http://www.secdev.org/
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Chaosgame fractals
+                    </td>
+                    <td>
+                        <p>
+                            This program creates chaosgame-like fractals. By Carl Friedrich Bolz <a href="https://bitbucket.org/cfbolz/compost/src/a11f10cc7026b4bb138d6f995c91cf990e0a7e23/python/chaosgame.py?at=default">https://bitbucket.org/cfbolz/compost/src/a11f10cc7026b4bb138d6f995c91cf990e0a7e23/python/chaosgame.py?at=default
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Chess
+                    </td>
+                    <td>
+                        <p>
+                            Simple chess like speed test program written in Python by Jyrki Alakuijala
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Color Patterns Shells
+                    </td>
+                    <td>
+                        <p>
+                            This program Models for the simulations of the color pattern on the shells of mollusks
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Connect four game
+                    </td>
+                    <td>
+                        <p>
+                            This program implements the connect four (also known as four-in-a-row) game <a href="http://users.softlab.ece.ntua.gr/~ttsiod/score4.html">http://users.softlab.ece.ntua.gr/~ttsiod/score4.html</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Conway game of life
+                    </td>
+                    <td>
+                        <p>
+                            This program is an implementation of the Game of Life, a cellular automaton devised
+                            by the British mathematician John Horton Conway. Its author is Francesco Frassinelli
+                            <a href="https://github.com/frafra">https://github.com/frafra</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dijkstra
+                    </td>
+                    <td>
+                        <p>
+                            Program that uses the Dijkstra shortest-distance algorithm by Gustavo J.A.M. Carneiro
+                            <a href="http://gjcarneiro.blogspot.com.es/2007/01/dijkstra-in-python.html">http://gjcarneiro.blogspot.com.es/2007/01/dijkstra-in-python.html</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dijkstra Bidirectional
+                    </td>
+                    <td>
+                        <p>
+                            Bidirectional Dijkstra/search algorithm extracted from the NetworkX program (<a href="http://networkx.lanl.gov/">http://networkx.lanl.gov/)
+                        </a></p><a href="http://networkx.lanl.gov/">
+                    </a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Genetic algorithm
+                    </td>
+                    <td>
+                        <p>
+                            A genetic algorithm implementation
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Genetic algorithm 2
+                    </td>
+                    <td>
+                        <p>
+                            Another genetic algorithm implementation by Stavros Korokithakis
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Go
+                    </td>
+                    <td>
+                        <p>
+                            An implementation of the popular Go game by Mark Dufour <a href="https://sites.google.com/site/markdufour/home">https://sites.google.com/site/markdufour/home </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Hq2x filter
+                    </td>
+                    <td>
+                        <p>
+                            Python adaptation of the Hq2x filter demo program by Maxim Stepin <a href="http://spacy51.sp.funpic.de/hq_filters/hq2x.html">http://spacy51.sp.funpic.de/hq_filters/hq2x.html</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Jpeg decoder
+                    </td>
+                    <td>
+                        <p>
+                            A JPEG decoding program by Tong Lin <a href="http://www.cis.pku.edu.cn/faculty/vision/lintong/default.htm">http://www.cis.pku.edu.cn/faculty/vision/lintong/default.htm </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Kanoodle puzzle
+                    </td>
+                    <td>
+                        <p>
+                            A program that finds solutions to the popular kanoodle puzzle game by David Austin
+                            <a href="http://www.ams.org/samplings/feature-column/fcarc-kanoodle">http://www.ams.org/samplings/feature-column/fcarc-kanoodle
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Lempel-Ziv compression
+                    </td>
+                    <td>
+                        <p>
+                            A program that performs compression of data using the Lempel-Ziv code by David Mackay
+                            <a href="http://www.inference.phy.cam.ac.uk/mackay/python/compress/#LZ">http://www.inference.phy.cam.ac.uk/mackay/python/compress/#LZ
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Linear algebra
+                    </td>
+                    <td>
+                        <p>
+                            A program that uses various linear algebra operations by Mladen Bestvina
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Loop nodes
+                    </td>
+                    <td>
+                        <p>
+                            A program that performs loop recognition in a node graph by Leonardo Maffi <a href="http://www.fantascienza.net/leonardo/js/index.html">http://www.fantascienza.net/leonardo/js/index.html </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mandelbrot
+                    </td>
+                    <td>
+                        <p>
+                            Program that generates and serializes Mandelbrot fractals by Tony Veijalainen <a href="http://www.daniweb.com/software-development/python/code/371844/mandelbrot-with-tkinter-and-shedskin">http://www.daniweb.com/software-development/python/code/371844/mandelbrot-with-tkinter-and-shedskin
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mastermind
+                    </td>
+                    <td>
+                        <p>
+                            An implementation of the Mastermind game, by Sean McCarthy
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mastermind2
+                    </td>
+                    <td>
+                        <p>
+                            Another implementation of the Mastermind game by Leonardo Maffi <a href="http://code.activestate.com/recipes/496907/">http://code.activestate.com/recipes/496907/ </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Maze solver
+                    </td>
+                    <td>
+                        <p>
+                            A random maze generator/solver by ActiveState: <a href="http://code.activestate.com/recipes/496884/">http://code.activestate.com/recipes/496884/ </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Minimal global illumination renderer
+                    </td>
+                    <td>
+                        <p>
+                            This program is a minimal global illumination renderer (minilight) written by Harrison
+                            Ainsworth HXA7241 and Juraj Sukop<a href="http://www.hxa.name/minilight/"> http://www.hxa.name/minilight/
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Neural network
+                    </td>
+                    <td>
+                        <p>
+                            This program implements a Back-Propagation Neural Networks. Its author is Neil Schemenauer
+                            <a href="http://arctrix.com/nas/python/">http://arctrix.com/nas/python/ </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Othello game
+                    </td>
+                    <td>
+                        <p>
+                            This program is an implementation of the Othello (also named Reversi or Yang) game
+                            by Mark Dufour <a href="https://sites.google.com/site/markdufour/home">https://sites.google.com/site/markdufour/home
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Path tracer
+                    </td>
+                    <td>
+                        <p>
+                            This program is an implementation of Path tracing, a way of solving a rendering
+                            equation using Montecarlo integration. It consist on a Python port of the works
+                            of Jonas Wagner (<a href="http://29a.ch/">http://29a.ch/</a> )
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Primes by sieve of Atkin
+                    </td>
+                    <td>
+                        <p>
+                            This program computes a finite list of prime numbers that are smaller than a predefined
+                            limit by using the sieve of Atkin. Its author is Steve Krenzel <a href="https://github.com/stevekrenzel">https://github.com/stevekrenzel</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Probabilistic linear context-free rewriting systems parser for natural language
+                    </td>
+                    <td>
+                        <p>
+                            This program is a natural language parser for PLCFRS (probabilistic linear context-free
+                            rewriting systems), an extension of context-free grammar which rewrites tuples of
+                            strings instead of strings. Its author is Andreas van Cranenburgh <a href="http://staff.science.uva.nl/~acranenb/">http://staff.science.uva.nl/~acranenb/</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Ray Tracer
+                    </td>
+                    <td>
+                        <p>
+                            The Pygmy RayTracer by Dave Griffiths <a href="http://www.pawfal.org/dave/blog/">http://www.pawfal.org/dave/blog/
+                            </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>RGB Converter
+                    </td>
+                    <td>
+                        <p>
+                            Conversion functions between RGB and other color systems
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Richards task management
+                    </td>
+                    <td>
+                        <p>
+                            A Python translation by Mario Wolczko that implements a task management algorithm
+                            originally written by Dr. Martin Richards
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>RSync
+                    </td>
+                    <td>
+                        <p>
+                            This is a Python implementation of the Rsync algorithm: <em>The rsync algorithm</em>,
+                            Tridgell A., Mackerras, P.; Technical Report TR-CS-96-05, Canberra 0200 ACT, Australia,
+                            1996. <a href="http://rsync.samba.org/">http://rsync.samba.org/</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Rubik solver
+                    </td>
+                    <td>
+                        <p>
+                            This program implements a Rubik cube solver algorithm <a href="http://pastebin.com/KwGMujyB">http://pastebin.com/KwGMujyB </a>. It was adapted by Mark Dufour <a href="https://sites.google.com/site/markdufour/home">https://sites.google.com/site/markdufour/home</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Rubik solver 2
+                    </td>
+                    <td>
+                        <p>
+                            Another Rubik's cube solver using Thistlethwaite's algorithm, originally implemented
+                            on C++ by Stefan Pochmann's but translated to Python by Mark Dufour <a href="https://sites.google.com/site/markdufour/home">https://sites.google.com/site/markdufour/home </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Satisfiability solver
+                    </td>
+                    <td>
+                        <p>
+                            This program implements a satisfiability solver. Its author is Mark Dufour <a href="https://sites.google.com/site/markdufour/home">https://sites.google.com/site/markdufour/home </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SHA
+                    </td>
+                    <td>
+                        <p>
+                            This program is a Python implementation of the SHA-1 algorithm by J. Hall’en and
+                            L. Creighton <a href="https://seattle.poly.edu/svn/seattle/trunk/seattlelib/sha.repy">https://seattle.poly.edu/svn/seattle/trunk/seattlelib/sha.repy </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Simple mandelbrot
+                    </td>
+                    <td>
+                        <p>
+                            This is an implementation of the Mandelbrot fractal by Daniel Rosengren <a href="http://www.timestretch.com/article/mandelbrot_fractal_benchmark">http://www.timestretch.com/article/mandelbrot_fractal_benchmark </a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Sokoban
+                    </td>
+                    <td>
+                        <p>
+                            An implementation of the Sokoban game
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Solitaire encryption
+                    </td>
+                    <td>
+                        <p>
+                            Python implementation of Bruce Schneier's Solitaire Encryption algorithm by John
+                            Dell'Aquila. <a href="https://www.schneier.com/">https://www.schneier.com/</a>
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Sudoku solvers
+                    </td>
+                    <td>
+                        <p>
+                            We included 5 different Sudoku solvers by various authors:
+                        </p>
+                        <ul>
+                            <li>Jack Ha</li>
+                            <li>Peter Goodspeed</li>
+                            <li>Peter Cock <a href="http://www2.warwick.ac.uk/fac/sci/moac/people/students/peter_cock/python/sudoku">http://www2.warwick.ac.uk/fac/sci/moac/people/students/peter_cock/python/sudoku
+                            </a></li>
+                            <li>Peter Norvig <a href="http://norvig.com/sudoku.html">http://norvig.com/sudoku.html</a>
+                            </li>
+                            <li>Ali Assaf <a href="http://www.cs.mcgill.ca/~aassaf9/">http://www.cs.mcgill.ca/~aassaf9/</a>
+                            </li>
+                        </ul>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tic Tac Toe
+                    </td>
+                    <td>
+                        <p>
+                            An implementation of the Tic Tac Toe game by Peter Goodspeed
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Voronoi
+                    </td>
+                    <td>
+                        <p>
+                            This program implements a Voronoi diagram, which is a way of dividing space into
+                            a number of regions. A set of points is specified beforehand and for each seed there
+                            will be a corresponding region consisting of all points closer to that seed than
+                            to any other. The regions are called Voronoi cells.
+                        </p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody></table>
+
+            <h3><a id="Numpy">Large Scale Applications</a></h3>
+            <p>
+                The final group of tests uses different numpy features to check if code generation of type-inference
+                programs works well when integrating this library new functions and types. To do that, we used a
+                collection of code fragments using these features from the official Numpy documentation, that
+                presents code snippets from real applications using these features.
+            </p>
+
+        </div>
+        <!-- projectdescription -->
+
+
+        <div id="foot">
+            <ul>
+                <li>
+                    <!--<a href="http://my.statcounter.com/project/standard/stats.php?project_id=3415399&amp;guest=1">-->
+                        <!--<img class="statcounter" src="Test%20Program%20Description_files/stat.gif" alt="hit counter">-->
+                    <!--</a>-->
+                    <!-- Start of StatCounter Code -->
+                    <!--<script type="text/javascript">-->
+                        <!--var sc_project = 3415399;-->
+                        <!--var sc_invisible = 0;-->
+                        <!--var sc_partition = 38;-->
+                        <!--var sc_security = "fe034f6c";-->
+                    <!--</script>-->
+                    <!--<script type="text/javascript" src="Test%20Program%20Description_files/counter_xhtml.js"></script><span class="statcounter"><a class="statcounter" href="http://www.statcounter.com/" target="_blank"><img src="Test%20Program%20Description_files/t" alt="StatCounter - Free Web Tracker and Counter" border="0"></a></span>-->
+
+                    <!--<noscript class="noscript-show">-->
+                        <!--<span></span>-->
+                    <!--</noscript>-->
+                    <!-- End of StatCounter Code -->
+                </li>
+                <li><a href="http://validator.w3.org/check?uri=www.reflection.uniovi.es">
+                    <img src="Test%20Program%20Description_files/valid-xhtml10-blue.png" alt="Valid XHTML 1.0 Strict"></a></li>
+                <li><a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.reflection.uniovi.es/">
+                    <img src="Test%20Program%20Description_files/valid-css2-blue.png" alt="Valid CSS 2.0"></a></li>
+                <li>
+                    <img src="Test%20Program%20Description_files/wcag1AA-blue.gif" alt="Accessible Site"></li>
+            </ul>
+        </div>
+    <!-- foot -->
+
+
+    </div><!-- total -->
+
+
+</body></html>

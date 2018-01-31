@@ -1,0 +1,312 @@
+
+/* General aspect of the body */
+
+body
+{
+	margin: 0 0 0 0;
+	font-family: verdana;
+	background: white;
+	font-size: 0.8em;
+}
+
+img 
+{
+	border:0; 
+}
+
+/* The whole div */
+div#total
+{
+	text-decoration: none;
+}
+
+h2 
+{
+	font-size:large;
+}
+
+h3
+{
+	font-size:medium;
+}
+
+/************ The upper menu *********************/
+div#menu
+{
+	background: url( "../imgs/topgrad.gif" ) top right;
+	background-color: #002d96;
+	background-repeat: repeat-x;
+	height: 3.2em;
+	font-size: 0.7em;
+	font-family: verdana; 
+	border-bottom: #ffd275 solid 0.35em;
+	color:White;
+	width:100%;
+}
+
+
+div#menu a
+{
+	margin: 0;
+	height: 3.2em;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	background-color:inherit;
+}
+
+div#leftmenu
+{
+	float: left;
+}
+div#rightmenu
+{
+	float: right;
+}
+
+div#leftmenu img
+{
+	position: absolute;
+	top: 0;
+}
+
+div#leftmenu a
+{
+	position: relative;
+	left: 30px; /* Width of the logo */
+	top: 7px;
+	padding-right: 0.5em;
+	text-align: left;
+	margin-top: 0;
+}
+
+div#rightmenu a
+{
+	position: relative;
+	top: 7px;
+	padding-right: 7px;
+	text-align: right;
+}
+
+
+/***************** The project section *****************************/
+
+div#project
+{
+	height: 4.5em;
+	font-family: verdana;
+	border-bottom: #ffd275 solid 1px;
+	width: 100%;
+}
+
+div#leftproject
+{
+	float: left;
+	position: relative;
+	top: 15px;
+	vertical-align: middle;
+	font-size: 1.5em;
+	text-align:right;
+	width: 5em;
+}
+div#rightproject
+{
+	position: relative;
+	margin-left: 11em;			/* Must be the same that div#rightproject(margin-left), div#projectmenu(width), divproject#description(margin-left) */
+	left: 5px;
+}
+
+div#leftproject img
+{
+	position: relative;
+	top: -9px;
+}
+
+div#rightproject
+{
+	text-align: left;
+}
+
+div#projecttitle
+{
+	font-size: 1em;
+	padding-top: 5px;
+}
+
+div#projectsubtitle h1
+{
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+/***************** The project description *****************************/
+
+div#description
+{
+	position: relative;
+	top: 0px;
+	width: 100%;
+	background-color: #e1ecfc;
+}
+
+div#projectmenu 
+{
+	float:left;
+	background-color:inherit;
+	padding-top: 5px;
+	width: 11em;			/* Must be the same that div#rightproject(margin-left), div#projectmenu(width), divproject#description(margin-left) */
+	display:table-column;
+}
+
+div#projectmenu a
+{
+	margin: 0;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: none;
+	content: "\a";
+	line-height:22px;
+	margin-left:10px;
+	color:#002d96;
+	background-color:inherit;
+}
+
+div#projectdescription
+{
+	margin-left: 11em;		/* Must be the same that div#rightproject(margin-left), div#projectmenu(width), divproject#description(margin-left) */
+	position: absolute;
+	position: relative;
+	top: 0px;
+	padding-top: 10px;
+	background-color:White;
+	min-height: 500px;
+}
+
+/* For the Internet Explorer that does not support min-height*/
+* html #projectdescription
+{
+	height:500px;
+}
+
+div#projectdescription *
+{
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+div#projectdescription p
+{
+	margin-right: 50px;
+	text-align:justify;
+}
+
+div#projectdescription pre.code, div#projectdescription code
+{
+	font-family: "Courier New";
+	font-size: 1em;
+}
+
+div#projectdescription code.keyword
+{
+	color: Blue;
+}
+
+div#projectdescription code.comment
+{
+	color: Green;
+}
+
+div#projectdescription code.string
+{
+	color: Maroon;
+}
+
+div#projectdescription ol 
+{
+	list-style-type: decimal;
+	margin-left: 1em;
+	padding-left: 1em;
+	/* max-width: 90%; */
+}
+
+div#projectdescription ul
+{
+	margin-left: 1em;
+	padding-left: 1em;
+	/*max-width: 90%;*/
+	list-style-type:disc;
+}
+
+div#projectdescription img
+{
+	max-width: 40em; /* The same as div#projectdescription p.figurecaption */
+}
+
+div#projectdescription p.figurecaption
+{
+	max-width: 40em; /* The same as div#projectdescription img */
+	font-size:x-small;
+}
+
+div#projectdescription ul.member
+{
+	list-style: none;
+	margin-left: 2em;
+	/*max-width: 90%;*/
+}
+
+div#projectdescription li.membername
+{
+	font-weight: bold;
+}
+
+div#projectdescription ul.contact
+{
+	list-style: none;
+	margin-left: 2em;
+	/*max-width: 90%;*/
+}
+
+div#projectdescription li.contact
+{
+	margin-top:1em;
+}
+
+div#projectdescription li a
+{
+	margin-left: -0.1em;
+}
+
+
+
+/***************** The foot *****************************/
+
+div#foot
+{
+	position: relative;
+	top: 0px;
+	width: 100%;
+	background-color: White;
+	text-align:center;
+	text-align:center;
+	padding-top:25px;
+	height: 60px;
+	vertical-align: middle;
+}
+
+div#foot ul
+{
+	list-style: none;
+	padding-left: 0;
+	text-align: center;
+}
+
+div#foot li
+{
+	display: block;
+	float: left;
+	width: 24%;/* 100/(number+2) of elements Limitations of CSS. This number must be fixed. */
+	text-align:center;
+}
