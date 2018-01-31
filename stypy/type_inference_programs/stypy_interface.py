@@ -194,9 +194,15 @@ def set_contained_elements_type(localization, container, elements):
             errors = []
             # For each type of the union, set elements
             for t in elements[0].types:
-                result = __set_contained_elements_type(localization, container, t)
-                if type_inspection.is_error(result):
-                    errors.append(result)
+                # Special case for dictionaties
+                if len(elements) > 1:
+                    result = __set_contained_elements_type(localization, container, (t, elements[1]))
+                    if type_inspection.is_error(result):
+                        errors.append(result)
+                else:
+                    result = __set_contained_elements_type(localization, container, t)
+                    if type_inspection.is_error(result):
+                        errors.append(result)
 
             # Everything is an error
             if len(errors) == len(elements[0].types):

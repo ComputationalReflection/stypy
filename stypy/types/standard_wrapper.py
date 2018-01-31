@@ -7,8 +7,9 @@ from stypy.types.type_containers import get_contained_elements_type, can_store_e
 from stypy.types.type_inspection import is_union_type, is_undefined
 from type_wrapper import TypeWrapper
 import numpy
+import itertools
 
-types_to_be_wrapped = [list, dict, numpy.ndarray]
+types_to_be_wrapped = [list, dict, numpy.ndarray, itertools.product]
 
 
 def wrap_contained_type(type_):

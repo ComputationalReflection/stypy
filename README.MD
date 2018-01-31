@@ -82,6 +82,6 @@ Main features of the new 0.2 release include:
 - [26/01/2018] Fixed type inference for the list.pop method. If position of a container is a type error when writing to it, this type error is now propagated and a new one is not generated. Loops over empty data structures (type of contents if UndefinedType) will not iterate. Therefore, stypy now did not process the loop body in these cases. This removes a lot of false positives.
 - [29/01/2018] Fixed code generation for the else statement of the for clauses not closing correctly its SSA contexts. Added while loop to the "loop over empty data structures will not iterate" optimization of the 26/01/2018. If conditions that dynamically evaluates to NoneType only execute the else part. This is a runtime idiom.
 - [30/01/2018] Tested the type inference of the shedskin kanoodle, kmeansapp programs. Inequality operators can now be applied to any object.
-- [31/01/2018] Added a web page to describe the different stypy test suites
+- [31/01/2018] Added a web page to describe the different stypy test suites. itertools.product object can now be properly processed. When manipulating dictionaries whose keys are union types, now each member of a union type is inserted with its associated value.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

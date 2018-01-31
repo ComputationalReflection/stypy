@@ -88,9 +88,6 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-
-
-
     def test_kanoodle(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/kanoodle.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
@@ -108,7 +105,6 @@ class TestShedSkin(TestCommon):
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
-
 
     def test_linalg(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/linalg.py"
@@ -142,12 +138,6 @@ class TestShedSkin(TestCommon):
 
     def test_mao(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/mao.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_mastermind2(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/mastermind2.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
@@ -326,6 +316,12 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
+
+    def test_mastermind2(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/mastermind2.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
 
     # Recursion problem when generating code
     def test_hq2x(self):

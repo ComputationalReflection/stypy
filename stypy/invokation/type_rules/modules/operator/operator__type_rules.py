@@ -143,12 +143,14 @@ type_rules_of_members = {
         ((Str, Number), bool),
         ((types.NoneType, AnyType), bool),
         ((AnyType, types.NoneType), bool),
+        ((collections.defaultdict, AnyType), bool),
         ((numpy.ndarray, numpy.ndarray), DynamicType),
         ((IterableObject, IterableObject), bool),
         ((Overloads__eq__, AnyType), DynamicType),
         ((Overloads__cmp__, AnyType), DynamicType),
         ((DontHaveMember(["__cmp__"], 1), AnyType), bool),
-        ((AnyType, DontHaveMember(["__cmp__"], 1)), bool)
+        ((AnyType, DontHaveMember(["__cmp__"], 1)), bool),
+
     ],
 
     '__floordiv__': [
@@ -546,6 +548,7 @@ type_rules_of_members = {
         ((Overloads__cmp__, AnyType), DynamicType),
         ((DontHaveMember(["__cmp__"], 1), AnyType), bool),
         ((AnyType, DontHaveMember(["__cmp__"], 1)), bool),
+        ((collections.defaultdict, AnyType), bool)
     ],
 
     '__neg__': {
