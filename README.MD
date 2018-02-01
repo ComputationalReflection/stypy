@@ -83,5 +83,7 @@ Main features of the new 0.2 release include:
 - [29/01/2018] Fixed code generation for the else statement of the for clauses not closing correctly its SSA contexts. Added while loop to the "loop over empty data structures will not iterate" optimization of the 26/01/2018. If conditions that dynamically evaluates to NoneType only execute the else part. This is a runtime idiom.
 - [30/01/2018] Tested the type inference of the shedskin kanoodle, kmeansapp programs. Inequality operators can now be applied to any object.
 - [31/01/2018] Added a web page to describe the different stypy test suites. itertools.product object can now be properly processed. When manipulating dictionaries whose keys are union types, now each member of a union type is inserted with its associated value.
+- [01/02/2018] Fixed loading the real module code instead of the type-inference equivalent when a module imports a member of a submodule defined in its own directory tree. Fixed problems with the file.next() method. Iterating files directly no longer causes false negatives. Added initial support to infer types of code that uses the Python re library.
+
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

@@ -410,6 +410,9 @@ def is_suitable_for_loop_condition(localization, condition_type):
     if is_error_type(condition_type):
         return False
 
+    if type(condition_type) is file:
+        return True
+
     if not (can_store_elements(condition_type) or can_represent_type(Str, condition_type) or (
             can_represent_type(IterableObject, condition_type)) or call_utilities.is_iterable(condition_type)):
         StypyTypeError(localization, "The type of this for loop condition is erroneous")
@@ -428,6 +431,9 @@ def will_iterate_loop(localization, condition_type):
     """
     if is_error_type(condition_type):
         return False
+
+    if type(condition_type) is file:
+        return True
 
     if (can_store_elements(condition_type) or (
             can_represent_type(IterableObject, condition_type)) or call_utilities.is_iterable(condition_type)):
