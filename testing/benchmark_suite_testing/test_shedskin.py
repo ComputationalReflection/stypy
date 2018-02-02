@@ -148,18 +148,6 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-    def test_minilight_main(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/minilight_main.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_mwmatching(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/mwmatching.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
     def test_neural2(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/neural2.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
@@ -178,20 +166,8 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-    def test_path_tracing(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/path_tracing.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
     def test_pisang(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/pisang.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_plcfrs(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/plcfrs.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
@@ -214,6 +190,55 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
+    def test_rubik2(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/rubik2.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_sokoban(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/sokoban.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_sudoku1(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/sudoku1.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_sudoku4(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/sudoku4.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_voronoi(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/voronoi.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+# Programs to look closely
+    def test_mwmatching(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/mwmatching.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_path_tracing(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/path_tracing.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_plcfrs(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/plcfrs.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
     def test_rsync(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/rsync.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
@@ -222,12 +247,6 @@ class TestShedSkin(TestCommon):
 
     def test_rubik(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/rubik.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_rubik2(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/rubik2.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
@@ -250,20 +269,8 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-    def test_sokoban(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/sokoban.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
     def test_solitaire(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/solitaire.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_sudoku1(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/sudoku1.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
@@ -276,12 +283,6 @@ class TestShedSkin(TestCommon):
 
     def test_sudoku3(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/sudoku3.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_sudoku4(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/sudoku4.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
@@ -304,18 +305,19 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-    def test_voronoi(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/voronoi.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
     def test_yopyra(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/yopyra.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
 
+
+    #Hangs
+    def test_minilight_main(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/minilight_main.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
 
     def test_mastermind2(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/mastermind2.py"

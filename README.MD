@@ -84,6 +84,7 @@ Main features of the new 0.2 release include:
 - [30/01/2018] Tested the type inference of the shedskin kanoodle, kmeansapp programs. Inequality operators can now be applied to any object.
 - [31/01/2018] Added a web page to describe the different stypy test suites. itertools.product object can now be properly processed. When manipulating dictionaries whose keys are union types, now each member of a union type is inserted with its associated value.
 - [01/02/2018] Fixed loading the real module code instead of the type-inference equivalent when a module imports a member of a submodule defined in its own directory tree. Fixed problems with the file.next() method. Iterating files directly no longer causes false negatives. Added initial support to infer types of code that uses the Python re library.
+- [02/02/2018] Added more support to the Python re module. 34/52 shedskin programs processed correctly (WIP)
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

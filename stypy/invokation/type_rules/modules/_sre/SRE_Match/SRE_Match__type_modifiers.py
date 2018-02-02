@@ -17,8 +17,9 @@ from stypy.types import undefined_type
 
 class TypeModifiers:
     @staticmethod
-    def match(localization, proxy_obj, arguments):
-        t = UnionType.add(undefined_type.UndefinedType, str)
+    def groups(localization, proxy_obj, arguments):
+        t = UnionType.add(undefined_type.UndefinedType, str())
+        t = UnionType.add(t, 0)
         tup = call_utilities.wrap_contained_type(tuple())
         tup.set_contained_type(t)
 
