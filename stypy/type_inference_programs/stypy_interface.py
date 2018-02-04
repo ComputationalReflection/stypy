@@ -242,8 +242,9 @@ def __set_contained_elements_type(localization, container, elements):
                 if not type_group_generator.Integer == type(elements[0]):
                     if not hasattr(container, '__index__'):
                         # Ellipsis
-                        if not (type_inspection.compare_type(elements[0], slice) and type_inspection.compare_type(
-                                elements[1], slice)):
+                        if not (type_inspection.compare_type(elements[0], slice) and (type_inspection.compare_type(
+                                elements[1], slice) or type_inspection.compare_type(
+                                elements[1], list))):
                             return StypyTypeError(localization,
                                                   "Indexes of indexable containers must be Integers or instances that "
                                                   "implement the __index__ method")
