@@ -655,6 +655,9 @@ class StatementVisitor(ast.NodeVisitor):
         # Process for test
         iter_stmt, for_stmt_test = self.visit(node.iter, context)
 
+        set_type_of_loop_var = stypy_functions.create_set_type_of(for_stmt_test.id, for_stmt_test, node.lineno,
+                                                                              node.col_offset)
+
         # Check if the for statement is suitable for iteration
         condition_comment = stypy_functions.create_src_comment("Testing the type of a for loop iterable",
                                                                node.lineno)
@@ -686,6 +689,7 @@ class StatementVisitor(ast.NodeVisitor):
         target_assign, target_assign_var = stypy_functions.create_temp_Assign(target_assign_call, node.lineno,
                                                                               node.col_offset, "for_loop_var")
         for_stmt_body.append(target_assign)
+
 
         if isinstance(node.target, ast.Tuple):
             get_elements_call = core_language.create_Name("get_contained_elements_type")
@@ -767,6 +771,7 @@ class StatementVisitor(ast.NodeVisitor):
 
         return stypy_functions.flatten_lists(begin_for_comment,
                                              iter_stmt,
+                                             set_type_of_loop_var,
                                              iteration_comment,
                                              for_stmt,
                                              end_for_comment)
@@ -789,6 +794,9 @@ class StatementVisitor(ast.NodeVisitor):
 
         # Process the condition of the while statement
         condition_stmt, while_stmt_test = self.visit(node.test, context)
+
+        set_type_of_loop_var = stypy_functions.create_set_type_of(while_stmt_test.id, while_stmt_test, node.lineno,
+                                                                              node.col_offset)
 
         # Test the type of the while condition
         condition_comment = stypy_functions.create_src_comment("Testing the type of an if condition", node.lineno)
@@ -853,6 +861,7 @@ class StatementVisitor(ast.NodeVisitor):
         end_while_comment = stypy_functions.create_blank_line()
         return stypy_functions.flatten_lists(begin_while_comment,
                                              condition_stmt,
+                                             set_type_of_loop_var,
                                              iteration_comment,
                                              while_stmt,
                                              end_while_comment)
@@ -1492,7 +1501,12 @@ class StatementVisitor(ast.NodeVisitor):
         """
         comment = stypy_functions.create_src_comment("Evaluating assert statement condition")
         stmts, var = self.visit(node.test, context)
-        return stypy_functions.flatten_lists(comment, stmts)
+
+        target_assign, target_assign_var = stypy_functions.create_temp_Assign(var, node.lineno,
+                                                                              node.col_offset, "assert")
+        assing_to_var = stypy_functions.create_set_type_of(target_assign_var.id, var, node.lineno,
+                                                           node.col_offset)
+        return stypy_functions.flatten_lists(comment, stmts, target_assign, [assing_to_var])
 
     def visit_Exec(self, node, context):
         """

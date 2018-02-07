@@ -1576,6 +1576,8 @@ def getRandomNormalInHemisphere(localization, *varargs, **kwargs):
     
     # Getting the type of 'True' (line 62)
     True_210 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 62, 10), 'True')
+    # Assigning a type to the variable 'True_210' (line 62)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 62, 4), 'True_210', True_210)
     # Testing if the while is going to be iterated (line 62)
     # Testing the type of an if condition (line 62)
     is_suitable_condition(stypy.reporting.localization.Localization(__file__, 62, 4), True_210)
@@ -3690,6 +3692,8 @@ class Renderer(object, ):
         # Calling xrange(args, kwargs) (line 193)
         xrange_call_result_608 = invoke(stypy.reporting.localization.Localization(__file__, 193, 17), xrange_601, *[len_call_result_606], **kwargs_607)
         
+        # Assigning a type to the variable 'xrange_call_result_608' (line 193)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 193, 8), 'xrange_call_result_608', xrange_call_result_608)
         # Testing if the for loop is going to be iterated (line 193)
         # Testing the type of a for loop iterable (line 193)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 193, 8), xrange_call_result_608)
@@ -3885,6 +3889,8 @@ class Renderer(object, ):
         # Applying the binary operator '<' (line 206)
         result_lt_648 = python_operator(stypy.reporting.localization.Localization(__file__, 206, 14), '<', y_646, float_647)
         
+        # Assigning a type to the variable 'result_lt_648' (line 206)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 206, 8), 'result_lt_648', result_lt_648)
         # Testing if the while is going to be iterated (line 206)
         # Testing the type of an if condition (line 206)
         is_suitable_condition(stypy.reporting.localization.Localization(__file__, 206, 8), result_lt_648)
@@ -3928,6 +3934,8 @@ class Renderer(object, ):
             # Applying the binary operator '<' (line 209)
             result_lt_659 = python_operator(stypy.reporting.localization.Localization(__file__, 209, 18), '<', x_657, float_658)
             
+            # Assigning a type to the variable 'result_lt_659' (line 209)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 209, 12), 'result_lt_659', result_lt_659)
             # Testing if the while is going to be iterated (line 209)
             # Testing the type of an if condition (line 209)
             is_suitable_condition(stypy.reporting.localization.Localization(__file__, 209, 12), result_lt_659)
@@ -4181,6 +4189,8 @@ class Renderer(object, ):
         # Calling xrange(args, kwargs) (line 226)
         xrange_call_result_715 = invoke(stypy.reporting.localization.Localization(__file__, 226, 17), xrange_707, *[len_call_result_713], **kwargs_714)
         
+        # Assigning a type to the variable 'xrange_call_result_715' (line 226)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 226, 8), 'xrange_call_result_715', xrange_call_result_715)
         # Testing if the for loop is going to be iterated (line 226)
         # Testing the type of a for loop iterable (line 226)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 226, 8), xrange_call_result_715)
@@ -4857,6 +4867,8 @@ class Renderer(object, ):
         self_872 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 257, 17), 'self')
         # Obtaining the member 'buffer' of a type (line 257)
         buffer_873 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 257, 17), self_872, 'buffer')
+        # Assigning a type to the variable 'buffer_873' (line 257)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 257, 8), 'buffer_873', buffer_873)
         # Testing if the for loop is going to be iterated (line 257)
         # Testing the type of a for loop iterable (line 257)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 257, 8), buffer_873)
@@ -5680,6 +5692,8 @@ def run(localization, *varargs, **kwargs):
     # Calling range(args, kwargs) (line 303)
     range_call_result_1153 = invoke(stypy.reporting.localization.Localization(__file__, 303, 17), range_1150, *[ITERATIONS_1151], **kwargs_1152)
     
+    # Assigning a type to the variable 'range_call_result_1153' (line 303)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 303, 4), 'range_call_result_1153', range_call_result_1153)
     # Testing if the for loop is going to be iterated (line 303)
     # Testing the type of a for loop iterable (line 303)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 303, 4), range_call_result_1153)

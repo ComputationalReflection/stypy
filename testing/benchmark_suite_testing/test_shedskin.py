@@ -220,13 +220,13 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-# Programs to look closely
     def test_mwmatching(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/mwmatching.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False, expected_errors=2)
 
         self.assertEqual(result, 0)
 
+    # Programs to look closely
     def test_path_tracing(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/path_tracing.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
