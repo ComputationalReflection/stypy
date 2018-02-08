@@ -87,6 +87,7 @@ Main features of the new 0.2 release include:
 - [02/02/2018] Added more support to the Python re module. 34/52 shedskin programs processed correctly (WIP)
 - [05/02/2018] Lists that has been populated partially from other lists using slice indexes have now types correctly calculated.
 - [07/02/2018] Errors produced in assert expressions or in loops conditions inside an SSA algorithm now are correctly reported as warnings
+- [08/02/2018] Added support to type inference with the collections.deque Python class
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

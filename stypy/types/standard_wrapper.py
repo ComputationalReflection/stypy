@@ -8,8 +8,9 @@ from stypy.types.type_inspection import is_union_type, is_undefined
 from type_wrapper import TypeWrapper
 import numpy
 import itertools
+import collections
 
-types_to_be_wrapped = [list, dict, numpy.ndarray, itertools.product]
+types_to_be_wrapped = [list, dict, numpy.ndarray, itertools.product, collections.deque]
 
 
 def wrap_contained_type(type_):

@@ -648,6 +648,7 @@ class TypeGroups(object):
         set,
         xrange,
         numpyarray,
+        collections.deque
     ]
 
     # Data structures that can be iterable plus iterators plus iterable objects that are not necessarily data structures
@@ -676,6 +677,7 @@ class TypeGroups(object):
         types.DictProxyType,
         numpyarray,
         file,
+        collections.deque
         ]
 
 
