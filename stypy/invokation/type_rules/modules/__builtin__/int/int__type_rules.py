@@ -11,4 +11,8 @@ type_rules_of_members = {
     '__trunc__': [
         ((), int),
     ],
+    '__cmd__': [
+        ((AnyType,), bool),
+    ]
+
 }

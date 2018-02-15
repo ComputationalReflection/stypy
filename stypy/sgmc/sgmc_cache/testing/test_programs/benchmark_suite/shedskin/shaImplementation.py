@@ -533,6 +533,8 @@ def _long2bytesBigEndian(localization, *varargs, **kwargs):
     # Applying the binary operator '>' (line 49)
     result_gt_15 = python_operator(stypy.reporting.localization.Localization(__file__, 49, 10), '>', n_13, int_14)
     
+    # Assigning a type to the variable 'result_gt_15' (line 49)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 49, 4), 'result_gt_15', result_gt_15)
     # Testing if the while is going to be iterated (line 49)
     # Testing the type of an if condition (line 49)
     is_suitable_condition(stypy.reporting.localization.Localization(__file__, 49, 4), result_gt_15)
@@ -605,6 +607,8 @@ def _long2bytesBigEndian(localization, *varargs, **kwargs):
     # Calling range(args, kwargs) (line 54)
     range_call_result_35 = invoke(stypy.reporting.localization.Localization(__file__, 54, 13), range_29, *[len_call_result_33], **kwargs_34)
     
+    # Assigning a type to the variable 'range_call_result_35' (line 54)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 54, 4), 'range_call_result_35', range_call_result_35)
     # Testing if the for loop is going to be iterated (line 54)
     # Testing the type of a for loop iterable (line 54)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 54, 4), range_call_result_35)
@@ -648,8 +652,6 @@ def _long2bytesBigEndian(localization, *varargs, **kwargs):
             module_type_store = module_type_store.join_ssa_context()
             
 
-        # SSA join for a for statement
-        module_type_store = module_type_store.join_ssa_context()
         # SSA branch for the else part of a for statement (line 54)
         module_type_store.open_ssa_branch('for loop else')
         
@@ -888,6 +890,8 @@ def _bytelist2longBigEndian(localization, *varargs, **kwargs):
     # Applying the binary operator '<' (line 80)
     result_lt_91 = python_operator(stypy.reporting.localization.Localization(__file__, 80, 10), '<', i_89, imax_90)
     
+    # Assigning a type to the variable 'result_lt_91' (line 80)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 80, 4), 'result_lt_91', result_lt_91)
     # Testing if the while is going to be iterated (line 80)
     # Testing the type of an if condition (line 80)
     is_suitable_condition(stypy.reporting.localization.Localization(__file__, 80, 4), result_lt_91)
@@ -1748,6 +1752,8 @@ class sha:
         # Calling range(args, kwargs) (line 171)
         range_call_result_232 = invoke(stypy.reporting.localization.Localization(__file__, 171, 17), range_228, *[int_229, int_230], **kwargs_231)
         
+        # Assigning a type to the variable 'range_call_result_232' (line 171)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 171, 8), 'range_call_result_232', range_call_result_232)
         # Testing if the for loop is going to be iterated (line 171)
         # Testing the type of a for loop iterable (line 171)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 171, 8), range_call_result_232)
@@ -1913,6 +1919,8 @@ class sha:
         # Calling range(args, kwargs) (line 192)
         range_call_result_286 = invoke(stypy.reporting.localization.Localization(__file__, 192, 17), range_282, *[int_283, int_284], **kwargs_285)
         
+        # Assigning a type to the variable 'range_call_result_286' (line 192)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 192, 8), 'range_call_result_286', range_call_result_286)
         # Testing if the for loop is going to be iterated (line 192)
         # Testing the type of a for loop iterable (line 192)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 192, 8), range_call_result_286)
@@ -2063,6 +2071,8 @@ class sha:
         # Calling range(args, kwargs) (line 200)
         range_call_result_331 = invoke(stypy.reporting.localization.Localization(__file__, 200, 17), range_327, *[int_328, int_329], **kwargs_330)
         
+        # Assigning a type to the variable 'range_call_result_331' (line 200)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 200, 8), 'range_call_result_331', range_call_result_331)
         # Testing if the for loop is going to be iterated (line 200)
         # Testing the type of a for loop iterable (line 200)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 200, 8), range_call_result_331)
@@ -2204,6 +2214,8 @@ class sha:
         # Calling range(args, kwargs) (line 208)
         range_call_result_373 = invoke(stypy.reporting.localization.Localization(__file__, 208, 17), range_369, *[int_370, int_371], **kwargs_372)
         
+        # Assigning a type to the variable 'range_call_result_373' (line 208)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 208, 8), 'range_call_result_373', range_call_result_373)
         # Testing if the for loop is going to be iterated (line 208)
         # Testing the type of a for loop iterable (line 208)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 208, 8), range_call_result_373)
@@ -2360,6 +2372,8 @@ class sha:
         # Calling range(args, kwargs) (line 216)
         range_call_result_421 = invoke(stypy.reporting.localization.Localization(__file__, 216, 17), range_417, *[int_418, int_419], **kwargs_420)
         
+        # Assigning a type to the variable 'range_call_result_421' (line 216)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 216, 8), 'range_call_result_421', range_call_result_421)
         # Testing if the for loop is going to be iterated (line 216)
         # Testing the type of a for loop iterable (line 216)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 216, 8), range_call_result_421)
@@ -2957,6 +2971,8 @@ class sha:
             # Applying the binary operator '<' (line 269)
             result_lt_590 = python_operator(stypy.reporting.localization.Localization(__file__, 269, 18), '<', result_add_588, leninBuf_589)
             
+            # Assigning a type to the variable 'result_lt_590' (line 269)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 269, 12), 'result_lt_590', result_lt_590)
             # Testing if the while is going to be iterated (line 269)
             # Testing the type of an if condition (line 269)
             is_suitable_condition(stypy.reporting.localization.Localization(__file__, 269, 12), result_lt_590)
@@ -3024,8 +3040,6 @@ class sha:
                 
                 # Assigning a type to the variable 'i' (line 272)
                 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 272, 16), 'i', result_add_611)
-                # SSA join for while statement (line 269)
-                module_type_store = module_type_store.join_ssa_context()
                 # SSA branch for the else part of a while statement (line 269)
                 module_type_store.open_ssa_branch('while loop else')
                 
@@ -3058,6 +3072,8 @@ class sha:
                 self_621 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 16), 'self')
                 # Setting the type of the member 'input' of a type (line 274)
                 module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 274, 16), self_621, 'input', list_call_result_620)
+                # SSA join for while statement (line 269)
+                module_type_store = module_type_store.join_ssa_context()
             else:
                 
                 # Assigning a Call to a Attribute (line 274):
@@ -4163,6 +4179,8 @@ def run(localization, *varargs, **kwargs):
     # Calling range(args, kwargs) (line 407)
     range_call_result_844 = invoke(stypy.reporting.localization.Localization(__file__, 407, 13), range_841, *[int_842], **kwargs_843)
     
+    # Assigning a type to the variable 'range_call_result_844' (line 407)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 407, 4), 'range_call_result_844', range_call_result_844)
     # Testing if the for loop is going to be iterated (line 407)
     # Testing the type of a for loop iterable (line 407)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 407, 4), range_call_result_844)

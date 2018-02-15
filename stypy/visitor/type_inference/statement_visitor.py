@@ -755,12 +755,17 @@ class StatementVisitor(ast.NodeVisitor):
             # join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
             # for_stmt_orelse.append(join_stmt)
 
+        if len(node.orelse) > 0:
+            for_stmts = for_stmt_body + for_stmt_orelse
+        else:
+            for_stmts = for_stmt_body
+
         # Join and finish for
         for_stmt_body.append(stypy_functions.create_src_comment("SSA join for a for statement"))
         join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
         for_stmt_body.append(join_stmt)
 
-        for_stmts = for_stmt_body + for_stmt_orelse
+
 
         if_node_iteration.body = [for_stmts]
         if_node_iteration.orelse = else_inst
@@ -833,6 +838,7 @@ class StatementVisitor(ast.NodeVisitor):
                 stypy_functions.create_src_comment("SSA branch for the else part of a while statement",
                                                    node.lineno))
             clone_stmt2 = stypy_functions.create_open_ssa_branch("while loop else")
+
             while_stmt_orelse.append(clone_stmt2)
 
             # While else part
@@ -845,13 +851,16 @@ class StatementVisitor(ast.NodeVisitor):
             # join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
             # while_stmt_orelse.append(join_stmt)
 
+        if len(node.orelse) > 0:
+            all_while_stmts = while_stmt_body + while_stmt_orelse
+        else:
+            all_while_stmts = while_stmt_body
+
         # Join type stores and finish while
-        while_stmt_body.append(stypy_functions.create_src_comment("SSA join for while statement", node.lineno))
+        all_while_stmts.append(stypy_functions.create_src_comment("SSA join for while statement", node.lineno))
 
         join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
-        while_stmt_body.append(join_stmt)
-
-        all_while_stmts = while_stmt_body + while_stmt_orelse
+        all_while_stmts.append(join_stmt)
 
         if_node_iteration.body = [all_while_stmts]
         if_node_iteration.orelse = else_inst

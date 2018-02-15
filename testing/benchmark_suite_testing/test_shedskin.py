@@ -232,6 +232,12 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
+    def test_score4(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/score4.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
     # Programs to look closely
     def test_path_tracing(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/path_tracing.py"
@@ -251,11 +257,7 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-    def test_score4(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/score4.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
-        self.assertEqual(result, 0)
 
     def test_shaImplementation(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/shaImplementation.py"

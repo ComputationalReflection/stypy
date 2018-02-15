@@ -88,6 +88,8 @@ Main features of the new 0.2 release include:
 - [05/02/2018] Lists that has been populated partially from other lists using slice indexes have now types correctly calculated.
 - [07/02/2018] Errors produced in assert expressions or in loops conditions inside an SSA algorithm now are correctly reported as warnings
 - [08/02/2018] Added support to type inference with the collections.deque Python class
+- [15/02/2018] Comparisons between ints and strings no longer report a type error. else clases in for and while loops now properly generate type inference code.
+
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]
