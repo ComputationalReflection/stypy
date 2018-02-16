@@ -761,11 +761,9 @@ class StatementVisitor(ast.NodeVisitor):
             for_stmts = for_stmt_body
 
         # Join and finish for
-        for_stmt_body.append(stypy_functions.create_src_comment("SSA join for a for statement"))
+        for_stmts.append(stypy_functions.create_src_comment("SSA join for a for statement"))
         join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
-        for_stmt_body.append(join_stmt)
-
-
+        for_stmts.append(join_stmt)
 
         if_node_iteration.body = [for_stmts]
         if_node_iteration.orelse = else_inst

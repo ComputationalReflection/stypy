@@ -664,6 +664,8 @@ def _long2bytesBigEndian(localization, *varargs, **kwargs):
         int_45 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 60, 12), 'int')
         # Assigning a type to the variable 'i' (line 60)
         module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 60, 8), 'i', int_45)
+        # SSA join for a for statement
+        module_type_store = module_type_store.join_ssa_context()
     else:
         
         # Assigning a Str to a Name (line 59):

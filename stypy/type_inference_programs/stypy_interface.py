@@ -268,7 +268,13 @@ def __set_contained_elements_type(localization, container, elements):
                     except TypeError:
                         return m_set(*elements)
 
-            return type_containers.set_contained_elements_type(container, elements[1])
+            if type_containers.is_slice(elements[0]):
+                if type_containers.can_store_elements(elements[1]):
+                    return type_containers.set_contained_elements_type(container, type_containers.get_contained_elements_type(elements[1]))
+                else:
+                    return type_containers.set_contained_elements_type(container, elements[1])
+            else:
+                return type_containers.set_contained_elements_type(container, elements[1])
 
         type_containers.set_contained_elements_type(container, elements)
     except Exception as ex:

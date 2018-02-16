@@ -238,6 +238,24 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
+    def test_shaImplementation(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/shaImplementation.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_sieve(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/sieve.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_solitaire(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/solitaire.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
     # Programs to look closely
     def test_path_tracing(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/path_tracing.py"
@@ -259,23 +277,11 @@ class TestShedSkin(TestCommon):
 
 
 
-    def test_shaImplementation(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/shaImplementation.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
-        self.assertEqual(result, 0)
 
-    def test_sieve(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/sieve.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
-        self.assertEqual(result, 0)
 
-    def test_solitaire(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/solitaire.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
-        self.assertEqual(result, 0)
 
     def test_sudoku2(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/sudoku2.py"

@@ -483,6 +483,8 @@ class Solitaire:
         
         # Getting the type of 'passphrase' (line 47)
         passphrase_46 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 47, 17), 'passphrase')
+        # Assigning a type to the variable 'passphrase_46' (line 47)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 47, 8), 'passphrase_46', passphrase_46)
         # Testing if the for loop is going to be iterated (line 47)
         # Testing the type of a for loop iterable (line 47)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 47, 8), passphrase_46)
@@ -1331,6 +1333,8 @@ class Solitaire:
         module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 97, 8), 'd', deck_211)
         
         int_212 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 98, 14), 'int')
+        # Assigning a type to the variable 'int_212' (line 98)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 98, 8), 'int_212', int_212)
         # Testing if the while is going to be iterated (line 98)
         # Testing the type of an if condition (line 98)
         is_suitable_condition(stypy.reporting.localization.Localization(__file__, 98, 8), int_212)
@@ -1585,6 +1589,8 @@ class Solitaire:
         # Calling range(args, kwargs) (line 112)
         range_call_result_268 = invoke(stypy.reporting.localization.Localization(__file__, 112, 17), range_262, *[len_call_result_266], **kwargs_267)
         
+        # Assigning a type to the variable 'range_call_result_268' (line 112)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 112, 8), 'range_call_result_268', range_call_result_268)
         # Testing if the for loop is going to be iterated (line 112)
         # Testing the type of a for loop iterable (line 112)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 112, 8), range_call_result_268)
@@ -1684,6 +1690,8 @@ class Solitaire:
         # Calling range(args, kwargs) (line 115)
         range_call_result_297 = invoke(stypy.reporting.localization.Localization(__file__, 115, 17), range_287, *[result_sub_293, int_294, int_295], **kwargs_296)
         
+        # Assigning a type to the variable 'range_call_result_297' (line 115)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 115, 8), 'range_call_result_297', range_call_result_297)
         # Testing if the for loop is going to be iterated (line 115)
         # Testing the type of a for loop iterable (line 115)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 115, 8), range_call_result_297)
@@ -1895,6 +1903,8 @@ class Solitaire:
         # Calling range(args, kwargs) (line 127)
         range_call_result_341 = invoke(stypy.reporting.localization.Localization(__file__, 127, 17), range_335, *[len_call_result_339], **kwargs_340)
         
+        # Assigning a type to the variable 'range_call_result_341' (line 127)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 127, 8), 'range_call_result_341', range_call_result_341)
         # Testing if the for loop is going to be iterated (line 127)
         # Testing the type of a for loop iterable (line 127)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 127, 8), range_call_result_341)
@@ -2368,6 +2378,8 @@ def main(localization, *varargs, **kwargs):
     
     # Getting the type of 'testCases' (line 166)
     testCases_426 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 166, 28), 'testCases')
+    # Assigning a type to the variable 'testCases_426' (line 166)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 166, 4), 'testCases_426', testCases_426)
     # Testing if the for loop is going to be iterated (line 166)
     # Testing the type of a for loop iterable (line 166)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 166, 4), testCases_426)
@@ -2414,6 +2426,9 @@ def main(localization, *varargs, **kwargs):
         # Applying the binary operator '==' (line 168)
         result_eq_436 = python_operator(stypy.reporting.localization.Localization(__file__, 168, 15), '==', cipher_434, coded_435)
         
+        assert_437 = result_eq_436
+        # Assigning a type to the variable 'assert_437' (line 168)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 168, 8), 'assert_437', result_eq_436)
         
         # Assigning a Call to a Name (line 169):
         
@@ -2422,20 +2437,20 @@ def main(localization, *varargs, **kwargs):
         # Call to decrypt(...): (line 169)
         # Processing the call arguments (line 169)
         # Getting the type of 'coded' (line 169)
-        coded_439 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 169, 28), 'coded', False)
+        coded_440 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 169, 28), 'coded', False)
         # Getting the type of 'key' (line 169)
-        key_440 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 169, 35), 'key', False)
+        key_441 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 169, 35), 'key', False)
         # Processing the call keyword arguments (line 169)
-        kwargs_441 = {}
+        kwargs_442 = {}
         # Getting the type of 's' (line 169)
-        s_437 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 169, 18), 's', False)
+        s_438 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 169, 18), 's', False)
         # Obtaining the member 'decrypt' of a type (line 169)
-        decrypt_438 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 169, 18), s_437, 'decrypt')
+        decrypt_439 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 169, 18), s_438, 'decrypt')
         # Calling decrypt(args, kwargs) (line 169)
-        decrypt_call_result_442 = invoke(stypy.reporting.localization.Localization(__file__, 169, 18), decrypt_438, *[coded_439, key_440], **kwargs_441)
+        decrypt_call_result_443 = invoke(stypy.reporting.localization.Localization(__file__, 169, 18), decrypt_439, *[coded_440, key_441], **kwargs_442)
         
         # Assigning a type to the variable 'decoded' (line 169)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 169, 8), 'decoded', decrypt_call_result_442)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 169, 8), 'decoded', decrypt_call_result_443)
         # Evaluating assert statement condition
         
         
@@ -2444,39 +2459,42 @@ def main(localization, *varargs, **kwargs):
         # Call to len(...): (line 170)
         # Processing the call arguments (line 170)
         # Getting the type of 'txt' (line 170)
-        txt_444 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 28), 'txt', False)
+        txt_445 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 28), 'txt', False)
         # Processing the call keyword arguments (line 170)
-        kwargs_445 = {}
+        kwargs_446 = {}
         # Getting the type of 'len' (line 170)
-        len_443 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 24), 'len', False)
+        len_444 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 24), 'len', False)
         # Calling len(args, kwargs) (line 170)
-        len_call_result_446 = invoke(stypy.reporting.localization.Localization(__file__, 170, 24), len_443, *[txt_444], **kwargs_445)
+        len_call_result_447 = invoke(stypy.reporting.localization.Localization(__file__, 170, 24), len_444, *[txt_445], **kwargs_446)
         
-        slice_447 = ensure_slice_bounds(stypy.reporting.localization.Localization(__file__, 170, 15), None, len_call_result_446, None)
+        slice_448 = ensure_slice_bounds(stypy.reporting.localization.Localization(__file__, 170, 15), None, len_call_result_447, None)
         # Getting the type of 'decoded' (line 170)
-        decoded_448 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 15), 'decoded')
+        decoded_449 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 15), 'decoded')
         # Obtaining the member '__getitem__' of a type (line 170)
-        getitem___449 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 170, 15), decoded_448, '__getitem__')
+        getitem___450 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 170, 15), decoded_449, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 170)
-        subscript_call_result_450 = invoke(stypy.reporting.localization.Localization(__file__, 170, 15), getitem___449, slice_447)
+        subscript_call_result_451 = invoke(stypy.reporting.localization.Localization(__file__, 170, 15), getitem___450, slice_448)
         
         
         # Call to upper(...): (line 170)
         # Processing the call arguments (line 170)
         # Getting the type of 'txt' (line 170)
-        txt_453 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 50), 'txt', False)
+        txt_454 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 50), 'txt', False)
         # Processing the call keyword arguments (line 170)
-        kwargs_454 = {}
+        kwargs_455 = {}
         # Getting the type of 'string' (line 170)
-        string_451 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 37), 'string', False)
+        string_452 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 170, 37), 'string', False)
         # Obtaining the member 'upper' of a type (line 170)
-        upper_452 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 170, 37), string_451, 'upper')
+        upper_453 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 170, 37), string_452, 'upper')
         # Calling upper(args, kwargs) (line 170)
-        upper_call_result_455 = invoke(stypy.reporting.localization.Localization(__file__, 170, 37), upper_452, *[txt_453], **kwargs_454)
+        upper_call_result_456 = invoke(stypy.reporting.localization.Localization(__file__, 170, 37), upper_453, *[txt_454], **kwargs_455)
         
         # Applying the binary operator '==' (line 170)
-        result_eq_456 = python_operator(stypy.reporting.localization.Localization(__file__, 170, 15), '==', subscript_call_result_450, upper_call_result_455)
+        result_eq_457 = python_operator(stypy.reporting.localization.Localization(__file__, 170, 15), '==', subscript_call_result_451, upper_call_result_456)
         
+        assert_458 = result_eq_457
+        # Assigning a type to the variable 'assert_458' (line 170)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 170, 8), 'assert_458', result_eq_457)
         # SSA join for a for statement
         module_type_store = module_type_store.join_ssa_context()
 
@@ -2489,14 +2507,14 @@ def main(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'main' in the type store
     # Getting the type of 'stypy_return_type' (line 160)
-    stypy_return_type_457 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 160, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_457)
+    stypy_return_type_459 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 160, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_459)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'main'
-    return stypy_return_type_457
+    return stypy_return_type_459
 
 # Assigning a type to the variable 'main' (line 160)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 160, 0), 'main', main)
@@ -2541,42 +2559,44 @@ def run(localization, *varargs, **kwargs):
     
     # Call to range(...): (line 184)
     # Processing the call arguments (line 184)
-    int_459 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 184, 19), 'int')
+    int_461 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 184, 19), 'int')
     # Processing the call keyword arguments (line 184)
-    kwargs_460 = {}
+    kwargs_462 = {}
     # Getting the type of 'range' (line 184)
-    range_458 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 184, 13), 'range', False)
+    range_460 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 184, 13), 'range', False)
     # Calling range(args, kwargs) (line 184)
-    range_call_result_461 = invoke(stypy.reporting.localization.Localization(__file__, 184, 13), range_458, *[int_459], **kwargs_460)
+    range_call_result_463 = invoke(stypy.reporting.localization.Localization(__file__, 184, 13), range_460, *[int_461], **kwargs_462)
     
+    # Assigning a type to the variable 'range_call_result_463' (line 184)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 184, 4), 'range_call_result_463', range_call_result_463)
     # Testing if the for loop is going to be iterated (line 184)
     # Testing the type of a for loop iterable (line 184)
-    is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 184, 4), range_call_result_461)
+    is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 184, 4), range_call_result_463)
 
-    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 184, 4), range_call_result_461):
+    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 184, 4), range_call_result_463):
         # Getting the type of the for loop variable (line 184)
-        for_loop_var_462 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 184, 4), range_call_result_461)
+        for_loop_var_464 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 184, 4), range_call_result_463)
         # Assigning a type to the variable 'i' (line 184)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 184, 4), 'i', for_loop_var_462)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 184, 4), 'i', for_loop_var_464)
         # SSA begins for a for statement (line 184)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
         
         # Call to main(...): (line 185)
         # Processing the call keyword arguments (line 185)
-        kwargs_464 = {}
+        kwargs_466 = {}
         # Getting the type of 'main' (line 185)
-        main_463 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 185, 8), 'main', False)
+        main_465 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 185, 8), 'main', False)
         # Calling main(args, kwargs) (line 185)
-        main_call_result_465 = invoke(stypy.reporting.localization.Localization(__file__, 185, 8), main_463, *[], **kwargs_464)
+        main_call_result_467 = invoke(stypy.reporting.localization.Localization(__file__, 185, 8), main_465, *[], **kwargs_466)
         
         # SSA join for a for statement
         module_type_store = module_type_store.join_ssa_context()
 
     
     # Getting the type of 'True' (line 186)
-    True_466 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 186, 11), 'True')
+    True_468 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 186, 11), 'True')
     # Assigning a type to the variable 'stypy_return_type' (line 186)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 186, 4), 'stypy_return_type', True_466)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 186, 4), 'stypy_return_type', True_468)
     
     # ################# End of 'run(...)' code ##################
 
@@ -2585,25 +2605,25 @@ def run(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'run' in the type store
     # Getting the type of 'stypy_return_type' (line 183)
-    stypy_return_type_467 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 183, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_467)
+    stypy_return_type_469 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 183, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_469)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'run'
-    return stypy_return_type_467
+    return stypy_return_type_469
 
 # Assigning a type to the variable 'run' (line 183)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 183, 0), 'run', run)
 
 # Call to run(...): (line 189)
 # Processing the call keyword arguments (line 189)
-kwargs_469 = {}
+kwargs_471 = {}
 # Getting the type of 'run' (line 189)
-run_468 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 189, 0), 'run', False)
+run_470 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 189, 0), 'run', False)
 # Calling run(args, kwargs) (line 189)
-run_call_result_470 = invoke(stypy.reporting.localization.Localization(__file__, 189, 0), run_468, *[], **kwargs_469)
+run_call_result_472 = invoke(stypy.reporting.localization.Localization(__file__, 189, 0), run_470, *[], **kwargs_471)
 
 
 # ################# End of the type inference program ##################

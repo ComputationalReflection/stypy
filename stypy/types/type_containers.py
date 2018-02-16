@@ -20,6 +20,16 @@ These container types store its content types inside them
 types_that_store_contents_directly = [list, bytearray]#, numpy.ndarray]
 
 
+def is_slice(obj):
+    try:
+        if isinstance(obj, TypeWrapper):
+            if type(obj.wrapped_type) is slice:
+                return True
+    except:
+        pass
+    return False
+
+
 def has_method(obj, m_name):
     try:
         return getattr(obj, m_name)
