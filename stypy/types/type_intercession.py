@@ -70,6 +70,9 @@ def has_attr(obj, name):
     """
     if not __private_variable_name(name):
         return hasattr(obj, name)
+    else:
+        if hasattr(obj, name):
+            return True
 
     import types as python_types
     mangled_name = None
@@ -95,6 +98,9 @@ def get_attr(obj, name):
     """
     if not __private_variable_name(name):
         return getattr(obj, name)
+    else:
+        if hasattr(obj, name):
+            return getattr(obj, name)
 
     if hasattr(obj, name):
         return getattr(obj, name)

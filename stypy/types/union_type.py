@@ -287,6 +287,7 @@ class UnionType(TypeWrapper):
         for e in t:
             if not UnionType.__is_same_base_type(e, type):
                 return False
+            # if isinstance(t1.contained_types, TypeWrapper) and isinstance(t2.contained_types, TypeWrapper):
 
         return True
 

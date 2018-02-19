@@ -90,6 +90,8 @@ Main features of the new 0.2 release include:
 - [08/02/2018] Added support to type inference with the collections.deque Python class
 - [15/02/2018] Comparisons between ints and strings no longer report a type error. else clases in for and while loops now properly generate type inference code.
 - [16/02/2018] Fixed rare bug with code generation of for loops with else branches. Fixed assignments of lists when using slices incorrectly calculating the list type.
+- [19/02/2018] Attributes that start with __ are now located in its class or instance. Comparisons between ints and str are now properly processed.
+
 
 
 
