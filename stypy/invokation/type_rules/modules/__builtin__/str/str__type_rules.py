@@ -10,7 +10,7 @@ type_rules_of_members = {
         ((Str,), str),
         ((IterableObject,), str),
         ((ByteSequence,), str),
-        ((Has__str__,), str)
+        ((Has__str__,), str),
     ],
 
     '__repr__': [

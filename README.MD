@@ -91,6 +91,8 @@ Main features of the new 0.2 release include:
 - [15/02/2018] Comparisons between ints and strings no longer report a type error. else clases in for and while loops now properly generate type inference code.
 - [16/02/2018] Fixed rare bug with code generation of for loops with else branches. Fixed assignments of lists when using slices incorrectly calculating the list type.
 - [19/02/2018] Attributes that start with __ are now located in its class or instance. Comparisons between ints and str are now properly processed.
+- [20/02/2018] Union types with tuples now integrate tuples with the same element types into a single tuple better.
+- [21/02/2018] Fixed getting elements from a dictionary inside a comprehension. Solved type inference problems when calling the set.difference Python API method.
 
 
 

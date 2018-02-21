@@ -268,6 +268,33 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
+    def test_sudoku5(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/sudoku5.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_tictactoe(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/tictactoe.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+
+
+    def test_TonyJpegDecoder(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/TonyJPegDecoder.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+    def test_yopyra(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/yopyra.py"
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+
+        self.assertEqual(result, 0)
+
+
     # Programs to look closely
     def test_path_tracing(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/path_tracing.py"
@@ -286,36 +313,6 @@ class TestShedSkin(TestCommon):
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
-
-
-
-
-
-
-    def test_sudoku5(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/sudoku5.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_tictactoe(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/tictactoe.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_TonyJpegDecoder(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/TonyJPegDecoder.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
-    def test_yopyra(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/yopyra.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
-
-        self.assertEqual(result, 0)
-
 
     #Hangs
     def test_minilight_main(self):

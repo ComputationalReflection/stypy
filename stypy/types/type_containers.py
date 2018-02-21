@@ -73,12 +73,16 @@ def get_contained_elements_type(proxy_obj):
     # Wrappers
     if isinstance(proxy_obj, TypeWrapper):
         if proxy_obj.can_store_elements():
+            if proxy_obj.can_store_keypairs() and type(proxy_obj.wrapped_type) is dict:
+                return union_type.UnionType.create_from_type_list(proxy_obj.wrapped_type.keys())
+
             if type(proxy_obj.wrapped_type) in types_that_store_contents_directly:
                 try:
                     return proxy_obj.wrapped_type[0]
                 except:
                     return undefined_type.UndefinedType
             return proxy_obj.get_contained_type()
+
     else:
         if type(proxy_obj) is str:
             return str()

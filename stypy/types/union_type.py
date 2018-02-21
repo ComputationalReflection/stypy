@@ -287,7 +287,6 @@ class UnionType(TypeWrapper):
         for e in t:
             if not UnionType.__is_same_base_type(e, type):
                 return False
-            # if isinstance(t1.contained_types, TypeWrapper) and isinstance(t2.contained_types, TypeWrapper):
 
         return True
 
@@ -309,8 +308,13 @@ class UnionType(TypeWrapper):
 
             if isinstance(t1.contained_types, TypeWrapper) and isinstance(t2.contained_types, TypeWrapper):
                 try:
+                    if t1.contained_types == t2.contained_types:
+                        return True
+
                     if len(t1.contained_types) != len(t2.contained_types):
                         return False
+
+
 
                     for t in t1.contained_types:
                         # If a type in the first tuple is not contained in the second one, they are not considered equal

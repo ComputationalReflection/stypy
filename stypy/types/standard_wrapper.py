@@ -179,6 +179,17 @@ class StandardWrapper(TypeWrapper):
         else:
             wrapped_eq = self.wrapped_type == other.wrapped_type
 
+            # Special comparison for tuples
+            if not wrapped_eq and type(self.wrapped_type) is tuple and type(other.wrapped_type) is tuple:
+                t1 = []
+                for e in self.wrapped_type:
+                    t1.append(type(e))
+
+                t2 = []
+                for e in other.wrapped_type:
+                    t2.append(type(e))
+                wrapped_eq = t1 == t2
+
         if not wrapped_eq:
             return False
 
