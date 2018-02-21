@@ -285,6 +285,13 @@ class StypyTypeError(TypeError):
                                   StypyTypeError.__format_type(obj)))
 
     @staticmethod
+    def member_do_not_exist_error(localization, obj, member_name):
+        return StypyTypeError(localization,
+                              "Cannot locate a member named '{0}' on '{1}' ".format(
+                                  member_name, StypyTypeError.__format_type(obj)))
+
+
+    @staticmethod
     def member_cannot_be_set_error(localization, obj, member_name, type_, reason):
         return StypyTypeError(localization,
                               "The member '{0}' of object '{1}' cannot be set to the value '{2}' due to the following"

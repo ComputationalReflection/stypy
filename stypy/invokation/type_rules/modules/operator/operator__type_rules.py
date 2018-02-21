@@ -491,6 +491,7 @@ type_rules_of_members = {
         ((Str, tuple), TypeOfParam(1)),
         ((Str, memoryview), TypeOfParam(1)),
         ((Str, TypeInstance), TypeOfParam(1)),
+        ((Str, AnyType), TypeOfParam(1)),
         ((long, bool), long),
         ((long, Number), TypeOfParam(2)),
         ((int, bool), int),

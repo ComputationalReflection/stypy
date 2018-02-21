@@ -860,6 +860,8 @@ def parse(localization, *varargs, **kwargs):
     # Calling enumerate(args, kwargs) (line 47)
     enumerate_call_result_68 = invoke(stypy.reporting.localization.Localization(__file__, 47, 16), enumerate_65, *[sent_66], **kwargs_67)
     
+    # Assigning a type to the variable 'enumerate_call_result_68' (line 47)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 47, 4), 'enumerate_call_result_68', enumerate_call_result_68)
     # Testing if the for loop is going to be iterated (line 47)
     # Testing the type of a for loop iterable (line 47)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 47, 4), enumerate_call_result_68)
@@ -901,6 +903,8 @@ def parse(localization, *varargs, **kwargs):
         # Calling get(args, kwargs) (line 49)
         get_call_result_76 = invoke(stypy.reporting.localization.Localization(__file__, 49, 24), get_72, *[w_73, list_74], **kwargs_75)
         
+        # Assigning a type to the variable 'get_call_result_76' (line 49)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 49, 8), 'get_call_result_76', get_call_result_76)
         # Testing if the for loop is going to be iterated (line 49)
         # Testing the type of a for loop iterable (line 49)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 49, 8), get_call_result_76)
@@ -1341,6 +1345,8 @@ def parse(localization, *varargs, **kwargs):
     
     # Getting the type of 'A' (line 68)
     A_178 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 68, 10), 'A')
+    # Assigning a type to the variable 'A_178' (line 68)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 68, 4), 'A_178', A_178)
     # Testing if the while is going to be iterated (line 68)
     # Testing the type of an if condition (line 68)
     is_suitable_condition(stypy.reporting.localization.Localization(__file__, 68, 4), A_178)
@@ -1515,6 +1521,8 @@ def parse(localization, *varargs, **kwargs):
         # Calling the subscript (__getitem__) to obtain the elements type (line 78)
         subscript_call_result_220 = invoke(stypy.reporting.localization.Localization(__file__, 78, 20), getitem___219, label_217)
         
+        # Assigning a type to the variable 'subscript_call_result_220' (line 78)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 78, 8), 'subscript_call_result_220', subscript_call_result_220)
         # Testing if the for loop is going to be iterated (line 78)
         # Testing the type of a for loop iterable (line 78)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 78, 8), subscript_call_result_220)
@@ -1626,6 +1634,8 @@ def parse(localization, *varargs, **kwargs):
         # Calling the subscript (__getitem__) to obtain the elements type (line 83)
         subscript_call_result_258 = invoke(stypy.reporting.localization.Localization(__file__, 83, 20), getitem___257, label_255)
         
+        # Assigning a type to the variable 'subscript_call_result_258' (line 83)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 83, 8), 'subscript_call_result_258', subscript_call_result_258)
         # Testing if the for loop is going to be iterated (line 83)
         # Testing the type of a for loop iterable (line 83)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 83, 8), subscript_call_result_258)
@@ -1651,6 +1661,8 @@ def parse(localization, *varargs, **kwargs):
             # Calling the subscript (__getitem__) to obtain the elements type (line 84)
             subscript_call_result_264 = invoke(stypy.reporting.localization.Localization(__file__, 84, 27), getitem___263, rhs2_261)
             
+            # Assigning a type to the variable 'subscript_call_result_264' (line 84)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 84, 12), 'subscript_call_result_264', subscript_call_result_264)
             # Testing if the for loop is going to be iterated (line 84)
             # Testing the type of a for loop iterable (line 84)
             is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 84, 12), subscript_call_result_264)
@@ -1872,6 +1884,8 @@ def parse(localization, *varargs, **kwargs):
         # Calling the subscript (__getitem__) to obtain the elements type (line 93)
         subscript_call_result_336 = invoke(stypy.reporting.localization.Localization(__file__, 93, 20), getitem___335, label_333)
         
+        # Assigning a type to the variable 'subscript_call_result_336' (line 93)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 93, 8), 'subscript_call_result_336', subscript_call_result_336)
         # Testing if the for loop is going to be iterated (line 93)
         # Testing the type of a for loop iterable (line 93)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 93, 8), subscript_call_result_336)
@@ -1897,6 +1911,8 @@ def parse(localization, *varargs, **kwargs):
             # Calling the subscript (__getitem__) to obtain the elements type (line 94)
             subscript_call_result_342 = invoke(stypy.reporting.localization.Localization(__file__, 94, 27), getitem___341, rhs1_339)
             
+            # Assigning a type to the variable 'subscript_call_result_342' (line 94)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 94, 12), 'subscript_call_result_342', subscript_call_result_342)
             # Testing if the for loop is going to be iterated (line 94)
             # Testing the type of a for loop iterable (line 94)
             is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 94, 12), subscript_call_result_342)
@@ -2832,6 +2848,8 @@ def concat(localization, *varargs, **kwargs):
     # Calling range(args, kwargs) (line 135)
     range_call_result_506 = invoke(stypy.reporting.localization.Localization(__file__, 135, 13), range_499, *[len_call_result_504], **kwargs_505)
     
+    # Assigning a type to the variable 'range_call_result_506' (line 135)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 135, 4), 'range_call_result_506', range_call_result_506)
     # Testing if the for loop is going to be iterated (line 135)
     # Testing the type of a for loop iterable (line 135)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 135, 4), range_call_result_506)
@@ -2883,6 +2901,8 @@ def concat(localization, *varargs, **kwargs):
         # Calling range(args, kwargs) (line 137)
         range_call_result_520 = invoke(stypy.reporting.localization.Localization(__file__, 137, 17), range_515, *[result_add_518], **kwargs_519)
         
+        # Assigning a type to the variable 'range_call_result_520' (line 137)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 137, 8), 'range_call_result_520', range_call_result_520)
         # Testing if the for loop is going to be iterated (line 137)
         # Testing the type of a for loop iterable (line 137)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 137, 8), range_call_result_520)
@@ -4471,6 +4491,8 @@ def pprint_chart(localization, *varargs, **kwargs):
     # Calling sorted(args, kwargs) (line 202)
     sorted_call_result_762 = invoke(stypy.reporting.localization.Localization(__file__, 202, 16), sorted_750, *[list_760], **kwargs_761)
     
+    # Assigning a type to the variable 'sorted_call_result_762' (line 202)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 202, 4), 'sorted_call_result_762', sorted_call_result_762)
     # Testing if the for loop is going to be iterated (line 202)
     # Testing the type of a for loop iterable (line 202)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 202, 4), sorted_call_result_762)
@@ -4541,6 +4563,8 @@ def pprint_chart(localization, *varargs, **kwargs):
         # Calling the subscript (__getitem__) to obtain the elements type (line 206)
         subscript_call_result_778 = invoke(stypy.reporting.localization.Localization(__file__, 206, 20), getitem___777, a_775)
         
+        # Assigning a type to the variable 'subscript_call_result_778' (line 206)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 206, 8), 'subscript_call_result_778', subscript_call_result_778)
         # Testing if the for loop is going to be iterated (line 206)
         # Testing the type of a for loop iterable (line 206)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 206, 8), subscript_call_result_778)
@@ -5837,6 +5861,8 @@ def splitgrammar(localization, *varargs, **kwargs):
     
     # Getting the type of 'lexicon' (line 268)
     lexicon_1085 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 268, 26), 'lexicon')
+    # Assigning a type to the variable 'lexicon_1085' (line 268)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 268, 4), 'lexicon_1085', lexicon_1085)
     # Testing if the for loop is going to be iterated (line 268)
     # Testing the type of a for loop iterable (line 268)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 268, 4), lexicon_1085)
@@ -5950,49 +5976,52 @@ def splitgrammar(localization, *varargs, **kwargs):
         # Applying the binary operator 'in' (line 270)
         result_contains_1118 = python_operator(stypy.reporting.localization.Localization(__file__, 270, 15), 'in', subscript_call_result_1114, tuple_1115)
         
+        assert_1119 = result_contains_1118
+        # Assigning a type to the variable 'assert_1119' (line 270)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 270, 8), 'assert_1119', result_contains_1118)
         
         # Assigning a Num to a Subscript (line 271):
         
         # Assigning a Num to a Subscript (line 271):
-        int_1119 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 271, 23), 'int')
+        int_1120 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 271, 23), 'int')
         # Getting the type of 'arity' (line 271)
-        arity_1120 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 271, 8), 'arity')
+        arity_1121 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 271, 8), 'arity')
         # Getting the type of 't' (line 271)
-        t_1121 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 271, 14), 't')
+        t_1122 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 271, 14), 't')
         # Obtaining the member 'lhs' of a type (line 271)
-        lhs_1122 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 271, 14), t_1121, 'lhs')
+        lhs_1123 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 271, 14), t_1122, 'lhs')
         # Storing an element on a container (line 271)
-        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 271, 8), arity_1120, (lhs_1122, int_1119))
+        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 271, 8), arity_1121, (lhs_1123, int_1120))
         
         # Call to append(...): (line 272)
         # Processing the call arguments (line 272)
         # Getting the type of 't' (line 272)
-        t_1130 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 272, 44), 't', False)
+        t_1131 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 272, 44), 't', False)
         # Processing the call keyword arguments (line 272)
-        kwargs_1131 = {}
+        kwargs_1132 = {}
         
         # Call to setdefault(...): (line 272)
         # Processing the call arguments (line 272)
         # Getting the type of 'word' (line 272)
-        word_1125 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 272, 27), 'word', False)
+        word_1126 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 272, 27), 'word', False)
         
         # Obtaining an instance of the builtin type 'list' (line 272)
-        list_1126 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 272, 33), 'list')
+        list_1127 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 272, 33), 'list')
         # Adding type elements to the builtin type 'list' instance (line 272)
         
         # Processing the call keyword arguments (line 272)
-        kwargs_1127 = {}
+        kwargs_1128 = {}
         # Getting the type of 'lexical' (line 272)
-        lexical_1123 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 272, 8), 'lexical', False)
+        lexical_1124 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 272, 8), 'lexical', False)
         # Obtaining the member 'setdefault' of a type (line 272)
-        setdefault_1124 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 272, 8), lexical_1123, 'setdefault')
+        setdefault_1125 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 272, 8), lexical_1124, 'setdefault')
         # Calling setdefault(args, kwargs) (line 272)
-        setdefault_call_result_1128 = invoke(stypy.reporting.localization.Localization(__file__, 272, 8), setdefault_1124, *[word_1125, list_1126], **kwargs_1127)
+        setdefault_call_result_1129 = invoke(stypy.reporting.localization.Localization(__file__, 272, 8), setdefault_1125, *[word_1126, list_1127], **kwargs_1128)
         
         # Obtaining the member 'append' of a type (line 272)
-        append_1129 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 272, 8), setdefault_call_result_1128, 'append')
+        append_1130 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 272, 8), setdefault_call_result_1129, 'append')
         # Calling append(args, kwargs) (line 272)
-        append_call_result_1132 = invoke(stypy.reporting.localization.Localization(__file__, 272, 8), append_1129, *[t_1130], **kwargs_1131)
+        append_call_result_1133 = invoke(stypy.reporting.localization.Localization(__file__, 272, 8), append_1130, *[t_1131], **kwargs_1132)
         
         # SSA join for a for statement
         module_type_store = module_type_store.join_ssa_context()
@@ -6000,20 +6029,22 @@ def splitgrammar(localization, *varargs, **kwargs):
     
     
     # Getting the type of 'grammar' (line 273)
-    grammar_1133 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 273, 25), 'grammar')
+    grammar_1134 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 273, 25), 'grammar')
+    # Assigning a type to the variable 'grammar_1134' (line 273)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 273, 4), 'grammar_1134', grammar_1134)
     # Testing if the for loop is going to be iterated (line 273)
     # Testing the type of a for loop iterable (line 273)
-    is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 273, 4), grammar_1133)
+    is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 273, 4), grammar_1134)
 
-    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 273, 4), grammar_1133):
+    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 273, 4), grammar_1134):
         # Getting the type of the for loop variable (line 273)
-        for_loop_var_1134 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 273, 4), grammar_1133)
+        for_loop_var_1135 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 273, 4), grammar_1134)
         # Assigning a type to the variable 'rule' (line 273)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 273, 4), 'rule', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 273, 4), for_loop_var_1134))
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 273, 4), 'rule', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 273, 4), for_loop_var_1135))
         # Assigning a type to the variable 'yf' (line 273)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 273, 4), 'yf', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 273, 4), for_loop_var_1134))
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 273, 4), 'yf', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 273, 4), for_loop_var_1135))
         # Assigning a type to the variable 'w' (line 273)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 273, 4), 'w', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 273, 4), for_loop_var_1134))
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 273, 4), 'w', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 273, 4), for_loop_var_1135))
         # SSA begins for a for statement (line 273)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
         
@@ -6024,83 +6055,86 @@ def splitgrammar(localization, *varargs, **kwargs):
         # Call to yfarray(...): (line 274)
         # Processing the call arguments (line 274)
         # Getting the type of 'yf' (line 274)
-        yf_1136 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 32), 'yf', False)
+        yf_1137 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 32), 'yf', False)
         # Processing the call keyword arguments (line 274)
-        kwargs_1137 = {}
+        kwargs_1138 = {}
         # Getting the type of 'yfarray' (line 274)
-        yfarray_1135 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 24), 'yfarray', False)
+        yfarray_1136 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 24), 'yfarray', False)
         # Calling yfarray(args, kwargs) (line 274)
-        yfarray_call_result_1138 = invoke(stypy.reporting.localization.Localization(__file__, 274, 24), yfarray_1135, *[yf_1136], **kwargs_1137)
+        yfarray_call_result_1139 = invoke(stypy.reporting.localization.Localization(__file__, 274, 24), yfarray_1136, *[yf_1137], **kwargs_1138)
         
         # Assigning a type to the variable 'call_assignment_10' (line 274)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_10', yfarray_call_result_1138)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_10', yfarray_call_result_1139)
         
         # Assigning a Call to a Name (line 274):
         
         # Call to __getitem__(...):
         # Processing the call arguments
-        int_1141 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 274, 8), 'int')
+        int_1142 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 274, 8), 'int')
         # Processing the call keyword arguments
-        kwargs_1142 = {}
+        kwargs_1143 = {}
         # Getting the type of 'call_assignment_10' (line 274)
-        call_assignment_10_1139 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_10', False)
+        call_assignment_10_1140 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_10', False)
         # Obtaining the member '__getitem__' of a type (line 274)
-        getitem___1140 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 274, 8), call_assignment_10_1139, '__getitem__')
+        getitem___1141 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 274, 8), call_assignment_10_1140, '__getitem__')
         # Calling __getitem__(args, kwargs)
-        getitem___call_result_1143 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1140, *[int_1141], **kwargs_1142)
+        getitem___call_result_1144 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1141, *[int_1142], **kwargs_1143)
         
         # Assigning a type to the variable 'call_assignment_11' (line 274)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_11', getitem___call_result_1143)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_11', getitem___call_result_1144)
         
         # Assigning a Name to a Name (line 274):
         # Getting the type of 'call_assignment_11' (line 274)
-        call_assignment_11_1144 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_11')
+        call_assignment_11_1145 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_11')
         # Assigning a type to the variable 'args' (line 274)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'args', call_assignment_11_1144)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'args', call_assignment_11_1145)
         
         # Assigning a Call to a Name (line 274):
         
         # Call to __getitem__(...):
         # Processing the call arguments
-        int_1147 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 274, 8), 'int')
+        int_1148 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 274, 8), 'int')
         # Processing the call keyword arguments
-        kwargs_1148 = {}
+        kwargs_1149 = {}
         # Getting the type of 'call_assignment_10' (line 274)
-        call_assignment_10_1145 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_10', False)
+        call_assignment_10_1146 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_10', False)
         # Obtaining the member '__getitem__' of a type (line 274)
-        getitem___1146 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 274, 8), call_assignment_10_1145, '__getitem__')
+        getitem___1147 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 274, 8), call_assignment_10_1146, '__getitem__')
         # Calling __getitem__(args, kwargs)
-        getitem___call_result_1149 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1146, *[int_1147], **kwargs_1148)
+        getitem___call_result_1150 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1147, *[int_1148], **kwargs_1149)
         
         # Assigning a type to the variable 'call_assignment_12' (line 274)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_12', getitem___call_result_1149)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_12', getitem___call_result_1150)
         
         # Assigning a Name to a Name (line 274):
         # Getting the type of 'call_assignment_12' (line 274)
-        call_assignment_12_1150 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_12')
+        call_assignment_12_1151 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 274, 8), 'call_assignment_12')
         # Assigning a type to the variable 'lengths' (line 274)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 14), 'lengths', call_assignment_12_1150)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 274, 14), 'lengths', call_assignment_12_1151)
         # Evaluating assert statement condition
         
         # Getting the type of 'yf' (line 275)
-        yf_1151 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 275, 15), 'yf')
+        yf_1152 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 275, 15), 'yf')
         
         # Call to arraytoyf(...): (line 275)
         # Processing the call arguments (line 275)
         # Getting the type of 'args' (line 275)
-        args_1153 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 275, 31), 'args', False)
+        args_1154 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 275, 31), 'args', False)
         # Getting the type of 'lengths' (line 275)
-        lengths_1154 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 275, 37), 'lengths', False)
+        lengths_1155 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 275, 37), 'lengths', False)
         # Processing the call keyword arguments (line 275)
-        kwargs_1155 = {}
+        kwargs_1156 = {}
         # Getting the type of 'arraytoyf' (line 275)
-        arraytoyf_1152 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 275, 21), 'arraytoyf', False)
+        arraytoyf_1153 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 275, 21), 'arraytoyf', False)
         # Calling arraytoyf(args, kwargs) (line 275)
-        arraytoyf_call_result_1156 = invoke(stypy.reporting.localization.Localization(__file__, 275, 21), arraytoyf_1152, *[args_1153, lengths_1154], **kwargs_1155)
+        arraytoyf_call_result_1157 = invoke(stypy.reporting.localization.Localization(__file__, 275, 21), arraytoyf_1153, *[args_1154, lengths_1155], **kwargs_1156)
         
         # Applying the binary operator '==' (line 275)
-        result_eq_1157 = python_operator(stypy.reporting.localization.Localization(__file__, 275, 15), '==', yf_1151, arraytoyf_call_result_1156)
+        result_eq_1158 = python_operator(stypy.reporting.localization.Localization(__file__, 275, 15), '==', yf_1152, arraytoyf_call_result_1157)
         
+        assert_1159 = result_eq_1158
+        # Assigning a type to the variable 'assert_1159' (line 275)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 275, 8), 'assert_1159', result_eq_1158)
         
         # Evaluating a boolean operation
         
@@ -6108,48 +6142,48 @@ def splitgrammar(localization, *varargs, **kwargs):
         # Call to len(...): (line 277)
         # Processing the call arguments (line 277)
         # Getting the type of 'rule' (line 277)
-        rule_1159 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 15), 'rule', False)
+        rule_1161 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 15), 'rule', False)
         # Processing the call keyword arguments (line 277)
-        kwargs_1160 = {}
+        kwargs_1162 = {}
         # Getting the type of 'len' (line 277)
-        len_1158 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 11), 'len', False)
+        len_1160 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 11), 'len', False)
         # Calling len(args, kwargs) (line 277)
-        len_call_result_1161 = invoke(stypy.reporting.localization.Localization(__file__, 277, 11), len_1158, *[rule_1159], **kwargs_1160)
+        len_call_result_1163 = invoke(stypy.reporting.localization.Localization(__file__, 277, 11), len_1160, *[rule_1161], **kwargs_1162)
         
-        int_1162 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 277, 24), 'int')
+        int_1164 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 277, 24), 'int')
         # Applying the binary operator '==' (line 277)
-        result_eq_1163 = python_operator(stypy.reporting.localization.Localization(__file__, 277, 11), '==', len_call_result_1161, int_1162)
+        result_eq_1165 = python_operator(stypy.reporting.localization.Localization(__file__, 277, 11), '==', len_call_result_1163, int_1164)
         
         
         # Getting the type of 'w' (line 277)
-        w_1164 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 30), 'w')
-        float_1165 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 277, 35), 'float')
+        w_1166 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 30), 'w')
+        float_1167 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 277, 35), 'float')
         # Applying the binary operator '==' (line 277)
-        result_eq_1166 = python_operator(stypy.reporting.localization.Localization(__file__, 277, 30), '==', w_1164, float_1165)
+        result_eq_1168 = python_operator(stypy.reporting.localization.Localization(__file__, 277, 30), '==', w_1166, float_1167)
         
         # Applying the binary operator 'and' (line 277)
-        result_and_keyword_1167 = python_operator(stypy.reporting.localization.Localization(__file__, 277, 11), 'and', result_eq_1163, result_eq_1166)
+        result_and_keyword_1169 = python_operator(stypy.reporting.localization.Localization(__file__, 277, 11), 'and', result_eq_1165, result_eq_1168)
         
         # Testing if the type of an if condition is none (line 277)
 
-        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 277, 8), result_and_keyword_1167):
+        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 277, 8), result_and_keyword_1169):
             pass
         else:
             
             # Testing the type of an if condition (line 277)
-            if_condition_1168 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 277, 8), result_and_keyword_1167)
-            # Assigning a type to the variable 'if_condition_1168' (line 277)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 277, 8), 'if_condition_1168', if_condition_1168)
+            if_condition_1170 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 277, 8), result_and_keyword_1169)
+            # Assigning a type to the variable 'if_condition_1170' (line 277)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 277, 8), 'if_condition_1170', if_condition_1170)
             # SSA begins for if statement (line 277)
             module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
             
             # Getting the type of 'w' (line 277)
-            w_1169 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 40), 'w')
-            float_1170 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 277, 45), 'float')
+            w_1171 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 277, 40), 'w')
+            float_1172 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 277, 45), 'float')
             # Applying the binary operator '+=' (line 277)
-            result_iadd_1171 = python_operator(stypy.reporting.localization.Localization(__file__, 277, 40), '+=', w_1169, float_1170)
+            result_iadd_1173 = python_operator(stypy.reporting.localization.Localization(__file__, 277, 40), '+=', w_1171, float_1172)
             # Assigning a type to the variable 'w' (line 277)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 277, 40), 'w', result_iadd_1171)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 277, 40), 'w', result_iadd_1173)
             
             # SSA join for if statement (line 277)
             module_type_store = module_type_store.join_ssa_context()
@@ -6166,39 +6200,39 @@ def splitgrammar(localization, *varargs, **kwargs):
         # Obtaining the type of the subscript
         
         # Obtaining the type of the subscript
-        int_1173 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 278, 27), 'int')
+        int_1175 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 278, 27), 'int')
         # Getting the type of 'rule' (line 278)
-        rule_1174 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 22), 'rule', False)
+        rule_1176 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 22), 'rule', False)
         # Obtaining the member '__getitem__' of a type (line 278)
-        getitem___1175 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 22), rule_1174, '__getitem__')
+        getitem___1177 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 22), rule_1176, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 278)
-        subscript_call_result_1176 = invoke(stypy.reporting.localization.Localization(__file__, 278, 22), getitem___1175, int_1173)
+        subscript_call_result_1178 = invoke(stypy.reporting.localization.Localization(__file__, 278, 22), getitem___1177, int_1175)
         
         # Getting the type of 'toid' (line 278)
-        toid_1177 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 17), 'toid', False)
+        toid_1179 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 17), 'toid', False)
         # Obtaining the member '__getitem__' of a type (line 278)
-        getitem___1178 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 17), toid_1177, '__getitem__')
+        getitem___1180 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 17), toid_1179, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 278)
-        subscript_call_result_1179 = invoke(stypy.reporting.localization.Localization(__file__, 278, 17), getitem___1178, subscript_call_result_1176)
+        subscript_call_result_1181 = invoke(stypy.reporting.localization.Localization(__file__, 278, 17), getitem___1180, subscript_call_result_1178)
         
         
         # Obtaining the type of the subscript
         
         # Obtaining the type of the subscript
-        int_1180 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 278, 42), 'int')
+        int_1182 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 278, 42), 'int')
         # Getting the type of 'rule' (line 278)
-        rule_1181 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 37), 'rule', False)
+        rule_1183 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 37), 'rule', False)
         # Obtaining the member '__getitem__' of a type (line 278)
-        getitem___1182 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 37), rule_1181, '__getitem__')
+        getitem___1184 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 37), rule_1183, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 278)
-        subscript_call_result_1183 = invoke(stypy.reporting.localization.Localization(__file__, 278, 37), getitem___1182, int_1180)
+        subscript_call_result_1185 = invoke(stypy.reporting.localization.Localization(__file__, 278, 37), getitem___1184, int_1182)
         
         # Getting the type of 'toid' (line 278)
-        toid_1184 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 32), 'toid', False)
+        toid_1186 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 32), 'toid', False)
         # Obtaining the member '__getitem__' of a type (line 278)
-        getitem___1185 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 32), toid_1184, '__getitem__')
+        getitem___1187 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 278, 32), toid_1186, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 278)
-        subscript_call_result_1186 = invoke(stypy.reporting.localization.Localization(__file__, 278, 32), getitem___1185, subscript_call_result_1183)
+        subscript_call_result_1188 = invoke(stypy.reporting.localization.Localization(__file__, 278, 32), getitem___1187, subscript_call_result_1185)
         
         
         
@@ -6206,101 +6240,101 @@ def splitgrammar(localization, *varargs, **kwargs):
         # Call to len(...): (line 279)
         # Processing the call arguments (line 279)
         # Getting the type of 'rule' (line 279)
-        rule_1188 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 38), 'rule', False)
+        rule_1190 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 38), 'rule', False)
         # Processing the call keyword arguments (line 279)
-        kwargs_1189 = {}
+        kwargs_1191 = {}
         # Getting the type of 'len' (line 279)
-        len_1187 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 34), 'len', False)
+        len_1189 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 34), 'len', False)
         # Calling len(args, kwargs) (line 279)
-        len_call_result_1190 = invoke(stypy.reporting.localization.Localization(__file__, 279, 34), len_1187, *[rule_1188], **kwargs_1189)
+        len_call_result_1192 = invoke(stypy.reporting.localization.Localization(__file__, 279, 34), len_1189, *[rule_1190], **kwargs_1191)
         
-        int_1191 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 279, 47), 'int')
+        int_1193 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 279, 47), 'int')
         # Applying the binary operator '==' (line 279)
-        result_eq_1192 = python_operator(stypy.reporting.localization.Localization(__file__, 279, 34), '==', len_call_result_1190, int_1191)
+        result_eq_1194 = python_operator(stypy.reporting.localization.Localization(__file__, 279, 34), '==', len_call_result_1192, int_1193)
         
         # Testing the type of an if expression (line 279)
-        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 279, 17), result_eq_1192)
+        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 279, 17), result_eq_1194)
         # SSA begins for if expression (line 279)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'if expression')
         
         # Obtaining the type of the subscript
         
         # Obtaining the type of the subscript
-        int_1193 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 279, 27), 'int')
+        int_1195 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 279, 27), 'int')
         # Getting the type of 'rule' (line 279)
-        rule_1194 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 22), 'rule', False)
+        rule_1196 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 22), 'rule', False)
         # Obtaining the member '__getitem__' of a type (line 279)
-        getitem___1195 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 279, 22), rule_1194, '__getitem__')
+        getitem___1197 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 279, 22), rule_1196, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 279)
-        subscript_call_result_1196 = invoke(stypy.reporting.localization.Localization(__file__, 279, 22), getitem___1195, int_1193)
+        subscript_call_result_1198 = invoke(stypy.reporting.localization.Localization(__file__, 279, 22), getitem___1197, int_1195)
         
         # Getting the type of 'toid' (line 279)
-        toid_1197 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 17), 'toid', False)
+        toid_1199 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 17), 'toid', False)
         # Obtaining the member '__getitem__' of a type (line 279)
-        getitem___1198 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 279, 17), toid_1197, '__getitem__')
+        getitem___1200 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 279, 17), toid_1199, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 279)
-        subscript_call_result_1199 = invoke(stypy.reporting.localization.Localization(__file__, 279, 17), getitem___1198, subscript_call_result_1196)
+        subscript_call_result_1201 = invoke(stypy.reporting.localization.Localization(__file__, 279, 17), getitem___1200, subscript_call_result_1198)
         
         # SSA branch for the else part of an if expression (line 279)
         module_type_store.open_ssa_branch('if expression else')
-        int_1200 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 279, 54), 'int')
+        int_1202 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 279, 54), 'int')
         # SSA join for if expression (line 279)
         module_type_store = module_type_store.join_ssa_context()
-        if_exp_1201 = union_type.UnionType.add(subscript_call_result_1199, int_1200)
+        if_exp_1203 = union_type.UnionType.add(subscript_call_result_1201, int_1202)
         
         # Getting the type of 'args' (line 279)
-        args_1202 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 57), 'args', False)
+        args_1204 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 57), 'args', False)
         # Getting the type of 'lengths' (line 279)
-        lengths_1203 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 63), 'lengths', False)
+        lengths_1205 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 63), 'lengths', False)
         
         # Call to abs(...): (line 279)
         # Processing the call arguments (line 279)
         # Getting the type of 'w' (line 279)
-        w_1205 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 76), 'w', False)
+        w_1207 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 76), 'w', False)
         # Processing the call keyword arguments (line 279)
-        kwargs_1206 = {}
+        kwargs_1208 = {}
         # Getting the type of 'abs' (line 279)
-        abs_1204 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 72), 'abs', False)
+        abs_1206 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 279, 72), 'abs', False)
         # Calling abs(args, kwargs) (line 279)
-        abs_call_result_1207 = invoke(stypy.reporting.localization.Localization(__file__, 279, 72), abs_1204, *[w_1205], **kwargs_1206)
+        abs_call_result_1209 = invoke(stypy.reporting.localization.Localization(__file__, 279, 72), abs_1206, *[w_1207], **kwargs_1208)
         
         # Processing the call keyword arguments (line 278)
-        kwargs_1208 = {}
+        kwargs_1210 = {}
         # Getting the type of 'Rule' (line 278)
-        Rule_1172 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 12), 'Rule', False)
+        Rule_1174 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 278, 12), 'Rule', False)
         # Calling Rule(args, kwargs) (line 278)
-        Rule_call_result_1209 = invoke(stypy.reporting.localization.Localization(__file__, 278, 12), Rule_1172, *[subscript_call_result_1179, subscript_call_result_1186, if_exp_1201, args_1202, lengths_1203, abs_call_result_1207], **kwargs_1208)
+        Rule_call_result_1211 = invoke(stypy.reporting.localization.Localization(__file__, 278, 12), Rule_1174, *[subscript_call_result_1181, subscript_call_result_1188, if_exp_1203, args_1204, lengths_1205, abs_call_result_1209], **kwargs_1210)
         
         # Assigning a type to the variable 'r' (line 278)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 278, 8), 'r', Rule_call_result_1209)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 278, 8), 'r', Rule_call_result_1211)
         
         
         # Obtaining the type of the subscript
         # Getting the type of 'r' (line 280)
-        r_1210 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 280, 17), 'r')
+        r_1212 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 280, 17), 'r')
         # Obtaining the member 'lhs' of a type (line 280)
-        lhs_1211 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 280, 17), r_1210, 'lhs')
+        lhs_1213 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 280, 17), r_1212, 'lhs')
         # Getting the type of 'arity' (line 280)
-        arity_1212 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 280, 11), 'arity')
+        arity_1214 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 280, 11), 'arity')
         # Obtaining the member '__getitem__' of a type (line 280)
-        getitem___1213 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 280, 11), arity_1212, '__getitem__')
+        getitem___1215 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 280, 11), arity_1214, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 280)
-        subscript_call_result_1214 = invoke(stypy.reporting.localization.Localization(__file__, 280, 11), getitem___1213, lhs_1211)
+        subscript_call_result_1216 = invoke(stypy.reporting.localization.Localization(__file__, 280, 11), getitem___1215, lhs_1213)
         
-        int_1215 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 280, 27), 'int')
+        int_1217 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 280, 27), 'int')
         # Applying the binary operator '==' (line 280)
-        result_eq_1216 = python_operator(stypy.reporting.localization.Localization(__file__, 280, 11), '==', subscript_call_result_1214, int_1215)
+        result_eq_1218 = python_operator(stypy.reporting.localization.Localization(__file__, 280, 11), '==', subscript_call_result_1216, int_1217)
         
         # Testing if the type of an if condition is none (line 280)
 
-        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 280, 8), result_eq_1216):
+        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 280, 8), result_eq_1218):
             pass
         else:
             
             # Testing the type of an if condition (line 280)
-            if_condition_1217 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 280, 8), result_eq_1216)
-            # Assigning a type to the variable 'if_condition_1217' (line 280)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 280, 8), 'if_condition_1217', if_condition_1217)
+            if_condition_1219 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 280, 8), result_eq_1218)
+            # Assigning a type to the variable 'if_condition_1219' (line 280)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 280, 8), 'if_condition_1219', if_condition_1219)
             # SSA begins for if statement (line 280)
             module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
             
@@ -6311,22 +6345,22 @@ def splitgrammar(localization, *varargs, **kwargs):
             # Call to len(...): (line 281)
             # Processing the call arguments (line 281)
             # Getting the type of 'args' (line 281)
-            args_1219 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 31), 'args', False)
+            args_1221 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 31), 'args', False)
             # Processing the call keyword arguments (line 281)
-            kwargs_1220 = {}
+            kwargs_1222 = {}
             # Getting the type of 'len' (line 281)
-            len_1218 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 27), 'len', False)
+            len_1220 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 27), 'len', False)
             # Calling len(args, kwargs) (line 281)
-            len_call_result_1221 = invoke(stypy.reporting.localization.Localization(__file__, 281, 27), len_1218, *[args_1219], **kwargs_1220)
+            len_call_result_1223 = invoke(stypy.reporting.localization.Localization(__file__, 281, 27), len_1220, *[args_1221], **kwargs_1222)
             
             # Getting the type of 'arity' (line 281)
-            arity_1222 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 12), 'arity')
+            arity_1224 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 12), 'arity')
             # Getting the type of 'r' (line 281)
-            r_1223 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 18), 'r')
+            r_1225 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 281, 18), 'r')
             # Obtaining the member 'lhs' of a type (line 281)
-            lhs_1224 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 281, 18), r_1223, 'lhs')
+            lhs_1226 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 281, 18), r_1225, 'lhs')
             # Storing an element on a container (line 281)
-            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 281, 12), arity_1222, (lhs_1224, len_call_result_1221))
+            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 281, 12), arity_1224, (lhs_1226, len_call_result_1223))
             # SSA join for if statement (line 280)
             module_type_store = module_type_store.join_ssa_context()
             
@@ -6336,190 +6370,193 @@ def splitgrammar(localization, *varargs, **kwargs):
         
         # Obtaining the type of the subscript
         # Getting the type of 'r' (line 282)
-        r_1225 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 282, 21), 'r')
+        r_1227 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 282, 21), 'r')
         # Obtaining the member 'lhs' of a type (line 282)
-        lhs_1226 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 282, 21), r_1225, 'lhs')
+        lhs_1228 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 282, 21), r_1227, 'lhs')
         # Getting the type of 'arity' (line 282)
-        arity_1227 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 282, 15), 'arity')
+        arity_1229 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 282, 15), 'arity')
         # Obtaining the member '__getitem__' of a type (line 282)
-        getitem___1228 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 282, 15), arity_1227, '__getitem__')
+        getitem___1230 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 282, 15), arity_1229, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 282)
-        subscript_call_result_1229 = invoke(stypy.reporting.localization.Localization(__file__, 282, 15), getitem___1228, lhs_1226)
+        subscript_call_result_1231 = invoke(stypy.reporting.localization.Localization(__file__, 282, 15), getitem___1230, lhs_1228)
         
         
         # Call to len(...): (line 282)
         # Processing the call arguments (line 282)
         # Getting the type of 'args' (line 282)
-        args_1231 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 282, 35), 'args', False)
+        args_1233 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 282, 35), 'args', False)
         # Processing the call keyword arguments (line 282)
-        kwargs_1232 = {}
+        kwargs_1234 = {}
         # Getting the type of 'len' (line 282)
-        len_1230 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 282, 31), 'len', False)
+        len_1232 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 282, 31), 'len', False)
         # Calling len(args, kwargs) (line 282)
-        len_call_result_1233 = invoke(stypy.reporting.localization.Localization(__file__, 282, 31), len_1230, *[args_1231], **kwargs_1232)
+        len_call_result_1235 = invoke(stypy.reporting.localization.Localization(__file__, 282, 31), len_1232, *[args_1233], **kwargs_1234)
         
         # Applying the binary operator '==' (line 282)
-        result_eq_1234 = python_operator(stypy.reporting.localization.Localization(__file__, 282, 15), '==', subscript_call_result_1229, len_call_result_1233)
+        result_eq_1236 = python_operator(stypy.reporting.localization.Localization(__file__, 282, 15), '==', subscript_call_result_1231, len_call_result_1235)
         
+        assert_1237 = result_eq_1236
+        # Assigning a type to the variable 'assert_1237' (line 282)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 282, 8), 'assert_1237', result_eq_1236)
         
         
         # Call to len(...): (line 283)
         # Processing the call arguments (line 283)
         # Getting the type of 'rule' (line 283)
-        rule_1236 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 283, 15), 'rule', False)
+        rule_1239 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 283, 15), 'rule', False)
         # Processing the call keyword arguments (line 283)
-        kwargs_1237 = {}
+        kwargs_1240 = {}
         # Getting the type of 'len' (line 283)
-        len_1235 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 283, 11), 'len', False)
+        len_1238 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 283, 11), 'len', False)
         # Calling len(args, kwargs) (line 283)
-        len_call_result_1238 = invoke(stypy.reporting.localization.Localization(__file__, 283, 11), len_1235, *[rule_1236], **kwargs_1237)
+        len_call_result_1241 = invoke(stypy.reporting.localization.Localization(__file__, 283, 11), len_1238, *[rule_1239], **kwargs_1240)
         
-        int_1239 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 283, 24), 'int')
+        int_1242 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 283, 24), 'int')
         # Applying the binary operator '==' (line 283)
-        result_eq_1240 = python_operator(stypy.reporting.localization.Localization(__file__, 283, 11), '==', len_call_result_1238, int_1239)
+        result_eq_1243 = python_operator(stypy.reporting.localization.Localization(__file__, 283, 11), '==', len_call_result_1241, int_1242)
         
         # Testing if the type of an if condition is none (line 283)
 
-        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 283, 8), result_eq_1240):
+        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 283, 8), result_eq_1243):
             
             
             # Call to len(...): (line 286)
             # Processing the call arguments (line 286)
             # Getting the type of 'rule' (line 286)
-            rule_1261 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 17), 'rule', False)
+            rule_1264 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 17), 'rule', False)
             # Processing the call keyword arguments (line 286)
-            kwargs_1262 = {}
+            kwargs_1265 = {}
             # Getting the type of 'len' (line 286)
-            len_1260 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 13), 'len', False)
+            len_1263 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 13), 'len', False)
             # Calling len(args, kwargs) (line 286)
-            len_call_result_1263 = invoke(stypy.reporting.localization.Localization(__file__, 286, 13), len_1260, *[rule_1261], **kwargs_1262)
+            len_call_result_1266 = invoke(stypy.reporting.localization.Localization(__file__, 286, 13), len_1263, *[rule_1264], **kwargs_1265)
             
-            int_1264 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 286, 26), 'int')
+            int_1267 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 286, 26), 'int')
             # Applying the binary operator '==' (line 286)
-            result_eq_1265 = python_operator(stypy.reporting.localization.Localization(__file__, 286, 13), '==', len_call_result_1263, int_1264)
+            result_eq_1268 = python_operator(stypy.reporting.localization.Localization(__file__, 286, 13), '==', len_call_result_1266, int_1267)
             
             # Testing if the type of an if condition is none (line 286)
 
-            if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 286, 13), result_eq_1265):
+            if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 286, 13), result_eq_1268):
                 
                 # Call to ValueError(...): (line 291)
                 # Processing the call arguments (line 291)
-                str_1295 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 291, 29), 'str', 'grammar not binarized: %r')
+                str_1298 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 291, 29), 'str', 'grammar not binarized: %r')
                 # Getting the type of 'r' (line 291)
-                r_1296 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 59), 'r', False)
+                r_1299 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 59), 'r', False)
                 # Applying the binary operator '%' (line 291)
-                result_mod_1297 = python_operator(stypy.reporting.localization.Localization(__file__, 291, 29), '%', str_1295, r_1296)
+                result_mod_1300 = python_operator(stypy.reporting.localization.Localization(__file__, 291, 29), '%', str_1298, r_1299)
                 
                 # Processing the call keyword arguments (line 291)
-                kwargs_1298 = {}
+                kwargs_1301 = {}
                 # Getting the type of 'ValueError' (line 291)
-                ValueError_1294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 18), 'ValueError', False)
+                ValueError_1297 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 18), 'ValueError', False)
                 # Calling ValueError(args, kwargs) (line 291)
-                ValueError_call_result_1299 = invoke(stypy.reporting.localization.Localization(__file__, 291, 18), ValueError_1294, *[result_mod_1297], **kwargs_1298)
+                ValueError_call_result_1302 = invoke(stypy.reporting.localization.Localization(__file__, 291, 18), ValueError_1297, *[result_mod_1300], **kwargs_1301)
                 
-                ensure_var_of_types(stypy.reporting.localization.Localization(__file__, 291, 12), ValueError_call_result_1299, 'raise parameter', BaseException)
+                ensure_var_of_types(stypy.reporting.localization.Localization(__file__, 291, 12), ValueError_call_result_1302, 'raise parameter', BaseException)
             else:
                 
                 # Testing the type of an if condition (line 286)
-                if_condition_1266 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 286, 13), result_eq_1265)
-                # Assigning a type to the variable 'if_condition_1266' (line 286)
-                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 286, 13), 'if_condition_1266', if_condition_1266)
+                if_condition_1269 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 286, 13), result_eq_1268)
+                # Assigning a type to the variable 'if_condition_1269' (line 286)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 286, 13), 'if_condition_1269', if_condition_1269)
                 # SSA begins for if statement (line 286)
                 module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
                 
                 # Call to append(...): (line 287)
                 # Processing the call arguments (line 287)
                 # Getting the type of 'r' (line 287)
-                r_1273 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 35), 'r', False)
+                r_1276 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 35), 'r', False)
                 # Processing the call keyword arguments (line 287)
-                kwargs_1274 = {}
+                kwargs_1277 = {}
                 
                 # Obtaining the type of the subscript
                 # Getting the type of 'r' (line 287)
-                r_1267 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 20), 'r', False)
+                r_1270 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 20), 'r', False)
                 # Obtaining the member 'rhs1' of a type (line 287)
-                rhs1_1268 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 20), r_1267, 'rhs1')
+                rhs1_1271 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 20), r_1270, 'rhs1')
                 # Getting the type of 'lbinary' (line 287)
-                lbinary_1269 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 12), 'lbinary', False)
+                lbinary_1272 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 12), 'lbinary', False)
                 # Obtaining the member '__getitem__' of a type (line 287)
-                getitem___1270 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 12), lbinary_1269, '__getitem__')
+                getitem___1273 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 12), lbinary_1272, '__getitem__')
                 # Calling the subscript (__getitem__) to obtain the elements type (line 287)
-                subscript_call_result_1271 = invoke(stypy.reporting.localization.Localization(__file__, 287, 12), getitem___1270, rhs1_1268)
+                subscript_call_result_1274 = invoke(stypy.reporting.localization.Localization(__file__, 287, 12), getitem___1273, rhs1_1271)
                 
                 # Obtaining the member 'append' of a type (line 287)
-                append_1272 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 12), subscript_call_result_1271, 'append')
+                append_1275 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 12), subscript_call_result_1274, 'append')
                 # Calling append(args, kwargs) (line 287)
-                append_call_result_1275 = invoke(stypy.reporting.localization.Localization(__file__, 287, 12), append_1272, *[r_1273], **kwargs_1274)
+                append_call_result_1278 = invoke(stypy.reporting.localization.Localization(__file__, 287, 12), append_1275, *[r_1276], **kwargs_1277)
                 
                 
                 # Call to append(...): (line 288)
                 # Processing the call arguments (line 288)
                 # Getting the type of 'r' (line 288)
-                r_1282 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 35), 'r', False)
+                r_1285 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 35), 'r', False)
                 # Processing the call keyword arguments (line 288)
-                kwargs_1283 = {}
+                kwargs_1286 = {}
                 
                 # Obtaining the type of the subscript
                 # Getting the type of 'r' (line 288)
-                r_1276 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 20), 'r', False)
+                r_1279 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 20), 'r', False)
                 # Obtaining the member 'rhs2' of a type (line 288)
-                rhs2_1277 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 20), r_1276, 'rhs2')
+                rhs2_1280 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 20), r_1279, 'rhs2')
                 # Getting the type of 'rbinary' (line 288)
-                rbinary_1278 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 12), 'rbinary', False)
+                rbinary_1281 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 12), 'rbinary', False)
                 # Obtaining the member '__getitem__' of a type (line 288)
-                getitem___1279 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 12), rbinary_1278, '__getitem__')
+                getitem___1282 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 12), rbinary_1281, '__getitem__')
                 # Calling the subscript (__getitem__) to obtain the elements type (line 288)
-                subscript_call_result_1280 = invoke(stypy.reporting.localization.Localization(__file__, 288, 12), getitem___1279, rhs2_1277)
+                subscript_call_result_1283 = invoke(stypy.reporting.localization.Localization(__file__, 288, 12), getitem___1282, rhs2_1280)
                 
                 # Obtaining the member 'append' of a type (line 288)
-                append_1281 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 12), subscript_call_result_1280, 'append')
+                append_1284 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 12), subscript_call_result_1283, 'append')
                 # Calling append(args, kwargs) (line 288)
-                append_call_result_1284 = invoke(stypy.reporting.localization.Localization(__file__, 288, 12), append_1281, *[r_1282], **kwargs_1283)
+                append_call_result_1287 = invoke(stypy.reporting.localization.Localization(__file__, 288, 12), append_1284, *[r_1285], **kwargs_1286)
                 
                 
                 # Call to append(...): (line 289)
                 # Processing the call arguments (line 289)
                 # Getting the type of 'r' (line 289)
-                r_1291 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 32), 'r', False)
+                r_1294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 32), 'r', False)
                 # Processing the call keyword arguments (line 289)
-                kwargs_1292 = {}
+                kwargs_1295 = {}
                 
                 # Obtaining the type of the subscript
                 # Getting the type of 'r' (line 289)
-                r_1285 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 18), 'r', False)
+                r_1288 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 18), 'r', False)
                 # Obtaining the member 'lhs' of a type (line 289)
-                lhs_1286 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 18), r_1285, 'lhs')
+                lhs_1289 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 18), r_1288, 'lhs')
                 # Getting the type of 'bylhs' (line 289)
-                bylhs_1287 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 12), 'bylhs', False)
+                bylhs_1290 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 12), 'bylhs', False)
                 # Obtaining the member '__getitem__' of a type (line 289)
-                getitem___1288 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 12), bylhs_1287, '__getitem__')
+                getitem___1291 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 12), bylhs_1290, '__getitem__')
                 # Calling the subscript (__getitem__) to obtain the elements type (line 289)
-                subscript_call_result_1289 = invoke(stypy.reporting.localization.Localization(__file__, 289, 12), getitem___1288, lhs_1286)
+                subscript_call_result_1292 = invoke(stypy.reporting.localization.Localization(__file__, 289, 12), getitem___1291, lhs_1289)
                 
                 # Obtaining the member 'append' of a type (line 289)
-                append_1290 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 12), subscript_call_result_1289, 'append')
+                append_1293 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 12), subscript_call_result_1292, 'append')
                 # Calling append(args, kwargs) (line 289)
-                append_call_result_1293 = invoke(stypy.reporting.localization.Localization(__file__, 289, 12), append_1290, *[r_1291], **kwargs_1292)
+                append_call_result_1296 = invoke(stypy.reporting.localization.Localization(__file__, 289, 12), append_1293, *[r_1294], **kwargs_1295)
                 
                 # SSA branch for the else part of an if statement (line 286)
                 module_type_store.open_ssa_branch('else')
                 
                 # Call to ValueError(...): (line 291)
                 # Processing the call arguments (line 291)
-                str_1295 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 291, 29), 'str', 'grammar not binarized: %r')
+                str_1298 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 291, 29), 'str', 'grammar not binarized: %r')
                 # Getting the type of 'r' (line 291)
-                r_1296 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 59), 'r', False)
+                r_1299 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 59), 'r', False)
                 # Applying the binary operator '%' (line 291)
-                result_mod_1297 = python_operator(stypy.reporting.localization.Localization(__file__, 291, 29), '%', str_1295, r_1296)
+                result_mod_1300 = python_operator(stypy.reporting.localization.Localization(__file__, 291, 29), '%', str_1298, r_1299)
                 
                 # Processing the call keyword arguments (line 291)
-                kwargs_1298 = {}
+                kwargs_1301 = {}
                 # Getting the type of 'ValueError' (line 291)
-                ValueError_1294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 18), 'ValueError', False)
+                ValueError_1297 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 18), 'ValueError', False)
                 # Calling ValueError(args, kwargs) (line 291)
-                ValueError_call_result_1299 = invoke(stypy.reporting.localization.Localization(__file__, 291, 18), ValueError_1294, *[result_mod_1297], **kwargs_1298)
+                ValueError_call_result_1302 = invoke(stypy.reporting.localization.Localization(__file__, 291, 18), ValueError_1297, *[result_mod_1300], **kwargs_1301)
                 
-                ensure_var_of_types(stypy.reporting.localization.Localization(__file__, 291, 12), ValueError_call_result_1299, 'raise parameter', BaseException)
+                ensure_var_of_types(stypy.reporting.localization.Localization(__file__, 291, 12), ValueError_call_result_1302, 'raise parameter', BaseException)
                 # SSA join for if statement (line 286)
                 module_type_store = module_type_store.join_ssa_context()
                 
@@ -6527,60 +6564,60 @@ def splitgrammar(localization, *varargs, **kwargs):
         else:
             
             # Testing the type of an if condition (line 283)
-            if_condition_1241 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 283, 8), result_eq_1240)
-            # Assigning a type to the variable 'if_condition_1241' (line 283)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 283, 8), 'if_condition_1241', if_condition_1241)
+            if_condition_1244 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 283, 8), result_eq_1243)
+            # Assigning a type to the variable 'if_condition_1244' (line 283)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 283, 8), 'if_condition_1244', if_condition_1244)
             # SSA begins for if statement (line 283)
             module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
             
             # Call to append(...): (line 284)
             # Processing the call arguments (line 284)
             # Getting the type of 'r' (line 284)
-            r_1248 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 33), 'r', False)
+            r_1251 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 33), 'r', False)
             # Processing the call keyword arguments (line 284)
-            kwargs_1249 = {}
+            kwargs_1252 = {}
             
             # Obtaining the type of the subscript
             # Getting the type of 'r' (line 284)
-            r_1242 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 18), 'r', False)
+            r_1245 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 18), 'r', False)
             # Obtaining the member 'rhs1' of a type (line 284)
-            rhs1_1243 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 284, 18), r_1242, 'rhs1')
+            rhs1_1246 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 284, 18), r_1245, 'rhs1')
             # Getting the type of 'unary' (line 284)
-            unary_1244 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 12), 'unary', False)
+            unary_1247 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 284, 12), 'unary', False)
             # Obtaining the member '__getitem__' of a type (line 284)
-            getitem___1245 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 284, 12), unary_1244, '__getitem__')
+            getitem___1248 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 284, 12), unary_1247, '__getitem__')
             # Calling the subscript (__getitem__) to obtain the elements type (line 284)
-            subscript_call_result_1246 = invoke(stypy.reporting.localization.Localization(__file__, 284, 12), getitem___1245, rhs1_1243)
+            subscript_call_result_1249 = invoke(stypy.reporting.localization.Localization(__file__, 284, 12), getitem___1248, rhs1_1246)
             
             # Obtaining the member 'append' of a type (line 284)
-            append_1247 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 284, 12), subscript_call_result_1246, 'append')
+            append_1250 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 284, 12), subscript_call_result_1249, 'append')
             # Calling append(args, kwargs) (line 284)
-            append_call_result_1250 = invoke(stypy.reporting.localization.Localization(__file__, 284, 12), append_1247, *[r_1248], **kwargs_1249)
+            append_call_result_1253 = invoke(stypy.reporting.localization.Localization(__file__, 284, 12), append_1250, *[r_1251], **kwargs_1252)
             
             
             # Call to append(...): (line 285)
             # Processing the call arguments (line 285)
             # Getting the type of 'r' (line 285)
-            r_1257 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 285, 32), 'r', False)
+            r_1260 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 285, 32), 'r', False)
             # Processing the call keyword arguments (line 285)
-            kwargs_1258 = {}
+            kwargs_1261 = {}
             
             # Obtaining the type of the subscript
             # Getting the type of 'r' (line 285)
-            r_1251 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 285, 18), 'r', False)
+            r_1254 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 285, 18), 'r', False)
             # Obtaining the member 'lhs' of a type (line 285)
-            lhs_1252 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 285, 18), r_1251, 'lhs')
+            lhs_1255 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 285, 18), r_1254, 'lhs')
             # Getting the type of 'bylhs' (line 285)
-            bylhs_1253 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 285, 12), 'bylhs', False)
+            bylhs_1256 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 285, 12), 'bylhs', False)
             # Obtaining the member '__getitem__' of a type (line 285)
-            getitem___1254 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 285, 12), bylhs_1253, '__getitem__')
+            getitem___1257 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 285, 12), bylhs_1256, '__getitem__')
             # Calling the subscript (__getitem__) to obtain the elements type (line 285)
-            subscript_call_result_1255 = invoke(stypy.reporting.localization.Localization(__file__, 285, 12), getitem___1254, lhs_1252)
+            subscript_call_result_1258 = invoke(stypy.reporting.localization.Localization(__file__, 285, 12), getitem___1257, lhs_1255)
             
             # Obtaining the member 'append' of a type (line 285)
-            append_1256 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 285, 12), subscript_call_result_1255, 'append')
+            append_1259 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 285, 12), subscript_call_result_1258, 'append')
             # Calling append(args, kwargs) (line 285)
-            append_call_result_1259 = invoke(stypy.reporting.localization.Localization(__file__, 285, 12), append_1256, *[r_1257], **kwargs_1258)
+            append_call_result_1262 = invoke(stypy.reporting.localization.Localization(__file__, 285, 12), append_1259, *[r_1260], **kwargs_1261)
             
             # SSA branch for the else part of an if statement (line 283)
             module_type_store.open_ssa_branch('else')
@@ -6589,140 +6626,140 @@ def splitgrammar(localization, *varargs, **kwargs):
             # Call to len(...): (line 286)
             # Processing the call arguments (line 286)
             # Getting the type of 'rule' (line 286)
-            rule_1261 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 17), 'rule', False)
+            rule_1264 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 17), 'rule', False)
             # Processing the call keyword arguments (line 286)
-            kwargs_1262 = {}
+            kwargs_1265 = {}
             # Getting the type of 'len' (line 286)
-            len_1260 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 13), 'len', False)
+            len_1263 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 286, 13), 'len', False)
             # Calling len(args, kwargs) (line 286)
-            len_call_result_1263 = invoke(stypy.reporting.localization.Localization(__file__, 286, 13), len_1260, *[rule_1261], **kwargs_1262)
+            len_call_result_1266 = invoke(stypy.reporting.localization.Localization(__file__, 286, 13), len_1263, *[rule_1264], **kwargs_1265)
             
-            int_1264 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 286, 26), 'int')
+            int_1267 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 286, 26), 'int')
             # Applying the binary operator '==' (line 286)
-            result_eq_1265 = python_operator(stypy.reporting.localization.Localization(__file__, 286, 13), '==', len_call_result_1263, int_1264)
+            result_eq_1268 = python_operator(stypy.reporting.localization.Localization(__file__, 286, 13), '==', len_call_result_1266, int_1267)
             
             # Testing if the type of an if condition is none (line 286)
 
-            if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 286, 13), result_eq_1265):
+            if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 286, 13), result_eq_1268):
                 
                 # Call to ValueError(...): (line 291)
                 # Processing the call arguments (line 291)
-                str_1295 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 291, 29), 'str', 'grammar not binarized: %r')
+                str_1298 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 291, 29), 'str', 'grammar not binarized: %r')
                 # Getting the type of 'r' (line 291)
-                r_1296 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 59), 'r', False)
+                r_1299 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 59), 'r', False)
                 # Applying the binary operator '%' (line 291)
-                result_mod_1297 = python_operator(stypy.reporting.localization.Localization(__file__, 291, 29), '%', str_1295, r_1296)
+                result_mod_1300 = python_operator(stypy.reporting.localization.Localization(__file__, 291, 29), '%', str_1298, r_1299)
                 
                 # Processing the call keyword arguments (line 291)
-                kwargs_1298 = {}
+                kwargs_1301 = {}
                 # Getting the type of 'ValueError' (line 291)
-                ValueError_1294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 18), 'ValueError', False)
+                ValueError_1297 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 18), 'ValueError', False)
                 # Calling ValueError(args, kwargs) (line 291)
-                ValueError_call_result_1299 = invoke(stypy.reporting.localization.Localization(__file__, 291, 18), ValueError_1294, *[result_mod_1297], **kwargs_1298)
+                ValueError_call_result_1302 = invoke(stypy.reporting.localization.Localization(__file__, 291, 18), ValueError_1297, *[result_mod_1300], **kwargs_1301)
                 
-                ensure_var_of_types(stypy.reporting.localization.Localization(__file__, 291, 12), ValueError_call_result_1299, 'raise parameter', BaseException)
+                ensure_var_of_types(stypy.reporting.localization.Localization(__file__, 291, 12), ValueError_call_result_1302, 'raise parameter', BaseException)
             else:
                 
                 # Testing the type of an if condition (line 286)
-                if_condition_1266 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 286, 13), result_eq_1265)
-                # Assigning a type to the variable 'if_condition_1266' (line 286)
-                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 286, 13), 'if_condition_1266', if_condition_1266)
+                if_condition_1269 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 286, 13), result_eq_1268)
+                # Assigning a type to the variable 'if_condition_1269' (line 286)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 286, 13), 'if_condition_1269', if_condition_1269)
                 # SSA begins for if statement (line 286)
                 module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
                 
                 # Call to append(...): (line 287)
                 # Processing the call arguments (line 287)
                 # Getting the type of 'r' (line 287)
-                r_1273 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 35), 'r', False)
+                r_1276 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 35), 'r', False)
                 # Processing the call keyword arguments (line 287)
-                kwargs_1274 = {}
+                kwargs_1277 = {}
                 
                 # Obtaining the type of the subscript
                 # Getting the type of 'r' (line 287)
-                r_1267 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 20), 'r', False)
+                r_1270 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 20), 'r', False)
                 # Obtaining the member 'rhs1' of a type (line 287)
-                rhs1_1268 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 20), r_1267, 'rhs1')
+                rhs1_1271 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 20), r_1270, 'rhs1')
                 # Getting the type of 'lbinary' (line 287)
-                lbinary_1269 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 12), 'lbinary', False)
+                lbinary_1272 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 287, 12), 'lbinary', False)
                 # Obtaining the member '__getitem__' of a type (line 287)
-                getitem___1270 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 12), lbinary_1269, '__getitem__')
+                getitem___1273 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 12), lbinary_1272, '__getitem__')
                 # Calling the subscript (__getitem__) to obtain the elements type (line 287)
-                subscript_call_result_1271 = invoke(stypy.reporting.localization.Localization(__file__, 287, 12), getitem___1270, rhs1_1268)
+                subscript_call_result_1274 = invoke(stypy.reporting.localization.Localization(__file__, 287, 12), getitem___1273, rhs1_1271)
                 
                 # Obtaining the member 'append' of a type (line 287)
-                append_1272 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 12), subscript_call_result_1271, 'append')
+                append_1275 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 287, 12), subscript_call_result_1274, 'append')
                 # Calling append(args, kwargs) (line 287)
-                append_call_result_1275 = invoke(stypy.reporting.localization.Localization(__file__, 287, 12), append_1272, *[r_1273], **kwargs_1274)
+                append_call_result_1278 = invoke(stypy.reporting.localization.Localization(__file__, 287, 12), append_1275, *[r_1276], **kwargs_1277)
                 
                 
                 # Call to append(...): (line 288)
                 # Processing the call arguments (line 288)
                 # Getting the type of 'r' (line 288)
-                r_1282 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 35), 'r', False)
+                r_1285 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 35), 'r', False)
                 # Processing the call keyword arguments (line 288)
-                kwargs_1283 = {}
+                kwargs_1286 = {}
                 
                 # Obtaining the type of the subscript
                 # Getting the type of 'r' (line 288)
-                r_1276 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 20), 'r', False)
+                r_1279 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 20), 'r', False)
                 # Obtaining the member 'rhs2' of a type (line 288)
-                rhs2_1277 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 20), r_1276, 'rhs2')
+                rhs2_1280 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 20), r_1279, 'rhs2')
                 # Getting the type of 'rbinary' (line 288)
-                rbinary_1278 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 12), 'rbinary', False)
+                rbinary_1281 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 288, 12), 'rbinary', False)
                 # Obtaining the member '__getitem__' of a type (line 288)
-                getitem___1279 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 12), rbinary_1278, '__getitem__')
+                getitem___1282 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 12), rbinary_1281, '__getitem__')
                 # Calling the subscript (__getitem__) to obtain the elements type (line 288)
-                subscript_call_result_1280 = invoke(stypy.reporting.localization.Localization(__file__, 288, 12), getitem___1279, rhs2_1277)
+                subscript_call_result_1283 = invoke(stypy.reporting.localization.Localization(__file__, 288, 12), getitem___1282, rhs2_1280)
                 
                 # Obtaining the member 'append' of a type (line 288)
-                append_1281 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 12), subscript_call_result_1280, 'append')
+                append_1284 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 288, 12), subscript_call_result_1283, 'append')
                 # Calling append(args, kwargs) (line 288)
-                append_call_result_1284 = invoke(stypy.reporting.localization.Localization(__file__, 288, 12), append_1281, *[r_1282], **kwargs_1283)
+                append_call_result_1287 = invoke(stypy.reporting.localization.Localization(__file__, 288, 12), append_1284, *[r_1285], **kwargs_1286)
                 
                 
                 # Call to append(...): (line 289)
                 # Processing the call arguments (line 289)
                 # Getting the type of 'r' (line 289)
-                r_1291 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 32), 'r', False)
+                r_1294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 32), 'r', False)
                 # Processing the call keyword arguments (line 289)
-                kwargs_1292 = {}
+                kwargs_1295 = {}
                 
                 # Obtaining the type of the subscript
                 # Getting the type of 'r' (line 289)
-                r_1285 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 18), 'r', False)
+                r_1288 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 18), 'r', False)
                 # Obtaining the member 'lhs' of a type (line 289)
-                lhs_1286 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 18), r_1285, 'lhs')
+                lhs_1289 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 18), r_1288, 'lhs')
                 # Getting the type of 'bylhs' (line 289)
-                bylhs_1287 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 12), 'bylhs', False)
+                bylhs_1290 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 289, 12), 'bylhs', False)
                 # Obtaining the member '__getitem__' of a type (line 289)
-                getitem___1288 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 12), bylhs_1287, '__getitem__')
+                getitem___1291 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 12), bylhs_1290, '__getitem__')
                 # Calling the subscript (__getitem__) to obtain the elements type (line 289)
-                subscript_call_result_1289 = invoke(stypy.reporting.localization.Localization(__file__, 289, 12), getitem___1288, lhs_1286)
+                subscript_call_result_1292 = invoke(stypy.reporting.localization.Localization(__file__, 289, 12), getitem___1291, lhs_1289)
                 
                 # Obtaining the member 'append' of a type (line 289)
-                append_1290 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 12), subscript_call_result_1289, 'append')
+                append_1293 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 289, 12), subscript_call_result_1292, 'append')
                 # Calling append(args, kwargs) (line 289)
-                append_call_result_1293 = invoke(stypy.reporting.localization.Localization(__file__, 289, 12), append_1290, *[r_1291], **kwargs_1292)
+                append_call_result_1296 = invoke(stypy.reporting.localization.Localization(__file__, 289, 12), append_1293, *[r_1294], **kwargs_1295)
                 
                 # SSA branch for the else part of an if statement (line 286)
                 module_type_store.open_ssa_branch('else')
                 
                 # Call to ValueError(...): (line 291)
                 # Processing the call arguments (line 291)
-                str_1295 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 291, 29), 'str', 'grammar not binarized: %r')
+                str_1298 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 291, 29), 'str', 'grammar not binarized: %r')
                 # Getting the type of 'r' (line 291)
-                r_1296 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 59), 'r', False)
+                r_1299 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 59), 'r', False)
                 # Applying the binary operator '%' (line 291)
-                result_mod_1297 = python_operator(stypy.reporting.localization.Localization(__file__, 291, 29), '%', str_1295, r_1296)
+                result_mod_1300 = python_operator(stypy.reporting.localization.Localization(__file__, 291, 29), '%', str_1298, r_1299)
                 
                 # Processing the call keyword arguments (line 291)
-                kwargs_1298 = {}
+                kwargs_1301 = {}
                 # Getting the type of 'ValueError' (line 291)
-                ValueError_1294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 18), 'ValueError', False)
+                ValueError_1297 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 291, 18), 'ValueError', False)
                 # Calling ValueError(args, kwargs) (line 291)
-                ValueError_call_result_1299 = invoke(stypy.reporting.localization.Localization(__file__, 291, 18), ValueError_1294, *[result_mod_1297], **kwargs_1298)
+                ValueError_call_result_1302 = invoke(stypy.reporting.localization.Localization(__file__, 291, 18), ValueError_1297, *[result_mod_1300], **kwargs_1301)
                 
-                ensure_var_of_types(stypy.reporting.localization.Localization(__file__, 291, 12), ValueError_call_result_1299, 'raise parameter', BaseException)
+                ensure_var_of_types(stypy.reporting.localization.Localization(__file__, 291, 12), ValueError_call_result_1302, 'raise parameter', BaseException)
                 # SSA join for if statement (line 286)
                 module_type_store = module_type_store.join_ssa_context()
                 
@@ -6739,28 +6776,28 @@ def splitgrammar(localization, *varargs, **kwargs):
     # Call to Grammar(...): (line 293)
     # Processing the call arguments (line 293)
     # Getting the type of 'unary' (line 293)
-    unary_1301 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 19), 'unary', False)
+    unary_1304 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 19), 'unary', False)
     # Getting the type of 'lbinary' (line 293)
-    lbinary_1302 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 26), 'lbinary', False)
+    lbinary_1305 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 26), 'lbinary', False)
     # Getting the type of 'rbinary' (line 293)
-    rbinary_1303 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 35), 'rbinary', False)
+    rbinary_1306 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 35), 'rbinary', False)
     # Getting the type of 'lexical' (line 293)
-    lexical_1304 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 44), 'lexical', False)
+    lexical_1307 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 44), 'lexical', False)
     # Getting the type of 'bylhs' (line 293)
-    bylhs_1305 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 53), 'bylhs', False)
+    bylhs_1308 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 53), 'bylhs', False)
     # Getting the type of 'toid' (line 293)
-    toid_1306 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 60), 'toid', False)
+    toid_1309 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 60), 'toid', False)
     # Getting the type of 'tolabel' (line 293)
-    tolabel_1307 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 66), 'tolabel', False)
+    tolabel_1310 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 66), 'tolabel', False)
     # Processing the call keyword arguments (line 293)
-    kwargs_1308 = {}
+    kwargs_1311 = {}
     # Getting the type of 'Grammar' (line 293)
-    Grammar_1300 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 11), 'Grammar', False)
+    Grammar_1303 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 293, 11), 'Grammar', False)
     # Calling Grammar(args, kwargs) (line 293)
-    Grammar_call_result_1309 = invoke(stypy.reporting.localization.Localization(__file__, 293, 11), Grammar_1300, *[unary_1301, lbinary_1302, rbinary_1303, lexical_1304, bylhs_1305, toid_1306, tolabel_1307], **kwargs_1308)
+    Grammar_call_result_1312 = invoke(stypy.reporting.localization.Localization(__file__, 293, 11), Grammar_1303, *[unary_1304, lbinary_1305, rbinary_1306, lexical_1307, bylhs_1308, toid_1309, tolabel_1310], **kwargs_1311)
     
     # Assigning a type to the variable 'stypy_return_type' (line 293)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 293, 4), 'stypy_return_type', Grammar_call_result_1309)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 293, 4), 'stypy_return_type', Grammar_call_result_1312)
     
     # ################# End of 'splitgrammar(...)' code ##################
 
@@ -6769,14 +6806,14 @@ def splitgrammar(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'splitgrammar' in the type store
     # Getting the type of 'stypy_return_type' (line 250)
-    stypy_return_type_1310 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 250, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_1310)
+    stypy_return_type_1313 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 250, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_1313)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'splitgrammar'
-    return stypy_return_type_1310
+    return stypy_return_type_1313
 
 # Assigning a type to the variable 'splitgrammar' (line 250)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 250, 0), 'splitgrammar', splitgrammar)
@@ -6817,54 +6854,57 @@ def yfarray(localization, *varargs, **kwargs):
     
     # ################# Begin of 'yfarray(...)' code ##################
 
-    str_1311 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 298, (-1)), 'str', ' convert a yield function represented as a 2D sequence to an array\n    object. ')
+    str_1314 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 298, (-1)), 'str', ' convert a yield function represented as a 2D sequence to an array\n    object. ')
     
     # Assigning a Str to a Name (line 300):
     
     # Assigning a Str to a Name (line 300):
-    str_1312 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 300, 14), 'str', 'I')
+    str_1315 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 300, 14), 'str', 'I')
     # Assigning a type to the variable 'vectype' (line 300)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 300, 4), 'vectype', str_1312)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 300, 4), 'vectype', str_1315)
     
     # Assigning a Num to a Name (line 301):
     
     # Assigning a Num to a Name (line 301):
-    int_1313 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 301, 14), 'int')
+    int_1316 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 301, 14), 'int')
     # Assigning a type to the variable 'vecsize' (line 301)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 301, 4), 'vecsize', int_1313)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 301, 4), 'vecsize', int_1316)
     
     # Assigning a Str to a Name (line 302):
     
     # Assigning a Str to a Name (line 302):
-    str_1314 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 302, 14), 'str', 'H')
+    str_1317 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 302, 14), 'str', 'H')
     # Assigning a type to the variable 'lentype' (line 302)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 302, 4), 'lentype', str_1314)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 302, 4), 'lentype', str_1317)
     
     # Assigning a Num to a Name (line 303):
     
     # Assigning a Num to a Name (line 303):
-    int_1315 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 303, 14), 'int')
+    int_1318 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 303, 14), 'int')
     # Assigning a type to the variable 'lensize' (line 303)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 303, 4), 'lensize', int_1315)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 303, 4), 'lensize', int_1318)
     # Evaluating assert statement condition
     
     
     # Call to len(...): (line 304)
     # Processing the call arguments (line 304)
     # Getting the type of 'yf' (line 304)
-    yf_1317 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 304, 15), 'yf', False)
+    yf_1320 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 304, 15), 'yf', False)
     # Processing the call keyword arguments (line 304)
-    kwargs_1318 = {}
+    kwargs_1321 = {}
     # Getting the type of 'len' (line 304)
-    len_1316 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 304, 11), 'len', False)
+    len_1319 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 304, 11), 'len', False)
     # Calling len(args, kwargs) (line 304)
-    len_call_result_1319 = invoke(stypy.reporting.localization.Localization(__file__, 304, 11), len_1316, *[yf_1317], **kwargs_1318)
+    len_call_result_1322 = invoke(stypy.reporting.localization.Localization(__file__, 304, 11), len_1319, *[yf_1320], **kwargs_1321)
     
     # Getting the type of 'lensize' (line 304)
-    lensize_1320 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 304, 22), 'lensize')
+    lensize_1323 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 304, 22), 'lensize')
     # Applying the binary operator '<=' (line 304)
-    result_le_1321 = python_operator(stypy.reporting.localization.Localization(__file__, 304, 11), '<=', len_call_result_1319, lensize_1320)
+    result_le_1324 = python_operator(stypy.reporting.localization.Localization(__file__, 304, 11), '<=', len_call_result_1322, lensize_1323)
     
+    assert_1325 = result_le_1324
+    # Assigning a type to the variable 'assert_1325' (line 304)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 304, 4), 'assert_1325', result_le_1324)
     # Evaluating assert statement condition
     
     # Call to all(...): (line 305)
@@ -6873,39 +6913,42 @@ def yfarray(localization, *varargs, **kwargs):
     module_type_store = module_type_store.open_function_context('list comprehension expression', 305, 15, True)
     # Calculating comprehension expression
     # Getting the type of 'yf' (line 305)
-    yf_1329 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 42), 'yf', False)
-    comprehension_1330 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 305, 15), yf_1329)
+    yf_1333 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 42), 'yf', False)
+    comprehension_1334 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 305, 15), yf_1333)
     # Assigning a type to the variable 'a' (line 305)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 305, 15), 'a', comprehension_1330)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 305, 15), 'a', comprehension_1334)
     
     
     # Call to len(...): (line 305)
     # Processing the call arguments (line 305)
     # Getting the type of 'a' (line 305)
-    a_1324 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 19), 'a', False)
+    a_1328 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 19), 'a', False)
     # Processing the call keyword arguments (line 305)
-    kwargs_1325 = {}
+    kwargs_1329 = {}
     # Getting the type of 'len' (line 305)
-    len_1323 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 15), 'len', False)
+    len_1327 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 15), 'len', False)
     # Calling len(args, kwargs) (line 305)
-    len_call_result_1326 = invoke(stypy.reporting.localization.Localization(__file__, 305, 15), len_1323, *[a_1324], **kwargs_1325)
+    len_call_result_1330 = invoke(stypy.reporting.localization.Localization(__file__, 305, 15), len_1327, *[a_1328], **kwargs_1329)
     
     # Getting the type of 'vecsize' (line 305)
-    vecsize_1327 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 25), 'vecsize', False)
+    vecsize_1331 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 25), 'vecsize', False)
     # Applying the binary operator '<=' (line 305)
-    result_le_1328 = python_operator(stypy.reporting.localization.Localization(__file__, 305, 15), '<=', len_call_result_1326, vecsize_1327)
+    result_le_1332 = python_operator(stypy.reporting.localization.Localization(__file__, 305, 15), '<=', len_call_result_1330, vecsize_1331)
     
-    list_1331 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 305, 15), 'list')
+    list_1335 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 305, 15), 'list')
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
-    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 305, 15), list_1331, result_le_1328)
+    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 305, 15), list_1335, result_le_1332)
     # Processing the call keyword arguments (line 305)
-    kwargs_1332 = {}
+    kwargs_1336 = {}
     # Getting the type of 'all' (line 305)
-    all_1322 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 11), 'all', False)
+    all_1326 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 305, 11), 'all', False)
     # Calling all(args, kwargs) (line 305)
-    all_call_result_1333 = invoke(stypy.reporting.localization.Localization(__file__, 305, 11), all_1322, *[list_1331], **kwargs_1332)
+    all_call_result_1337 = invoke(stypy.reporting.localization.Localization(__file__, 305, 11), all_1326, *[list_1335], **kwargs_1336)
     
+    assert_1338 = all_call_result_1337
+    # Assigning a type to the variable 'assert_1338' (line 305)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 305, 4), 'assert_1338', all_call_result_1337)
     
     # Assigning a ListComp to a Name (line 306):
     
@@ -6913,10 +6956,10 @@ def yfarray(localization, *varargs, **kwargs):
     # Calculating list comprehension
     # Calculating comprehension expression
     # Getting the type of 'yf' (line 306)
-    yf_1347 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 70), 'yf')
-    comprehension_1348 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 19), yf_1347)
+    yf_1352 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 70), 'yf')
+    comprehension_1353 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 19), yf_1352)
     # Assigning a type to the variable 'a' (line 306)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 19), 'a', comprehension_1348)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 19), 'a', comprehension_1353)
     
     # Call to sum(...): (line 306)
     # Processing the call arguments (line 306)
@@ -6927,42 +6970,42 @@ def yfarray(localization, *varargs, **kwargs):
     # Call to enumerate(...): (line 306)
     # Processing the call arguments (line 306)
     # Getting the type of 'a' (line 306)
-    a_1340 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 52), 'a', False)
+    a_1345 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 52), 'a', False)
     # Processing the call keyword arguments (line 306)
-    kwargs_1341 = {}
+    kwargs_1346 = {}
     # Getting the type of 'enumerate' (line 306)
-    enumerate_1339 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 42), 'enumerate', False)
+    enumerate_1344 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 42), 'enumerate', False)
     # Calling enumerate(args, kwargs) (line 306)
-    enumerate_call_result_1342 = invoke(stypy.reporting.localization.Localization(__file__, 306, 42), enumerate_1339, *[a_1340], **kwargs_1341)
+    enumerate_call_result_1347 = invoke(stypy.reporting.localization.Localization(__file__, 306, 42), enumerate_1344, *[a_1345], **kwargs_1346)
     
-    comprehension_1343 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 23), enumerate_call_result_1342)
+    comprehension_1348 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 23), enumerate_call_result_1347)
     # Assigning a type to the variable 'n' (line 306)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 23), 'n', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 23), comprehension_1343))
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 23), 'n', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 23), comprehension_1348))
     # Assigning a type to the variable 'b' (line 306)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 23), 'b', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 23), comprehension_1343))
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 23), 'b', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 23), comprehension_1348))
     # Getting the type of 'b' (line 306)
-    b_1338 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 58), 'b', False)
-    int_1335 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 306, 23), 'int')
+    b_1343 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 58), 'b', False)
+    int_1340 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 306, 23), 'int')
     # Getting the type of 'n' (line 306)
-    n_1336 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 28), 'n', False)
+    n_1341 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 28), 'n', False)
     # Applying the binary operator '<<' (line 306)
-    result_lshift_1337 = python_operator(stypy.reporting.localization.Localization(__file__, 306, 23), '<<', int_1335, n_1336)
+    result_lshift_1342 = python_operator(stypy.reporting.localization.Localization(__file__, 306, 23), '<<', int_1340, n_1341)
     
-    list_1344 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 306, 23), 'list')
+    list_1349 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 306, 23), 'list')
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
-    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 23), list_1344, result_lshift_1337)
+    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 23), list_1349, result_lshift_1342)
     # Processing the call keyword arguments (line 306)
-    kwargs_1345 = {}
+    kwargs_1350 = {}
     # Getting the type of 'sum' (line 306)
-    sum_1334 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 19), 'sum', False)
+    sum_1339 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 306, 19), 'sum', False)
     # Calling sum(args, kwargs) (line 306)
-    sum_call_result_1346 = invoke(stypy.reporting.localization.Localization(__file__, 306, 19), sum_1334, *[list_1344], **kwargs_1345)
+    sum_call_result_1351 = invoke(stypy.reporting.localization.Localization(__file__, 306, 19), sum_1339, *[list_1349], **kwargs_1350)
     
-    list_1349 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 306, 19), 'list')
-    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 19), list_1349, sum_call_result_1346)
+    list_1354 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 306, 19), 'list')
+    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 306, 19), list_1354, sum_call_result_1351)
     # Assigning a type to the variable 'initializer' (line 306)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 4), 'initializer', list_1349)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 306, 4), 'initializer', list_1354)
     
     # Assigning a Call to a Name (line 307):
     
@@ -6970,18 +7013,18 @@ def yfarray(localization, *varargs, **kwargs):
     
     # Call to array(...): (line 307)
     # Processing the call arguments (line 307)
-    str_1351 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 307, 17), 'str', 'I')
+    str_1356 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 307, 17), 'str', 'I')
     # Getting the type of 'initializer' (line 307)
-    initializer_1352 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 307, 22), 'initializer', False)
+    initializer_1357 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 307, 22), 'initializer', False)
     # Processing the call keyword arguments (line 307)
-    kwargs_1353 = {}
+    kwargs_1358 = {}
     # Getting the type of 'array' (line 307)
-    array_1350 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 307, 11), 'array', False)
+    array_1355 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 307, 11), 'array', False)
     # Calling array(args, kwargs) (line 307)
-    array_call_result_1354 = invoke(stypy.reporting.localization.Localization(__file__, 307, 11), array_1350, *[str_1351, initializer_1352], **kwargs_1353)
+    array_call_result_1359 = invoke(stypy.reporting.localization.Localization(__file__, 307, 11), array_1355, *[str_1356, initializer_1357], **kwargs_1358)
     
     # Assigning a type to the variable 'args' (line 307)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 307, 4), 'args', array_call_result_1354)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 307, 4), 'args', array_call_result_1359)
     
     # Assigning a Call to a Name (line 308):
     
@@ -6989,45 +7032,45 @@ def yfarray(localization, *varargs, **kwargs):
     
     # Call to array(...): (line 308)
     # Processing the call arguments (line 308)
-    str_1356 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 308, 20), 'str', 'H')
+    str_1361 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 308, 20), 'str', 'H')
     
     # Call to map(...): (line 308)
     # Processing the call arguments (line 308)
     # Getting the type of 'len' (line 308)
-    len_1358 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 29), 'len', False)
+    len_1363 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 29), 'len', False)
     # Getting the type of 'yf' (line 308)
-    yf_1359 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 34), 'yf', False)
+    yf_1364 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 34), 'yf', False)
     # Processing the call keyword arguments (line 308)
-    kwargs_1360 = {}
+    kwargs_1365 = {}
     # Getting the type of 'map' (line 308)
-    map_1357 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 25), 'map', False)
+    map_1362 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 25), 'map', False)
     # Calling map(args, kwargs) (line 308)
-    map_call_result_1361 = invoke(stypy.reporting.localization.Localization(__file__, 308, 25), map_1357, *[len_1358, yf_1359], **kwargs_1360)
+    map_call_result_1366 = invoke(stypy.reporting.localization.Localization(__file__, 308, 25), map_1362, *[len_1363, yf_1364], **kwargs_1365)
     
     # Processing the call keyword arguments (line 308)
-    kwargs_1362 = {}
+    kwargs_1367 = {}
     # Getting the type of 'array' (line 308)
-    array_1355 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 14), 'array', False)
+    array_1360 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 308, 14), 'array', False)
     # Calling array(args, kwargs) (line 308)
-    array_call_result_1363 = invoke(stypy.reporting.localization.Localization(__file__, 308, 14), array_1355, *[str_1356, map_call_result_1361], **kwargs_1362)
+    array_call_result_1368 = invoke(stypy.reporting.localization.Localization(__file__, 308, 14), array_1360, *[str_1361, map_call_result_1366], **kwargs_1367)
     
     # Assigning a type to the variable 'lengths' (line 308)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 308, 4), 'lengths', array_call_result_1363)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 308, 4), 'lengths', array_call_result_1368)
     
     # Obtaining an instance of the builtin type 'tuple' (line 309)
-    tuple_1364 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 309, 11), 'tuple')
+    tuple_1369 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 309, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 309)
     # Adding element type (line 309)
     # Getting the type of 'args' (line 309)
-    args_1365 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 309, 11), 'args')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 309, 11), tuple_1364, args_1365)
+    args_1370 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 309, 11), 'args')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 309, 11), tuple_1369, args_1370)
     # Adding element type (line 309)
     # Getting the type of 'lengths' (line 309)
-    lengths_1366 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 309, 17), 'lengths')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 309, 11), tuple_1364, lengths_1366)
+    lengths_1371 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 309, 17), 'lengths')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 309, 11), tuple_1369, lengths_1371)
     
     # Assigning a type to the variable 'stypy_return_type' (line 309)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 309, 4), 'stypy_return_type', tuple_1364)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 309, 4), 'stypy_return_type', tuple_1369)
     
     # ################# End of 'yfarray(...)' code ##################
 
@@ -7036,14 +7079,14 @@ def yfarray(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'yfarray' in the type store
     # Getting the type of 'stypy_return_type' (line 296)
-    stypy_return_type_1367 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 296, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_1367)
+    stypy_return_type_1372 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 296, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_1372)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'yfarray'
-    return stypy_return_type_1367
+    return stypy_return_type_1372
 
 # Assigning a type to the variable 'yfarray' (line 296)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 296, 0), 'yfarray', yfarray)
@@ -7094,21 +7137,21 @@ def arraytoyf(localization, *varargs, **kwargs):
     # Call to zip(...): (line 314)
     # Processing the call arguments (line 314)
     # Getting the type of 'lengths' (line 314)
-    lengths_1387 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 314, 33), 'lengths', False)
+    lengths_1392 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 314, 33), 'lengths', False)
     # Getting the type of 'args' (line 314)
-    args_1388 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 314, 42), 'args', False)
+    args_1393 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 314, 42), 'args', False)
     # Processing the call keyword arguments (line 314)
-    kwargs_1389 = {}
+    kwargs_1394 = {}
     # Getting the type of 'zip' (line 314)
-    zip_1386 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 314, 29), 'zip', False)
+    zip_1391 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 314, 29), 'zip', False)
     # Calling zip(args, kwargs) (line 314)
-    zip_call_result_1390 = invoke(stypy.reporting.localization.Localization(__file__, 314, 29), zip_1386, *[lengths_1387, args_1388], **kwargs_1389)
+    zip_call_result_1395 = invoke(stypy.reporting.localization.Localization(__file__, 314, 29), zip_1391, *[lengths_1392, args_1393], **kwargs_1394)
     
-    comprehension_1391 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 17), zip_call_result_1390)
+    comprehension_1396 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 17), zip_call_result_1395)
     # Assigning a type to the variable 'n' (line 313)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 313, 17), 'n', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 17), comprehension_1391))
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 313, 17), 'n', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 17), comprehension_1396))
     # Assigning a type to the variable 'a' (line 313)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 313, 17), 'a', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 17), comprehension_1391))
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 313, 17), 'a', get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 17), comprehension_1396))
     
     # Call to tuple(...): (line 313)
     # Processing the call arguments (line 313)
@@ -7119,65 +7162,65 @@ def arraytoyf(localization, *varargs, **kwargs):
     # Call to range(...): (line 313)
     # Processing the call arguments (line 313)
     # Getting the type of 'n' (line 313)
-    n_1379 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 63), 'n', False)
+    n_1384 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 63), 'n', False)
     # Processing the call keyword arguments (line 313)
-    kwargs_1380 = {}
+    kwargs_1385 = {}
     # Getting the type of 'range' (line 313)
-    range_1378 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 57), 'range', False)
+    range_1383 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 57), 'range', False)
     # Calling range(args, kwargs) (line 313)
-    range_call_result_1381 = invoke(stypy.reporting.localization.Localization(__file__, 313, 57), range_1378, *[n_1379], **kwargs_1380)
+    range_call_result_1386 = invoke(stypy.reporting.localization.Localization(__file__, 313, 57), range_1383, *[n_1384], **kwargs_1385)
     
-    comprehension_1382 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 23), range_call_result_1381)
+    comprehension_1387 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 23), range_call_result_1386)
     # Assigning a type to the variable 'm' (line 313)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 313, 23), 'm', comprehension_1382)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 313, 23), 'm', comprehension_1387)
     
     # Getting the type of 'a' (line 313)
-    a_1370 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 28), 'a', False)
-    int_1371 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 33), 'int')
+    a_1375 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 28), 'a', False)
+    int_1376 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 33), 'int')
     # Getting the type of 'm' (line 313)
-    m_1372 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 38), 'm', False)
+    m_1377 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 38), 'm', False)
     # Applying the binary operator '<<' (line 313)
-    result_lshift_1373 = python_operator(stypy.reporting.localization.Localization(__file__, 313, 33), '<<', int_1371, m_1372)
+    result_lshift_1378 = python_operator(stypy.reporting.localization.Localization(__file__, 313, 33), '<<', int_1376, m_1377)
     
     # Applying the binary operator '&' (line 313)
-    result_and__1374 = python_operator(stypy.reporting.localization.Localization(__file__, 313, 28), '&', a_1370, result_lshift_1373)
+    result_and__1379 = python_operator(stypy.reporting.localization.Localization(__file__, 313, 28), '&', a_1375, result_lshift_1378)
     
     # Testing the type of an if expression (line 313)
-    is_suitable_condition(stypy.reporting.localization.Localization(__file__, 313, 23), result_and__1374)
+    is_suitable_condition(stypy.reporting.localization.Localization(__file__, 313, 23), result_and__1379)
     # SSA begins for if expression (line 313)
     module_type_store = SSAContext.create_ssa_context(module_type_store, 'if expression')
-    int_1375 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 23), 'int')
+    int_1380 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 23), 'int')
     # SSA branch for the else part of an if expression (line 313)
     module_type_store.open_ssa_branch('if expression else')
-    int_1376 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 46), 'int')
+    int_1381 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 46), 'int')
     # SSA join for if expression (line 313)
     module_type_store = module_type_store.join_ssa_context()
-    if_exp_1377 = union_type.UnionType.add(int_1375, int_1376)
+    if_exp_1382 = union_type.UnionType.add(int_1380, int_1381)
     
-    list_1383 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 23), 'list')
+    list_1388 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 23), 'list')
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
-    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 23), list_1383, if_exp_1377)
+    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 23), list_1388, if_exp_1382)
     # Processing the call keyword arguments (line 313)
-    kwargs_1384 = {}
+    kwargs_1389 = {}
     # Getting the type of 'tuple' (line 313)
-    tuple_1369 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 17), 'tuple', False)
+    tuple_1374 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 17), 'tuple', False)
     # Calling tuple(args, kwargs) (line 313)
-    tuple_call_result_1385 = invoke(stypy.reporting.localization.Localization(__file__, 313, 17), tuple_1369, *[list_1383], **kwargs_1384)
+    tuple_call_result_1390 = invoke(stypy.reporting.localization.Localization(__file__, 313, 17), tuple_1374, *[list_1388], **kwargs_1389)
     
-    list_1392 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 17), 'list')
+    list_1397 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 313, 17), 'list')
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
-    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 17), list_1392, tuple_call_result_1385)
+    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 313, 17), list_1397, tuple_call_result_1390)
     # Processing the call keyword arguments (line 313)
-    kwargs_1393 = {}
+    kwargs_1398 = {}
     # Getting the type of 'tuple' (line 313)
-    tuple_1368 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 11), 'tuple', False)
+    tuple_1373 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 313, 11), 'tuple', False)
     # Calling tuple(args, kwargs) (line 313)
-    tuple_call_result_1394 = invoke(stypy.reporting.localization.Localization(__file__, 313, 11), tuple_1368, *[list_1392], **kwargs_1393)
+    tuple_call_result_1399 = invoke(stypy.reporting.localization.Localization(__file__, 313, 11), tuple_1373, *[list_1397], **kwargs_1398)
     
     # Assigning a type to the variable 'stypy_return_type' (line 313)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 313, 4), 'stypy_return_type', tuple_call_result_1394)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 313, 4), 'stypy_return_type', tuple_call_result_1399)
     
     # ################# End of 'arraytoyf(...)' code ##################
 
@@ -7186,14 +7229,14 @@ def arraytoyf(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'arraytoyf' in the type store
     # Getting the type of 'stypy_return_type' (line 312)
-    stypy_return_type_1395 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 312, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_1395)
+    stypy_return_type_1400 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 312, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_1400)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'arraytoyf'
-    return stypy_return_type_1395
+    return stypy_return_type_1400
 
 # Assigning a type to the variable 'arraytoyf' (line 312)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 312, 0), 'arraytoyf', arraytoyf)
@@ -7234,82 +7277,84 @@ def nextset(localization, *varargs, **kwargs):
     
     # ################# Begin of 'nextset(...)' code ##################
 
-    str_1396 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 319, 4), 'str', ' First set bit, starting from pos ')
+    str_1401 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 319, 4), 'str', ' First set bit, starting from pos ')
     
     # Assigning a Name to a Name (line 320):
     
     # Assigning a Name to a Name (line 320):
     # Getting the type of 'pos' (line 320)
-    pos_1397 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 320, 13), 'pos')
+    pos_1402 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 320, 13), 'pos')
     # Assigning a type to the variable 'result' (line 320)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 320, 4), 'result', pos_1397)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 320, 4), 'result', pos_1402)
     # Getting the type of 'a' (line 321)
-    a_1398 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 321, 7), 'a')
+    a_1403 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 321, 7), 'a')
     # Getting the type of 'result' (line 321)
-    result_1399 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 321, 12), 'result')
+    result_1404 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 321, 12), 'result')
     # Applying the binary operator '>>' (line 321)
-    result_rshift_1400 = python_operator(stypy.reporting.localization.Localization(__file__, 321, 7), '>>', a_1398, result_1399)
+    result_rshift_1405 = python_operator(stypy.reporting.localization.Localization(__file__, 321, 7), '>>', a_1403, result_1404)
     
     # Testing if the type of an if condition is none (line 321)
 
-    if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 321, 4), result_rshift_1400):
+    if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 321, 4), result_rshift_1405):
         pass
     else:
         
         # Testing the type of an if condition (line 321)
-        if_condition_1401 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 321, 4), result_rshift_1400)
-        # Assigning a type to the variable 'if_condition_1401' (line 321)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 321, 4), 'if_condition_1401', if_condition_1401)
+        if_condition_1406 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 321, 4), result_rshift_1405)
+        # Assigning a type to the variable 'if_condition_1406' (line 321)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 321, 4), 'if_condition_1406', if_condition_1406)
         # SSA begins for if statement (line 321)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
         
         
         # Getting the type of 'a' (line 322)
-        a_1402 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 322, 15), 'a')
+        a_1407 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 322, 15), 'a')
         # Getting the type of 'result' (line 322)
-        result_1403 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 322, 20), 'result')
+        result_1408 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 322, 20), 'result')
         # Applying the binary operator '>>' (line 322)
-        result_rshift_1404 = python_operator(stypy.reporting.localization.Localization(__file__, 322, 15), '>>', a_1402, result_1403)
+        result_rshift_1409 = python_operator(stypy.reporting.localization.Localization(__file__, 322, 15), '>>', a_1407, result_1408)
         
-        int_1405 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 322, 30), 'int')
+        int_1410 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 322, 30), 'int')
         # Applying the binary operator '&' (line 322)
-        result_and__1406 = python_operator(stypy.reporting.localization.Localization(__file__, 322, 14), '&', result_rshift_1404, int_1405)
+        result_and__1411 = python_operator(stypy.reporting.localization.Localization(__file__, 322, 14), '&', result_rshift_1409, int_1410)
         
-        int_1407 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 322, 35), 'int')
+        int_1412 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 322, 35), 'int')
         # Applying the binary operator '==' (line 322)
-        result_eq_1408 = python_operator(stypy.reporting.localization.Localization(__file__, 322, 14), '==', result_and__1406, int_1407)
+        result_eq_1413 = python_operator(stypy.reporting.localization.Localization(__file__, 322, 14), '==', result_and__1411, int_1412)
         
+        # Assigning a type to the variable 'result_eq_1413' (line 322)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 322, 8), 'result_eq_1413', result_eq_1413)
         # Testing if the while is going to be iterated (line 322)
         # Testing the type of an if condition (line 322)
-        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 322, 8), result_eq_1408)
+        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 322, 8), result_eq_1413)
 
-        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 322, 8), result_eq_1408):
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 322, 8), result_eq_1413):
             # SSA begins for while statement (line 322)
             module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
             
             # Getting the type of 'result' (line 323)
-            result_1409 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 323, 12), 'result')
-            int_1410 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 323, 22), 'int')
+            result_1414 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 323, 12), 'result')
+            int_1415 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 323, 22), 'int')
             # Applying the binary operator '+=' (line 323)
-            result_iadd_1411 = python_operator(stypy.reporting.localization.Localization(__file__, 323, 12), '+=', result_1409, int_1410)
+            result_iadd_1416 = python_operator(stypy.reporting.localization.Localization(__file__, 323, 12), '+=', result_1414, int_1415)
             # Assigning a type to the variable 'result' (line 323)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 323, 12), 'result', result_iadd_1411)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 323, 12), 'result', result_iadd_1416)
             
             # SSA join for while statement (line 322)
             module_type_store = module_type_store.join_ssa_context()
 
         
         # Getting the type of 'result' (line 324)
-        result_1412 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 324, 15), 'result')
+        result_1417 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 324, 15), 'result')
         # Assigning a type to the variable 'stypy_return_type' (line 324)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 324, 8), 'stypy_return_type', result_1412)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 324, 8), 'stypy_return_type', result_1417)
         # SSA join for if statement (line 321)
         module_type_store = module_type_store.join_ssa_context()
         
 
-    int_1413 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 325, 11), 'int')
+    int_1418 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 325, 11), 'int')
     # Assigning a type to the variable 'stypy_return_type' (line 325)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 325, 4), 'stypy_return_type', int_1413)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 325, 4), 'stypy_return_type', int_1418)
     
     # ################# End of 'nextset(...)' code ##################
 
@@ -7318,14 +7363,14 @@ def nextset(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'nextset' in the type store
     # Getting the type of 'stypy_return_type' (line 318)
-    stypy_return_type_1414 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 318, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_1414)
+    stypy_return_type_1419 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 318, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_1419)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'nextset'
-    return stypy_return_type_1414
+    return stypy_return_type_1419
 
 # Assigning a type to the variable 'nextset' (line 318)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 318, 0), 'nextset', nextset)
@@ -7366,51 +7411,53 @@ def nextunset(localization, *varargs, **kwargs):
     
     # ################# Begin of 'nextunset(...)' code ##################
 
-    str_1415 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 329, 4), 'str', ' First unset bit, starting from pos ')
+    str_1420 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 329, 4), 'str', ' First unset bit, starting from pos ')
     
     # Assigning a Name to a Name (line 330):
     
     # Assigning a Name to a Name (line 330):
     # Getting the type of 'pos' (line 330)
-    pos_1416 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 330, 13), 'pos')
+    pos_1421 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 330, 13), 'pos')
     # Assigning a type to the variable 'result' (line 330)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 330, 4), 'result', pos_1416)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 330, 4), 'result', pos_1421)
     
     # Getting the type of 'a' (line 331)
-    a_1417 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 331, 11), 'a')
+    a_1422 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 331, 11), 'a')
     # Getting the type of 'result' (line 331)
-    result_1418 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 331, 16), 'result')
+    result_1423 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 331, 16), 'result')
     # Applying the binary operator '>>' (line 331)
-    result_rshift_1419 = python_operator(stypy.reporting.localization.Localization(__file__, 331, 11), '>>', a_1417, result_1418)
+    result_rshift_1424 = python_operator(stypy.reporting.localization.Localization(__file__, 331, 11), '>>', a_1422, result_1423)
     
-    int_1420 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 331, 26), 'int')
+    int_1425 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 331, 26), 'int')
     # Applying the binary operator '&' (line 331)
-    result_and__1421 = python_operator(stypy.reporting.localization.Localization(__file__, 331, 10), '&', result_rshift_1419, int_1420)
+    result_and__1426 = python_operator(stypy.reporting.localization.Localization(__file__, 331, 10), '&', result_rshift_1424, int_1425)
     
+    # Assigning a type to the variable 'result_and__1426' (line 331)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 331, 4), 'result_and__1426', result_and__1426)
     # Testing if the while is going to be iterated (line 331)
     # Testing the type of an if condition (line 331)
-    is_suitable_condition(stypy.reporting.localization.Localization(__file__, 331, 4), result_and__1421)
+    is_suitable_condition(stypy.reporting.localization.Localization(__file__, 331, 4), result_and__1426)
 
-    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 331, 4), result_and__1421):
+    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 331, 4), result_and__1426):
         # SSA begins for while statement (line 331)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
         
         # Getting the type of 'result' (line 332)
-        result_1422 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 332, 8), 'result')
-        int_1423 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 332, 18), 'int')
+        result_1427 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 332, 8), 'result')
+        int_1428 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 332, 18), 'int')
         # Applying the binary operator '+=' (line 332)
-        result_iadd_1424 = python_operator(stypy.reporting.localization.Localization(__file__, 332, 8), '+=', result_1422, int_1423)
+        result_iadd_1429 = python_operator(stypy.reporting.localization.Localization(__file__, 332, 8), '+=', result_1427, int_1428)
         # Assigning a type to the variable 'result' (line 332)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 332, 8), 'result', result_iadd_1424)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 332, 8), 'result', result_iadd_1429)
         
         # SSA join for while statement (line 331)
         module_type_store = module_type_store.join_ssa_context()
 
     
     # Getting the type of 'result' (line 333)
-    result_1425 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 333, 11), 'result')
+    result_1430 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 333, 11), 'result')
     # Assigning a type to the variable 'stypy_return_type' (line 333)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 333, 4), 'stypy_return_type', result_1425)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 333, 4), 'stypy_return_type', result_1430)
     
     # ################# End of 'nextunset(...)' code ##################
 
@@ -7419,14 +7466,14 @@ def nextunset(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'nextunset' in the type store
     # Getting the type of 'stypy_return_type' (line 328)
-    stypy_return_type_1426 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 328, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_1426)
+    stypy_return_type_1431 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 328, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_1431)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'nextunset'
-    return stypy_return_type_1426
+    return stypy_return_type_1431
 
 # Assigning a type to the variable 'nextunset' (line 328)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 328, 0), 'nextunset', nextunset)
@@ -7467,55 +7514,57 @@ def bitcount(localization, *varargs, **kwargs):
     
     # ################# Begin of 'bitcount(...)' code ##################
 
-    str_1427 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 337, 4), 'str', ' Number of set bits (1s) ')
+    str_1432 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 337, 4), 'str', ' Number of set bits (1s) ')
     
     # Assigning a Num to a Name (line 338):
     
     # Assigning a Num to a Name (line 338):
-    int_1428 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 338, 12), 'int')
+    int_1433 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 338, 12), 'int')
     # Assigning a type to the variable 'count' (line 338)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 338, 4), 'count', int_1428)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 338, 4), 'count', int_1433)
     
     # Getting the type of 'a' (line 339)
-    a_1429 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 339, 10), 'a')
+    a_1434 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 339, 10), 'a')
+    # Assigning a type to the variable 'a_1434' (line 339)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 339, 4), 'a_1434', a_1434)
     # Testing if the while is going to be iterated (line 339)
     # Testing the type of an if condition (line 339)
-    is_suitable_condition(stypy.reporting.localization.Localization(__file__, 339, 4), a_1429)
+    is_suitable_condition(stypy.reporting.localization.Localization(__file__, 339, 4), a_1434)
 
-    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 339, 4), a_1429):
+    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 339, 4), a_1434):
         # SSA begins for while statement (line 339)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
         
         # Getting the type of 'a' (line 340)
-        a_1430 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 340, 8), 'a')
+        a_1435 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 340, 8), 'a')
         # Getting the type of 'a' (line 340)
-        a_1431 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 340, 13), 'a')
-        int_1432 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 340, 17), 'int')
+        a_1436 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 340, 13), 'a')
+        int_1437 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 340, 17), 'int')
         # Applying the binary operator '-' (line 340)
-        result_sub_1433 = python_operator(stypy.reporting.localization.Localization(__file__, 340, 13), '-', a_1431, int_1432)
+        result_sub_1438 = python_operator(stypy.reporting.localization.Localization(__file__, 340, 13), '-', a_1436, int_1437)
         
         # Applying the binary operator '&=' (line 340)
-        result_iand_1434 = python_operator(stypy.reporting.localization.Localization(__file__, 340, 8), '&=', a_1430, result_sub_1433)
+        result_iand_1439 = python_operator(stypy.reporting.localization.Localization(__file__, 340, 8), '&=', a_1435, result_sub_1438)
         # Assigning a type to the variable 'a' (line 340)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 340, 8), 'a', result_iand_1434)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 340, 8), 'a', result_iand_1439)
         
         
         # Getting the type of 'count' (line 341)
-        count_1435 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 8), 'count')
-        int_1436 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 341, 17), 'int')
+        count_1440 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 341, 8), 'count')
+        int_1441 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 341, 17), 'int')
         # Applying the binary operator '+=' (line 341)
-        result_iadd_1437 = python_operator(stypy.reporting.localization.Localization(__file__, 341, 8), '+=', count_1435, int_1436)
+        result_iadd_1442 = python_operator(stypy.reporting.localization.Localization(__file__, 341, 8), '+=', count_1440, int_1441)
         # Assigning a type to the variable 'count' (line 341)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 341, 8), 'count', result_iadd_1437)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 341, 8), 'count', result_iadd_1442)
         
         # SSA join for while statement (line 339)
         module_type_store = module_type_store.join_ssa_context()
 
     
     # Getting the type of 'count' (line 342)
-    count_1438 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 342, 11), 'count')
+    count_1443 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 342, 11), 'count')
     # Assigning a type to the variable 'stypy_return_type' (line 342)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 342, 4), 'stypy_return_type', count_1438)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 342, 4), 'stypy_return_type', count_1443)
     
     # ################# End of 'bitcount(...)' code ##################
 
@@ -7524,14 +7573,14 @@ def bitcount(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'bitcount' in the type store
     # Getting the type of 'stypy_return_type' (line 336)
-    stypy_return_type_1439 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 336, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_1439)
+    stypy_return_type_1444 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 336, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_1444)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'bitcount'
-    return stypy_return_type_1439
+    return stypy_return_type_1444
 
 # Assigning a type to the variable 'bitcount' (line 336)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 336, 0), 'bitcount', bitcount)
@@ -7572,20 +7621,20 @@ def testbit(localization, *varargs, **kwargs):
     
     # ################# Begin of 'testbit(...)' code ##################
 
-    str_1440 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 346, 4), 'str', ' Mask a particular bit, return nonzero if set ')
+    str_1445 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 346, 4), 'str', ' Mask a particular bit, return nonzero if set ')
     # Getting the type of 'a' (line 347)
-    a_1441 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 347, 11), 'a')
-    int_1442 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 347, 16), 'int')
+    a_1446 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 347, 11), 'a')
+    int_1447 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 347, 16), 'int')
     # Getting the type of 'offset' (line 347)
-    offset_1443 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 347, 21), 'offset')
+    offset_1448 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 347, 21), 'offset')
     # Applying the binary operator '<<' (line 347)
-    result_lshift_1444 = python_operator(stypy.reporting.localization.Localization(__file__, 347, 16), '<<', int_1442, offset_1443)
+    result_lshift_1449 = python_operator(stypy.reporting.localization.Localization(__file__, 347, 16), '<<', int_1447, offset_1448)
     
     # Applying the binary operator '&' (line 347)
-    result_and__1445 = python_operator(stypy.reporting.localization.Localization(__file__, 347, 11), '&', a_1441, result_lshift_1444)
+    result_and__1450 = python_operator(stypy.reporting.localization.Localization(__file__, 347, 11), '&', a_1446, result_lshift_1449)
     
     # Assigning a type to the variable 'stypy_return_type' (line 347)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 347, 4), 'stypy_return_type', result_and__1445)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 347, 4), 'stypy_return_type', result_and__1450)
     
     # ################# End of 'testbit(...)' code ##################
 
@@ -7594,14 +7643,14 @@ def testbit(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'testbit' in the type store
     # Getting the type of 'stypy_return_type' (line 345)
-    stypy_return_type_1446 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 345, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_1446)
+    stypy_return_type_1451 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 345, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_1451)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'testbit'
-    return stypy_return_type_1446
+    return stypy_return_type_1451
 
 # Assigning a type to the variable 'testbit' (line 345)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 345, 0), 'testbit', testbit)
@@ -7644,71 +7693,71 @@ class Grammar(object, ):
         
         # Assigning a Name to a Attribute (line 356):
         # Getting the type of 'unary' (line 356)
-        unary_1447 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 356, 21), 'unary')
+        unary_1452 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 356, 21), 'unary')
         # Getting the type of 'self' (line 356)
-        self_1448 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 356, 8), 'self')
+        self_1453 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 356, 8), 'self')
         # Setting the type of the member 'unary' of a type (line 356)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 356, 8), self_1448, 'unary', unary_1447)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 356, 8), self_1453, 'unary', unary_1452)
         
         # Assigning a Name to a Attribute (line 357):
         
         # Assigning a Name to a Attribute (line 357):
         # Getting the type of 'lbinary' (line 357)
-        lbinary_1449 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 357, 23), 'lbinary')
+        lbinary_1454 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 357, 23), 'lbinary')
         # Getting the type of 'self' (line 357)
-        self_1450 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 357, 8), 'self')
+        self_1455 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 357, 8), 'self')
         # Setting the type of the member 'lbinary' of a type (line 357)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 357, 8), self_1450, 'lbinary', lbinary_1449)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 357, 8), self_1455, 'lbinary', lbinary_1454)
         
         # Assigning a Name to a Attribute (line 358):
         
         # Assigning a Name to a Attribute (line 358):
         # Getting the type of 'rbinary' (line 358)
-        rbinary_1451 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 358, 23), 'rbinary')
+        rbinary_1456 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 358, 23), 'rbinary')
         # Getting the type of 'self' (line 358)
-        self_1452 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 358, 8), 'self')
+        self_1457 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 358, 8), 'self')
         # Setting the type of the member 'rbinary' of a type (line 358)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 358, 8), self_1452, 'rbinary', rbinary_1451)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 358, 8), self_1457, 'rbinary', rbinary_1456)
         
         # Assigning a Name to a Attribute (line 359):
         
         # Assigning a Name to a Attribute (line 359):
         # Getting the type of 'lexical' (line 359)
-        lexical_1453 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 359, 23), 'lexical')
+        lexical_1458 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 359, 23), 'lexical')
         # Getting the type of 'self' (line 359)
-        self_1454 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 359, 8), 'self')
+        self_1459 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 359, 8), 'self')
         # Setting the type of the member 'lexical' of a type (line 359)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 359, 8), self_1454, 'lexical', lexical_1453)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 359, 8), self_1459, 'lexical', lexical_1458)
         
         # Assigning a Name to a Attribute (line 360):
         
         # Assigning a Name to a Attribute (line 360):
         # Getting the type of 'bylhs' (line 360)
-        bylhs_1455 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 360, 21), 'bylhs')
+        bylhs_1460 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 360, 21), 'bylhs')
         # Getting the type of 'self' (line 360)
-        self_1456 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 360, 8), 'self')
+        self_1461 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 360, 8), 'self')
         # Setting the type of the member 'bylhs' of a type (line 360)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 360, 8), self_1456, 'bylhs', bylhs_1455)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 360, 8), self_1461, 'bylhs', bylhs_1460)
         
         # Assigning a Name to a Attribute (line 361):
         
         # Assigning a Name to a Attribute (line 361):
         # Getting the type of 'toid' (line 361)
-        toid_1457 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 361, 20), 'toid')
+        toid_1462 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 361, 20), 'toid')
         # Getting the type of 'self' (line 361)
-        self_1458 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 361, 8), 'self')
+        self_1463 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 361, 8), 'self')
         # Setting the type of the member 'toid' of a type (line 361)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 361, 8), self_1458, 'toid', toid_1457)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 361, 8), self_1463, 'toid', toid_1462)
         
         # Assigning a Name to a Attribute (line 362):
         
         # Assigning a Name to a Attribute (line 362):
         # Getting the type of 'tolabel' (line 362)
-        tolabel_1459 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 362, 23), 'tolabel')
+        tolabel_1464 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 362, 23), 'tolabel')
         # Getting the type of 'self' (line 362)
-        self_1460 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 362, 8), 'self')
+        self_1465 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 362, 8), 'self')
         # Setting the type of the member 'tolabel' of a type (line 362)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 362, 8), self_1460, 'tolabel', tolabel_1459)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 362, 8), self_1465, 'tolabel', tolabel_1464)
         
         # ################# End of '__init__(...)' code ##################
 
@@ -7724,34 +7773,34 @@ module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__
 # Assigning a Tuple to a Name (line 352):
 
 # Obtaining an instance of the builtin type 'tuple' (line 352)
-tuple_1461 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 17), 'tuple')
+tuple_1466 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 17), 'tuple')
 # Adding type elements to the builtin type 'tuple' instance (line 352)
 # Adding element type (line 352)
-str_1462 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 17), 'str', 'unary')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1461, str_1462)
+str_1467 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 17), 'str', 'unary')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1466, str_1467)
 # Adding element type (line 352)
-str_1463 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 26), 'str', 'lbinary')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1461, str_1463)
+str_1468 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 26), 'str', 'lbinary')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1466, str_1468)
 # Adding element type (line 352)
-str_1464 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 37), 'str', 'rbinary')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1461, str_1464)
+str_1469 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 37), 'str', 'rbinary')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1466, str_1469)
 # Adding element type (line 352)
-str_1465 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 48), 'str', 'lexical')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1461, str_1465)
+str_1470 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 352, 48), 'str', 'lexical')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1466, str_1470)
 # Adding element type (line 352)
-str_1466 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 353, 17), 'str', 'bylhs')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1461, str_1466)
+str_1471 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 353, 17), 'str', 'bylhs')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1466, str_1471)
 # Adding element type (line 352)
-str_1467 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 353, 26), 'str', 'toid')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1461, str_1467)
+str_1472 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 353, 26), 'str', 'toid')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1466, str_1472)
 # Adding element type (line 352)
-str_1468 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 353, 34), 'str', 'tolabel')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1461, str_1468)
+str_1473 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 353, 34), 'str', 'tolabel')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 352, 17), tuple_1466, str_1473)
 
 # Getting the type of 'Grammar'
-Grammar_1469 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Grammar')
+Grammar_1474 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Grammar')
 # Setting the type of the member '__slots__' of a type
-module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Grammar_1469, '__slots__', tuple_1461)
+module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Grammar_1474, '__slots__', tuple_1466)
 # Declaration of the 'ChartItem' class
 
 class ChartItem:
@@ -7791,21 +7840,21 @@ class ChartItem:
         
         # Assigning a Name to a Attribute (line 369):
         # Getting the type of 'label' (line 369)
-        label_1470 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 369, 21), 'label')
+        label_1475 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 369, 21), 'label')
         # Getting the type of 'self' (line 369)
-        self_1471 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 369, 8), 'self')
+        self_1476 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 369, 8), 'self')
         # Setting the type of the member 'label' of a type (line 369)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 369, 8), self_1471, 'label', label_1470)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 369, 8), self_1476, 'label', label_1475)
         
         # Assigning a Name to a Attribute (line 370):
         
         # Assigning a Name to a Attribute (line 370):
         # Getting the type of 'vec' (line 370)
-        vec_1472 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 370, 19), 'vec')
+        vec_1477 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 370, 19), 'vec')
         # Getting the type of 'self' (line 370)
-        self_1473 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 370, 8), 'self')
+        self_1478 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 370, 8), 'self')
         # Setting the type of the member 'vec' of a type (line 370)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 370, 8), self_1473, 'vec', vec_1472)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 370, 8), self_1478, 'vec', vec_1477)
         
         # ################# End of '__init__(...)' code ##################
 
@@ -7858,79 +7907,79 @@ class ChartItem:
         # Assigning a BinOp to a Name (line 376):
         
         # Assigning a BinOp to a Name (line 376):
-        int_1474 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 376, 14), 'int')
-        int_1475 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 376, 22), 'int')
+        int_1479 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 376, 14), 'int')
+        int_1480 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 376, 22), 'int')
         # Applying the binary operator '<<' (line 376)
-        result_lshift_1476 = python_operator(stypy.reporting.localization.Localization(__file__, 376, 14), '<<', int_1474, int_1475)
+        result_lshift_1481 = python_operator(stypy.reporting.localization.Localization(__file__, 376, 14), '<<', int_1479, int_1480)
         
-        int_1477 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 376, 27), 'int')
+        int_1482 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 376, 27), 'int')
         # Applying the binary operator '+' (line 376)
-        result_add_1478 = python_operator(stypy.reporting.localization.Localization(__file__, 376, 13), '+', result_lshift_1476, int_1477)
+        result_add_1483 = python_operator(stypy.reporting.localization.Localization(__file__, 376, 13), '+', result_lshift_1481, int_1482)
         
-        int_1479 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 376, 35), 'int')
+        int_1484 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 376, 35), 'int')
         # Applying the binary operator '*' (line 376)
-        result_mul_1480 = python_operator(stypy.reporting.localization.Localization(__file__, 376, 12), '*', result_add_1478, int_1479)
+        result_mul_1485 = python_operator(stypy.reporting.localization.Localization(__file__, 376, 12), '*', result_add_1483, int_1484)
         
         # Getting the type of 'self' (line 376)
-        self_1481 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 376, 40), 'self')
+        self_1486 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 376, 40), 'self')
         # Obtaining the member 'label' of a type (line 376)
-        label_1482 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 376, 40), self_1481, 'label')
+        label_1487 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 376, 40), self_1486, 'label')
         # Applying the binary operator '^' (line 376)
-        result_xor_1483 = python_operator(stypy.reporting.localization.Localization(__file__, 376, 12), '^', result_mul_1480, label_1482)
+        result_xor_1488 = python_operator(stypy.reporting.localization.Localization(__file__, 376, 12), '^', result_mul_1485, label_1487)
         
         # Assigning a type to the variable 'h' (line 376)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 376, 8), 'h', result_xor_1483)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 376, 8), 'h', result_xor_1488)
         
         # Assigning a BinOp to a Name (line 377):
         
         # Assigning a BinOp to a Name (line 377):
         # Getting the type of 'h' (line 377)
-        h_1484 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 377, 14), 'h')
-        int_1485 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 377, 19), 'int')
+        h_1489 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 377, 14), 'h')
+        int_1490 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 377, 19), 'int')
         # Applying the binary operator '<<' (line 377)
-        result_lshift_1486 = python_operator(stypy.reporting.localization.Localization(__file__, 377, 14), '<<', h_1484, int_1485)
+        result_lshift_1491 = python_operator(stypy.reporting.localization.Localization(__file__, 377, 14), '<<', h_1489, int_1490)
         
         # Getting the type of 'h' (line 377)
-        h_1487 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 377, 24), 'h')
+        h_1492 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 377, 24), 'h')
         # Applying the binary operator '+' (line 377)
-        result_add_1488 = python_operator(stypy.reporting.localization.Localization(__file__, 377, 13), '+', result_lshift_1486, h_1487)
+        result_add_1493 = python_operator(stypy.reporting.localization.Localization(__file__, 377, 13), '+', result_lshift_1491, h_1492)
         
-        int_1489 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 377, 29), 'int')
+        int_1494 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 377, 29), 'int')
         # Applying the binary operator '*' (line 377)
-        result_mul_1490 = python_operator(stypy.reporting.localization.Localization(__file__, 377, 12), '*', result_add_1488, int_1489)
+        result_mul_1495 = python_operator(stypy.reporting.localization.Localization(__file__, 377, 12), '*', result_add_1493, int_1494)
         
         # Getting the type of 'self' (line 377)
-        self_1491 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 377, 34), 'self')
+        self_1496 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 377, 34), 'self')
         # Obtaining the member 'vec' of a type (line 377)
-        vec_1492 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 377, 34), self_1491, 'vec')
+        vec_1497 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 377, 34), self_1496, 'vec')
         # Applying the binary operator '^' (line 377)
-        result_xor_1493 = python_operator(stypy.reporting.localization.Localization(__file__, 377, 12), '^', result_mul_1490, vec_1492)
+        result_xor_1498 = python_operator(stypy.reporting.localization.Localization(__file__, 377, 12), '^', result_mul_1495, vec_1497)
         
         # Assigning a type to the variable 'h' (line 377)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 377, 8), 'h', result_xor_1493)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 377, 8), 'h', result_xor_1498)
         
         
         # Getting the type of 'h' (line 378)
-        h_1494 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 378, 21), 'h')
-        int_1495 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 378, 26), 'int')
+        h_1499 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 378, 21), 'h')
+        int_1500 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 378, 26), 'int')
         # Applying the binary operator '==' (line 378)
-        result_eq_1496 = python_operator(stypy.reporting.localization.Localization(__file__, 378, 21), '==', h_1494, int_1495)
+        result_eq_1501 = python_operator(stypy.reporting.localization.Localization(__file__, 378, 21), '==', h_1499, int_1500)
         
         # Testing the type of an if expression (line 378)
-        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 378, 15), result_eq_1496)
+        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 378, 15), result_eq_1501)
         # SSA begins for if expression (line 378)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'if expression')
-        int_1497 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 378, 15), 'int')
+        int_1502 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 378, 15), 'int')
         # SSA branch for the else part of an if expression (line 378)
         module_type_store.open_ssa_branch('if expression else')
         # Getting the type of 'h' (line 378)
-        h_1498 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 378, 34), 'h')
+        h_1503 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 378, 34), 'h')
         # SSA join for if expression (line 378)
         module_type_store = module_type_store.join_ssa_context()
-        if_exp_1499 = union_type.UnionType.add(int_1497, h_1498)
+        if_exp_1504 = union_type.UnionType.add(int_1502, h_1503)
         
         # Assigning a type to the variable 'stypy_return_type' (line 378)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 378, 8), 'stypy_return_type', if_exp_1499)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 378, 8), 'stypy_return_type', if_exp_1504)
         
         # ################# End of '__hash__(...)' code ##################
 
@@ -7939,14 +7988,14 @@ class ChartItem:
         
         # Storing the return type of function '__hash__' in the type store
         # Getting the type of 'stypy_return_type' (line 372)
-        stypy_return_type_1500 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 372, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1500)
+        stypy_return_type_1505 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 372, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1505)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__hash__'
-        return stypy_return_type_1500
+        return stypy_return_type_1505
 
 
     @norecursion
@@ -7991,26 +8040,26 @@ class ChartItem:
         
         # Type idiom detected: calculating its left and rigth part (line 381)
         # Getting the type of 'other' (line 381)
-        other_1501 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 381, 11), 'other')
+        other_1506 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 381, 11), 'other')
         # Getting the type of 'None' (line 381)
-        None_1502 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 381, 20), 'None')
+        None_1507 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 381, 20), 'None')
         
-        (may_be_1503, more_types_in_union_1504) = may_be_none(other_1501, None_1502)
+        (may_be_1508, more_types_in_union_1509) = may_be_none(other_1506, None_1507)
 
-        if may_be_1503:
+        if may_be_1508:
 
-            if more_types_in_union_1504:
+            if more_types_in_union_1509:
                 # Runtime conditional SSA (line 381)
                 module_type_store = SSAContext.create_ssa_context(module_type_store, 'idiom if')
             else:
                 module_type_store = module_type_store
 
             # Getting the type of 'False' (line 381)
-            False_1505 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 381, 33), 'False')
+            False_1510 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 381, 33), 'False')
             # Assigning a type to the variable 'stypy_return_type' (line 381)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 381, 26), 'stypy_return_type', False_1505)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 381, 26), 'stypy_return_type', False_1510)
 
-            if more_types_in_union_1504:
+            if more_types_in_union_1509:
                 # SSA join for if statement (line 381)
                 module_type_store = module_type_store.join_ssa_context()
 
@@ -8020,33 +8069,33 @@ class ChartItem:
         # Evaluating a boolean operation
         
         # Getting the type of 'self' (line 382)
-        self_1506 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 382, 15), 'self')
+        self_1511 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 382, 15), 'self')
         # Obtaining the member 'label' of a type (line 382)
-        label_1507 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 382, 15), self_1506, 'label')
+        label_1512 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 382, 15), self_1511, 'label')
         # Getting the type of 'other' (line 382)
-        other_1508 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 382, 29), 'other')
+        other_1513 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 382, 29), 'other')
         # Obtaining the member 'label' of a type (line 382)
-        label_1509 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 382, 29), other_1508, 'label')
+        label_1514 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 382, 29), other_1513, 'label')
         # Applying the binary operator '==' (line 382)
-        result_eq_1510 = python_operator(stypy.reporting.localization.Localization(__file__, 382, 15), '==', label_1507, label_1509)
+        result_eq_1515 = python_operator(stypy.reporting.localization.Localization(__file__, 382, 15), '==', label_1512, label_1514)
         
         
         # Getting the type of 'self' (line 382)
-        self_1511 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 382, 45), 'self')
+        self_1516 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 382, 45), 'self')
         # Obtaining the member 'vec' of a type (line 382)
-        vec_1512 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 382, 45), self_1511, 'vec')
+        vec_1517 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 382, 45), self_1516, 'vec')
         # Getting the type of 'other' (line 382)
-        other_1513 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 382, 57), 'other')
+        other_1518 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 382, 57), 'other')
         # Obtaining the member 'vec' of a type (line 382)
-        vec_1514 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 382, 57), other_1513, 'vec')
+        vec_1519 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 382, 57), other_1518, 'vec')
         # Applying the binary operator '==' (line 382)
-        result_eq_1515 = python_operator(stypy.reporting.localization.Localization(__file__, 382, 45), '==', vec_1512, vec_1514)
+        result_eq_1520 = python_operator(stypy.reporting.localization.Localization(__file__, 382, 45), '==', vec_1517, vec_1519)
         
         # Applying the binary operator 'and' (line 382)
-        result_and_keyword_1516 = python_operator(stypy.reporting.localization.Localization(__file__, 382, 15), 'and', result_eq_1510, result_eq_1515)
+        result_and_keyword_1521 = python_operator(stypy.reporting.localization.Localization(__file__, 382, 15), 'and', result_eq_1515, result_eq_1520)
         
         # Assigning a type to the variable 'stypy_return_type' (line 382)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 382, 8), 'stypy_return_type', result_and_keyword_1516)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 382, 8), 'stypy_return_type', result_and_keyword_1521)
         
         # ################# End of '__eq__(...)' code ##################
 
@@ -8055,14 +8104,14 @@ class ChartItem:
         
         # Storing the return type of function '__eq__' in the type store
         # Getting the type of 'stypy_return_type' (line 380)
-        stypy_return_type_1517 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 380, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1517)
+        stypy_return_type_1522 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 380, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1522)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__eq__'
-        return stypy_return_type_1517
+        return stypy_return_type_1522
 
 
 # Assigning a type to the variable 'ChartItem' (line 365)
@@ -8071,19 +8120,19 @@ module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__
 # Assigning a Tuple to a Name (line 366):
 
 # Obtaining an instance of the builtin type 'tuple' (line 366)
-tuple_1518 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 366, 17), 'tuple')
+tuple_1523 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 366, 17), 'tuple')
 # Adding type elements to the builtin type 'tuple' instance (line 366)
 # Adding element type (line 366)
-str_1519 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 366, 17), 'str', 'label')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 366, 17), tuple_1518, str_1519)
+str_1524 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 366, 17), 'str', 'label')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 366, 17), tuple_1523, str_1524)
 # Adding element type (line 366)
-str_1520 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 366, 26), 'str', 'vec')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 366, 17), tuple_1518, str_1520)
+str_1525 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 366, 26), 'str', 'vec')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 366, 17), tuple_1523, str_1525)
 
 # Getting the type of 'ChartItem'
-ChartItem_1521 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'ChartItem')
+ChartItem_1526 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'ChartItem')
 # Setting the type of the member '__slots__' of a type
-module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), ChartItem_1521, '__slots__', tuple_1518)
+module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), ChartItem_1526, '__slots__', tuple_1523)
 # Declaration of the 'Edge' class
 
 class Edge:
@@ -8123,51 +8172,51 @@ class Edge:
         
         # Assigning a Name to a Attribute (line 389):
         # Getting the type of 'score' (line 389)
-        score_1522 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 389, 21), 'score')
+        score_1527 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 389, 21), 'score')
         # Getting the type of 'self' (line 389)
-        self_1523 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 389, 8), 'self')
+        self_1528 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 389, 8), 'self')
         # Setting the type of the member 'score' of a type (line 389)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 389, 8), self_1523, 'score', score_1522)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 389, 8), self_1528, 'score', score_1527)
         
         # Assigning a Name to a Attribute (line 390):
         
         # Assigning a Name to a Attribute (line 390):
         # Getting the type of 'inside' (line 390)
-        inside_1524 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 390, 22), 'inside')
+        inside_1529 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 390, 22), 'inside')
         # Getting the type of 'self' (line 390)
-        self_1525 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 390, 8), 'self')
+        self_1530 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 390, 8), 'self')
         # Setting the type of the member 'inside' of a type (line 390)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 390, 8), self_1525, 'inside', inside_1524)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 390, 8), self_1530, 'inside', inside_1529)
         
         # Assigning a Name to a Attribute (line 391):
         
         # Assigning a Name to a Attribute (line 391):
         # Getting the type of 'prob' (line 391)
-        prob_1526 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 391, 20), 'prob')
+        prob_1531 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 391, 20), 'prob')
         # Getting the type of 'self' (line 391)
-        self_1527 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 391, 8), 'self')
+        self_1532 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 391, 8), 'self')
         # Setting the type of the member 'prob' of a type (line 391)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 391, 8), self_1527, 'prob', prob_1526)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 391, 8), self_1532, 'prob', prob_1531)
         
         # Assigning a Name to a Attribute (line 392):
         
         # Assigning a Name to a Attribute (line 392):
         # Getting the type of 'left' (line 392)
-        left_1528 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 392, 20), 'left')
+        left_1533 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 392, 20), 'left')
         # Getting the type of 'self' (line 392)
-        self_1529 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 392, 8), 'self')
+        self_1534 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 392, 8), 'self')
         # Setting the type of the member 'left' of a type (line 392)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 392, 8), self_1529, 'left', left_1528)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 392, 8), self_1534, 'left', left_1533)
         
         # Assigning a Name to a Attribute (line 393):
         
         # Assigning a Name to a Attribute (line 393):
         # Getting the type of 'right' (line 393)
-        right_1530 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 393, 21), 'right')
+        right_1535 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 393, 21), 'right')
         # Getting the type of 'self' (line 393)
-        self_1531 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 393, 8), 'self')
+        self_1536 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 393, 8), 'self')
         # Setting the type of the member 'right' of a type (line 393)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 393, 8), self_1531, 'right', right_1530)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 393, 8), self_1536, 'right', right_1535)
         
         # ################# End of '__init__(...)' code ##################
 
@@ -8218,18 +8267,18 @@ class Edge:
 
         
         # Getting the type of 'self' (line 398)
-        self_1532 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 398, 15), 'self')
+        self_1537 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 398, 15), 'self')
         # Obtaining the member 'score' of a type (line 398)
-        score_1533 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 398, 15), self_1532, 'score')
+        score_1538 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 398, 15), self_1537, 'score')
         # Getting the type of 'other' (line 398)
-        other_1534 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 398, 28), 'other')
+        other_1539 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 398, 28), 'other')
         # Obtaining the member 'score' of a type (line 398)
-        score_1535 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 398, 28), other_1534, 'score')
+        score_1540 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 398, 28), other_1539, 'score')
         # Applying the binary operator '<' (line 398)
-        result_lt_1536 = python_operator(stypy.reporting.localization.Localization(__file__, 398, 15), '<', score_1533, score_1535)
+        result_lt_1541 = python_operator(stypy.reporting.localization.Localization(__file__, 398, 15), '<', score_1538, score_1540)
         
         # Assigning a type to the variable 'stypy_return_type' (line 398)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 398, 8), 'stypy_return_type', result_lt_1536)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 398, 8), 'stypy_return_type', result_lt_1541)
         
         # ################# End of '__lt__(...)' code ##################
 
@@ -8238,14 +8287,14 @@ class Edge:
         
         # Storing the return type of function '__lt__' in the type store
         # Getting the type of 'stypy_return_type' (line 395)
-        stypy_return_type_1537 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 395, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1537)
+        stypy_return_type_1542 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 395, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1542)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__lt__'
-        return stypy_return_type_1537
+        return stypy_return_type_1542
 
 
     @norecursion
@@ -8289,18 +8338,18 @@ class Edge:
 
         
         # Getting the type of 'self' (line 401)
-        self_1538 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 401, 15), 'self')
+        self_1543 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 401, 15), 'self')
         # Obtaining the member 'score' of a type (line 401)
-        score_1539 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 401, 15), self_1538, 'score')
+        score_1544 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 401, 15), self_1543, 'score')
         # Getting the type of 'other' (line 401)
-        other_1540 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 401, 28), 'other')
+        other_1545 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 401, 28), 'other')
         # Obtaining the member 'score' of a type (line 401)
-        score_1541 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 401, 28), other_1540, 'score')
+        score_1546 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 401, 28), other_1545, 'score')
         # Applying the binary operator '>' (line 401)
-        result_gt_1542 = python_operator(stypy.reporting.localization.Localization(__file__, 401, 15), '>', score_1539, score_1541)
+        result_gt_1547 = python_operator(stypy.reporting.localization.Localization(__file__, 401, 15), '>', score_1544, score_1546)
         
         # Assigning a type to the variable 'stypy_return_type' (line 401)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 401, 8), 'stypy_return_type', result_gt_1542)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 401, 8), 'stypy_return_type', result_gt_1547)
         
         # ################# End of '__gt__(...)' code ##################
 
@@ -8309,14 +8358,14 @@ class Edge:
         
         # Storing the return type of function '__gt__' in the type store
         # Getting the type of 'stypy_return_type' (line 400)
-        stypy_return_type_1543 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 400, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1543)
+        stypy_return_type_1548 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 400, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1548)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__gt__'
-        return stypy_return_type_1543
+        return stypy_return_type_1548
 
 
     @norecursion
@@ -8362,61 +8411,61 @@ class Edge:
         # Evaluating a boolean operation
         
         # Getting the type of 'self' (line 404)
-        self_1544 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 404, 16), 'self')
+        self_1549 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 404, 16), 'self')
         # Obtaining the member 'inside' of a type (line 404)
-        inside_1545 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 404, 16), self_1544, 'inside')
+        inside_1550 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 404, 16), self_1549, 'inside')
         # Getting the type of 'other' (line 404)
-        other_1546 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 404, 31), 'other')
+        other_1551 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 404, 31), 'other')
         # Obtaining the member 'inside' of a type (line 404)
-        inside_1547 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 404, 31), other_1546, 'inside')
+        inside_1552 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 404, 31), other_1551, 'inside')
         # Applying the binary operator '==' (line 404)
-        result_eq_1548 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 16), '==', inside_1545, inside_1547)
+        result_eq_1553 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 16), '==', inside_1550, inside_1552)
         
         
         # Getting the type of 'self' (line 405)
-        self_1549 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 405, 20), 'self')
+        self_1554 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 405, 20), 'self')
         # Obtaining the member 'prob' of a type (line 405)
-        prob_1550 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 405, 20), self_1549, 'prob')
+        prob_1555 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 405, 20), self_1554, 'prob')
         # Getting the type of 'other' (line 405)
-        other_1551 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 405, 33), 'other')
+        other_1556 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 405, 33), 'other')
         # Obtaining the member 'prob' of a type (line 405)
-        prob_1552 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 405, 33), other_1551, 'prob')
+        prob_1557 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 405, 33), other_1556, 'prob')
         # Applying the binary operator '==' (line 405)
-        result_eq_1553 = python_operator(stypy.reporting.localization.Localization(__file__, 405, 20), '==', prob_1550, prob_1552)
+        result_eq_1558 = python_operator(stypy.reporting.localization.Localization(__file__, 405, 20), '==', prob_1555, prob_1557)
         
         # Applying the binary operator 'and' (line 404)
-        result_and_keyword_1554 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 16), 'and', result_eq_1548, result_eq_1553)
+        result_and_keyword_1559 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 16), 'and', result_eq_1553, result_eq_1558)
         
         # Getting the type of 'self' (line 406)
-        self_1555 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 406, 20), 'self')
+        self_1560 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 406, 20), 'self')
         # Obtaining the member 'left' of a type (line 406)
-        left_1556 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 406, 20), self_1555, 'left')
+        left_1561 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 406, 20), self_1560, 'left')
         # Getting the type of 'other' (line 406)
-        other_1557 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 406, 33), 'other')
+        other_1562 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 406, 33), 'other')
         # Obtaining the member 'right' of a type (line 406)
-        right_1558 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 406, 33), other_1557, 'right')
+        right_1563 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 406, 33), other_1562, 'right')
         # Applying the binary operator '==' (line 406)
-        result_eq_1559 = python_operator(stypy.reporting.localization.Localization(__file__, 406, 20), '==', left_1556, right_1558)
+        result_eq_1564 = python_operator(stypy.reporting.localization.Localization(__file__, 406, 20), '==', left_1561, right_1563)
         
         # Applying the binary operator 'and' (line 404)
-        result_and_keyword_1560 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 16), 'and', result_and_keyword_1554, result_eq_1559)
+        result_and_keyword_1565 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 16), 'and', result_and_keyword_1559, result_eq_1564)
         
         # Getting the type of 'self' (line 407)
-        self_1561 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 407, 20), 'self')
+        self_1566 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 407, 20), 'self')
         # Obtaining the member 'right' of a type (line 407)
-        right_1562 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 407, 20), self_1561, 'right')
+        right_1567 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 407, 20), self_1566, 'right')
         # Getting the type of 'other' (line 407)
-        other_1563 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 407, 34), 'other')
+        other_1568 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 407, 34), 'other')
         # Obtaining the member 'right' of a type (line 407)
-        right_1564 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 407, 34), other_1563, 'right')
+        right_1569 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 407, 34), other_1568, 'right')
         # Applying the binary operator '==' (line 407)
-        result_eq_1565 = python_operator(stypy.reporting.localization.Localization(__file__, 407, 20), '==', right_1562, right_1564)
+        result_eq_1570 = python_operator(stypy.reporting.localization.Localization(__file__, 407, 20), '==', right_1567, right_1569)
         
         # Applying the binary operator 'and' (line 404)
-        result_and_keyword_1566 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 16), 'and', result_and_keyword_1560, result_eq_1565)
+        result_and_keyword_1571 = python_operator(stypy.reporting.localization.Localization(__file__, 404, 16), 'and', result_and_keyword_1565, result_eq_1570)
         
         # Assigning a type to the variable 'stypy_return_type' (line 404)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 404, 8), 'stypy_return_type', result_and_keyword_1566)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 404, 8), 'stypy_return_type', result_and_keyword_1571)
         
         # ################# End of '__eq__(...)' code ##################
 
@@ -8425,14 +8474,14 @@ class Edge:
         
         # Storing the return type of function '__eq__' in the type store
         # Getting the type of 'stypy_return_type' (line 403)
-        stypy_return_type_1567 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 403, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1567)
+        stypy_return_type_1572 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 403, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1572)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__eq__'
-        return stypy_return_type_1567
+        return stypy_return_type_1572
 
 
 # Assigning a type to the variable 'Edge' (line 385)
@@ -8441,28 +8490,28 @@ module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__
 # Assigning a Tuple to a Name (line 386):
 
 # Obtaining an instance of the builtin type 'tuple' (line 386)
-tuple_1568 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 17), 'tuple')
+tuple_1573 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 17), 'tuple')
 # Adding type elements to the builtin type 'tuple' instance (line 386)
 # Adding element type (line 386)
-str_1569 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 17), 'str', 'score')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1568, str_1569)
+str_1574 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 17), 'str', 'score')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1573, str_1574)
 # Adding element type (line 386)
-str_1570 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 26), 'str', 'inside')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1568, str_1570)
+str_1575 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 26), 'str', 'inside')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1573, str_1575)
 # Adding element type (line 386)
-str_1571 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 36), 'str', 'prob')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1568, str_1571)
+str_1576 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 36), 'str', 'prob')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1573, str_1576)
 # Adding element type (line 386)
-str_1572 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 44), 'str', 'left')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1568, str_1572)
+str_1577 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 44), 'str', 'left')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1573, str_1577)
 # Adding element type (line 386)
-str_1573 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 52), 'str', 'right')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1568, str_1573)
+str_1578 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 386, 52), 'str', 'right')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 386, 17), tuple_1573, str_1578)
 
 # Getting the type of 'Edge'
-Edge_1574 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Edge')
+Edge_1579 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Edge')
 # Setting the type of the member '__slots__' of a type
-module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Edge_1574, '__slots__', tuple_1568)
+module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Edge_1579, '__slots__', tuple_1573)
 # Declaration of the 'Terminal' class
 
 class Terminal:
@@ -8502,51 +8551,51 @@ class Terminal:
         
         # Assigning a Name to a Attribute (line 414):
         # Getting the type of 'lhs' (line 414)
-        lhs_1575 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 414, 19), 'lhs')
+        lhs_1580 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 414, 19), 'lhs')
         # Getting the type of 'self' (line 414)
-        self_1576 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 414, 8), 'self')
+        self_1581 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 414, 8), 'self')
         # Setting the type of the member 'lhs' of a type (line 414)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 414, 8), self_1576, 'lhs', lhs_1575)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 414, 8), self_1581, 'lhs', lhs_1580)
         
         # Assigning a Name to a Attribute (line 415):
         
         # Assigning a Name to a Attribute (line 415):
         # Getting the type of 'rhs1' (line 415)
-        rhs1_1577 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 415, 20), 'rhs1')
+        rhs1_1582 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 415, 20), 'rhs1')
         # Getting the type of 'self' (line 415)
-        self_1578 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 415, 8), 'self')
+        self_1583 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 415, 8), 'self')
         # Setting the type of the member 'rhs1' of a type (line 415)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 415, 8), self_1578, 'rhs1', rhs1_1577)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 415, 8), self_1583, 'rhs1', rhs1_1582)
         
         # Assigning a Name to a Attribute (line 416):
         
         # Assigning a Name to a Attribute (line 416):
         # Getting the type of 'rhs2' (line 416)
-        rhs2_1579 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 416, 20), 'rhs2')
+        rhs2_1584 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 416, 20), 'rhs2')
         # Getting the type of 'self' (line 416)
-        self_1580 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 416, 8), 'self')
+        self_1585 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 416, 8), 'self')
         # Setting the type of the member 'rhs2' of a type (line 416)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 416, 8), self_1580, 'rhs2', rhs2_1579)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 416, 8), self_1585, 'rhs2', rhs2_1584)
         
         # Assigning a Name to a Attribute (line 417):
         
         # Assigning a Name to a Attribute (line 417):
         # Getting the type of 'word' (line 417)
-        word_1581 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 417, 20), 'word')
+        word_1586 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 417, 20), 'word')
         # Getting the type of 'self' (line 417)
-        self_1582 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 417, 8), 'self')
+        self_1587 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 417, 8), 'self')
         # Setting the type of the member 'word' of a type (line 417)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 417, 8), self_1582, 'word', word_1581)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 417, 8), self_1587, 'word', word_1586)
         
         # Assigning a Name to a Attribute (line 418):
         
         # Assigning a Name to a Attribute (line 418):
         # Getting the type of 'prob' (line 418)
-        prob_1583 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 418, 20), 'prob')
+        prob_1588 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 418, 20), 'prob')
         # Getting the type of 'self' (line 418)
-        self_1584 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 418, 8), 'self')
+        self_1589 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 418, 8), 'self')
         # Setting the type of the member 'prob' of a type (line 418)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 418, 8), self_1584, 'prob', prob_1583)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 418, 8), self_1589, 'prob', prob_1588)
         
         # ################# End of '__init__(...)' code ##################
 
@@ -8562,28 +8611,28 @@ module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__
 # Assigning a Tuple to a Name (line 411):
 
 # Obtaining an instance of the builtin type 'tuple' (line 411)
-tuple_1585 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 17), 'tuple')
+tuple_1590 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 17), 'tuple')
 # Adding type elements to the builtin type 'tuple' instance (line 411)
 # Adding element type (line 411)
-str_1586 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 17), 'str', 'lhs')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1585, str_1586)
+str_1591 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 17), 'str', 'lhs')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1590, str_1591)
 # Adding element type (line 411)
-str_1587 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 24), 'str', 'rhs1')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1585, str_1587)
+str_1592 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 24), 'str', 'rhs1')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1590, str_1592)
 # Adding element type (line 411)
-str_1588 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 32), 'str', 'rhs2')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1585, str_1588)
+str_1593 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 32), 'str', 'rhs2')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1590, str_1593)
 # Adding element type (line 411)
-str_1589 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 40), 'str', 'word')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1585, str_1589)
+str_1594 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 40), 'str', 'word')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1590, str_1594)
 # Adding element type (line 411)
-str_1590 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 48), 'str', 'prob')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1585, str_1590)
+str_1595 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 411, 48), 'str', 'prob')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 411, 17), tuple_1590, str_1595)
 
 # Getting the type of 'Terminal'
-Terminal_1591 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Terminal')
+Terminal_1596 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Terminal')
 # Setting the type of the member '__slots__' of a type
-module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Terminal_1591, '__slots__', tuple_1585)
+module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Terminal_1596, '__slots__', tuple_1590)
 # Declaration of the 'Rule' class
 
 class Rule:
@@ -8623,85 +8672,85 @@ class Rule:
         
         # Assigning a Name to a Attribute (line 426):
         # Getting the type of 'lhs' (line 426)
-        lhs_1592 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 426, 19), 'lhs')
+        lhs_1597 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 426, 19), 'lhs')
         # Getting the type of 'self' (line 426)
-        self_1593 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 426, 8), 'self')
+        self_1598 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 426, 8), 'self')
         # Setting the type of the member 'lhs' of a type (line 426)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 426, 8), self_1593, 'lhs', lhs_1592)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 426, 8), self_1598, 'lhs', lhs_1597)
         
         # Assigning a Name to a Attribute (line 427):
         
         # Assigning a Name to a Attribute (line 427):
         # Getting the type of 'rhs1' (line 427)
-        rhs1_1594 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 20), 'rhs1')
+        rhs1_1599 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 20), 'rhs1')
         # Getting the type of 'self' (line 427)
-        self_1595 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 8), 'self')
+        self_1600 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 427, 8), 'self')
         # Setting the type of the member 'rhs1' of a type (line 427)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 427, 8), self_1595, 'rhs1', rhs1_1594)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 427, 8), self_1600, 'rhs1', rhs1_1599)
         
         # Assigning a Name to a Attribute (line 428):
         
         # Assigning a Name to a Attribute (line 428):
         # Getting the type of 'rhs2' (line 428)
-        rhs2_1596 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 428, 20), 'rhs2')
+        rhs2_1601 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 428, 20), 'rhs2')
         # Getting the type of 'self' (line 428)
-        self_1597 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 428, 8), 'self')
+        self_1602 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 428, 8), 'self')
         # Setting the type of the member 'rhs2' of a type (line 428)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 428, 8), self_1597, 'rhs2', rhs2_1596)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 428, 8), self_1602, 'rhs2', rhs2_1601)
         
         # Assigning a Name to a Attribute (line 429):
         
         # Assigning a Name to a Attribute (line 429):
         # Getting the type of 'args' (line 429)
-        args_1598 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 429, 20), 'args')
+        args_1603 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 429, 20), 'args')
         # Getting the type of 'self' (line 429)
-        self_1599 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 429, 8), 'self')
+        self_1604 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 429, 8), 'self')
         # Setting the type of the member 'args' of a type (line 429)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 429, 8), self_1599, 'args', args_1598)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 429, 8), self_1604, 'args', args_1603)
         
         # Assigning a Name to a Attribute (line 430):
         
         # Assigning a Name to a Attribute (line 430):
         # Getting the type of 'lengths' (line 430)
-        lengths_1600 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 430, 23), 'lengths')
+        lengths_1605 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 430, 23), 'lengths')
         # Getting the type of 'self' (line 430)
-        self_1601 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 430, 8), 'self')
+        self_1606 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 430, 8), 'self')
         # Setting the type of the member 'lengths' of a type (line 430)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 430, 8), self_1601, 'lengths', lengths_1600)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 430, 8), self_1606, 'lengths', lengths_1605)
         
         # Assigning a Name to a Attribute (line 431):
         
         # Assigning a Name to a Attribute (line 431):
         # Getting the type of 'prob' (line 431)
-        prob_1602 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 20), 'prob')
+        prob_1607 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 20), 'prob')
         # Getting the type of 'self' (line 431)
-        self_1603 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 8), 'self')
+        self_1608 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 431, 8), 'self')
         # Setting the type of the member 'prob' of a type (line 431)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 431, 8), self_1603, 'prob', prob_1602)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 431, 8), self_1608, 'prob', prob_1607)
         
         # Assigning a Attribute to a Attribute (line 432):
         
         # Assigning a Attribute to a Attribute (line 432):
         # Getting the type of 'self' (line 432)
-        self_1604 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 21), 'self')
+        self_1609 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 21), 'self')
         # Obtaining the member 'args' of a type (line 432)
-        args_1605 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 21), self_1604, 'args')
+        args_1610 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 21), self_1609, 'args')
         # Getting the type of 'self' (line 432)
-        self_1606 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 8), 'self')
+        self_1611 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 432, 8), 'self')
         # Setting the type of the member '_args' of a type (line 432)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 8), self_1606, '_args', args_1605)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 432, 8), self_1611, '_args', args_1610)
         
         # Assigning a Attribute to a Attribute (line 433):
         
         # Assigning a Attribute to a Attribute (line 433):
         # Getting the type of 'self' (line 433)
-        self_1607 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 433, 24), 'self')
+        self_1612 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 433, 24), 'self')
         # Obtaining the member 'lengths' of a type (line 433)
-        lengths_1608 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 433, 24), self_1607, 'lengths')
+        lengths_1613 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 433, 24), self_1612, 'lengths')
         # Getting the type of 'self' (line 433)
-        self_1609 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 433, 8), 'self')
+        self_1614 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 433, 8), 'self')
         # Setting the type of the member '_lengths' of a type (line 433)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 433, 8), self_1609, '_lengths', lengths_1608)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 433, 8), self_1614, '_lengths', lengths_1613)
         
         # ################# End of '__init__(...)' code ##################
 
@@ -8717,37 +8766,37 @@ module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__
 # Assigning a Tuple to a Name (line 422):
 
 # Obtaining an instance of the builtin type 'tuple' (line 422)
-tuple_1610 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 17), 'tuple')
+tuple_1615 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 17), 'tuple')
 # Adding type elements to the builtin type 'tuple' instance (line 422)
 # Adding element type (line 422)
-str_1611 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 17), 'str', 'lhs')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1610, str_1611)
+str_1616 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 17), 'str', 'lhs')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1615, str_1616)
 # Adding element type (line 422)
-str_1612 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 24), 'str', 'rhs1')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1610, str_1612)
+str_1617 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 24), 'str', 'rhs1')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1615, str_1617)
 # Adding element type (line 422)
-str_1613 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 32), 'str', 'rhs2')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1610, str_1613)
+str_1618 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 32), 'str', 'rhs2')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1615, str_1618)
 # Adding element type (line 422)
-str_1614 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 40), 'str', 'prob')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1610, str_1614)
+str_1619 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 422, 40), 'str', 'prob')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1615, str_1619)
 # Adding element type (line 422)
-str_1615 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 17), 'str', 'args')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1610, str_1615)
+str_1620 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 17), 'str', 'args')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1615, str_1620)
 # Adding element type (line 422)
-str_1616 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 25), 'str', 'lengths')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1610, str_1616)
+str_1621 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 25), 'str', 'lengths')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1615, str_1621)
 # Adding element type (line 422)
-str_1617 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 36), 'str', '_args')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1610, str_1617)
+str_1622 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 36), 'str', '_args')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1615, str_1622)
 # Adding element type (line 422)
-str_1618 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 45), 'str', 'lengths')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1610, str_1618)
+str_1623 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 423, 45), 'str', 'lengths')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 422, 17), tuple_1615, str_1623)
 
 # Getting the type of 'Rule'
-Rule_1619 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Rule')
+Rule_1624 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Rule')
 # Setting the type of the member '__slots__' of a type
-module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Rule_1619, '__slots__', tuple_1610)
+module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Rule_1624, '__slots__', tuple_1615)
 # Declaration of the 'Entry' class
 
 class Entry(object, ):
@@ -8787,31 +8836,31 @@ class Entry(object, ):
         
         # Assigning a Name to a Attribute (line 441):
         # Getting the type of 'key' (line 441)
-        key_1620 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 441, 19), 'key')
+        key_1625 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 441, 19), 'key')
         # Getting the type of 'self' (line 441)
-        self_1621 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 441, 8), 'self')
+        self_1626 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 441, 8), 'self')
         # Setting the type of the member 'key' of a type (line 441)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 441, 8), self_1621, 'key', key_1620)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 441, 8), self_1626, 'key', key_1625)
         
         # Assigning a Name to a Attribute (line 442):
         
         # Assigning a Name to a Attribute (line 442):
         # Getting the type of 'value' (line 442)
-        value_1622 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 442, 21), 'value')
+        value_1627 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 442, 21), 'value')
         # Getting the type of 'self' (line 442)
-        self_1623 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 442, 8), 'self')
+        self_1628 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 442, 8), 'self')
         # Setting the type of the member 'value' of a type (line 442)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 442, 8), self_1623, 'value', value_1622)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 442, 8), self_1628, 'value', value_1627)
         
         # Assigning a Name to a Attribute (line 443):
         
         # Assigning a Name to a Attribute (line 443):
         # Getting the type of 'count' (line 443)
-        count_1624 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 443, 21), 'count')
+        count_1629 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 443, 21), 'count')
         # Getting the type of 'self' (line 443)
-        self_1625 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 443, 8), 'self')
+        self_1630 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 443, 8), 'self')
         # Setting the type of the member 'count' of a type (line 443)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 443, 8), self_1625, 'count', count_1624)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 443, 8), self_1630, 'count', count_1629)
         
         # ################# End of '__init__(...)' code ##################
 
@@ -8862,18 +8911,18 @@ class Entry(object, ):
 
         
         # Getting the type of 'self' (line 446)
-        self_1626 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 446, 15), 'self')
+        self_1631 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 446, 15), 'self')
         # Obtaining the member 'count' of a type (line 446)
-        count_1627 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 446, 15), self_1626, 'count')
+        count_1632 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 446, 15), self_1631, 'count')
         # Getting the type of 'other' (line 446)
-        other_1628 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 446, 29), 'other')
+        other_1633 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 446, 29), 'other')
         # Obtaining the member 'count' of a type (line 446)
-        count_1629 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 446, 29), other_1628, 'count')
+        count_1634 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 446, 29), other_1633, 'count')
         # Applying the binary operator '==' (line 446)
-        result_eq_1630 = python_operator(stypy.reporting.localization.Localization(__file__, 446, 15), '==', count_1627, count_1629)
+        result_eq_1635 = python_operator(stypy.reporting.localization.Localization(__file__, 446, 15), '==', count_1632, count_1634)
         
         # Assigning a type to the variable 'stypy_return_type' (line 446)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 446, 8), 'stypy_return_type', result_eq_1630)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 446, 8), 'stypy_return_type', result_eq_1635)
         
         # ################# End of '__eq__(...)' code ##################
 
@@ -8882,14 +8931,14 @@ class Entry(object, ):
         
         # Storing the return type of function '__eq__' in the type store
         # Getting the type of 'stypy_return_type' (line 445)
-        stypy_return_type_1631 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 445, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1631)
+        stypy_return_type_1636 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 445, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1636)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__eq__'
-        return stypy_return_type_1631
+        return stypy_return_type_1636
 
 
     @norecursion
@@ -8935,50 +8984,50 @@ class Entry(object, ):
         # Evaluating a boolean operation
         
         # Getting the type of 'self' (line 449)
-        self_1632 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 449, 15), 'self')
+        self_1637 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 449, 15), 'self')
         # Obtaining the member 'value' of a type (line 449)
-        value_1633 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 449, 15), self_1632, 'value')
+        value_1638 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 449, 15), self_1637, 'value')
         # Getting the type of 'other' (line 449)
-        other_1634 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 449, 28), 'other')
+        other_1639 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 449, 28), 'other')
         # Obtaining the member 'value' of a type (line 449)
-        value_1635 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 449, 28), other_1634, 'value')
+        value_1640 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 449, 28), other_1639, 'value')
         # Applying the binary operator '<' (line 449)
-        result_lt_1636 = python_operator(stypy.reporting.localization.Localization(__file__, 449, 15), '<', value_1633, value_1635)
+        result_lt_1641 = python_operator(stypy.reporting.localization.Localization(__file__, 449, 15), '<', value_1638, value_1640)
         
         
         # Evaluating a boolean operation
         
         # Getting the type of 'self' (line 449)
-        self_1637 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 449, 44), 'self')
+        self_1642 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 449, 44), 'self')
         # Obtaining the member 'value' of a type (line 449)
-        value_1638 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 449, 44), self_1637, 'value')
+        value_1643 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 449, 44), self_1642, 'value')
         # Getting the type of 'other' (line 449)
-        other_1639 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 449, 58), 'other')
+        other_1644 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 449, 58), 'other')
         # Obtaining the member 'value' of a type (line 449)
-        value_1640 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 449, 58), other_1639, 'value')
+        value_1645 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 449, 58), other_1644, 'value')
         # Applying the binary operator '==' (line 449)
-        result_eq_1641 = python_operator(stypy.reporting.localization.Localization(__file__, 449, 44), '==', value_1638, value_1640)
+        result_eq_1646 = python_operator(stypy.reporting.localization.Localization(__file__, 449, 44), '==', value_1643, value_1645)
         
         
         # Getting the type of 'self' (line 450)
-        self_1642 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 450, 48), 'self')
+        self_1647 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 450, 48), 'self')
         # Obtaining the member 'count' of a type (line 450)
-        count_1643 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 450, 48), self_1642, 'count')
+        count_1648 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 450, 48), self_1647, 'count')
         # Getting the type of 'other' (line 450)
-        other_1644 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 450, 61), 'other')
+        other_1649 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 450, 61), 'other')
         # Obtaining the member 'count' of a type (line 450)
-        count_1645 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 450, 61), other_1644, 'count')
+        count_1650 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 450, 61), other_1649, 'count')
         # Applying the binary operator '<' (line 450)
-        result_lt_1646 = python_operator(stypy.reporting.localization.Localization(__file__, 450, 48), '<', count_1643, count_1645)
+        result_lt_1651 = python_operator(stypy.reporting.localization.Localization(__file__, 450, 48), '<', count_1648, count_1650)
         
         # Applying the binary operator 'and' (line 449)
-        result_and_keyword_1647 = python_operator(stypy.reporting.localization.Localization(__file__, 449, 44), 'and', result_eq_1641, result_lt_1646)
+        result_and_keyword_1652 = python_operator(stypy.reporting.localization.Localization(__file__, 449, 44), 'and', result_eq_1646, result_lt_1651)
         
         # Applying the binary operator 'or' (line 449)
-        result_or_keyword_1648 = python_operator(stypy.reporting.localization.Localization(__file__, 449, 15), 'or', result_lt_1636, result_and_keyword_1647)
+        result_or_keyword_1653 = python_operator(stypy.reporting.localization.Localization(__file__, 449, 15), 'or', result_lt_1641, result_and_keyword_1652)
         
         # Assigning a type to the variable 'stypy_return_type' (line 449)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 449, 8), 'stypy_return_type', result_or_keyword_1648)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 449, 8), 'stypy_return_type', result_or_keyword_1653)
         
         # ################# End of '__lt__(...)' code ##################
 
@@ -8987,14 +9036,14 @@ class Entry(object, ):
         
         # Storing the return type of function '__lt__' in the type store
         # Getting the type of 'stypy_return_type' (line 448)
-        stypy_return_type_1649 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 448, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1649)
+        stypy_return_type_1654 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 448, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1654)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__lt__'
-        return stypy_return_type_1649
+        return stypy_return_type_1654
 
 
 # Assigning a type to the variable 'Entry' (line 437)
@@ -9003,29 +9052,29 @@ module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__
 # Assigning a Tuple to a Name (line 438):
 
 # Obtaining an instance of the builtin type 'tuple' (line 438)
-tuple_1650 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 438, 17), 'tuple')
+tuple_1655 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 438, 17), 'tuple')
 # Adding type elements to the builtin type 'tuple' instance (line 438)
 # Adding element type (line 438)
-str_1651 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 438, 17), 'str', 'key')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 438, 17), tuple_1650, str_1651)
+str_1656 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 438, 17), 'str', 'key')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 438, 17), tuple_1655, str_1656)
 # Adding element type (line 438)
-str_1652 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 438, 24), 'str', 'value')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 438, 17), tuple_1650, str_1652)
+str_1657 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 438, 24), 'str', 'value')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 438, 17), tuple_1655, str_1657)
 # Adding element type (line 438)
-str_1653 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 438, 33), 'str', 'count')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 438, 17), tuple_1650, str_1653)
+str_1658 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 438, 33), 'str', 'count')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 438, 17), tuple_1655, str_1658)
 
 # Getting the type of 'Entry'
-Entry_1654 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Entry')
+Entry_1659 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 0, 0), 'Entry')
 # Setting the type of the member '__slots__' of a type
-module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Entry_1654, '__slots__', tuple_1650)
+module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 0, 0), Entry_1659, '__slots__', tuple_1655)
 
 # Assigning a Num to a Name (line 453):
 
 # Assigning a Num to a Name (line 453):
-int_1655 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 453, 10), 'int')
+int_1660 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 453, 10), 'int')
 # Assigning a type to the variable 'INVALID' (line 453)
-module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 453, 0), 'INVALID', int_1655)
+module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 453, 0), 'INVALID', int_1660)
 # Declaration of the 'agenda' class
 
 class agenda(object, ):
@@ -9064,35 +9113,35 @@ class agenda(object, ):
         # Assigning a List to a Attribute (line 458):
         
         # Obtaining an instance of the builtin type 'list' (line 458)
-        list_1656 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 458, 20), 'list')
+        list_1661 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 458, 20), 'list')
         # Adding type elements to the builtin type 'list' instance (line 458)
         
         # Getting the type of 'self' (line 458)
-        self_1657 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 458, 8), 'self')
+        self_1662 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 458, 8), 'self')
         # Setting the type of the member 'heap' of a type (line 458)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 458, 8), self_1657, 'heap', list_1656)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 458, 8), self_1662, 'heap', list_1661)
         
         # Assigning a Dict to a Attribute (line 459):
         
         # Assigning a Dict to a Attribute (line 459):
         
         # Obtaining an instance of the builtin type 'dict' (line 459)
-        dict_1658 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 459, 23), 'dict')
+        dict_1663 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 459, 23), 'dict')
         # Adding type elements to the builtin type 'dict' instance (line 459)
         
         # Getting the type of 'self' (line 459)
-        self_1659 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 459, 8), 'self')
+        self_1664 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 459, 8), 'self')
         # Setting the type of the member 'mapping' of a type (line 459)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 459, 8), self_1659, 'mapping', dict_1658)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 459, 8), self_1664, 'mapping', dict_1663)
         
         # Assigning a Num to a Attribute (line 460):
         
         # Assigning a Num to a Attribute (line 460):
-        int_1660 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 460, 23), 'int')
+        int_1665 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 460, 23), 'int')
         # Getting the type of 'self' (line 460)
-        self_1661 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 460, 8), 'self')
+        self_1666 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 460, 8), 'self')
         # Setting the type of the member 'counter' of a type (line 460)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 460, 8), self_1661, 'counter', int_1660)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 460, 8), self_1666, 'counter', int_1665)
         
         # ################# End of '__init__(...)' code ##################
 
@@ -9143,17 +9192,17 @@ class agenda(object, ):
 
         
         # Getting the type of 'key' (line 463)
-        key_1662 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 463, 11), 'key')
+        key_1667 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 463, 11), 'key')
         # Getting the type of 'self' (line 463)
-        self_1663 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 463, 18), 'self')
+        self_1668 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 463, 18), 'self')
         # Obtaining the member 'mapping' of a type (line 463)
-        mapping_1664 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 463, 18), self_1663, 'mapping')
+        mapping_1669 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 463, 18), self_1668, 'mapping')
         # Applying the binary operator 'in' (line 463)
-        result_contains_1665 = python_operator(stypy.reporting.localization.Localization(__file__, 463, 11), 'in', key_1662, mapping_1664)
+        result_contains_1670 = python_operator(stypy.reporting.localization.Localization(__file__, 463, 11), 'in', key_1667, mapping_1669)
         
         # Testing if the type of an if condition is none (line 463)
 
-        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 463, 8), result_contains_1665):
+        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 463, 8), result_contains_1670):
             
             # Assigning a Call to a Name (line 470):
             
@@ -9162,71 +9211,71 @@ class agenda(object, ):
             # Call to Entry(...): (line 470)
             # Processing the call arguments (line 470)
             # Getting the type of 'key' (line 470)
-            key_1692 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 26), 'key', False)
+            key_1697 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 26), 'key', False)
             # Getting the type of 'value' (line 470)
-            value_1693 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 31), 'value', False)
+            value_1698 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 31), 'value', False)
             # Getting the type of 'self' (line 470)
-            self_1694 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 38), 'self', False)
+            self_1699 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 38), 'self', False)
             # Obtaining the member 'counter' of a type (line 470)
-            counter_1695 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 470, 38), self_1694, 'counter')
+            counter_1700 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 470, 38), self_1699, 'counter')
             # Processing the call keyword arguments (line 470)
-            kwargs_1696 = {}
+            kwargs_1701 = {}
             # Getting the type of 'Entry' (line 470)
-            Entry_1691 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 20), 'Entry', False)
+            Entry_1696 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 20), 'Entry', False)
             # Calling Entry(args, kwargs) (line 470)
-            Entry_call_result_1697 = invoke(stypy.reporting.localization.Localization(__file__, 470, 20), Entry_1691, *[key_1692, value_1693, counter_1695], **kwargs_1696)
+            Entry_call_result_1702 = invoke(stypy.reporting.localization.Localization(__file__, 470, 20), Entry_1696, *[key_1697, value_1698, counter_1700], **kwargs_1701)
             
             # Assigning a type to the variable 'entry' (line 470)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 470, 12), 'entry', Entry_call_result_1697)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 470, 12), 'entry', Entry_call_result_1702)
             
             # Getting the type of 'self' (line 471)
-            self_1698 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 12), 'self')
+            self_1703 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 12), 'self')
             # Obtaining the member 'counter' of a type (line 471)
-            counter_1699 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 12), self_1698, 'counter')
-            int_1700 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 471, 28), 'int')
+            counter_1704 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 12), self_1703, 'counter')
+            int_1705 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 471, 28), 'int')
             # Applying the binary operator '+=' (line 471)
-            result_iadd_1701 = python_operator(stypy.reporting.localization.Localization(__file__, 471, 12), '+=', counter_1699, int_1700)
+            result_iadd_1706 = python_operator(stypy.reporting.localization.Localization(__file__, 471, 12), '+=', counter_1704, int_1705)
             # Getting the type of 'self' (line 471)
-            self_1702 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 12), 'self')
+            self_1707 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 12), 'self')
             # Setting the type of the member 'counter' of a type (line 471)
-            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 12), self_1702, 'counter', result_iadd_1701)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 12), self_1707, 'counter', result_iadd_1706)
             
             
             # Assigning a Name to a Subscript (line 472):
             
             # Assigning a Name to a Subscript (line 472):
             # Getting the type of 'entry' (line 472)
-            entry_1703 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 32), 'entry')
+            entry_1708 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 32), 'entry')
             # Getting the type of 'self' (line 472)
-            self_1704 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 12), 'self')
+            self_1709 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 12), 'self')
             # Obtaining the member 'mapping' of a type (line 472)
-            mapping_1705 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 472, 12), self_1704, 'mapping')
+            mapping_1710 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 472, 12), self_1709, 'mapping')
             # Getting the type of 'key' (line 472)
-            key_1706 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 25), 'key')
+            key_1711 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 25), 'key')
             # Storing an element on a container (line 472)
-            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 472, 12), mapping_1705, (key_1706, entry_1703))
+            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 472, 12), mapping_1710, (key_1711, entry_1708))
             
             # Call to heappush(...): (line 473)
             # Processing the call arguments (line 473)
             # Getting the type of 'self' (line 473)
-            self_1708 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 21), 'self', False)
+            self_1713 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 21), 'self', False)
             # Obtaining the member 'heap' of a type (line 473)
-            heap_1709 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 473, 21), self_1708, 'heap')
+            heap_1714 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 473, 21), self_1713, 'heap')
             # Getting the type of 'entry' (line 473)
-            entry_1710 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 32), 'entry', False)
+            entry_1715 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 32), 'entry', False)
             # Processing the call keyword arguments (line 473)
-            kwargs_1711 = {}
+            kwargs_1716 = {}
             # Getting the type of 'heappush' (line 473)
-            heappush_1707 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 12), 'heappush', False)
+            heappush_1712 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 12), 'heappush', False)
             # Calling heappush(args, kwargs) (line 473)
-            heappush_call_result_1712 = invoke(stypy.reporting.localization.Localization(__file__, 473, 12), heappush_1707, *[heap_1709, entry_1710], **kwargs_1711)
+            heappush_call_result_1717 = invoke(stypy.reporting.localization.Localization(__file__, 473, 12), heappush_1712, *[heap_1714, entry_1715], **kwargs_1716)
             
         else:
             
             # Testing the type of an if condition (line 463)
-            if_condition_1666 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 463, 8), result_contains_1665)
-            # Assigning a type to the variable 'if_condition_1666' (line 463)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 463, 8), 'if_condition_1666', if_condition_1666)
+            if_condition_1671 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 463, 8), result_contains_1670)
+            # Assigning a type to the variable 'if_condition_1671' (line 463)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 463, 8), 'if_condition_1671', if_condition_1671)
             # SSA begins for if statement (line 463)
             module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
             
@@ -9236,18 +9285,18 @@ class agenda(object, ):
             
             # Obtaining the type of the subscript
             # Getting the type of 'key' (line 464)
-            key_1667 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 464, 36), 'key')
+            key_1672 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 464, 36), 'key')
             # Getting the type of 'self' (line 464)
-            self_1668 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 464, 23), 'self')
+            self_1673 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 464, 23), 'self')
             # Obtaining the member 'mapping' of a type (line 464)
-            mapping_1669 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 464, 23), self_1668, 'mapping')
+            mapping_1674 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 464, 23), self_1673, 'mapping')
             # Obtaining the member '__getitem__' of a type (line 464)
-            getitem___1670 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 464, 23), mapping_1669, '__getitem__')
+            getitem___1675 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 464, 23), mapping_1674, '__getitem__')
             # Calling the subscript (__getitem__) to obtain the elements type (line 464)
-            subscript_call_result_1671 = invoke(stypy.reporting.localization.Localization(__file__, 464, 23), getitem___1670, key_1667)
+            subscript_call_result_1676 = invoke(stypy.reporting.localization.Localization(__file__, 464, 23), getitem___1675, key_1672)
             
             # Assigning a type to the variable 'oldentry' (line 464)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 464, 12), 'oldentry', subscript_call_result_1671)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 464, 12), 'oldentry', subscript_call_result_1676)
             
             # Assigning a Call to a Name (line 465):
             
@@ -9256,62 +9305,62 @@ class agenda(object, ):
             # Call to Entry(...): (line 465)
             # Processing the call arguments (line 465)
             # Getting the type of 'key' (line 465)
-            key_1673 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 465, 26), 'key', False)
+            key_1678 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 465, 26), 'key', False)
             # Getting the type of 'value' (line 465)
-            value_1674 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 465, 31), 'value', False)
+            value_1679 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 465, 31), 'value', False)
             # Getting the type of 'oldentry' (line 465)
-            oldentry_1675 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 465, 38), 'oldentry', False)
+            oldentry_1680 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 465, 38), 'oldentry', False)
             # Obtaining the member 'count' of a type (line 465)
-            count_1676 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 465, 38), oldentry_1675, 'count')
+            count_1681 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 465, 38), oldentry_1680, 'count')
             # Processing the call keyword arguments (line 465)
-            kwargs_1677 = {}
+            kwargs_1682 = {}
             # Getting the type of 'Entry' (line 465)
-            Entry_1672 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 465, 20), 'Entry', False)
+            Entry_1677 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 465, 20), 'Entry', False)
             # Calling Entry(args, kwargs) (line 465)
-            Entry_call_result_1678 = invoke(stypy.reporting.localization.Localization(__file__, 465, 20), Entry_1672, *[key_1673, value_1674, count_1676], **kwargs_1677)
+            Entry_call_result_1683 = invoke(stypy.reporting.localization.Localization(__file__, 465, 20), Entry_1677, *[key_1678, value_1679, count_1681], **kwargs_1682)
             
             # Assigning a type to the variable 'entry' (line 465)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 465, 12), 'entry', Entry_call_result_1678)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 465, 12), 'entry', Entry_call_result_1683)
             
             # Assigning a Name to a Subscript (line 466):
             
             # Assigning a Name to a Subscript (line 466):
             # Getting the type of 'entry' (line 466)
-            entry_1679 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 466, 32), 'entry')
+            entry_1684 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 466, 32), 'entry')
             # Getting the type of 'self' (line 466)
-            self_1680 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 466, 12), 'self')
+            self_1685 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 466, 12), 'self')
             # Obtaining the member 'mapping' of a type (line 466)
-            mapping_1681 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 466, 12), self_1680, 'mapping')
+            mapping_1686 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 466, 12), self_1685, 'mapping')
             # Getting the type of 'key' (line 466)
-            key_1682 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 466, 25), 'key')
+            key_1687 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 466, 25), 'key')
             # Storing an element on a container (line 466)
-            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 466, 12), mapping_1681, (key_1682, entry_1679))
+            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 466, 12), mapping_1686, (key_1687, entry_1684))
             
             # Call to heappush(...): (line 467)
             # Processing the call arguments (line 467)
             # Getting the type of 'self' (line 467)
-            self_1684 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 467, 21), 'self', False)
+            self_1689 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 467, 21), 'self', False)
             # Obtaining the member 'heap' of a type (line 467)
-            heap_1685 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 467, 21), self_1684, 'heap')
+            heap_1690 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 467, 21), self_1689, 'heap')
             # Getting the type of 'entry' (line 467)
-            entry_1686 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 467, 32), 'entry', False)
+            entry_1691 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 467, 32), 'entry', False)
             # Processing the call keyword arguments (line 467)
-            kwargs_1687 = {}
+            kwargs_1692 = {}
             # Getting the type of 'heappush' (line 467)
-            heappush_1683 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 467, 12), 'heappush', False)
+            heappush_1688 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 467, 12), 'heappush', False)
             # Calling heappush(args, kwargs) (line 467)
-            heappush_call_result_1688 = invoke(stypy.reporting.localization.Localization(__file__, 467, 12), heappush_1683, *[heap_1685, entry_1686], **kwargs_1687)
+            heappush_call_result_1693 = invoke(stypy.reporting.localization.Localization(__file__, 467, 12), heappush_1688, *[heap_1690, entry_1691], **kwargs_1692)
             
             
             # Assigning a Name to a Attribute (line 468):
             
             # Assigning a Name to a Attribute (line 468):
             # Getting the type of 'INVALID' (line 468)
-            INVALID_1689 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 468, 29), 'INVALID')
+            INVALID_1694 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 468, 29), 'INVALID')
             # Getting the type of 'oldentry' (line 468)
-            oldentry_1690 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 468, 12), 'oldentry')
+            oldentry_1695 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 468, 12), 'oldentry')
             # Setting the type of the member 'count' of a type (line 468)
-            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 468, 12), oldentry_1690, 'count', INVALID_1689)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 468, 12), oldentry_1695, 'count', INVALID_1694)
             # SSA branch for the else part of an if statement (line 463)
             module_type_store.open_ssa_branch('else')
             
@@ -9322,64 +9371,64 @@ class agenda(object, ):
             # Call to Entry(...): (line 470)
             # Processing the call arguments (line 470)
             # Getting the type of 'key' (line 470)
-            key_1692 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 26), 'key', False)
+            key_1697 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 26), 'key', False)
             # Getting the type of 'value' (line 470)
-            value_1693 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 31), 'value', False)
+            value_1698 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 31), 'value', False)
             # Getting the type of 'self' (line 470)
-            self_1694 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 38), 'self', False)
+            self_1699 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 38), 'self', False)
             # Obtaining the member 'counter' of a type (line 470)
-            counter_1695 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 470, 38), self_1694, 'counter')
+            counter_1700 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 470, 38), self_1699, 'counter')
             # Processing the call keyword arguments (line 470)
-            kwargs_1696 = {}
+            kwargs_1701 = {}
             # Getting the type of 'Entry' (line 470)
-            Entry_1691 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 20), 'Entry', False)
+            Entry_1696 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 470, 20), 'Entry', False)
             # Calling Entry(args, kwargs) (line 470)
-            Entry_call_result_1697 = invoke(stypy.reporting.localization.Localization(__file__, 470, 20), Entry_1691, *[key_1692, value_1693, counter_1695], **kwargs_1696)
+            Entry_call_result_1702 = invoke(stypy.reporting.localization.Localization(__file__, 470, 20), Entry_1696, *[key_1697, value_1698, counter_1700], **kwargs_1701)
             
             # Assigning a type to the variable 'entry' (line 470)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 470, 12), 'entry', Entry_call_result_1697)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 470, 12), 'entry', Entry_call_result_1702)
             
             # Getting the type of 'self' (line 471)
-            self_1698 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 12), 'self')
+            self_1703 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 12), 'self')
             # Obtaining the member 'counter' of a type (line 471)
-            counter_1699 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 12), self_1698, 'counter')
-            int_1700 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 471, 28), 'int')
+            counter_1704 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 12), self_1703, 'counter')
+            int_1705 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 471, 28), 'int')
             # Applying the binary operator '+=' (line 471)
-            result_iadd_1701 = python_operator(stypy.reporting.localization.Localization(__file__, 471, 12), '+=', counter_1699, int_1700)
+            result_iadd_1706 = python_operator(stypy.reporting.localization.Localization(__file__, 471, 12), '+=', counter_1704, int_1705)
             # Getting the type of 'self' (line 471)
-            self_1702 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 12), 'self')
+            self_1707 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 471, 12), 'self')
             # Setting the type of the member 'counter' of a type (line 471)
-            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 12), self_1702, 'counter', result_iadd_1701)
+            module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 471, 12), self_1707, 'counter', result_iadd_1706)
             
             
             # Assigning a Name to a Subscript (line 472):
             
             # Assigning a Name to a Subscript (line 472):
             # Getting the type of 'entry' (line 472)
-            entry_1703 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 32), 'entry')
+            entry_1708 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 32), 'entry')
             # Getting the type of 'self' (line 472)
-            self_1704 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 12), 'self')
+            self_1709 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 12), 'self')
             # Obtaining the member 'mapping' of a type (line 472)
-            mapping_1705 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 472, 12), self_1704, 'mapping')
+            mapping_1710 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 472, 12), self_1709, 'mapping')
             # Getting the type of 'key' (line 472)
-            key_1706 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 25), 'key')
+            key_1711 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 472, 25), 'key')
             # Storing an element on a container (line 472)
-            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 472, 12), mapping_1705, (key_1706, entry_1703))
+            set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 472, 12), mapping_1710, (key_1711, entry_1708))
             
             # Call to heappush(...): (line 473)
             # Processing the call arguments (line 473)
             # Getting the type of 'self' (line 473)
-            self_1708 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 21), 'self', False)
+            self_1713 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 21), 'self', False)
             # Obtaining the member 'heap' of a type (line 473)
-            heap_1709 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 473, 21), self_1708, 'heap')
+            heap_1714 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 473, 21), self_1713, 'heap')
             # Getting the type of 'entry' (line 473)
-            entry_1710 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 32), 'entry', False)
+            entry_1715 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 32), 'entry', False)
             # Processing the call keyword arguments (line 473)
-            kwargs_1711 = {}
+            kwargs_1716 = {}
             # Getting the type of 'heappush' (line 473)
-            heappush_1707 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 12), 'heappush', False)
+            heappush_1712 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 473, 12), 'heappush', False)
             # Calling heappush(args, kwargs) (line 473)
-            heappush_call_result_1712 = invoke(stypy.reporting.localization.Localization(__file__, 473, 12), heappush_1707, *[heap_1709, entry_1710], **kwargs_1711)
+            heappush_call_result_1717 = invoke(stypy.reporting.localization.Localization(__file__, 473, 12), heappush_1712, *[heap_1714, entry_1715], **kwargs_1716)
             
             # SSA join for if statement (line 463)
             module_type_store = module_type_store.join_ssa_context()
@@ -9393,14 +9442,14 @@ class agenda(object, ):
         
         # Storing the return type of function '__setitem__' in the type store
         # Getting the type of 'stypy_return_type' (line 462)
-        stypy_return_type_1713 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 462, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1713)
+        stypy_return_type_1718 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 462, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1718)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__setitem__'
-        return stypy_return_type_1713
+        return stypy_return_type_1718
 
 
     @norecursion
@@ -9445,20 +9494,20 @@ class agenda(object, ):
         
         # Obtaining the type of the subscript
         # Getting the type of 'key' (line 476)
-        key_1714 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 476, 28), 'key')
+        key_1719 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 476, 28), 'key')
         # Getting the type of 'self' (line 476)
-        self_1715 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 476, 15), 'self')
+        self_1720 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 476, 15), 'self')
         # Obtaining the member 'mapping' of a type (line 476)
-        mapping_1716 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 476, 15), self_1715, 'mapping')
+        mapping_1721 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 476, 15), self_1720, 'mapping')
         # Obtaining the member '__getitem__' of a type (line 476)
-        getitem___1717 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 476, 15), mapping_1716, '__getitem__')
+        getitem___1722 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 476, 15), mapping_1721, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 476)
-        subscript_call_result_1718 = invoke(stypy.reporting.localization.Localization(__file__, 476, 15), getitem___1717, key_1714)
+        subscript_call_result_1723 = invoke(stypy.reporting.localization.Localization(__file__, 476, 15), getitem___1722, key_1719)
         
         # Obtaining the member 'value' of a type (line 476)
-        value_1719 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 476, 15), subscript_call_result_1718, 'value')
+        value_1724 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 476, 15), subscript_call_result_1723, 'value')
         # Assigning a type to the variable 'stypy_return_type' (line 476)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 476, 8), 'stypy_return_type', value_1719)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 476, 8), 'stypy_return_type', value_1724)
         
         # ################# End of '__getitem__(...)' code ##################
 
@@ -9467,14 +9516,14 @@ class agenda(object, ):
         
         # Storing the return type of function '__getitem__' in the type store
         # Getting the type of 'stypy_return_type' (line 475)
-        stypy_return_type_1720 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 475, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1720)
+        stypy_return_type_1725 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 475, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1725)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__getitem__'
-        return stypy_return_type_1720
+        return stypy_return_type_1725
 
 
     @norecursion
@@ -9518,16 +9567,16 @@ class agenda(object, ):
 
         
         # Getting the type of 'key' (line 479)
-        key_1721 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 479, 15), 'key')
+        key_1726 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 479, 15), 'key')
         # Getting the type of 'self' (line 479)
-        self_1722 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 479, 22), 'self')
+        self_1727 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 479, 22), 'self')
         # Obtaining the member 'mapping' of a type (line 479)
-        mapping_1723 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 479, 22), self_1722, 'mapping')
+        mapping_1728 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 479, 22), self_1727, 'mapping')
         # Applying the binary operator 'in' (line 479)
-        result_contains_1724 = python_operator(stypy.reporting.localization.Localization(__file__, 479, 15), 'in', key_1721, mapping_1723)
+        result_contains_1729 = python_operator(stypy.reporting.localization.Localization(__file__, 479, 15), 'in', key_1726, mapping_1728)
         
         # Assigning a type to the variable 'stypy_return_type' (line 479)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 479, 8), 'stypy_return_type', result_contains_1724)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 479, 8), 'stypy_return_type', result_contains_1729)
         
         # ################# End of '__contains__(...)' code ##################
 
@@ -9536,14 +9585,14 @@ class agenda(object, ):
         
         # Storing the return type of function '__contains__' in the type store
         # Getting the type of 'stypy_return_type' (line 478)
-        stypy_return_type_1725 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 478, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1725)
+        stypy_return_type_1730 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 478, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1730)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__contains__'
-        return stypy_return_type_1725
+        return stypy_return_type_1730
 
 
     @norecursion
@@ -9589,18 +9638,18 @@ class agenda(object, ):
         # Call to len(...): (line 482)
         # Processing the call arguments (line 482)
         # Getting the type of 'self' (line 482)
-        self_1727 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 482, 19), 'self', False)
+        self_1732 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 482, 19), 'self', False)
         # Obtaining the member 'mapping' of a type (line 482)
-        mapping_1728 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 482, 19), self_1727, 'mapping')
+        mapping_1733 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 482, 19), self_1732, 'mapping')
         # Processing the call keyword arguments (line 482)
-        kwargs_1729 = {}
+        kwargs_1734 = {}
         # Getting the type of 'len' (line 482)
-        len_1726 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 482, 15), 'len', False)
+        len_1731 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 482, 15), 'len', False)
         # Calling len(args, kwargs) (line 482)
-        len_call_result_1730 = invoke(stypy.reporting.localization.Localization(__file__, 482, 15), len_1726, *[mapping_1728], **kwargs_1729)
+        len_call_result_1735 = invoke(stypy.reporting.localization.Localization(__file__, 482, 15), len_1731, *[mapping_1733], **kwargs_1734)
         
         # Assigning a type to the variable 'stypy_return_type' (line 482)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 482, 8), 'stypy_return_type', len_call_result_1730)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 482, 8), 'stypy_return_type', len_call_result_1735)
         
         # ################# End of '__len__(...)' code ##################
 
@@ -9609,14 +9658,14 @@ class agenda(object, ):
         
         # Storing the return type of function '__len__' in the type store
         # Getting the type of 'stypy_return_type' (line 481)
-        stypy_return_type_1731 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 481, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1731)
+        stypy_return_type_1736 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 481, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1736)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function '__len__'
-        return stypy_return_type_1731
+        return stypy_return_type_1736
 
 
     @norecursion
@@ -9666,34 +9715,36 @@ class agenda(object, ):
         # Call to heappop(...): (line 485)
         # Processing the call arguments (line 485)
         # Getting the type of 'self' (line 485)
-        self_1733 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 485, 24), 'self', False)
+        self_1738 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 485, 24), 'self', False)
         # Obtaining the member 'heap' of a type (line 485)
-        heap_1734 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 485, 24), self_1733, 'heap')
+        heap_1739 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 485, 24), self_1738, 'heap')
         # Processing the call keyword arguments (line 485)
-        kwargs_1735 = {}
+        kwargs_1740 = {}
         # Getting the type of 'heappop' (line 485)
-        heappop_1732 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 485, 16), 'heappop', False)
+        heappop_1737 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 485, 16), 'heappop', False)
         # Calling heappop(args, kwargs) (line 485)
-        heappop_call_result_1736 = invoke(stypy.reporting.localization.Localization(__file__, 485, 16), heappop_1732, *[heap_1734], **kwargs_1735)
+        heappop_call_result_1741 = invoke(stypy.reporting.localization.Localization(__file__, 485, 16), heappop_1737, *[heap_1739], **kwargs_1740)
         
         # Assigning a type to the variable 'entry' (line 485)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 485, 8), 'entry', heappop_call_result_1736)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 485, 8), 'entry', heappop_call_result_1741)
         
         
         # Getting the type of 'entry' (line 486)
-        entry_1737 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 486, 14), 'entry')
+        entry_1742 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 486, 14), 'entry')
         # Obtaining the member 'count' of a type (line 486)
-        count_1738 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 486, 14), entry_1737, 'count')
+        count_1743 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 486, 14), entry_1742, 'count')
         # Getting the type of 'INVALID' (line 486)
-        INVALID_1739 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 486, 29), 'INVALID')
+        INVALID_1744 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 486, 29), 'INVALID')
         # Applying the binary operator 'is' (line 486)
-        result_is__1740 = python_operator(stypy.reporting.localization.Localization(__file__, 486, 14), 'is', count_1738, INVALID_1739)
+        result_is__1745 = python_operator(stypy.reporting.localization.Localization(__file__, 486, 14), 'is', count_1743, INVALID_1744)
         
+        # Assigning a type to the variable 'result_is__1745' (line 486)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 486, 8), 'result_is__1745', result_is__1745)
         # Testing if the while is going to be iterated (line 486)
         # Testing the type of an if condition (line 486)
-        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 486, 8), result_is__1740)
+        is_suitable_condition(stypy.reporting.localization.Localization(__file__, 486, 8), result_is__1745)
 
-        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 486, 8), result_is__1740):
+        if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 486, 8), result_is__1745):
             # SSA begins for while statement (line 486)
             module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
             
@@ -9704,62 +9755,62 @@ class agenda(object, ):
             # Call to heappop(...): (line 487)
             # Processing the call arguments (line 487)
             # Getting the type of 'self' (line 487)
-            self_1742 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 487, 28), 'self', False)
+            self_1747 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 487, 28), 'self', False)
             # Obtaining the member 'heap' of a type (line 487)
-            heap_1743 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 487, 28), self_1742, 'heap')
+            heap_1748 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 487, 28), self_1747, 'heap')
             # Processing the call keyword arguments (line 487)
-            kwargs_1744 = {}
+            kwargs_1749 = {}
             # Getting the type of 'heappop' (line 487)
-            heappop_1741 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 487, 20), 'heappop', False)
+            heappop_1746 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 487, 20), 'heappop', False)
             # Calling heappop(args, kwargs) (line 487)
-            heappop_call_result_1745 = invoke(stypy.reporting.localization.Localization(__file__, 487, 20), heappop_1741, *[heap_1743], **kwargs_1744)
+            heappop_call_result_1750 = invoke(stypy.reporting.localization.Localization(__file__, 487, 20), heappop_1746, *[heap_1748], **kwargs_1749)
             
             # Assigning a type to the variable 'entry' (line 487)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 487, 12), 'entry', heappop_call_result_1745)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 487, 12), 'entry', heappop_call_result_1750)
             # SSA join for while statement (line 486)
             module_type_store = module_type_store.join_ssa_context()
 
         
         # Deleting a member
         # Getting the type of 'self' (line 488)
-        self_1746 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 488, 12), 'self')
+        self_1751 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 488, 12), 'self')
         # Obtaining the member 'mapping' of a type (line 488)
-        mapping_1747 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 488, 12), self_1746, 'mapping')
+        mapping_1752 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 488, 12), self_1751, 'mapping')
         
         # Obtaining the type of the subscript
         # Getting the type of 'entry' (line 488)
-        entry_1748 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 488, 25), 'entry')
+        entry_1753 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 488, 25), 'entry')
         # Obtaining the member 'key' of a type (line 488)
-        key_1749 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 488, 25), entry_1748, 'key')
+        key_1754 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 488, 25), entry_1753, 'key')
         # Getting the type of 'self' (line 488)
-        self_1750 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 488, 12), 'self')
+        self_1755 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 488, 12), 'self')
         # Obtaining the member 'mapping' of a type (line 488)
-        mapping_1751 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 488, 12), self_1750, 'mapping')
+        mapping_1756 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 488, 12), self_1755, 'mapping')
         # Obtaining the member '__getitem__' of a type (line 488)
-        getitem___1752 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 488, 12), mapping_1751, '__getitem__')
+        getitem___1757 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 488, 12), mapping_1756, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 488)
-        subscript_call_result_1753 = invoke(stypy.reporting.localization.Localization(__file__, 488, 12), getitem___1752, key_1749)
+        subscript_call_result_1758 = invoke(stypy.reporting.localization.Localization(__file__, 488, 12), getitem___1757, key_1754)
         
-        del_contained_elements_type(stypy.reporting.localization.Localization(__file__, 488, 8), mapping_1747, subscript_call_result_1753)
+        del_contained_elements_type(stypy.reporting.localization.Localization(__file__, 488, 8), mapping_1752, subscript_call_result_1758)
         
         # Obtaining an instance of the builtin type 'tuple' (line 489)
-        tuple_1754 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 489, 15), 'tuple')
+        tuple_1759 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 489, 15), 'tuple')
         # Adding type elements to the builtin type 'tuple' instance (line 489)
         # Adding element type (line 489)
         # Getting the type of 'entry' (line 489)
-        entry_1755 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 489, 15), 'entry')
+        entry_1760 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 489, 15), 'entry')
         # Obtaining the member 'key' of a type (line 489)
-        key_1756 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 489, 15), entry_1755, 'key')
-        add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 489, 15), tuple_1754, key_1756)
+        key_1761 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 489, 15), entry_1760, 'key')
+        add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 489, 15), tuple_1759, key_1761)
         # Adding element type (line 489)
         # Getting the type of 'entry' (line 489)
-        entry_1757 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 489, 26), 'entry')
+        entry_1762 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 489, 26), 'entry')
         # Obtaining the member 'value' of a type (line 489)
-        value_1758 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 489, 26), entry_1757, 'value')
-        add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 489, 15), tuple_1754, value_1758)
+        value_1763 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 489, 26), entry_1762, 'value')
+        add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 489, 15), tuple_1759, value_1763)
         
         # Assigning a type to the variable 'stypy_return_type' (line 489)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 489, 8), 'stypy_return_type', tuple_1754)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 489, 8), 'stypy_return_type', tuple_1759)
         
         # ################# End of 'popitem(...)' code ##################
 
@@ -9768,14 +9819,14 @@ class agenda(object, ):
         
         # Storing the return type of function 'popitem' in the type store
         # Getting the type of 'stypy_return_type' (line 484)
-        stypy_return_type_1759 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 484, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_1759)
+        stypy_return_type_1764 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 484, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_1764)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function 'popitem'
-        return stypy_return_type_1759
+        return stypy_return_type_1764
 
 
 # Assigning a type to the variable 'agenda' (line 456)
@@ -9825,104 +9876,104 @@ def batch(localization, *varargs, **kwargs):
     # Call to read_srcg_grammar(...): (line 493)
     # Processing the call arguments (line 493)
     # Getting the type of 'rulefile' (line 493)
-    rulefile_1761 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 39), 'rulefile', False)
+    rulefile_1766 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 39), 'rulefile', False)
     # Getting the type of 'lexiconfile' (line 493)
-    lexiconfile_1762 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 49), 'lexiconfile', False)
+    lexiconfile_1767 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 49), 'lexiconfile', False)
     # Processing the call keyword arguments (line 493)
-    kwargs_1763 = {}
+    kwargs_1768 = {}
     # Getting the type of 'read_srcg_grammar' (line 493)
-    read_srcg_grammar_1760 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 21), 'read_srcg_grammar', False)
+    read_srcg_grammar_1765 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 21), 'read_srcg_grammar', False)
     # Calling read_srcg_grammar(args, kwargs) (line 493)
-    read_srcg_grammar_call_result_1764 = invoke(stypy.reporting.localization.Localization(__file__, 493, 21), read_srcg_grammar_1760, *[rulefile_1761, lexiconfile_1762], **kwargs_1763)
+    read_srcg_grammar_call_result_1769 = invoke(stypy.reporting.localization.Localization(__file__, 493, 21), read_srcg_grammar_1765, *[rulefile_1766, lexiconfile_1767], **kwargs_1768)
     
     # Assigning a type to the variable 'call_assignment_13' (line 493)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_13', read_srcg_grammar_call_result_1764)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_13', read_srcg_grammar_call_result_1769)
     
     # Assigning a Call to a Name (line 493):
     
     # Call to __getitem__(...):
     # Processing the call arguments
-    int_1767 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 493, 4), 'int')
+    int_1772 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 493, 4), 'int')
     # Processing the call keyword arguments
-    kwargs_1768 = {}
+    kwargs_1773 = {}
     # Getting the type of 'call_assignment_13' (line 493)
-    call_assignment_13_1765 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_13', False)
+    call_assignment_13_1770 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_13', False)
     # Obtaining the member '__getitem__' of a type (line 493)
-    getitem___1766 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 493, 4), call_assignment_13_1765, '__getitem__')
+    getitem___1771 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 493, 4), call_assignment_13_1770, '__getitem__')
     # Calling __getitem__(args, kwargs)
-    getitem___call_result_1769 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1766, *[int_1767], **kwargs_1768)
+    getitem___call_result_1774 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1771, *[int_1772], **kwargs_1773)
     
     # Assigning a type to the variable 'call_assignment_14' (line 493)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_14', getitem___call_result_1769)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_14', getitem___call_result_1774)
     
     # Assigning a Name to a Name (line 493):
     # Getting the type of 'call_assignment_14' (line 493)
-    call_assignment_14_1770 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_14')
+    call_assignment_14_1775 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_14')
     # Assigning a type to the variable 'rules' (line 493)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'rules', call_assignment_14_1770)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'rules', call_assignment_14_1775)
     
     # Assigning a Call to a Name (line 493):
     
     # Call to __getitem__(...):
     # Processing the call arguments
-    int_1773 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 493, 4), 'int')
+    int_1778 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 493, 4), 'int')
     # Processing the call keyword arguments
-    kwargs_1774 = {}
+    kwargs_1779 = {}
     # Getting the type of 'call_assignment_13' (line 493)
-    call_assignment_13_1771 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_13', False)
+    call_assignment_13_1776 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_13', False)
     # Obtaining the member '__getitem__' of a type (line 493)
-    getitem___1772 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 493, 4), call_assignment_13_1771, '__getitem__')
+    getitem___1777 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 493, 4), call_assignment_13_1776, '__getitem__')
     # Calling __getitem__(args, kwargs)
-    getitem___call_result_1775 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1772, *[int_1773], **kwargs_1774)
+    getitem___call_result_1780 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1777, *[int_1778], **kwargs_1779)
     
     # Assigning a type to the variable 'call_assignment_15' (line 493)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_15', getitem___call_result_1775)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_15', getitem___call_result_1780)
     
     # Assigning a Name to a Name (line 493):
     # Getting the type of 'call_assignment_15' (line 493)
-    call_assignment_15_1776 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_15')
+    call_assignment_15_1781 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 493, 4), 'call_assignment_15')
     # Assigning a type to the variable 'lexicon' (line 493)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 11), 'lexicon', call_assignment_15_1776)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 493, 11), 'lexicon', call_assignment_15_1781)
     
     # Assigning a Subscript to a Name (line 494):
     
     # Assigning a Subscript to a Name (line 494):
     
     # Obtaining the type of the subscript
-    int_1777 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 494, 26), 'int')
+    int_1782 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 494, 26), 'int')
     
     # Obtaining the type of the subscript
-    int_1778 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 494, 23), 'int')
+    int_1783 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 494, 23), 'int')
     
     # Obtaining the type of the subscript
-    int_1779 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 494, 20), 'int')
+    int_1784 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 494, 20), 'int')
     
     # Obtaining the type of the subscript
-    int_1780 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 494, 17), 'int')
+    int_1785 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 494, 17), 'int')
     # Getting the type of 'rules' (line 494)
-    rules_1781 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 494, 11), 'rules')
+    rules_1786 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 494, 11), 'rules')
     # Obtaining the member '__getitem__' of a type (line 494)
-    getitem___1782 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 494, 11), rules_1781, '__getitem__')
+    getitem___1787 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 494, 11), rules_1786, '__getitem__')
     # Calling the subscript (__getitem__) to obtain the elements type (line 494)
-    subscript_call_result_1783 = invoke(stypy.reporting.localization.Localization(__file__, 494, 11), getitem___1782, int_1780)
+    subscript_call_result_1788 = invoke(stypy.reporting.localization.Localization(__file__, 494, 11), getitem___1787, int_1785)
     
     # Obtaining the member '__getitem__' of a type (line 494)
-    getitem___1784 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 494, 11), subscript_call_result_1783, '__getitem__')
+    getitem___1789 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 494, 11), subscript_call_result_1788, '__getitem__')
     # Calling the subscript (__getitem__) to obtain the elements type (line 494)
-    subscript_call_result_1785 = invoke(stypy.reporting.localization.Localization(__file__, 494, 11), getitem___1784, int_1779)
+    subscript_call_result_1790 = invoke(stypy.reporting.localization.Localization(__file__, 494, 11), getitem___1789, int_1784)
     
     # Obtaining the member '__getitem__' of a type (line 494)
-    getitem___1786 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 494, 11), subscript_call_result_1785, '__getitem__')
+    getitem___1791 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 494, 11), subscript_call_result_1790, '__getitem__')
     # Calling the subscript (__getitem__) to obtain the elements type (line 494)
-    subscript_call_result_1787 = invoke(stypy.reporting.localization.Localization(__file__, 494, 11), getitem___1786, int_1778)
+    subscript_call_result_1792 = invoke(stypy.reporting.localization.Localization(__file__, 494, 11), getitem___1791, int_1783)
     
     # Obtaining the member '__getitem__' of a type (line 494)
-    getitem___1788 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 494, 11), subscript_call_result_1787, '__getitem__')
+    getitem___1793 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 494, 11), subscript_call_result_1792, '__getitem__')
     # Calling the subscript (__getitem__) to obtain the elements type (line 494)
-    subscript_call_result_1789 = invoke(stypy.reporting.localization.Localization(__file__, 494, 11), getitem___1788, int_1777)
+    subscript_call_result_1794 = invoke(stypy.reporting.localization.Localization(__file__, 494, 11), getitem___1793, int_1782)
     
     # Assigning a type to the variable 'root' (line 494)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 494, 4), 'root', subscript_call_result_1789)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 494, 4), 'root', subscript_call_result_1794)
     
     # Assigning a Call to a Name (line 495):
     
@@ -9931,18 +9982,18 @@ def batch(localization, *varargs, **kwargs):
     # Call to splitgrammar(...): (line 495)
     # Processing the call arguments (line 495)
     # Getting the type of 'rules' (line 495)
-    rules_1791 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 495, 27), 'rules', False)
+    rules_1796 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 495, 27), 'rules', False)
     # Getting the type of 'lexicon' (line 495)
-    lexicon_1792 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 495, 34), 'lexicon', False)
+    lexicon_1797 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 495, 34), 'lexicon', False)
     # Processing the call keyword arguments (line 495)
-    kwargs_1793 = {}
+    kwargs_1798 = {}
     # Getting the type of 'splitgrammar' (line 495)
-    splitgrammar_1790 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 495, 14), 'splitgrammar', False)
+    splitgrammar_1795 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 495, 14), 'splitgrammar', False)
     # Calling splitgrammar(args, kwargs) (line 495)
-    splitgrammar_call_result_1794 = invoke(stypy.reporting.localization.Localization(__file__, 495, 14), splitgrammar_1790, *[rules_1791, lexicon_1792], **kwargs_1793)
+    splitgrammar_call_result_1799 = invoke(stypy.reporting.localization.Localization(__file__, 495, 14), splitgrammar_1795, *[rules_1796, lexicon_1797], **kwargs_1798)
     
     # Assigning a type to the variable 'grammar' (line 495)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 495, 4), 'grammar', splitgrammar_call_result_1794)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 495, 4), 'grammar', splitgrammar_call_result_1799)
     
     # Assigning a Call to a Name (line 496):
     
@@ -9950,35 +10001,35 @@ def batch(localization, *varargs, **kwargs):
     
     # Call to splitlines(...): (line 496)
     # Processing the call keyword arguments (line 496)
-    kwargs_1803 = {}
+    kwargs_1808 = {}
     
     # Call to read(...): (line 496)
     # Processing the call keyword arguments (line 496)
-    kwargs_1800 = {}
+    kwargs_1805 = {}
     
     # Call to open(...): (line 496)
     # Processing the call arguments (line 496)
     # Getting the type of 'sentfile' (line 496)
-    sentfile_1796 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 496, 17), 'sentfile', False)
+    sentfile_1801 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 496, 17), 'sentfile', False)
     # Processing the call keyword arguments (line 496)
-    kwargs_1797 = {}
+    kwargs_1802 = {}
     # Getting the type of 'open' (line 496)
-    open_1795 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 496, 12), 'open', False)
+    open_1800 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 496, 12), 'open', False)
     # Calling open(args, kwargs) (line 496)
-    open_call_result_1798 = invoke(stypy.reporting.localization.Localization(__file__, 496, 12), open_1795, *[sentfile_1796], **kwargs_1797)
+    open_call_result_1803 = invoke(stypy.reporting.localization.Localization(__file__, 496, 12), open_1800, *[sentfile_1801], **kwargs_1802)
     
     # Obtaining the member 'read' of a type (line 496)
-    read_1799 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 496, 12), open_call_result_1798, 'read')
+    read_1804 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 496, 12), open_call_result_1803, 'read')
     # Calling read(args, kwargs) (line 496)
-    read_call_result_1801 = invoke(stypy.reporting.localization.Localization(__file__, 496, 12), read_1799, *[], **kwargs_1800)
+    read_call_result_1806 = invoke(stypy.reporting.localization.Localization(__file__, 496, 12), read_1804, *[], **kwargs_1805)
     
     # Obtaining the member 'splitlines' of a type (line 496)
-    splitlines_1802 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 496, 12), read_call_result_1801, 'splitlines')
+    splitlines_1807 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 496, 12), read_call_result_1806, 'splitlines')
     # Calling splitlines(args, kwargs) (line 496)
-    splitlines_call_result_1804 = invoke(stypy.reporting.localization.Localization(__file__, 496, 12), splitlines_1802, *[], **kwargs_1803)
+    splitlines_call_result_1809 = invoke(stypy.reporting.localization.Localization(__file__, 496, 12), splitlines_1807, *[], **kwargs_1808)
     
     # Assigning a type to the variable 'lines' (line 496)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 496, 4), 'lines', splitlines_call_result_1804)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 496, 4), 'lines', splitlines_call_result_1809)
     
     # Assigning a ListComp to a Name (line 497):
     
@@ -9986,57 +10037,59 @@ def batch(localization, *varargs, **kwargs):
     # Calculating list comprehension
     # Calculating comprehension expression
     # Getting the type of 'lines' (line 497)
-    lines_1816 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 497, 62), 'lines')
-    comprehension_1817 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 497, 13), lines_1816)
+    lines_1821 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 497, 62), 'lines')
+    comprehension_1822 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 497, 13), lines_1821)
     # Assigning a type to the variable 'sent' (line 497)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 497, 13), 'sent', comprehension_1817)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 497, 13), 'sent', comprehension_1822)
     # Calculating list comprehension
     # Calculating comprehension expression
     
     # Call to split(...): (line 497)
     # Processing the call keyword arguments (line 497)
-    kwargs_1812 = {}
+    kwargs_1817 = {}
     # Getting the type of 'sent' (line 497)
-    sent_1810 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 497, 36), 'sent', False)
+    sent_1815 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 497, 36), 'sent', False)
     # Obtaining the member 'split' of a type (line 497)
-    split_1811 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 497, 36), sent_1810, 'split')
+    split_1816 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 497, 36), sent_1815, 'split')
     # Calling split(args, kwargs) (line 497)
-    split_call_result_1813 = invoke(stypy.reporting.localization.Localization(__file__, 497, 36), split_1811, *[], **kwargs_1812)
+    split_call_result_1818 = invoke(stypy.reporting.localization.Localization(__file__, 497, 36), split_1816, *[], **kwargs_1817)
     
-    comprehension_1814 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 497, 14), split_call_result_1813)
+    comprehension_1819 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 497, 14), split_call_result_1818)
     # Assigning a type to the variable 'a' (line 497)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 497, 14), 'a', comprehension_1814)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 497, 14), 'a', comprehension_1819)
     
     # Call to split(...): (line 497)
     # Processing the call arguments (line 497)
-    str_1807 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 497, 22), 'str', '/')
+    str_1812 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 497, 22), 'str', '/')
     # Processing the call keyword arguments (line 497)
-    kwargs_1808 = {}
+    kwargs_1813 = {}
     # Getting the type of 'a' (line 497)
-    a_1805 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 497, 14), 'a', False)
+    a_1810 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 497, 14), 'a', False)
     # Obtaining the member 'split' of a type (line 497)
-    split_1806 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 497, 14), a_1805, 'split')
+    split_1811 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 497, 14), a_1810, 'split')
     # Calling split(args, kwargs) (line 497)
-    split_call_result_1809 = invoke(stypy.reporting.localization.Localization(__file__, 497, 14), split_1806, *[str_1807], **kwargs_1808)
+    split_call_result_1814 = invoke(stypy.reporting.localization.Localization(__file__, 497, 14), split_1811, *[str_1812], **kwargs_1813)
     
-    list_1815 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 497, 14), 'list')
-    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 497, 14), list_1815, split_call_result_1809)
-    list_1818 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 497, 13), 'list')
-    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 497, 13), list_1818, list_1815)
+    list_1820 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 497, 14), 'list')
+    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 497, 14), list_1820, split_call_result_1814)
+    list_1823 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 497, 13), 'list')
+    set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 497, 13), list_1823, list_1820)
     # Assigning a type to the variable 'sents' (line 497)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 497, 4), 'sents', list_1818)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 497, 4), 'sents', list_1823)
     
     # Getting the type of 'sents' (line 498)
-    sents_1819 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 498, 21), 'sents')
+    sents_1824 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 498, 21), 'sents')
+    # Assigning a type to the variable 'sents_1824' (line 498)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 498, 4), 'sents_1824', sents_1824)
     # Testing if the for loop is going to be iterated (line 498)
     # Testing the type of a for loop iterable (line 498)
-    is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 498, 4), sents_1819)
+    is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 498, 4), sents_1824)
 
-    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 498, 4), sents_1819):
+    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 498, 4), sents_1824):
         # Getting the type of the for loop variable (line 498)
-        for_loop_var_1820 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 498, 4), sents_1819)
+        for_loop_var_1825 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 498, 4), sents_1824)
         # Assigning a type to the variable 'wordstags' (line 498)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 498, 4), 'wordstags', for_loop_var_1820)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 498, 4), 'wordstags', for_loop_var_1825)
         # SSA begins for a for statement (line 498)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
         
@@ -10046,24 +10099,24 @@ def batch(localization, *varargs, **kwargs):
         # Calculating list comprehension
         # Calculating comprehension expression
         # Getting the type of 'wordstags' (line 499)
-        wordstags_1825 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 499, 30), 'wordstags')
-        comprehension_1826 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 499, 16), wordstags_1825)
+        wordstags_1830 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 499, 30), 'wordstags')
+        comprehension_1831 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 499, 16), wordstags_1830)
         # Assigning a type to the variable 'a' (line 499)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 499, 16), 'a', comprehension_1826)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 499, 16), 'a', comprehension_1831)
         
         # Obtaining the type of the subscript
-        int_1821 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 499, 18), 'int')
+        int_1826 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 499, 18), 'int')
         # Getting the type of 'a' (line 499)
-        a_1822 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 499, 16), 'a')
+        a_1827 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 499, 16), 'a')
         # Obtaining the member '__getitem__' of a type (line 499)
-        getitem___1823 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 499, 16), a_1822, '__getitem__')
+        getitem___1828 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 499, 16), a_1827, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 499)
-        subscript_call_result_1824 = invoke(stypy.reporting.localization.Localization(__file__, 499, 16), getitem___1823, int_1821)
+        subscript_call_result_1829 = invoke(stypy.reporting.localization.Localization(__file__, 499, 16), getitem___1828, int_1826)
         
-        list_1827 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 499, 16), 'list')
-        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 499, 16), list_1827, subscript_call_result_1824)
+        list_1832 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 499, 16), 'list')
+        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 499, 16), list_1832, subscript_call_result_1829)
         # Assigning a type to the variable 'sent' (line 499)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 499, 8), 'sent', list_1827)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 499, 8), 'sent', list_1832)
         
         # Assigning a ListComp to a Name (line 500):
         
@@ -10071,52 +10124,52 @@ def batch(localization, *varargs, **kwargs):
         # Calculating list comprehension
         # Calculating comprehension expression
         # Getting the type of 'wordstags' (line 500)
-        wordstags_1832 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 500, 30), 'wordstags')
-        comprehension_1833 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 500, 16), wordstags_1832)
+        wordstags_1837 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 500, 30), 'wordstags')
+        comprehension_1838 = get_contained_elements_type(stypy.reporting.localization.Localization(__file__, 500, 16), wordstags_1837)
         # Assigning a type to the variable 'a' (line 500)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 500, 16), 'a', comprehension_1833)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 500, 16), 'a', comprehension_1838)
         
         # Obtaining the type of the subscript
-        int_1828 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 500, 18), 'int')
+        int_1833 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 500, 18), 'int')
         # Getting the type of 'a' (line 500)
-        a_1829 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 500, 16), 'a')
+        a_1834 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 500, 16), 'a')
         # Obtaining the member '__getitem__' of a type (line 500)
-        getitem___1830 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 500, 16), a_1829, '__getitem__')
+        getitem___1835 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 500, 16), a_1834, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 500)
-        subscript_call_result_1831 = invoke(stypy.reporting.localization.Localization(__file__, 500, 16), getitem___1830, int_1828)
+        subscript_call_result_1836 = invoke(stypy.reporting.localization.Localization(__file__, 500, 16), getitem___1835, int_1833)
         
-        list_1834 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 500, 16), 'list')
-        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 500, 16), list_1834, subscript_call_result_1831)
+        list_1839 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 500, 16), 'list')
+        set_contained_elements_type(stypy.reporting.localization.Localization(__file__, 500, 16), list_1839, subscript_call_result_1836)
         # Assigning a type to the variable 'tags' (line 500)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 500, 8), 'tags', list_1834)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 500, 8), 'tags', list_1839)
         
         # Call to write(...): (line 501)
         # Processing the call arguments (line 501)
-        str_1837 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 501, 21), 'str', 'parsing: %s\n')
+        str_1842 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 501, 21), 'str', 'parsing: %s\n')
         
         # Call to join(...): (line 501)
         # Processing the call arguments (line 501)
         # Getting the type of 'sent' (line 501)
-        sent_1840 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 501, 48), 'sent', False)
+        sent_1845 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 501, 48), 'sent', False)
         # Processing the call keyword arguments (line 501)
-        kwargs_1841 = {}
-        str_1838 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 501, 39), 'str', ' ')
+        kwargs_1846 = {}
+        str_1843 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 501, 39), 'str', ' ')
         # Obtaining the member 'join' of a type (line 501)
-        join_1839 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 501, 39), str_1838, 'join')
+        join_1844 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 501, 39), str_1843, 'join')
         # Calling join(args, kwargs) (line 501)
-        join_call_result_1842 = invoke(stypy.reporting.localization.Localization(__file__, 501, 39), join_1839, *[sent_1840], **kwargs_1841)
+        join_call_result_1847 = invoke(stypy.reporting.localization.Localization(__file__, 501, 39), join_1844, *[sent_1845], **kwargs_1846)
         
         # Applying the binary operator '%' (line 501)
-        result_mod_1843 = python_operator(stypy.reporting.localization.Localization(__file__, 501, 21), '%', str_1837, join_call_result_1842)
+        result_mod_1848 = python_operator(stypy.reporting.localization.Localization(__file__, 501, 21), '%', str_1842, join_call_result_1847)
         
         # Processing the call keyword arguments (line 501)
-        kwargs_1844 = {}
+        kwargs_1849 = {}
         # Getting the type of 'stderr' (line 501)
-        stderr_1835 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 501, 8), 'stderr', False)
+        stderr_1840 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 501, 8), 'stderr', False)
         # Obtaining the member 'write' of a type (line 501)
-        write_1836 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 501, 8), stderr_1835, 'write')
+        write_1841 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 501, 8), stderr_1840, 'write')
         # Calling write(args, kwargs) (line 501)
-        write_call_result_1845 = invoke(stypy.reporting.localization.Localization(__file__, 501, 8), write_1836, *[result_mod_1843], **kwargs_1844)
+        write_call_result_1850 = invoke(stypy.reporting.localization.Localization(__file__, 501, 8), write_1841, *[result_mod_1848], **kwargs_1849)
         
         
         # Assigning a Call to a Tuple (line 502):
@@ -10126,93 +10179,93 @@ def batch(localization, *varargs, **kwargs):
         # Call to parse(...): (line 502)
         # Processing the call arguments (line 502)
         # Getting the type of 'sent' (line 502)
-        sent_1847 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 29), 'sent', False)
+        sent_1852 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 29), 'sent', False)
         # Getting the type of 'grammar' (line 502)
-        grammar_1848 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 35), 'grammar', False)
+        grammar_1853 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 35), 'grammar', False)
         # Getting the type of 'tags' (line 502)
-        tags_1849 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 44), 'tags', False)
+        tags_1854 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 44), 'tags', False)
         
         # Obtaining the type of the subscript
         # Getting the type of 'root' (line 502)
-        root_1850 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 63), 'root', False)
+        root_1855 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 63), 'root', False)
         # Getting the type of 'grammar' (line 502)
-        grammar_1851 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 50), 'grammar', False)
+        grammar_1856 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 50), 'grammar', False)
         # Obtaining the member 'toid' of a type (line 502)
-        toid_1852 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 502, 50), grammar_1851, 'toid')
+        toid_1857 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 502, 50), grammar_1856, 'toid')
         # Obtaining the member '__getitem__' of a type (line 502)
-        getitem___1853 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 502, 50), toid_1852, '__getitem__')
+        getitem___1858 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 502, 50), toid_1857, '__getitem__')
         # Calling the subscript (__getitem__) to obtain the elements type (line 502)
-        subscript_call_result_1854 = invoke(stypy.reporting.localization.Localization(__file__, 502, 50), getitem___1853, root_1850)
+        subscript_call_result_1859 = invoke(stypy.reporting.localization.Localization(__file__, 502, 50), getitem___1858, root_1855)
         
         # Getting the type of 'False' (line 502)
-        False_1855 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 70), 'False', False)
+        False_1860 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 70), 'False', False)
         # Processing the call keyword arguments (line 502)
-        kwargs_1856 = {}
+        kwargs_1861 = {}
         # Getting the type of 'parse' (line 502)
-        parse_1846 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 23), 'parse', False)
+        parse_1851 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 23), 'parse', False)
         # Calling parse(args, kwargs) (line 502)
-        parse_call_result_1857 = invoke(stypy.reporting.localization.Localization(__file__, 502, 23), parse_1846, *[sent_1847, grammar_1848, tags_1849, subscript_call_result_1854, False_1855], **kwargs_1856)
+        parse_call_result_1862 = invoke(stypy.reporting.localization.Localization(__file__, 502, 23), parse_1851, *[sent_1852, grammar_1853, tags_1854, subscript_call_result_1859, False_1860], **kwargs_1861)
         
         # Assigning a type to the variable 'call_assignment_16' (line 502)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_16', parse_call_result_1857)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_16', parse_call_result_1862)
         
         # Assigning a Call to a Name (line 502):
         
         # Call to __getitem__(...):
         # Processing the call arguments
-        int_1860 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 502, 8), 'int')
+        int_1865 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 502, 8), 'int')
         # Processing the call keyword arguments
-        kwargs_1861 = {}
+        kwargs_1866 = {}
         # Getting the type of 'call_assignment_16' (line 502)
-        call_assignment_16_1858 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_16', False)
+        call_assignment_16_1863 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_16', False)
         # Obtaining the member '__getitem__' of a type (line 502)
-        getitem___1859 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 502, 8), call_assignment_16_1858, '__getitem__')
+        getitem___1864 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 502, 8), call_assignment_16_1863, '__getitem__')
         # Calling __getitem__(args, kwargs)
-        getitem___call_result_1862 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1859, *[int_1860], **kwargs_1861)
+        getitem___call_result_1867 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1864, *[int_1865], **kwargs_1866)
         
         # Assigning a type to the variable 'call_assignment_17' (line 502)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_17', getitem___call_result_1862)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_17', getitem___call_result_1867)
         
         # Assigning a Name to a Name (line 502):
         # Getting the type of 'call_assignment_17' (line 502)
-        call_assignment_17_1863 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_17')
+        call_assignment_17_1868 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_17')
         # Assigning a type to the variable 'chart' (line 502)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'chart', call_assignment_17_1863)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'chart', call_assignment_17_1868)
         
         # Assigning a Call to a Name (line 502):
         
         # Call to __getitem__(...):
         # Processing the call arguments
-        int_1866 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 502, 8), 'int')
+        int_1871 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 502, 8), 'int')
         # Processing the call keyword arguments
-        kwargs_1867 = {}
+        kwargs_1872 = {}
         # Getting the type of 'call_assignment_16' (line 502)
-        call_assignment_16_1864 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_16', False)
+        call_assignment_16_1869 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_16', False)
         # Obtaining the member '__getitem__' of a type (line 502)
-        getitem___1865 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 502, 8), call_assignment_16_1864, '__getitem__')
+        getitem___1870 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 502, 8), call_assignment_16_1869, '__getitem__')
         # Calling __getitem__(args, kwargs)
-        getitem___call_result_1868 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1865, *[int_1866], **kwargs_1867)
+        getitem___call_result_1873 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1870, *[int_1871], **kwargs_1872)
         
         # Assigning a type to the variable 'call_assignment_18' (line 502)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_18', getitem___call_result_1868)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_18', getitem___call_result_1873)
         
         # Assigning a Name to a Name (line 502):
         # Getting the type of 'call_assignment_18' (line 502)
-        call_assignment_18_1869 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_18')
+        call_assignment_18_1874 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 502, 8), 'call_assignment_18')
         # Assigning a type to the variable 'start' (line 502)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 15), 'start', call_assignment_18_1869)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 502, 15), 'start', call_assignment_18_1874)
         # Getting the type of 'start' (line 503)
-        start_1870 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 503, 11), 'start')
+        start_1875 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 503, 11), 'start')
         # Testing if the type of an if condition is none (line 503)
 
-        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 503, 8), start_1870):
+        if evaluates_to_none(stypy.reporting.localization.Localization(__file__, 503, 8), start_1875):
             pass
         else:
             
             # Testing the type of an if condition (line 503)
-            if_condition_1871 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 503, 8), start_1870)
-            # Assigning a type to the variable 'if_condition_1871' (line 503)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 503, 8), 'if_condition_1871', if_condition_1871)
+            if_condition_1876 = is_suitable_condition(stypy.reporting.localization.Localization(__file__, 503, 8), start_1875)
+            # Assigning a type to the variable 'if_condition_1876' (line 503)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 503, 8), 'if_condition_1876', if_condition_1876)
             # SSA begins for if statement (line 503)
             module_type_store = SSAContext.create_ssa_context(module_type_store, 'if')
             
@@ -10223,83 +10276,83 @@ def batch(localization, *varargs, **kwargs):
             # Call to mostprobablederivation(...): (line 504)
             # Processing the call arguments (line 504)
             # Getting the type of 'chart' (line 504)
-            chart_1873 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 42), 'chart', False)
+            chart_1878 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 42), 'chart', False)
             # Getting the type of 'start' (line 504)
-            start_1874 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 49), 'start', False)
+            start_1879 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 49), 'start', False)
             # Getting the type of 'grammar' (line 504)
-            grammar_1875 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 56), 'grammar', False)
+            grammar_1880 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 56), 'grammar', False)
             # Obtaining the member 'tolabel' of a type (line 504)
-            tolabel_1876 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 504, 56), grammar_1875, 'tolabel')
+            tolabel_1881 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 504, 56), grammar_1880, 'tolabel')
             # Processing the call keyword arguments (line 504)
-            kwargs_1877 = {}
+            kwargs_1882 = {}
             # Getting the type of 'mostprobablederivation' (line 504)
-            mostprobablederivation_1872 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 19), 'mostprobablederivation', False)
+            mostprobablederivation_1877 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 19), 'mostprobablederivation', False)
             # Calling mostprobablederivation(args, kwargs) (line 504)
-            mostprobablederivation_call_result_1878 = invoke(stypy.reporting.localization.Localization(__file__, 504, 19), mostprobablederivation_1872, *[chart_1873, start_1874, tolabel_1876], **kwargs_1877)
+            mostprobablederivation_call_result_1883 = invoke(stypy.reporting.localization.Localization(__file__, 504, 19), mostprobablederivation_1877, *[chart_1878, start_1879, tolabel_1881], **kwargs_1882)
             
             # Assigning a type to the variable 'call_assignment_19' (line 504)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_19', mostprobablederivation_call_result_1878)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_19', mostprobablederivation_call_result_1883)
             
             # Assigning a Call to a Name (line 504):
             
             # Call to __getitem__(...):
             # Processing the call arguments
-            int_1881 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 504, 12), 'int')
+            int_1886 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 504, 12), 'int')
             # Processing the call keyword arguments
-            kwargs_1882 = {}
+            kwargs_1887 = {}
             # Getting the type of 'call_assignment_19' (line 504)
-            call_assignment_19_1879 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_19', False)
+            call_assignment_19_1884 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_19', False)
             # Obtaining the member '__getitem__' of a type (line 504)
-            getitem___1880 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 504, 12), call_assignment_19_1879, '__getitem__')
+            getitem___1885 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 504, 12), call_assignment_19_1884, '__getitem__')
             # Calling __getitem__(args, kwargs)
-            getitem___call_result_1883 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1880, *[int_1881], **kwargs_1882)
+            getitem___call_result_1888 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1885, *[int_1886], **kwargs_1887)
             
             # Assigning a type to the variable 'call_assignment_20' (line 504)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_20', getitem___call_result_1883)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_20', getitem___call_result_1888)
             
             # Assigning a Name to a Name (line 504):
             # Getting the type of 'call_assignment_20' (line 504)
-            call_assignment_20_1884 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_20')
+            call_assignment_20_1889 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_20')
             # Assigning a type to the variable 't' (line 504)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 't', call_assignment_20_1884)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 't', call_assignment_20_1889)
             
             # Assigning a Call to a Name (line 504):
             
             # Call to __getitem__(...):
             # Processing the call arguments
-            int_1887 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 504, 12), 'int')
+            int_1892 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 504, 12), 'int')
             # Processing the call keyword arguments
-            kwargs_1888 = {}
+            kwargs_1893 = {}
             # Getting the type of 'call_assignment_19' (line 504)
-            call_assignment_19_1885 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_19', False)
+            call_assignment_19_1890 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_19', False)
             # Obtaining the member '__getitem__' of a type (line 504)
-            getitem___1886 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 504, 12), call_assignment_19_1885, '__getitem__')
+            getitem___1891 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 504, 12), call_assignment_19_1890, '__getitem__')
             # Calling __getitem__(args, kwargs)
-            getitem___call_result_1889 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1886, *[int_1887], **kwargs_1888)
+            getitem___call_result_1894 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___1891, *[int_1892], **kwargs_1893)
             
             # Assigning a type to the variable 'call_assignment_21' (line 504)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_21', getitem___call_result_1889)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_21', getitem___call_result_1894)
             
             # Assigning a Name to a Name (line 504):
             # Getting the type of 'call_assignment_21' (line 504)
-            call_assignment_21_1890 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_21')
+            call_assignment_21_1895 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 504, 12), 'call_assignment_21')
             # Assigning a type to the variable 'p' (line 504)
-            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 15), 'p', call_assignment_21_1890)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 504, 15), 'p', call_assignment_21_1895)
             
             # Call to exp(...): (line 506)
             # Processing the call arguments (line 506)
             
             # Getting the type of 'p' (line 506)
-            p_1892 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 506, 17), 'p', False)
+            p_1897 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 506, 17), 'p', False)
             # Applying the 'usub' unary operator (line 506)
-            result___neg___1893 = python_operator(stypy.reporting.localization.Localization(__file__, 506, 16), 'usub', p_1892)
+            result___neg___1898 = python_operator(stypy.reporting.localization.Localization(__file__, 506, 16), 'usub', p_1897)
             
             # Processing the call keyword arguments (line 506)
-            kwargs_1894 = {}
+            kwargs_1899 = {}
             # Getting the type of 'exp' (line 506)
-            exp_1891 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 506, 12), 'exp', False)
+            exp_1896 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 506, 12), 'exp', False)
             # Calling exp(args, kwargs) (line 506)
-            exp_call_result_1895 = invoke(stypy.reporting.localization.Localization(__file__, 506, 12), exp_1891, *[result___neg___1893], **kwargs_1894)
+            exp_call_result_1900 = invoke(stypy.reporting.localization.Localization(__file__, 506, 12), exp_1896, *[result___neg___1898], **kwargs_1899)
             
             # SSA branch for the else part of an if statement (line 503)
             module_type_store.open_ssa_branch('else')
@@ -10320,14 +10373,14 @@ def batch(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'batch' in the type store
     # Getting the type of 'stypy_return_type' (line 492)
-    stypy_return_type_1896 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 492, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_1896)
+    stypy_return_type_1901 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 492, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_1901)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'batch'
-    return stypy_return_type_1896
+    return stypy_return_type_1901
 
 # Assigning a type to the variable 'batch' (line 492)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 492, 0), 'batch', batch)
@@ -10374,430 +10427,430 @@ def demo(localization, *varargs, **kwargs):
     # Assigning a List to a Name (line 512):
     
     # Obtaining an instance of the builtin type 'list' (line 512)
-    list_1897 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 512, 12), 'list')
+    list_1902 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 512, 12), 'list')
     # Adding type elements to the builtin type 'list' instance (line 512)
     # Adding element type (line 512)
     
     # Obtaining an instance of the builtin type 'tuple' (line 513)
-    tuple_1898 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 9), 'tuple')
+    tuple_1903 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 9), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 513)
     # Adding element type (line 513)
     
     # Obtaining an instance of the builtin type 'tuple' (line 513)
-    tuple_1899 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 10), 'tuple')
+    tuple_1904 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 10), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 513)
     # Adding element type (line 513)
     
     # Obtaining an instance of the builtin type 'tuple' (line 513)
-    tuple_1900 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 11), 'tuple')
+    tuple_1905 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 513)
     # Adding element type (line 513)
-    str_1901 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 11), 'str', 'S')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 11), tuple_1900, str_1901)
+    str_1906 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 11), 'str', 'S')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 11), tuple_1905, str_1906)
     # Adding element type (line 513)
-    str_1902 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 16), 'str', 'VP2')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 11), tuple_1900, str_1902)
+    str_1907 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 16), 'str', 'VP2')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 11), tuple_1905, str_1907)
     # Adding element type (line 513)
-    str_1903 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 23), 'str', 'VMFIN')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 11), tuple_1900, str_1903)
+    str_1908 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 23), 'str', 'VMFIN')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 11), tuple_1905, str_1908)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 10), tuple_1899, tuple_1900)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 10), tuple_1904, tuple_1905)
     # Adding element type (line 513)
     
     # Obtaining an instance of the builtin type 'tuple' (line 513)
-    tuple_1904 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 34), 'tuple')
+    tuple_1909 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 34), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 513)
     # Adding element type (line 513)
     
     # Obtaining an instance of the builtin type 'tuple' (line 513)
-    tuple_1905 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 35), 'tuple')
+    tuple_1910 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 35), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 513)
     # Adding element type (line 513)
-    int_1906 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 35), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 35), tuple_1905, int_1906)
+    int_1911 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 35), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 35), tuple_1910, int_1911)
     # Adding element type (line 513)
-    int_1907 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 38), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 35), tuple_1905, int_1907)
+    int_1912 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 38), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 35), tuple_1910, int_1912)
     # Adding element type (line 513)
-    int_1908 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 41), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 35), tuple_1905, int_1908)
+    int_1913 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 41), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 35), tuple_1910, int_1913)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 34), tuple_1904, tuple_1905)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 34), tuple_1909, tuple_1910)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 10), tuple_1899, tuple_1904)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 10), tuple_1904, tuple_1909)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 9), tuple_1898, tuple_1899)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 9), tuple_1903, tuple_1904)
     # Adding element type (line 513)
     
     # Call to log(...): (line 513)
     # Processing the call arguments (line 513)
-    float_1910 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 52), 'float')
+    float_1915 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 513, 52), 'float')
     # Processing the call keyword arguments (line 513)
-    kwargs_1911 = {}
+    kwargs_1916 = {}
     # Getting the type of 'log' (line 513)
-    log_1909 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 513, 48), 'log', False)
+    log_1914 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 513, 48), 'log', False)
     # Calling log(args, kwargs) (line 513)
-    log_call_result_1912 = invoke(stypy.reporting.localization.Localization(__file__, 513, 48), log_1909, *[float_1910], **kwargs_1911)
+    log_call_result_1917 = invoke(stypy.reporting.localization.Localization(__file__, 513, 48), log_1914, *[float_1915], **kwargs_1916)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 9), tuple_1898, log_call_result_1912)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 513, 9), tuple_1903, log_call_result_1917)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 512, 12), list_1897, tuple_1898)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 512, 12), list_1902, tuple_1903)
     # Adding element type (line 512)
     
     # Obtaining an instance of the builtin type 'tuple' (line 514)
-    tuple_1913 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 9), 'tuple')
+    tuple_1918 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 9), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 514)
     # Adding element type (line 514)
     
     # Obtaining an instance of the builtin type 'tuple' (line 514)
-    tuple_1914 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 10), 'tuple')
+    tuple_1919 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 10), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 514)
     # Adding element type (line 514)
     
     # Obtaining an instance of the builtin type 'tuple' (line 514)
-    tuple_1915 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 11), 'tuple')
+    tuple_1920 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 514)
     # Adding element type (line 514)
-    str_1916 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 11), 'str', 'VP2')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 11), tuple_1915, str_1916)
+    str_1921 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 11), 'str', 'VP2')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 11), tuple_1920, str_1921)
     # Adding element type (line 514)
-    str_1917 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 18), 'str', 'VP2')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 11), tuple_1915, str_1917)
+    str_1922 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 18), 'str', 'VP2')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 11), tuple_1920, str_1922)
     # Adding element type (line 514)
-    str_1918 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 25), 'str', 'VAINF')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 11), tuple_1915, str_1918)
+    str_1923 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 25), 'str', 'VAINF')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 11), tuple_1920, str_1923)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 10), tuple_1914, tuple_1915)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 10), tuple_1919, tuple_1920)
     # Adding element type (line 514)
     
     # Obtaining an instance of the builtin type 'tuple' (line 514)
-    tuple_1919 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 36), 'tuple')
+    tuple_1924 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 36), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 514)
     # Adding element type (line 514)
     
     # Obtaining an instance of the builtin type 'tuple' (line 514)
-    tuple_1920 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 37), 'tuple')
+    tuple_1925 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 37), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 514)
     # Adding element type (line 514)
-    int_1921 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 37), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 37), tuple_1920, int_1921)
+    int_1926 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 37), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 37), tuple_1925, int_1926)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 36), tuple_1919, tuple_1920)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 36), tuple_1924, tuple_1925)
     # Adding element type (line 514)
     
     # Obtaining an instance of the builtin type 'tuple' (line 514)
-    tuple_1922 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 43), 'tuple')
+    tuple_1927 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 43), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 514)
     # Adding element type (line 514)
-    int_1923 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 43), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 43), tuple_1922, int_1923)
+    int_1928 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 43), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 43), tuple_1927, int_1928)
     # Adding element type (line 514)
-    int_1924 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 46), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 43), tuple_1922, int_1924)
+    int_1929 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 46), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 43), tuple_1927, int_1929)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 36), tuple_1919, tuple_1922)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 36), tuple_1924, tuple_1927)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 10), tuple_1914, tuple_1919)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 10), tuple_1919, tuple_1924)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 9), tuple_1913, tuple_1914)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 9), tuple_1918, tuple_1919)
     # Adding element type (line 514)
     
     # Call to log(...): (line 514)
     # Processing the call arguments (line 514)
-    float_1926 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 56), 'float')
+    float_1931 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 514, 56), 'float')
     # Processing the call keyword arguments (line 514)
-    kwargs_1927 = {}
+    kwargs_1932 = {}
     # Getting the type of 'log' (line 514)
-    log_1925 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 514, 52), 'log', False)
+    log_1930 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 514, 52), 'log', False)
     # Calling log(args, kwargs) (line 514)
-    log_call_result_1928 = invoke(stypy.reporting.localization.Localization(__file__, 514, 52), log_1925, *[float_1926], **kwargs_1927)
+    log_call_result_1933 = invoke(stypy.reporting.localization.Localization(__file__, 514, 52), log_1930, *[float_1931], **kwargs_1932)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 9), tuple_1913, log_call_result_1928)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 514, 9), tuple_1918, log_call_result_1933)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 512, 12), list_1897, tuple_1913)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 512, 12), list_1902, tuple_1918)
     # Adding element type (line 512)
     
     # Obtaining an instance of the builtin type 'tuple' (line 515)
-    tuple_1929 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 9), 'tuple')
+    tuple_1934 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 9), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 515)
     # Adding element type (line 515)
     
     # Obtaining an instance of the builtin type 'tuple' (line 515)
-    tuple_1930 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 10), 'tuple')
+    tuple_1935 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 10), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 515)
     # Adding element type (line 515)
     
     # Obtaining an instance of the builtin type 'tuple' (line 515)
-    tuple_1931 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 11), 'tuple')
+    tuple_1936 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 515)
     # Adding element type (line 515)
-    str_1932 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 11), 'str', 'VP2')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 11), tuple_1931, str_1932)
+    str_1937 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 11), 'str', 'VP2')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 11), tuple_1936, str_1937)
     # Adding element type (line 515)
-    str_1933 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 18), 'str', 'PROAV')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 11), tuple_1931, str_1933)
+    str_1938 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 18), 'str', 'PROAV')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 11), tuple_1936, str_1938)
     # Adding element type (line 515)
-    str_1934 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 27), 'str', 'VVPP')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 11), tuple_1931, str_1934)
+    str_1939 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 27), 'str', 'VVPP')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 11), tuple_1936, str_1939)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 10), tuple_1930, tuple_1931)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 10), tuple_1935, tuple_1936)
     # Adding element type (line 515)
     
     # Obtaining an instance of the builtin type 'tuple' (line 515)
-    tuple_1935 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 37), 'tuple')
+    tuple_1940 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 37), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 515)
     # Adding element type (line 515)
     
     # Obtaining an instance of the builtin type 'tuple' (line 515)
-    tuple_1936 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 38), 'tuple')
+    tuple_1941 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 38), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 515)
     # Adding element type (line 515)
-    int_1937 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 38), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 38), tuple_1936, int_1937)
+    int_1942 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 38), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 38), tuple_1941, int_1942)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 37), tuple_1935, tuple_1936)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 37), tuple_1940, tuple_1941)
     # Adding element type (line 515)
     
     # Obtaining an instance of the builtin type 'tuple' (line 515)
-    tuple_1938 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 44), 'tuple')
+    tuple_1943 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 44), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 515)
     # Adding element type (line 515)
-    int_1939 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 44), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 44), tuple_1938, int_1939)
+    int_1944 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 44), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 44), tuple_1943, int_1944)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 37), tuple_1935, tuple_1938)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 37), tuple_1940, tuple_1943)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 10), tuple_1930, tuple_1935)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 10), tuple_1935, tuple_1940)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 9), tuple_1929, tuple_1930)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 9), tuple_1934, tuple_1935)
     # Adding element type (line 515)
     
     # Call to log(...): (line 515)
     # Processing the call arguments (line 515)
-    float_1941 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 55), 'float')
+    float_1946 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 515, 55), 'float')
     # Processing the call keyword arguments (line 515)
-    kwargs_1942 = {}
+    kwargs_1947 = {}
     # Getting the type of 'log' (line 515)
-    log_1940 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 515, 51), 'log', False)
+    log_1945 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 515, 51), 'log', False)
     # Calling log(args, kwargs) (line 515)
-    log_call_result_1943 = invoke(stypy.reporting.localization.Localization(__file__, 515, 51), log_1940, *[float_1941], **kwargs_1942)
+    log_call_result_1948 = invoke(stypy.reporting.localization.Localization(__file__, 515, 51), log_1945, *[float_1946], **kwargs_1947)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 9), tuple_1929, log_call_result_1943)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 515, 9), tuple_1934, log_call_result_1948)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 512, 12), list_1897, tuple_1929)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 512, 12), list_1902, tuple_1934)
     # Adding element type (line 512)
     
     # Obtaining an instance of the builtin type 'tuple' (line 516)
-    tuple_1944 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 9), 'tuple')
+    tuple_1949 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 9), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 516)
     # Adding element type (line 516)
     
     # Obtaining an instance of the builtin type 'tuple' (line 516)
-    tuple_1945 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 10), 'tuple')
+    tuple_1950 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 10), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 516)
     # Adding element type (line 516)
     
     # Obtaining an instance of the builtin type 'tuple' (line 516)
-    tuple_1946 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 11), 'tuple')
+    tuple_1951 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 516)
     # Adding element type (line 516)
-    str_1947 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 11), 'str', 'VP2')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 11), tuple_1946, str_1947)
+    str_1952 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 11), 'str', 'VP2')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 11), tuple_1951, str_1952)
     # Adding element type (line 516)
-    str_1948 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 18), 'str', 'VP2')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 11), tuple_1946, str_1948)
+    str_1953 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 18), 'str', 'VP2')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 11), tuple_1951, str_1953)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 10), tuple_1945, tuple_1946)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 10), tuple_1950, tuple_1951)
     # Adding element type (line 516)
     
     # Obtaining an instance of the builtin type 'tuple' (line 516)
-    tuple_1949 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 27), 'tuple')
+    tuple_1954 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 27), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 516)
     # Adding element type (line 516)
     
     # Obtaining an instance of the builtin type 'tuple' (line 516)
-    tuple_1950 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 28), 'tuple')
+    tuple_1955 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 28), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 516)
     # Adding element type (line 516)
-    int_1951 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 28), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 28), tuple_1950, int_1951)
+    int_1956 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 28), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 28), tuple_1955, int_1956)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 27), tuple_1949, tuple_1950)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 27), tuple_1954, tuple_1955)
     # Adding element type (line 516)
     
     # Obtaining an instance of the builtin type 'tuple' (line 516)
-    tuple_1952 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 34), 'tuple')
+    tuple_1957 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 34), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 516)
     # Adding element type (line 516)
-    int_1953 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 34), 'int')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 34), tuple_1952, int_1953)
+    int_1958 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 34), 'int')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 34), tuple_1957, int_1958)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 27), tuple_1949, tuple_1952)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 27), tuple_1954, tuple_1957)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 10), tuple_1945, tuple_1949)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 10), tuple_1950, tuple_1954)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 9), tuple_1944, tuple_1945)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 9), tuple_1949, tuple_1950)
     # Adding element type (line 516)
     
     # Call to log(...): (line 516)
     # Processing the call arguments (line 516)
-    float_1955 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 45), 'float')
+    float_1960 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 516, 45), 'float')
     # Processing the call keyword arguments (line 516)
-    kwargs_1956 = {}
+    kwargs_1961 = {}
     # Getting the type of 'log' (line 516)
-    log_1954 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 516, 41), 'log', False)
+    log_1959 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 516, 41), 'log', False)
     # Calling log(args, kwargs) (line 516)
-    log_call_result_1957 = invoke(stypy.reporting.localization.Localization(__file__, 516, 41), log_1954, *[float_1955], **kwargs_1956)
+    log_call_result_1962 = invoke(stypy.reporting.localization.Localization(__file__, 516, 41), log_1959, *[float_1960], **kwargs_1961)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 9), tuple_1944, log_call_result_1957)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 516, 9), tuple_1949, log_call_result_1962)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 512, 12), list_1897, tuple_1944)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 512, 12), list_1902, tuple_1949)
     
     # Assigning a type to the variable 'rules' (line 512)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 512, 4), 'rules', list_1897)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 512, 4), 'rules', list_1902)
     
     # Assigning a List to a Name (line 517):
     
     # Assigning a List to a Name (line 517):
     
     # Obtaining an instance of the builtin type 'list' (line 517)
-    list_1958 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 517, 14), 'list')
+    list_1963 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 517, 14), 'list')
     # Adding type elements to the builtin type 'list' instance (line 517)
     # Adding element type (line 517)
     
     # Obtaining an instance of the builtin type 'tuple' (line 518)
-    tuple_1959 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 9), 'tuple')
+    tuple_1964 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 9), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 518)
     # Adding element type (line 518)
     
     # Obtaining an instance of the builtin type 'tuple' (line 518)
-    tuple_1960 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 10), 'tuple')
+    tuple_1965 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 10), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 518)
     # Adding element type (line 518)
     
     # Obtaining an instance of the builtin type 'tuple' (line 518)
-    tuple_1961 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 11), 'tuple')
+    tuple_1966 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 518)
     # Adding element type (line 518)
-    str_1962 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 11), 'str', 'PROAV')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 11), tuple_1961, str_1962)
+    str_1967 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 11), 'str', 'PROAV')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 11), tuple_1966, str_1967)
     # Adding element type (line 518)
-    str_1963 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 20), 'str', 'Epsilon')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 11), tuple_1961, str_1963)
+    str_1968 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 20), 'str', 'Epsilon')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 11), tuple_1966, str_1968)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 10), tuple_1960, tuple_1961)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 10), tuple_1965, tuple_1966)
     # Adding element type (line 518)
-    str_1964 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 32), 'str', 'Darueber')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 10), tuple_1960, str_1964)
+    str_1969 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 32), 'str', 'Darueber')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 10), tuple_1965, str_1969)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 9), tuple_1959, tuple_1960)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 9), tuple_1964, tuple_1965)
     # Adding element type (line 518)
-    float_1965 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 45), 'float')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 9), tuple_1959, float_1965)
+    float_1970 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 518, 45), 'float')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 518, 9), tuple_1964, float_1970)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 517, 14), list_1958, tuple_1959)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 517, 14), list_1963, tuple_1964)
     # Adding element type (line 517)
     
     # Obtaining an instance of the builtin type 'tuple' (line 519)
-    tuple_1966 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 9), 'tuple')
+    tuple_1971 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 9), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 519)
     # Adding element type (line 519)
     
     # Obtaining an instance of the builtin type 'tuple' (line 519)
-    tuple_1967 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 10), 'tuple')
+    tuple_1972 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 10), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 519)
     # Adding element type (line 519)
     
     # Obtaining an instance of the builtin type 'tuple' (line 519)
-    tuple_1968 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 11), 'tuple')
+    tuple_1973 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 519)
     # Adding element type (line 519)
-    str_1969 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 11), 'str', 'VAINF')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 11), tuple_1968, str_1969)
+    str_1974 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 11), 'str', 'VAINF')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 11), tuple_1973, str_1974)
     # Adding element type (line 519)
-    str_1970 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 20), 'str', 'Epsilon')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 11), tuple_1968, str_1970)
+    str_1975 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 20), 'str', 'Epsilon')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 11), tuple_1973, str_1975)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 10), tuple_1967, tuple_1968)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 10), tuple_1972, tuple_1973)
     # Adding element type (line 519)
-    str_1971 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 32), 'str', 'werden')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 10), tuple_1967, str_1971)
+    str_1976 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 32), 'str', 'werden')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 10), tuple_1972, str_1976)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 9), tuple_1966, tuple_1967)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 9), tuple_1971, tuple_1972)
     # Adding element type (line 519)
-    float_1972 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 43), 'float')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 9), tuple_1966, float_1972)
+    float_1977 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 519, 43), 'float')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 519, 9), tuple_1971, float_1977)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 517, 14), list_1958, tuple_1966)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 517, 14), list_1963, tuple_1971)
     # Adding element type (line 517)
     
     # Obtaining an instance of the builtin type 'tuple' (line 520)
-    tuple_1973 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 9), 'tuple')
+    tuple_1978 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 9), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 520)
     # Adding element type (line 520)
     
     # Obtaining an instance of the builtin type 'tuple' (line 520)
-    tuple_1974 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 10), 'tuple')
+    tuple_1979 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 10), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 520)
     # Adding element type (line 520)
     
     # Obtaining an instance of the builtin type 'tuple' (line 520)
-    tuple_1975 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 11), 'tuple')
+    tuple_1980 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 520)
     # Adding element type (line 520)
-    str_1976 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 11), 'str', 'VMFIN')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 11), tuple_1975, str_1976)
+    str_1981 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 11), 'str', 'VMFIN')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 11), tuple_1980, str_1981)
     # Adding element type (line 520)
-    str_1977 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 20), 'str', 'Epsilon')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 11), tuple_1975, str_1977)
+    str_1982 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 20), 'str', 'Epsilon')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 11), tuple_1980, str_1982)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 10), tuple_1974, tuple_1975)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 10), tuple_1979, tuple_1980)
     # Adding element type (line 520)
-    str_1978 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 32), 'str', 'muss')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 10), tuple_1974, str_1978)
+    str_1983 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 32), 'str', 'muss')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 10), tuple_1979, str_1983)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 9), tuple_1973, tuple_1974)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 9), tuple_1978, tuple_1979)
     # Adding element type (line 520)
-    float_1979 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 41), 'float')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 9), tuple_1973, float_1979)
+    float_1984 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 520, 41), 'float')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 520, 9), tuple_1978, float_1984)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 517, 14), list_1958, tuple_1973)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 517, 14), list_1963, tuple_1978)
     # Adding element type (line 517)
     
     # Obtaining an instance of the builtin type 'tuple' (line 521)
-    tuple_1980 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 9), 'tuple')
+    tuple_1985 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 9), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 521)
     # Adding element type (line 521)
     
     # Obtaining an instance of the builtin type 'tuple' (line 521)
-    tuple_1981 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 10), 'tuple')
+    tuple_1986 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 10), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 521)
     # Adding element type (line 521)
     
     # Obtaining an instance of the builtin type 'tuple' (line 521)
-    tuple_1982 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 11), 'tuple')
+    tuple_1987 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 11), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 521)
     # Adding element type (line 521)
-    str_1983 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 11), 'str', 'VVPP')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 11), tuple_1982, str_1983)
+    str_1988 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 11), 'str', 'VVPP')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 11), tuple_1987, str_1988)
     # Adding element type (line 521)
-    str_1984 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 19), 'str', 'Epsilon')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 11), tuple_1982, str_1984)
+    str_1989 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 19), 'str', 'Epsilon')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 11), tuple_1987, str_1989)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 10), tuple_1981, tuple_1982)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 10), tuple_1986, tuple_1987)
     # Adding element type (line 521)
-    str_1985 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 31), 'str', 'nachgedacht')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 10), tuple_1981, str_1985)
+    str_1990 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 31), 'str', 'nachgedacht')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 10), tuple_1986, str_1990)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 9), tuple_1980, tuple_1981)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 9), tuple_1985, tuple_1986)
     # Adding element type (line 521)
-    float_1986 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 47), 'float')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 9), tuple_1980, float_1986)
+    float_1991 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 521, 47), 'float')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 521, 9), tuple_1985, float_1991)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 517, 14), list_1958, tuple_1980)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 517, 14), list_1963, tuple_1985)
     
     # Assigning a type to the variable 'lexicon' (line 517)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 517, 4), 'lexicon', list_1958)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 517, 4), 'lexicon', list_1963)
     
     # Assigning a Call to a Name (line 522):
     
@@ -10806,18 +10859,18 @@ def demo(localization, *varargs, **kwargs):
     # Call to splitgrammar(...): (line 522)
     # Processing the call arguments (line 522)
     # Getting the type of 'rules' (line 522)
-    rules_1988 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 522, 27), 'rules', False)
+    rules_1993 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 522, 27), 'rules', False)
     # Getting the type of 'lexicon' (line 522)
-    lexicon_1989 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 522, 34), 'lexicon', False)
+    lexicon_1994 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 522, 34), 'lexicon', False)
     # Processing the call keyword arguments (line 522)
-    kwargs_1990 = {}
+    kwargs_1995 = {}
     # Getting the type of 'splitgrammar' (line 522)
-    splitgrammar_1987 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 522, 14), 'splitgrammar', False)
+    splitgrammar_1992 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 522, 14), 'splitgrammar', False)
     # Calling splitgrammar(args, kwargs) (line 522)
-    splitgrammar_call_result_1991 = invoke(stypy.reporting.localization.Localization(__file__, 522, 14), splitgrammar_1987, *[rules_1988, lexicon_1989], **kwargs_1990)
+    splitgrammar_call_result_1996 = invoke(stypy.reporting.localization.Localization(__file__, 522, 14), splitgrammar_1992, *[rules_1993, lexicon_1994], **kwargs_1995)
     
     # Assigning a type to the variable 'grammar' (line 522)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 522, 4), 'grammar', splitgrammar_call_result_1991)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 522, 4), 'grammar', splitgrammar_call_result_1996)
     
     # Assigning a Call to a Tuple (line 524):
     
@@ -10828,119 +10881,119 @@ def demo(localization, *varargs, **kwargs):
     
     # Call to split(...): (line 524)
     # Processing the call keyword arguments (line 524)
-    kwargs_1995 = {}
-    str_1993 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 524, 25), 'str', 'Darueber muss nachgedacht werden')
+    kwargs_2000 = {}
+    str_1998 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 524, 25), 'str', 'Darueber muss nachgedacht werden')
     # Obtaining the member 'split' of a type (line 524)
-    split_1994 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 524, 25), str_1993, 'split')
+    split_1999 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 524, 25), str_1998, 'split')
     # Calling split(args, kwargs) (line 524)
-    split_call_result_1996 = invoke(stypy.reporting.localization.Localization(__file__, 524, 25), split_1994, *[], **kwargs_1995)
+    split_call_result_2001 = invoke(stypy.reporting.localization.Localization(__file__, 524, 25), split_1999, *[], **kwargs_2000)
     
     # Getting the type of 'grammar' (line 525)
-    grammar_1997 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 525, 25), 'grammar', False)
+    grammar_2002 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 525, 25), 'grammar', False)
     
     # Call to split(...): (line 525)
     # Processing the call keyword arguments (line 525)
-    kwargs_2000 = {}
-    str_1998 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 525, 34), 'str', 'PROAV VMFIN VVPP VAINF')
+    kwargs_2005 = {}
+    str_2003 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 525, 34), 'str', 'PROAV VMFIN VVPP VAINF')
     # Obtaining the member 'split' of a type (line 525)
-    split_1999 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 525, 34), str_1998, 'split')
+    split_2004 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 525, 34), str_2003, 'split')
     # Calling split(args, kwargs) (line 525)
-    split_call_result_2001 = invoke(stypy.reporting.localization.Localization(__file__, 525, 34), split_1999, *[], **kwargs_2000)
+    split_call_result_2006 = invoke(stypy.reporting.localization.Localization(__file__, 525, 34), split_2004, *[], **kwargs_2005)
     
     
     # Obtaining the type of the subscript
-    str_2002 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 525, 81), 'str', 'S')
+    str_2007 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 525, 81), 'str', 'S')
     # Getting the type of 'grammar' (line 525)
-    grammar_2003 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 525, 68), 'grammar', False)
+    grammar_2008 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 525, 68), 'grammar', False)
     # Obtaining the member 'toid' of a type (line 525)
-    toid_2004 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 525, 68), grammar_2003, 'toid')
+    toid_2009 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 525, 68), grammar_2008, 'toid')
     # Obtaining the member '__getitem__' of a type (line 525)
-    getitem___2005 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 525, 68), toid_2004, '__getitem__')
+    getitem___2010 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 525, 68), toid_2009, '__getitem__')
     # Calling the subscript (__getitem__) to obtain the elements type (line 525)
-    subscript_call_result_2006 = invoke(stypy.reporting.localization.Localization(__file__, 525, 68), getitem___2005, str_2002)
+    subscript_call_result_2011 = invoke(stypy.reporting.localization.Localization(__file__, 525, 68), getitem___2010, str_2007)
     
     # Getting the type of 'False' (line 525)
-    False_2007 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 525, 87), 'False', False)
+    False_2012 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 525, 87), 'False', False)
     # Processing the call keyword arguments (line 524)
-    kwargs_2008 = {}
+    kwargs_2013 = {}
     # Getting the type of 'parse' (line 524)
-    parse_1992 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 19), 'parse', False)
+    parse_1997 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 19), 'parse', False)
     # Calling parse(args, kwargs) (line 524)
-    parse_call_result_2009 = invoke(stypy.reporting.localization.Localization(__file__, 524, 19), parse_1992, *[split_call_result_1996, grammar_1997, split_call_result_2001, subscript_call_result_2006, False_2007], **kwargs_2008)
+    parse_call_result_2014 = invoke(stypy.reporting.localization.Localization(__file__, 524, 19), parse_1997, *[split_call_result_2001, grammar_2002, split_call_result_2006, subscript_call_result_2011, False_2012], **kwargs_2013)
     
     # Assigning a type to the variable 'call_assignment_22' (line 524)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_22', parse_call_result_2009)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_22', parse_call_result_2014)
     
     # Assigning a Call to a Name (line 524):
     
     # Call to __getitem__(...):
     # Processing the call arguments
-    int_2012 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 524, 4), 'int')
+    int_2017 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 524, 4), 'int')
     # Processing the call keyword arguments
-    kwargs_2013 = {}
+    kwargs_2018 = {}
     # Getting the type of 'call_assignment_22' (line 524)
-    call_assignment_22_2010 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_22', False)
+    call_assignment_22_2015 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_22', False)
     # Obtaining the member '__getitem__' of a type (line 524)
-    getitem___2011 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 524, 4), call_assignment_22_2010, '__getitem__')
+    getitem___2016 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 524, 4), call_assignment_22_2015, '__getitem__')
     # Calling __getitem__(args, kwargs)
-    getitem___call_result_2014 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___2011, *[int_2012], **kwargs_2013)
+    getitem___call_result_2019 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___2016, *[int_2017], **kwargs_2018)
     
     # Assigning a type to the variable 'call_assignment_23' (line 524)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_23', getitem___call_result_2014)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_23', getitem___call_result_2019)
     
     # Assigning a Name to a Name (line 524):
     # Getting the type of 'call_assignment_23' (line 524)
-    call_assignment_23_2015 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_23')
+    call_assignment_23_2020 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_23')
     # Assigning a type to the variable 'chart' (line 524)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'chart', call_assignment_23_2015)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'chart', call_assignment_23_2020)
     
     # Assigning a Call to a Name (line 524):
     
     # Call to __getitem__(...):
     # Processing the call arguments
-    int_2018 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 524, 4), 'int')
+    int_2023 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 524, 4), 'int')
     # Processing the call keyword arguments
-    kwargs_2019 = {}
+    kwargs_2024 = {}
     # Getting the type of 'call_assignment_22' (line 524)
-    call_assignment_22_2016 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_22', False)
+    call_assignment_22_2021 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_22', False)
     # Obtaining the member '__getitem__' of a type (line 524)
-    getitem___2017 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 524, 4), call_assignment_22_2016, '__getitem__')
+    getitem___2022 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 524, 4), call_assignment_22_2021, '__getitem__')
     # Calling __getitem__(args, kwargs)
-    getitem___call_result_2020 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___2017, *[int_2018], **kwargs_2019)
+    getitem___call_result_2025 = invoke(stypy.reporting.localization.Localization(__file__, 0, 0), getitem___2022, *[int_2023], **kwargs_2024)
     
     # Assigning a type to the variable 'call_assignment_24' (line 524)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_24', getitem___call_result_2020)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_24', getitem___call_result_2025)
     
     # Assigning a Name to a Name (line 524):
     # Getting the type of 'call_assignment_24' (line 524)
-    call_assignment_24_2021 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_24')
+    call_assignment_24_2026 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 524, 4), 'call_assignment_24')
     # Assigning a type to the variable 'start' (line 524)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 11), 'start', call_assignment_24_2021)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 524, 11), 'start', call_assignment_24_2026)
     
     # Call to pprint_chart(...): (line 526)
     # Processing the call arguments (line 526)
     # Getting the type of 'chart' (line 526)
-    chart_2023 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 526, 17), 'chart', False)
+    chart_2028 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 526, 17), 'chart', False)
     
     # Call to split(...): (line 526)
     # Processing the call keyword arguments (line 526)
-    kwargs_2026 = {}
-    str_2024 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 526, 24), 'str', 'Darueber muss nachgedacht werden')
+    kwargs_2031 = {}
+    str_2029 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 526, 24), 'str', 'Darueber muss nachgedacht werden')
     # Obtaining the member 'split' of a type (line 526)
-    split_2025 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 526, 24), str_2024, 'split')
+    split_2030 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 526, 24), str_2029, 'split')
     # Calling split(args, kwargs) (line 526)
-    split_call_result_2027 = invoke(stypy.reporting.localization.Localization(__file__, 526, 24), split_2025, *[], **kwargs_2026)
+    split_call_result_2032 = invoke(stypy.reporting.localization.Localization(__file__, 526, 24), split_2030, *[], **kwargs_2031)
     
     # Getting the type of 'grammar' (line 527)
-    grammar_2028 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 527, 17), 'grammar', False)
+    grammar_2033 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 527, 17), 'grammar', False)
     # Obtaining the member 'tolabel' of a type (line 527)
-    tolabel_2029 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 527, 17), grammar_2028, 'tolabel')
+    tolabel_2034 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 527, 17), grammar_2033, 'tolabel')
     # Processing the call keyword arguments (line 526)
-    kwargs_2030 = {}
+    kwargs_2035 = {}
     # Getting the type of 'pprint_chart' (line 526)
-    pprint_chart_2022 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 526, 4), 'pprint_chart', False)
+    pprint_chart_2027 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 526, 4), 'pprint_chart', False)
     # Calling pprint_chart(args, kwargs) (line 526)
-    pprint_chart_call_result_2031 = invoke(stypy.reporting.localization.Localization(__file__, 526, 4), pprint_chart_2022, *[chart_2023, split_call_result_2027, tolabel_2029], **kwargs_2030)
+    pprint_chart_call_result_2036 = invoke(stypy.reporting.localization.Localization(__file__, 526, 4), pprint_chart_2027, *[chart_2028, split_call_result_2032, tolabel_2034], **kwargs_2035)
     
     # Evaluating assert statement condition
     
@@ -10948,108 +11001,123 @@ def demo(localization, *varargs, **kwargs):
     # Call to mostprobablederivation(...): (line 528)
     # Processing the call arguments (line 528)
     # Getting the type of 'chart' (line 528)
-    chart_2033 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 528, 35), 'chart', False)
+    chart_2038 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 528, 35), 'chart', False)
     # Getting the type of 'start' (line 528)
-    start_2034 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 528, 42), 'start', False)
+    start_2039 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 528, 42), 'start', False)
     # Getting the type of 'grammar' (line 528)
-    grammar_2035 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 528, 49), 'grammar', False)
+    grammar_2040 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 528, 49), 'grammar', False)
     # Obtaining the member 'tolabel' of a type (line 528)
-    tolabel_2036 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 528, 49), grammar_2035, 'tolabel')
+    tolabel_2041 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 528, 49), grammar_2040, 'tolabel')
     # Processing the call keyword arguments (line 528)
-    kwargs_2037 = {}
+    kwargs_2042 = {}
     # Getting the type of 'mostprobablederivation' (line 528)
-    mostprobablederivation_2032 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 528, 12), 'mostprobablederivation', False)
+    mostprobablederivation_2037 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 528, 12), 'mostprobablederivation', False)
     # Calling mostprobablederivation(args, kwargs) (line 528)
-    mostprobablederivation_call_result_2038 = invoke(stypy.reporting.localization.Localization(__file__, 528, 12), mostprobablederivation_2032, *[chart_2033, start_2034, tolabel_2036], **kwargs_2037)
+    mostprobablederivation_call_result_2043 = invoke(stypy.reporting.localization.Localization(__file__, 528, 12), mostprobablederivation_2037, *[chart_2038, start_2039, tolabel_2041], **kwargs_2042)
     
     
     # Obtaining an instance of the builtin type 'tuple' (line 529)
-    tuple_2039 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 529, 13), 'tuple')
+    tuple_2044 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 529, 13), 'tuple')
     # Adding type elements to the builtin type 'tuple' instance (line 529)
     # Adding element type (line 529)
-    str_2040 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 529, 13), 'str', '(S (VP2 (VP2 (PROAV 0) (VVPP 2)) (VAINF 3)) (VMFIN 1))')
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 529, 13), tuple_2039, str_2040)
+    str_2045 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 529, 13), 'str', '(S (VP2 (VP2 (PROAV 0) (VVPP 2)) (VAINF 3)) (VMFIN 1))')
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 529, 13), tuple_2044, str_2045)
     # Adding element type (line 529)
     
     
     # Call to log(...): (line 529)
     # Processing the call arguments (line 529)
-    float_2042 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 529, 76), 'float')
+    float_2047 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 529, 76), 'float')
     # Processing the call keyword arguments (line 529)
-    kwargs_2043 = {}
+    kwargs_2048 = {}
     # Getting the type of 'log' (line 529)
-    log_2041 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 529, 72), 'log', False)
+    log_2046 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 529, 72), 'log', False)
     # Calling log(args, kwargs) (line 529)
-    log_call_result_2044 = invoke(stypy.reporting.localization.Localization(__file__, 529, 72), log_2041, *[float_2042], **kwargs_2043)
+    log_call_result_2049 = invoke(stypy.reporting.localization.Localization(__file__, 529, 72), log_2046, *[float_2047], **kwargs_2048)
     
     # Applying the 'usub' unary operator (line 529)
-    result___neg___2045 = python_operator(stypy.reporting.localization.Localization(__file__, 529, 71), 'usub', log_call_result_2044)
+    result___neg___2050 = python_operator(stypy.reporting.localization.Localization(__file__, 529, 71), 'usub', log_call_result_2049)
     
-    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 529, 13), tuple_2039, result___neg___2045)
+    add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 529, 13), tuple_2044, result___neg___2050)
     
     # Applying the binary operator '==' (line 528)
-    result_eq_2046 = python_operator(stypy.reporting.localization.Localization(__file__, 528, 12), '==', mostprobablederivation_call_result_2038, tuple_2039)
+    result_eq_2051 = python_operator(stypy.reporting.localization.Localization(__file__, 528, 12), '==', mostprobablederivation_call_result_2043, tuple_2044)
     
+    assert_2052 = result_eq_2051
+    # Assigning a type to the variable 'assert_2052' (line 528)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 528, 4), 'assert_2052', result_eq_2051)
     # Evaluating assert statement condition
     
     # Call to do(...): (line 530)
     # Processing the call arguments (line 530)
-    str_2048 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 530, 14), 'str', 'Darueber muss nachgedacht werden')
+    str_2054 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 530, 14), 'str', 'Darueber muss nachgedacht werden')
     # Getting the type of 'grammar' (line 530)
-    grammar_2049 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 530, 50), 'grammar', False)
+    grammar_2055 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 530, 50), 'grammar', False)
     # Processing the call keyword arguments (line 530)
-    kwargs_2050 = {}
+    kwargs_2056 = {}
     # Getting the type of 'do' (line 530)
-    do_2047 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 530, 11), 'do', False)
+    do_2053 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 530, 11), 'do', False)
     # Calling do(args, kwargs) (line 530)
-    do_call_result_2051 = invoke(stypy.reporting.localization.Localization(__file__, 530, 11), do_2047, *[str_2048, grammar_2049], **kwargs_2050)
+    do_call_result_2057 = invoke(stypy.reporting.localization.Localization(__file__, 530, 11), do_2053, *[str_2054, grammar_2055], **kwargs_2056)
     
+    assert_2058 = do_call_result_2057
+    # Assigning a type to the variable 'assert_2058' (line 530)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 530, 4), 'assert_2058', do_call_result_2057)
     # Evaluating assert statement condition
     
     # Call to do(...): (line 531)
     # Processing the call arguments (line 531)
-    str_2053 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 531, 14), 'str', 'Darueber muss nachgedacht werden werden')
+    str_2060 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 531, 14), 'str', 'Darueber muss nachgedacht werden werden')
     # Getting the type of 'grammar' (line 531)
-    grammar_2054 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 531, 57), 'grammar', False)
+    grammar_2061 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 531, 57), 'grammar', False)
     # Processing the call keyword arguments (line 531)
-    kwargs_2055 = {}
+    kwargs_2062 = {}
     # Getting the type of 'do' (line 531)
-    do_2052 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 531, 11), 'do', False)
+    do_2059 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 531, 11), 'do', False)
     # Calling do(args, kwargs) (line 531)
-    do_call_result_2056 = invoke(stypy.reporting.localization.Localization(__file__, 531, 11), do_2052, *[str_2053, grammar_2054], **kwargs_2055)
+    do_call_result_2063 = invoke(stypy.reporting.localization.Localization(__file__, 531, 11), do_2059, *[str_2060, grammar_2061], **kwargs_2062)
     
+    assert_2064 = do_call_result_2063
+    # Assigning a type to the variable 'assert_2064' (line 531)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 531, 4), 'assert_2064', do_call_result_2063)
     # Evaluating assert statement condition
     
     # Call to do(...): (line 532)
     # Processing the call arguments (line 532)
-    str_2058 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 532, 14), 'str', 'Darueber muss nachgedacht werden werden werden')
+    str_2066 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 532, 14), 'str', 'Darueber muss nachgedacht werden werden werden')
     # Getting the type of 'grammar' (line 532)
-    grammar_2059 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 532, 64), 'grammar', False)
+    grammar_2067 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 532, 64), 'grammar', False)
     # Processing the call keyword arguments (line 532)
-    kwargs_2060 = {}
+    kwargs_2068 = {}
     # Getting the type of 'do' (line 532)
-    do_2057 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 532, 11), 'do', False)
+    do_2065 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 532, 11), 'do', False)
     # Calling do(args, kwargs) (line 532)
-    do_call_result_2061 = invoke(stypy.reporting.localization.Localization(__file__, 532, 11), do_2057, *[str_2058, grammar_2059], **kwargs_2060)
+    do_call_result_2069 = invoke(stypy.reporting.localization.Localization(__file__, 532, 11), do_2065, *[str_2066, grammar_2067], **kwargs_2068)
     
+    assert_2070 = do_call_result_2069
+    # Assigning a type to the variable 'assert_2070' (line 532)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 532, 4), 'assert_2070', do_call_result_2069)
     # Evaluating assert statement condition
     
     
     # Call to do(...): (line 534)
     # Processing the call arguments (line 534)
-    str_2063 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 534, 18), 'str', 'werden nachgedacht muss Darueber')
+    str_2072 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 534, 18), 'str', 'werden nachgedacht muss Darueber')
     # Getting the type of 'grammar' (line 534)
-    grammar_2064 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 534, 54), 'grammar', False)
+    grammar_2073 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 534, 54), 'grammar', False)
     # Processing the call keyword arguments (line 534)
-    kwargs_2065 = {}
+    kwargs_2074 = {}
     # Getting the type of 'do' (line 534)
-    do_2062 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 534, 15), 'do', False)
+    do_2071 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 534, 15), 'do', False)
     # Calling do(args, kwargs) (line 534)
-    do_call_result_2066 = invoke(stypy.reporting.localization.Localization(__file__, 534, 15), do_2062, *[str_2063, grammar_2064], **kwargs_2065)
+    do_call_result_2075 = invoke(stypy.reporting.localization.Localization(__file__, 534, 15), do_2071, *[str_2072, grammar_2073], **kwargs_2074)
     
     # Applying the 'not' unary operator (line 534)
-    result_not__2067 = python_operator(stypy.reporting.localization.Localization(__file__, 534, 11), 'not', do_call_result_2066)
+    result_not__2076 = python_operator(stypy.reporting.localization.Localization(__file__, 534, 11), 'not', do_call_result_2075)
     
+    assert_2077 = result_not__2076
+    # Assigning a type to the variable 'assert_2077' (line 534)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 534, 4), 'assert_2077', result_not__2076)
     
     # ################# End of 'demo(...)' code ##################
 
@@ -11058,14 +11126,14 @@ def demo(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'demo' in the type store
     # Getting the type of 'stypy_return_type' (line 511)
-    stypy_return_type_2068 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 511, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_2068)
+    stypy_return_type_2078 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 511, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_2078)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'demo'
-    return stypy_return_type_2068
+    return stypy_return_type_2078
 
 # Assigning a type to the variable 'demo' (line 511)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 511, 0), 'demo', demo)
@@ -11110,42 +11178,44 @@ def run(localization, *varargs, **kwargs):
     
     # Call to range(...): (line 542)
     # Processing the call arguments (line 542)
-    int_2070 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 542, 19), 'int')
+    int_2080 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 542, 19), 'int')
     # Processing the call keyword arguments (line 542)
-    kwargs_2071 = {}
+    kwargs_2081 = {}
     # Getting the type of 'range' (line 542)
-    range_2069 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 542, 13), 'range', False)
+    range_2079 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 542, 13), 'range', False)
     # Calling range(args, kwargs) (line 542)
-    range_call_result_2072 = invoke(stypy.reporting.localization.Localization(__file__, 542, 13), range_2069, *[int_2070], **kwargs_2071)
+    range_call_result_2082 = invoke(stypy.reporting.localization.Localization(__file__, 542, 13), range_2079, *[int_2080], **kwargs_2081)
     
+    # Assigning a type to the variable 'range_call_result_2082' (line 542)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 542, 4), 'range_call_result_2082', range_call_result_2082)
     # Testing if the for loop is going to be iterated (line 542)
     # Testing the type of a for loop iterable (line 542)
-    is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 542, 4), range_call_result_2072)
+    is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 542, 4), range_call_result_2082)
 
-    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 542, 4), range_call_result_2072):
+    if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 542, 4), range_call_result_2082):
         # Getting the type of the for loop variable (line 542)
-        for_loop_var_2073 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 542, 4), range_call_result_2072)
+        for_loop_var_2083 = get_type_of_for_loop_variable(stypy.reporting.localization.Localization(__file__, 542, 4), range_call_result_2082)
         # Assigning a type to the variable 'i' (line 542)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 542, 4), 'i', for_loop_var_2073)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 542, 4), 'i', for_loop_var_2083)
         # SSA begins for a for statement (line 542)
         module_type_store = SSAContext.create_ssa_context(module_type_store, 'for loop')
         
         # Call to demo(...): (line 543)
         # Processing the call keyword arguments (line 543)
-        kwargs_2075 = {}
+        kwargs_2085 = {}
         # Getting the type of 'demo' (line 543)
-        demo_2074 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 543, 8), 'demo', False)
+        demo_2084 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 543, 8), 'demo', False)
         # Calling demo(args, kwargs) (line 543)
-        demo_call_result_2076 = invoke(stypy.reporting.localization.Localization(__file__, 543, 8), demo_2074, *[], **kwargs_2075)
+        demo_call_result_2086 = invoke(stypy.reporting.localization.Localization(__file__, 543, 8), demo_2084, *[], **kwargs_2085)
         
         # SSA join for a for statement
         module_type_store = module_type_store.join_ssa_context()
 
     
     # Getting the type of 'True' (line 572)
-    True_2077 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 572, 11), 'True')
+    True_2087 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 572, 11), 'True')
     # Assigning a type to the variable 'stypy_return_type' (line 572)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 572, 4), 'stypy_return_type', True_2077)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 572, 4), 'stypy_return_type', True_2087)
     
     # ################# End of 'run(...)' code ##################
 
@@ -11154,25 +11224,25 @@ def run(localization, *varargs, **kwargs):
     
     # Storing the return type of function 'run' in the type store
     # Getting the type of 'stypy_return_type' (line 538)
-    stypy_return_type_2078 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 538, 0), 'stypy_return_type')
-    module_type_store.store_return_type_of_current_context(stypy_return_type_2078)
+    stypy_return_type_2088 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 538, 0), 'stypy_return_type')
+    module_type_store.store_return_type_of_current_context(stypy_return_type_2088)
     
     # Destroy the current context
     module_type_store = module_type_store.close_function_context()
     
     # Return type of the function 'run'
-    return stypy_return_type_2078
+    return stypy_return_type_2088
 
 # Assigning a type to the variable 'run' (line 538)
 module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 538, 0), 'run', run)
 
 # Call to run(...): (line 575)
 # Processing the call keyword arguments (line 575)
-kwargs_2080 = {}
+kwargs_2090 = {}
 # Getting the type of 'run' (line 575)
-run_2079 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 575, 0), 'run', False)
+run_2089 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 575, 0), 'run', False)
 # Calling run(args, kwargs) (line 575)
-run_call_result_2081 = invoke(stypy.reporting.localization.Localization(__file__, 575, 0), run_2079, *[], **kwargs_2080)
+run_call_result_2091 = invoke(stypy.reporting.localization.Localization(__file__, 575, 0), run_2089, *[], **kwargs_2090)
 
 
 # ################# End of the type inference program ##################

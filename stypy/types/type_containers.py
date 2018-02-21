@@ -63,6 +63,9 @@ def get_contained_elements_type(proxy_obj):
     :return:
     """
 
+    if type(proxy_obj) is file:
+        return str()
+
     # Direct containers
     if type(proxy_obj) in types_that_store_contents_directly:
         try:

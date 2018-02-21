@@ -1062,10 +1062,17 @@ class TypeModifiers:
 
     @staticmethod
     def str(localization, proxy_obj, arguments):
+        str_func = None
+
         if len(arguments) > 0:
-            str_func = get_member(localization, arguments[0], '__str__')
-            if is_error(str_func):
-                return str_func
+            if has_member(localization, arguments[0], '__str__'):
+                str_func = get_member(localization, arguments[0], '__str__')
+            else:
+                if has_member(localization, arguments[0], 'stypy__str__'):
+                    str_func = get_member(localization, arguments[0], 'stypy__str__')
+
+            if str_func is None:
+                return StypyTypeError.member_do_not_exist_error(localization, "__str__", arguments[0])
 
             ret = invoke(localization, str_func)
             if not is_error(ret):
