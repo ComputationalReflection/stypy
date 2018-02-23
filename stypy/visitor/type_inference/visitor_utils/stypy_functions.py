@@ -29,6 +29,8 @@ default_lambda_var_name = "_stypy_temp_lambda_"
 default_temp_type_store_var_name = "_stypy_temp_type_store"
 default_import_function = "import_module"
 default_import_from_function = "import_from_module"
+auto_var_name = "__stypy_auto_var"
+
 
 # ############################################# TEMP VARIABLE CREATION ##############################################
 

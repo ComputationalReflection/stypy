@@ -132,7 +132,8 @@ def print_context_contents(context):
 
         type_to_print = print_type(value)
 
-        txt += "\t\t{0} = {1}\n".format(name, type_to_print)
+        if "__stypy_auto_var" not in name:
+            txt += "\t\t{0} = {1}\n".format(name, type_to_print)
     if len(context.globals) > 0:
         txt += "\tDeclared globals: ["
         for name in context.globals:

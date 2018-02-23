@@ -93,6 +93,7 @@ Main features of the new 0.2 release include:
 - [19/02/2018] Attributes that start with __ are now located in its class or instance. Comparisons between ints and str are now properly processed.
 - [20/02/2018] Union types with tuples now integrate tuples with the same element types into a single tuple better.
 - [21/02/2018] Fixed getting elements from a dictionary inside a comprehension. Solved type inference problems when calling the set.difference Python API method. Fixed type inference problems when calling a overriden __str__ method over user classes. Iteration over text files now properly infers str types. Type is inferred correctly when the % operator is used with strings into format usages.
+- [23/02/2018] Fixed incorrectly reporting type warnings as type errors when calling members from a variable that has a union type inside a SSA branch. 48/52 shedskin programs processed.
 
 
 

@@ -12,7 +12,7 @@ from stypy.types import type_inspection
 from stypy.types import type_intercession
 from stypy.types import union_type
 from stypy.types.type_wrapper import TypeWrapper
-from stypy.visitor.type_inference.visitor_utils.stypy_functions import default_function_ret_var_name
+from stypy.visitor.type_inference.visitor_utils.stypy_functions import default_function_ret_var_name, auto_var_name
 
 
 class Context(object):
@@ -22,6 +22,7 @@ class Context(object):
 
     # Parent context of this one
     module_parent_contexts = {}
+    auto_var_counter = 0
 
     def __init__(self, parent_context, context_name, can_access_parent_contexts=True):
         """
@@ -223,6 +224,8 @@ class Context(object):
         the "global" keyword
         :return:
         """
+        if name == 'None':
+            return type(None)
 
         if name in self.aliases.keys():
             name = self.aliases[name]
@@ -378,7 +381,14 @@ class Context(object):
         :param name:
         :return:
         """
-        return type_intercession.get_member_from_object(localization, obj, name)
+        member = type_intercession.get_member_from_object(localization, obj, name)
+
+        if type(member) is StypyTypeError:
+            # Store the error in the current context to turn it into a warning if dealing with a union type
+            self.set_type_of(localization, auto_var_name + str(Context.auto_var_counter), member)
+            Context.auto_var_counter += 1
+
+        return member
 
     def set_type_of_member(self, localization, obj, name, type_):
         """
