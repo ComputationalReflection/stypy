@@ -19,6 +19,7 @@ class StypyTypeError(TypeError):
 
     # The class stores a list with all the produced type errors so far
     errors = []
+    type_error_limit_hit = False
 
     def __init__(self, localization=None, msg="", prints_msg=True):
         """
@@ -52,6 +53,10 @@ class StypyTypeError(TypeError):
         # We calculate it here to "capture" the precise execution point when the error is produced as stack trace is
         # dynamic and changes during the execution
         self.error_msg = self.__msg()
+
+        if (stypy_parameters.MAX_TYPE_ERRORS > 0) and len(StypyTypeError.errors) > stypy_parameters.MAX_TYPE_ERRORS:
+            StypyTypeError.type_error_limit_hit = True
+            return
 
         # Add this error to the general error list if not already present
         if prints_msg and self not in StypyTypeError.errors:

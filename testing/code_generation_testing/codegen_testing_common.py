@@ -115,6 +115,9 @@ class TestCommon(unittest.TestCase):
             else:
                 self.print_output("No errors detected.", file_)
 
+            if StypyTypeError.type_error_limit_hit:
+                print ("MAXIMUM LIMIT OF REPORTED ERRORS REACHED: NOT ALL TYPE ERRORS WERE CAPTURED")
+
             self.print_output("\n*************** Warnings *************** ", file_)
             warnings = stypy.get_analyzed_program_warnings()
             if len(warnings) > 0:
@@ -127,6 +130,9 @@ class TestCommon(unittest.TestCase):
                 self.print_output("No warnings detected.", file_)
 
                 self.print_output("\n", file_)
+
+            if TypeWarning.type_warning_limit_hit:
+                print ("MAXIMUM LIMIT OF REPORTED WARNINGS REACHED: NOT ALL TYPE WARNINGS WERE CAPTURED")
 
         if output_file is not None:
             file_.close()

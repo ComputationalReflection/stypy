@@ -71,9 +71,9 @@ type_rules_of_members = {
     '__cmp__': [
         ((dict,), int),
     ],
-    # itervalues can be invoked with the following number of parameters: [1]
+
     'itervalues': [
-        ((), ExtraTypeDefinitions.dictionary_valueiterator),
+        ((), DynamicType),
     ],
 
     '__len__': [

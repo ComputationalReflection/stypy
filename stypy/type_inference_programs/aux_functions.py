@@ -496,7 +496,7 @@ def get_type_of_for_loop_variable(localization, condition_type):
         t.set_contained_type(numpy.int32())
         return t
 
-    return StypyTypeError(localization, "Invalid iterable type for a loop target")
+    return StypyTypeError(localization, "Invalid iterable type for a loop target ({0})".format(str(condition_type)))
 
 
 # ################################## TYPE IDIOMS FUNCTIONS ###################################

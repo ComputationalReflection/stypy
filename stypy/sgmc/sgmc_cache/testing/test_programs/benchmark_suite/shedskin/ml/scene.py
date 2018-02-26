@@ -212,6 +212,8 @@ class Scene(object, ):
         
         # Getting the type of 'in_stream' (line 20)
         in_stream_938 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 20, 20), 'in_stream')
+        # Assigning a type to the variable 'in_stream_938' (line 20)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 20, 8), 'in_stream_938', in_stream_938)
         # Testing if the for loop is going to be iterated (line 20)
         # Testing the type of a for loop iterable (line 20)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 20, 8), in_stream_938)
@@ -423,6 +425,8 @@ class Scene(object, ):
                 # Calling range(args, kwargs) (line 27)
                 range_call_result_991 = invoke(stypy.reporting.localization.Localization(__file__, 27, 29), range_988, *[MAX_TRIANGLES_989], **kwargs_990)
                 
+                # Assigning a type to the variable 'range_call_result_991' (line 27)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 27, 20), 'range_call_result_991', range_call_result_991)
                 # Testing if the for loop is going to be iterated (line 27)
                 # Testing the type of a for loop iterable (line 27)
                 is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 27, 20), range_call_result_991)

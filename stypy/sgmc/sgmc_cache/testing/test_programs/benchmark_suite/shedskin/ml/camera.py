@@ -190,6 +190,8 @@ class Camera(object, ):
         
         # Getting the type of 'in_stream' (line 18)
         in_stream_56 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 18, 20), 'in_stream')
+        # Assigning a type to the variable 'in_stream_56' (line 18)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 18, 8), 'in_stream_56', in_stream_56)
         # Testing if the for loop is going to be iterated (line 18)
         # Testing the type of a for loop iterable (line 18)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 18, 8), in_stream_56)
@@ -820,6 +822,8 @@ class Camera(object, ):
         # Calling range(args, kwargs) (line 37)
         range_call_result_207 = invoke(stypy.reporting.localization.Localization(__file__, 37, 17), range_203, *[height_205], **kwargs_206)
         
+        # Assigning a type to the variable 'range_call_result_207' (line 37)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 37, 8), 'range_call_result_207', range_call_result_207)
         # Testing if the for loop is going to be iterated (line 37)
         # Testing the type of a for loop iterable (line 37)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 37, 8), range_call_result_207)
@@ -846,6 +850,8 @@ class Camera(object, ):
             # Calling range(args, kwargs) (line 38)
             range_call_result_213 = invoke(stypy.reporting.localization.Localization(__file__, 38, 21), range_209, *[width_211], **kwargs_212)
             
+            # Assigning a type to the variable 'range_call_result_213' (line 38)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 38, 12), 'range_call_result_213', range_call_result_213)
             # Testing if the for loop is going to be iterated (line 38)
             # Testing the type of a for loop iterable (line 38)
             is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 38, 12), range_call_result_213)

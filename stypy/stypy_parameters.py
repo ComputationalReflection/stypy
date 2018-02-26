@@ -120,3 +120,10 @@ INFO_LOG_FILE = "info.log"
 Enable coding advices (coding style messages, not really warnings nor errors)
 """
 ENABLE_CODING_ADVICES = False
+
+
+"""
+Maximum amount of type errors or type warnings to report (-1 means unlimited)
+"""
+MAX_TYPE_ERRORS = 200
+MAX_TYPE_WARNINGS = 200

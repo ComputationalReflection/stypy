@@ -237,6 +237,8 @@ class SpatialIndex(object, ):
             
             # Getting the type of 'items' (line 17)
             items_1099 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 17, 24), 'items')
+            # Assigning a type to the variable 'items_1099' (line 17)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 17, 12), 'items_1099', items_1099)
             # Testing if the for loop is going to be iterated (line 17)
             # Testing the type of a for loop iterable (line 17)
             is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 17, 12), items_1099)
@@ -295,6 +297,8 @@ class SpatialIndex(object, ):
             
             # Getting the type of 'items' (line 20)
             items_1112 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 20, 24), 'items')
+            # Assigning a type to the variable 'items_1112' (line 20)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 20, 12), 'items_1112', items_1112)
             # Testing if the for loop is going to be iterated (line 20)
             # Testing the type of a for loop iterable (line 20)
             is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 20, 12), items_1112)
@@ -318,6 +322,8 @@ class SpatialIndex(object, ):
                 # Calling range(args, kwargs) (line 21)
                 range_call_result_1117 = invoke(stypy.reporting.localization.Localization(__file__, 21, 25), range_1114, *[int_1115], **kwargs_1116)
                 
+                # Assigning a type to the variable 'range_call_result_1117' (line 21)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 21, 16), 'range_call_result_1117', range_call_result_1117)
                 # Testing if the for loop is going to be iterated (line 21)
                 # Testing the type of a for loop iterable (line 21)
                 is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 21, 16), range_call_result_1117)
@@ -713,6 +719,8 @@ class SpatialIndex(object, ):
             # Calling range(args, kwargs) (line 32)
             range_call_result_1231 = invoke(stypy.reporting.localization.Localization(__file__, 32, 21), range_1228, *[int_1229], **kwargs_1230)
             
+            # Assigning a type to the variable 'range_call_result_1231' (line 32)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 32, 12), 'range_call_result_1231', range_call_result_1231)
             # Testing if the for loop is going to be iterated (line 32)
             # Testing the type of a for loop iterable (line 32)
             is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 32, 12), range_call_result_1231)
@@ -747,6 +755,8 @@ class SpatialIndex(object, ):
                 # Calling range(args, kwargs) (line 34)
                 range_call_result_1237 = invoke(stypy.reporting.localization.Localization(__file__, 34, 25), range_1234, *[int_1235], **kwargs_1236)
                 
+                # Assigning a type to the variable 'range_call_result_1237' (line 34)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 34, 16), 'range_call_result_1237', range_call_result_1237)
                 # Testing if the for loop is going to be iterated (line 34)
                 # Testing the type of a for loop iterable (line 34)
                 is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 34, 16), range_call_result_1237)
@@ -930,6 +940,8 @@ class SpatialIndex(object, ):
                 
                 # Getting the type of 'items' (line 41)
                 items_1283 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 41, 28), 'items')
+                # Assigning a type to the variable 'items_1283' (line 41)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 41, 16), 'items_1283', items_1283)
                 # Testing if the for loop is going to be iterated (line 41)
                 # Testing the type of a for loop iterable (line 41)
                 is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 41, 16), items_1283)
@@ -1586,6 +1598,8 @@ class SpatialIndex(object, ):
             self_1624 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 87, 24), 'self')
             # Obtaining the member 'items' of a type (line 87)
             items_1625 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 87, 24), self_1624, 'items')
+            # Assigning a type to the variable 'items_1625' (line 87)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 87, 12), 'items_1625', items_1625)
             # Testing if the for loop is going to be iterated (line 87)
             # Testing the type of a for loop iterable (line 87)
             is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 87, 12), items_1625)
@@ -1982,6 +1996,8 @@ class SpatialIndex(object, ):
             
             # Getting the type of 'True' (line 64)
             True_1493 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 64, 18), 'True')
+            # Assigning a type to the variable 'True_1493' (line 64)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 64, 12), 'True_1493', True_1493)
             # Testing if the while is going to be iterated (line 64)
             # Testing the type of an if condition (line 64)
             is_suitable_condition(stypy.reporting.localization.Localization(__file__, 64, 12), True_1493)
@@ -2157,6 +2173,8 @@ class SpatialIndex(object, ):
                 # Calling range(args, kwargs) (line 71)
                 range_call_result_1535 = invoke(stypy.reporting.localization.Localization(__file__, 71, 25), range_1532, *[int_1533], **kwargs_1534)
                 
+                # Assigning a type to the variable 'range_call_result_1535' (line 71)
+                module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 71, 16), 'range_call_result_1535', range_call_result_1535)
                 # Testing if the for loop is going to be iterated (line 71)
                 # Testing the type of a for loop iterable (line 71)
                 is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 71, 16), range_call_result_1535)
@@ -2498,6 +2516,8 @@ class SpatialIndex(object, ):
             self_1624 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 87, 24), 'self')
             # Obtaining the member 'items' of a type (line 87)
             items_1625 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 87, 24), self_1624, 'items')
+            # Assigning a type to the variable 'items_1625' (line 87)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 87, 12), 'items_1625', items_1625)
             # Testing if the for loop is going to be iterated (line 87)
             # Testing the type of a for loop iterable (line 87)
             is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 87, 12), items_1625)

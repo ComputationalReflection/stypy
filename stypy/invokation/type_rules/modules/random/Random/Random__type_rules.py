@@ -15,6 +15,15 @@ type_rules_of_members = {
         ((IterableDataStructure,), DynamicType),
     ],
 
+    'choice': [
+        ((IterableDataStructure,), DynamicType),
+    ],
+
+    'seed': [
+        ((), types.NoneType),
+        ((Integer,), types.NoneType),
+    ],
+
     'randrange': [
         ((Integer,), int),
         ((Integer, Integer), int),

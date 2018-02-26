@@ -39,7 +39,7 @@ def __can_store_elements(python_type):
                                                                      "dict" not in name)
 
     data_structures = [set, tuple, types.GeneratorType, slice, range, xrange, enumerate, reversed,
-                       frozenset]
+                       frozenset, collections.defaultdict]
 
     data_structure = filter(lambda ds: python_type is ds, data_structures)
     return len(data_structure) > 0 or is_iterator

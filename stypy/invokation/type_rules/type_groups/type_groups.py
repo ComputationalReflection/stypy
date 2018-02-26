@@ -166,6 +166,10 @@ class HasMember(TypeGroup, DependentType):
             if isinstance(callable_, StypyTypeError):
                 StypyTypeError.remove_error_msg(callable_)
                 self.member_obj = None
+                # There is an exception with the == operator, that can be possible between any type of object
+                if self.member == "__eq__":
+                    return True, False
+
                 return False, callable_
 
             equivalent_type = stypy.type_inference_programs.stypy_interface.invoke(localization, callable_,

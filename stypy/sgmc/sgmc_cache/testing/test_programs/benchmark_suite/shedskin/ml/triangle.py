@@ -223,6 +223,8 @@ class Triangle(object, ):
         
         # Getting the type of 'in_stream' (line 19)
         in_stream_1895 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 19, 20), 'in_stream')
+        # Assigning a type to the variable 'in_stream_1895' (line 19)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 19, 8), 'in_stream_1895', in_stream_1895)
         # Testing if the for loop is going to be iterated (line 19)
         # Testing the type of a for loop iterable (line 19)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 19, 8), in_stream_1895)
@@ -881,6 +883,8 @@ class Triangle(object, ):
         # Calling range(args, kwargs) (line 38)
         range_call_result_2059 = invoke(stypy.reporting.localization.Localization(__file__, 38, 17), range_2056, *[int_2057], **kwargs_2058)
         
+        # Assigning a type to the variable 'range_call_result_2059' (line 38)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 38, 8), 'range_call_result_2059', range_call_result_2059)
         # Testing if the for loop is going to be iterated (line 38)
         # Testing the type of a for loop iterable (line 38)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 38, 8), range_call_result_2059)

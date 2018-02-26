@@ -304,16 +304,12 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-
-
-    # Programs to look closely
-
-    #Hangs
-    def test_minilight_main(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/minilight_main.py"
+    def test_rubik(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/rubik.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
+
 
     def test_mastermind2(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/mastermind2.py"
@@ -321,17 +317,18 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-    def test_rubik(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/rubik.py"
+    def test_minilight_main(self):
+        file_path = self.file_path + "/benchmark_suite/shedskin/minilight_main.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
 
-    # Recursion problem when generating code
-    def test_hq2x(self):
-        file_path = self.file_path + "/benchmark_suite/shedskin/hq2x.py"
-        import sys
-        sys.setrecursionlimit(1500)
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
-        self.assertEqual(result, 0)
+    # # Recursion problem when generating code
+    # def test_hq2x(self):
+    #     file_path = self.file_path + "/benchmark_suite/shedskin/hq2x.py"
+    #     import sys
+    #     sys.setrecursionlimit(1500)
+    #     result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
+    #
+    #     self.assertEqual(result, 0)

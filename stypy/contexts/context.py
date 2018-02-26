@@ -383,7 +383,7 @@ class Context(object):
         """
         member = type_intercession.get_member_from_object(localization, obj, name)
 
-        if type(member) is StypyTypeError:
+        if type(member) is StypyTypeError and name != "__eq__":
             # Store the error in the current context to turn it into a warning if dealing with a union type
             self.set_type_of(localization, auto_var_name + str(Context.auto_var_counter), member)
             Context.auto_var_counter += 1

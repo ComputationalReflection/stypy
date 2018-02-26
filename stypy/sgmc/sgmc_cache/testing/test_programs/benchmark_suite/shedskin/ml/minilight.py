@@ -463,6 +463,8 @@ def main(localization, *varargs, **kwargs):
     
     # Getting the type of 'model_file' (line 78)
     model_file_618 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 78, 16), 'model_file')
+    # Assigning a type to the variable 'model_file_618' (line 78)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 78, 4), 'model_file_618', model_file_618)
     # Testing if the for loop is going to be iterated (line 78)
     # Testing the type of a for loop iterable (line 78)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 78, 4), model_file_618)
@@ -632,6 +634,8 @@ def main(localization, *varargs, **kwargs):
     # Calling range(args, kwargs) (line 88)
     range_call_result_661 = invoke(stypy.reporting.localization.Localization(__file__, 88, 24), range_655, *[int_656, result_add_659], **kwargs_660)
     
+    # Assigning a type to the variable 'range_call_result_661' (line 88)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 88, 8), 'range_call_result_661', range_call_result_661)
     # Testing if the for loop is going to be iterated (line 88)
     # Testing the type of a for loop iterable (line 88)
     is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 88, 8), range_call_result_661)

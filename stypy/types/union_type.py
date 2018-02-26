@@ -702,6 +702,9 @@ class UnionType(TypeWrapper):
 
         if call_utilities.is_numpy_array(type1) and call_utilities.is_numpy_array(type2):
             return type(type1.contained_types) == type(type2.contained_types)
+# Perhaps this condition but only base type atts?
+        # if type(type1) == type(type2) and not inspect.ismethod(type1) and not inspect.isfunction(type1) and not inspect.isbuiltin(type1):
+        #     return dir(type1) == dir(type2)
 
         return False
 

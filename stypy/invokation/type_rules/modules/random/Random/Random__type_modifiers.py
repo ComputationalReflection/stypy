@@ -90,3 +90,7 @@ class TypeModifiers:
             return call_utilities.create_numpy_array(numpy.int32())
 
         return int()
+
+    @staticmethod
+    def choice(localization, proxy_obj, arguments):
+        return call_utilities.get_contained_elements_type(localization, arguments[0])

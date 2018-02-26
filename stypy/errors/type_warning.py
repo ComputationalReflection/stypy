@@ -25,6 +25,8 @@ class TypeWarning(object):
 
     dynamic_warning = None
 
+    type_warning_limit_hit = False
+
     def __init__(self, localization, msg, prints_msg=True, snap=None):
         """
         Creates a warning with the provided message.
@@ -33,6 +35,7 @@ class TypeWarning(object):
         :param prints_msg: As TypeErrors, TypeWarnings can also be silent if reporting them is not activated
         :return:
         """
+
         self.message = msg
         if localization is None:
             localization = Localization(__file__, 1, 0)
@@ -45,6 +48,10 @@ class TypeWarning(object):
 
         # Create the message here to capture the execution point, as stack traces are dynamic.
         self.warn_msg = self.__msg()
+
+        if (stypy_parameters.MAX_TYPE_WARNINGS > 0) and len(TypeWarning.warnings) > stypy_parameters.MAX_TYPE_WARNINGS:
+            TypeWarning.type_warning_limit_hit = True
+            return
 
         if prints_msg and self not in TypeWarning.warnings:
             TypeWarning.warnings.append(self)

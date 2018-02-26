@@ -94,6 +94,7 @@ Main features of the new 0.2 release include:
 - [20/02/2018] Union types with tuples now integrate tuples with the same element types into a single tuple better.
 - [21/02/2018] Fixed getting elements from a dictionary inside a comprehension. Solved type inference problems when calling the set.difference Python API method. Fixed type inference problems when calling a overriden __str__ method over user classes. Iteration over text files now properly infers str types. Type is inferred correctly when the % operator is used with strings into format usages.
 - [23/02/2018] Fixed incorrectly reporting type warnings as type errors when calling members from a variable that has a union type inside a SSA branch. 48/52 shedskin programs processed.
+- [26/02/2018] Fixed type inference problems with random.choice and random.seed functions. Stypy can now limit the amount of reported type errors and warnings to a maximum configurable value if the user decides to do so. It has been fixed to 200 each by default. If the limit is hit, the program warns the user about the incomplete type error reporting. Solved problems when returning type errors when using == with objects of different types. Fixed type inference with defaultdict types. Provided more information when dealing with invalid loop variables.
 
 
 

@@ -184,6 +184,8 @@ class Image(object, ):
         
         # Getting the type of 'in_stream' (line 20)
         in_stream_294 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 20, 20), 'in_stream')
+        # Assigning a type to the variable 'in_stream_294' (line 20)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 20, 8), 'in_stream_294', in_stream_294)
         # Testing if the for loop is going to be iterated (line 20)
         # Testing the type of a for loop iterable (line 20)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 20, 8), in_stream_294)
@@ -864,6 +866,8 @@ class Image(object, ):
         self_461 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 40, 23), 'self')
         # Obtaining the member 'pixels' of a type (line 40)
         pixels_462 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 40, 23), self_461, 'pixels')
+        # Assigning a type to the variable 'pixels_462' (line 40)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 40, 8), 'pixels_462', pixels_462)
         # Testing if the for loop is going to be iterated (line 40)
         # Testing the type of a for loop iterable (line 40)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 40, 8), pixels_462)
@@ -1073,6 +1077,8 @@ class Image(object, ):
         # Calling range(args, kwargs) (line 47)
         range_call_result_506 = invoke(stypy.reporting.localization.Localization(__file__, 47, 17), range_498, *[result_div_504], **kwargs_505)
         
+        # Assigning a type to the variable 'range_call_result_506' (line 47)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 47, 8), 'range_call_result_506', range_call_result_506)
         # Testing if the for loop is going to be iterated (line 47)
         # Testing the type of a for loop iterable (line 47)
         is_suitable_for_loop_condition(stypy.reporting.localization.Localization(__file__, 47, 8), range_call_result_506)
