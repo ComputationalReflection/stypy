@@ -16,6 +16,8 @@
 # License along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
+# [28/02/2018] Refactorization of code to improve coding style
+
 import sys, os
 
 
@@ -45,6 +47,7 @@ class PPM:
     @staticmethod
     def load(filename):
         lines = [l.strip() for l in file(filename)]
+
         assert lines[0] == 'P3'
         w, h = map(int, lines[1].split())
         assert int(lines[2]) == 255
@@ -253,6 +256,47 @@ def PIXEL11_90(rgb_out, pOut, BpL, c): rgb_out[pOut + BpL + 1] = Interp9(c[5], c
 def PIXEL11_100(rgb_out, pOut, BpL, c): rgb_out[pOut + BpL + 1] = Interp10(c[5], c[6], c[8])
 
 
+pattern_dict = dict()
+
+
+def f0(rgb_out, pOut, BpL, c):
+    PIXEL00_20(rgb_out, pOut, BpL, c)
+    PIXEL01_20(rgb_out, pOut, BpL, c)
+    PIXEL10_20(rgb_out, pOut, BpL, c)
+    PIXEL11_20(rgb_out, pOut, BpL, c)
+
+
+pattern_dict[0] = f0
+pattern_dict[1] = f0
+pattern_dict[4] = f0
+pattern_dict[32] = f0
+pattern_dict[128] = f0
+pattern_dict[5] = f0
+pattern_dict[132] = f0
+pattern_dict[160] = f0
+pattern_dict[33] = f0
+pattern_dict[129] = f0
+pattern_dict[36] = f0
+pattern_dict[133] = f0
+pattern_dict[164] = f0
+pattern_dict[161] = f0
+pattern_dict[37] = f0
+pattern_dict[165] = f0
+
+
+def f1(rgb_out, pOut, BpL, c):
+    PIXEL00_22(rgb_out, pOut, BpL, c)
+    PIXEL01_21(rgb_out, pOut, BpL, c)
+    PIXEL10_20(rgb_out, pOut, BpL, c)
+    PIXEL11_20(rgb_out, pOut, BpL, c)
+
+
+pattern_dict[2] = f1
+pattern_dict[34] = f1
+pattern_dict[130] = f1
+pattern_dict[162] = f1
+
+
 def hq2x(xres, yres, rgb):
     '''
     +--+--+--+
@@ -307,1363 +351,1360 @@ def hq2x(xres, yres, rgb):
             for k in range(1, 10):
                 c[k] = LUT16to32[w[k]]
 
-            if pattern == 0 or pattern == 1 or pattern == 4 or pattern == 32 or pattern == 128 or pattern == 5 or pattern == 132 or pattern == 160 or pattern == 33 or pattern == 129 or pattern == 36 or pattern == 133 or pattern == 164 or pattern == 161 or pattern == 37 or pattern == 165:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 2 or pattern == 34 or pattern == 130 or pattern == 162:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 16 or pattern == 17 or pattern == 48 or pattern == 49:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 64 or pattern == 65 or pattern == 68 or pattern == 69:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 8 or pattern == 12 or pattern == 136 or pattern == 140:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 3 or pattern == 35 or pattern == 131 or pattern == 163:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 6 or pattern == 38 or pattern == 134 or pattern == 166:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 20 or pattern == 21 or pattern == 52 or pattern == 53:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 144 or pattern == 145 or pattern == 176 or pattern == 177:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 192 or pattern == 193 or pattern == 196 or pattern == 197:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 96 or pattern == 97 or pattern == 100 or pattern == 101:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 40 or pattern == 44 or pattern == 168 or pattern == 172:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 9 or pattern == 13 or pattern == 137 or pattern == 141:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 18 or pattern == 50:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 80 or pattern == 81:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 72 or pattern == 76:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 10 or pattern == 138:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 66:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 24:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 7 or pattern == 39 or pattern == 135:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 148 or pattern == 149 or pattern == 180:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 224 or pattern == 228 or pattern == 225:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 41 or pattern == 169 or pattern == 45:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 22 or pattern == 54:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 208 or pattern == 209:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 104 or pattern == 108:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 11 or pattern == 139:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 19 or pattern == 51:
-                if (diff(w[2], w[6])):
-                    PIXEL00_11(rgb_out, pOut, BpL, c)
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_60(rgb_out, pOut, BpL, c)
-                    PIXEL01_90(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 146 or pattern == 178:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                    PIXEL11_12(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_90(rgb_out, pOut, BpL, c)
-                    PIXEL11_61(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-            elif pattern == 84 or pattern == 85:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL01_11(rgb_out, pOut, BpL, c)
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_60(rgb_out, pOut, BpL, c)
-                    PIXEL11_90(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-            elif pattern == 112 or pattern == 113:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL10_12(rgb_out, pOut, BpL, c)
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_61(rgb_out, pOut, BpL, c)
-                    PIXEL11_90(rgb_out, pOut, BpL, c)
-            elif pattern == 200 or pattern == 204:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                    PIXEL11_11(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_90(rgb_out, pOut, BpL, c)
-                    PIXEL11_60(rgb_out, pOut, BpL, c)
-            elif pattern == 73 or pattern == 77:
-                if (diff(w[8], w[4])):
-                    PIXEL00_12(rgb_out, pOut, BpL, c)
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_61(rgb_out, pOut, BpL, c)
-                    PIXEL10_90(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 42 or pattern == 170:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                    PIXEL10_11(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_90(rgb_out, pOut, BpL, c)
-                    PIXEL10_60(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 14 or pattern == 142:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                    PIXEL01_12(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_90(rgb_out, pOut, BpL, c)
-                    PIXEL01_61(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 67:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 70:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 28:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 152:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 194:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 98:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 56:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 25:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 26 or pattern == 31:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 82 or pattern == 214:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 88 or pattern == 248:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 74 or pattern == 107:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 27:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 86:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 216:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 106:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 30:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 210:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 120:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 75:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 29:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 198:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 184:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 99:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 57:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 71:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 156:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 226:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 60:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 195:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 102:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 153:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 58:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 83:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 92:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 202:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 78:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 154:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 114:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 89:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 90:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 55 or pattern == 23:
-                if (diff(w[2], w[6])):
-                    PIXEL00_11(rgb_out, pOut, BpL, c)
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_60(rgb_out, pOut, BpL, c)
-                    PIXEL01_90(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 182 or pattern == 150:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                    PIXEL11_12(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_90(rgb_out, pOut, BpL, c)
-                    PIXEL11_61(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-            elif pattern == 213 or pattern == 212:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL01_11(rgb_out, pOut, BpL, c)
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_60(rgb_out, pOut, BpL, c)
-                    PIXEL11_90(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-            elif pattern == 241 or pattern == 240:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL10_12(rgb_out, pOut, BpL, c)
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_61(rgb_out, pOut, BpL, c)
-                    PIXEL11_90(rgb_out, pOut, BpL, c)
-            elif pattern == 236 or pattern == 232:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                    PIXEL11_11(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_90(rgb_out, pOut, BpL, c)
-                    PIXEL11_60(rgb_out, pOut, BpL, c)
-            elif pattern == 109 or pattern == 105:
-                if (diff(w[8], w[4])):
-                    PIXEL00_12(rgb_out, pOut, BpL, c)
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_61(rgb_out, pOut, BpL, c)
-                    PIXEL10_90(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 171 or pattern == 43:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                    PIXEL10_11(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_90(rgb_out, pOut, BpL, c)
-                    PIXEL10_60(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 143 or pattern == 15:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                    PIXEL01_12(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_90(rgb_out, pOut, BpL, c)
-                    PIXEL01_61(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 124:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 203:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 62:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 211:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 118:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 217:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 110:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 155:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 188:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 185:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 61:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 157:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 103:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 227:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 230:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 199:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 220:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 158:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 234:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 242:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 59:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 121:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 87:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 79:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 122:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 94:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 218:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 91:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 229:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 167:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 173:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 181:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 186:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 115:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 93:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 206:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 205 or pattern == 201:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_70(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 174 or pattern == 46:
-                if (diff(w[4], w[2])):
-                    PIXEL00_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_70(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 179 or pattern == 147:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_70(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 117 or pattern == 116:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_10(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_70(rgb_out, pOut, BpL, c)
-            elif pattern == 189:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 231:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 126:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 219:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 125:
-                if (diff(w[8], w[4])):
-                    PIXEL00_12(rgb_out, pOut, BpL, c)
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_61(rgb_out, pOut, BpL, c)
-                    PIXEL10_90(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 221:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL01_11(rgb_out, pOut, BpL, c)
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_60(rgb_out, pOut, BpL, c)
-                    PIXEL11_90(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-            elif pattern == 207:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                    PIXEL01_12(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_90(rgb_out, pOut, BpL, c)
-                    PIXEL01_61(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 238:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                    PIXEL11_11(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_90(rgb_out, pOut, BpL, c)
-                    PIXEL11_60(rgb_out, pOut, BpL, c)
-            elif pattern == 190:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                    PIXEL11_12(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_90(rgb_out, pOut, BpL, c)
-                    PIXEL11_61(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-            elif pattern == 187:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                    PIXEL10_11(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_90(rgb_out, pOut, BpL, c)
-                    PIXEL10_60(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 243:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL10_12(rgb_out, pOut, BpL, c)
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_61(rgb_out, pOut, BpL, c)
-                    PIXEL11_90(rgb_out, pOut, BpL, c)
-            elif pattern == 119:
-                if (diff(w[2], w[6])):
-                    PIXEL00_11(rgb_out, pOut, BpL, c)
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_60(rgb_out, pOut, BpL, c)
-                    PIXEL01_90(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 237 or pattern == 233:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_100(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 175 or pattern == 47:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_100(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 183 or pattern == 151:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_100(rgb_out, pOut, BpL, c)
-                PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 245 or pattern == 244:
-                PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_100(rgb_out, pOut, BpL, c)
-            elif pattern == 250:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 123:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 95:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 222:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 252:
-                PIXEL00_21(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_100(rgb_out, pOut, BpL, c)
-            elif pattern == 249:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_22(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_100(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 235:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_21(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_100(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 111:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_100(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_22(rgb_out, pOut, BpL, c)
-            elif pattern == 63:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_100(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_21(rgb_out, pOut, BpL, c)
-            elif pattern == 159:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_100(rgb_out, pOut, BpL, c)
-                PIXEL10_22(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 215:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_100(rgb_out, pOut, BpL, c)
-                PIXEL10_21(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 246:
-                PIXEL00_22(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_100(rgb_out, pOut, BpL, c)
-            elif pattern == 254:
-                PIXEL00_10(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_100(rgb_out, pOut, BpL, c)
-            elif pattern == 253:
-                PIXEL00_12(rgb_out, pOut, BpL, c)
-                PIXEL01_11(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_100(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_100(rgb_out, pOut, BpL, c)
-            elif pattern == 251:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                PIXEL01_10(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_100(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 239:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_100(rgb_out, pOut, BpL, c)
-                PIXEL01_12(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_100(rgb_out, pOut, BpL, c)
-                PIXEL11_11(rgb_out, pOut, BpL, c)
-            elif pattern == 127:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_100(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_20(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_20(rgb_out, pOut, BpL, c)
-                PIXEL11_10(rgb_out, pOut, BpL, c)
-            elif pattern == 191:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_100(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_100(rgb_out, pOut, BpL, c)
-                PIXEL10_11(rgb_out, pOut, BpL, c)
-                PIXEL11_12(rgb_out, pOut, BpL, c)
-            elif pattern == 223:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_20(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_100(rgb_out, pOut, BpL, c)
-                PIXEL10_10(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_20(rgb_out, pOut, BpL, c)
-            elif pattern == 247:
-                PIXEL00_11(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_100(rgb_out, pOut, BpL, c)
-                PIXEL10_12(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_100(rgb_out, pOut, BpL, c)
-            elif pattern == 255:
-                if (diff(w[4], w[2])):
-                    PIXEL00_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL00_100(rgb_out, pOut, BpL, c)
-                if (diff(w[2], w[6])):
-                    PIXEL01_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL01_100(rgb_out, pOut, BpL, c)
-                if (diff(w[8], w[4])):
-                    PIXEL10_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL10_100(rgb_out, pOut, BpL, c)
-                if (diff(w[6], w[8])):
-                    PIXEL11_0(rgb_out, pOut, BpL, c)
-                else:
-                    PIXEL11_100(rgb_out, pOut, BpL, c)
+            try:
+                f = pattern_dict[pattern]
+                f(rgb_out, pOut, BpL, c)
+            except KeyError:
+                pass
+
+
+            # elif pattern == 16 or pattern == 17 or pattern == 48 or pattern == 49:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 64 or pattern == 65 or pattern == 68 or pattern == 69:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 8 or pattern == 12 or pattern == 136 or pattern == 140:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 3 or pattern == 35 or pattern == 131 or pattern == 163:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 6 or pattern == 38 or pattern == 134 or pattern == 166:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 20 or pattern == 21 or pattern == 52 or pattern == 53:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 144 or pattern == 145 or pattern == 176 or pattern == 177:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 192 or pattern == 193 or pattern == 196 or pattern == 197:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 96 or pattern == 97 or pattern == 100 or pattern == 101:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 40 or pattern == 44 or pattern == 168 or pattern == 172:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 9 or pattern == 13 or pattern == 137 or pattern == 141:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 18 or pattern == 50:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 80 or pattern == 81:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 72 or pattern == 76:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 10 or pattern == 138:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 66:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 24:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 7 or pattern == 39 or pattern == 135:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 148 or pattern == 149 or pattern == 180:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 224 or pattern == 228 or pattern == 225:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 41 or pattern == 169 or pattern == 45:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 22 or pattern == 54:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 208 or pattern == 209:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 104 or pattern == 108:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 11 or pattern == 139:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 19 or pattern == 51:
+            #     if (diff(w[2], w[6])):
+            #         PIXEL00_11(rgb_out, pOut, BpL, c)
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_60(rgb_out, pOut, BpL, c)
+            #         PIXEL01_90(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 146 or pattern == 178:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #         PIXEL11_12(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_90(rgb_out, pOut, BpL, c)
+            #         PIXEL11_61(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 84 or pattern == 85:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL01_11(rgb_out, pOut, BpL, c)
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_60(rgb_out, pOut, BpL, c)
+            #         PIXEL11_90(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 112 or pattern == 113:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL10_12(rgb_out, pOut, BpL, c)
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_61(rgb_out, pOut, BpL, c)
+            #         PIXEL11_90(rgb_out, pOut, BpL, c)
+            # elif pattern == 200 or pattern == 204:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #         PIXEL11_11(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_90(rgb_out, pOut, BpL, c)
+            #         PIXEL11_60(rgb_out, pOut, BpL, c)
+            # elif pattern == 73 or pattern == 77:
+            #     if (diff(w[8], w[4])):
+            #         PIXEL00_12(rgb_out, pOut, BpL, c)
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_61(rgb_out, pOut, BpL, c)
+            #         PIXEL10_90(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 42 or pattern == 170:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #         PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_90(rgb_out, pOut, BpL, c)
+            #         PIXEL10_60(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 14 or pattern == 142:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #         PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_90(rgb_out, pOut, BpL, c)
+            #         PIXEL01_61(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 67:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 70:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 28:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 152:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 194:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 98:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 56:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 25:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 26 or pattern == 31:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 82 or pattern == 214:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 88 or pattern == 248:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 74 or pattern == 107:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 27:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 86:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 216:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 106:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 30:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 210:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 120:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 75:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 29:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 198:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 184:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 99:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 57:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 71:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 156:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 226:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 60:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 195:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 102:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 153:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 58:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 83:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 92:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 202:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 78:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 154:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 114:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 89:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 90:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 55 or pattern == 23:
+            #     if (diff(w[2], w[6])):
+            #         PIXEL00_11(rgb_out, pOut, BpL, c)
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_60(rgb_out, pOut, BpL, c)
+            #         PIXEL01_90(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 182 or pattern == 150:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #         PIXEL11_12(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_90(rgb_out, pOut, BpL, c)
+            #         PIXEL11_61(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 213 or pattern == 212:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL01_11(rgb_out, pOut, BpL, c)
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_60(rgb_out, pOut, BpL, c)
+            #         PIXEL11_90(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 241 or pattern == 240:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL10_12(rgb_out, pOut, BpL, c)
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_61(rgb_out, pOut, BpL, c)
+            #         PIXEL11_90(rgb_out, pOut, BpL, c)
+            # elif pattern == 236 or pattern == 232:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #         PIXEL11_11(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_90(rgb_out, pOut, BpL, c)
+            #         PIXEL11_60(rgb_out, pOut, BpL, c)
+            # elif pattern == 109 or pattern == 105:
+            #     if (diff(w[8], w[4])):
+            #         PIXEL00_12(rgb_out, pOut, BpL, c)
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_61(rgb_out, pOut, BpL, c)
+            #         PIXEL10_90(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 171 or pattern == 43:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #         PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_90(rgb_out, pOut, BpL, c)
+            #         PIXEL10_60(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 143 or pattern == 15:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #         PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_90(rgb_out, pOut, BpL, c)
+            #         PIXEL01_61(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 124:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 203:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 62:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 211:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 118:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 217:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 110:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 155:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 188:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 185:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 61:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 157:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 103:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 227:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 230:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 199:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 220:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 158:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 234:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 242:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 59:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 121:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 87:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 79:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 122:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 94:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 218:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 91:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 229:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 167:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 173:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 181:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 186:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 115:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 93:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 206:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 205 or pattern == 201:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_70(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 174 or pattern == 46:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_70(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 179 or pattern == 147:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_70(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 117 or pattern == 116:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_10(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_70(rgb_out, pOut, BpL, c)
+            # elif pattern == 189:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 231:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 126:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 219:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 125:
+            #     if (diff(w[8], w[4])):
+            #         PIXEL00_12(rgb_out, pOut, BpL, c)
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_61(rgb_out, pOut, BpL, c)
+            #         PIXEL10_90(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 221:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL01_11(rgb_out, pOut, BpL, c)
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_60(rgb_out, pOut, BpL, c)
+            #         PIXEL11_90(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 207:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #         PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_90(rgb_out, pOut, BpL, c)
+            #         PIXEL01_61(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 238:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #         PIXEL11_11(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_90(rgb_out, pOut, BpL, c)
+            #         PIXEL11_60(rgb_out, pOut, BpL, c)
+            # elif pattern == 190:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #         PIXEL11_12(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_90(rgb_out, pOut, BpL, c)
+            #         PIXEL11_61(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 187:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #         PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_90(rgb_out, pOut, BpL, c)
+            #         PIXEL10_60(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 243:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL10_12(rgb_out, pOut, BpL, c)
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_61(rgb_out, pOut, BpL, c)
+            #         PIXEL11_90(rgb_out, pOut, BpL, c)
+            # elif pattern == 119:
+            #     if (diff(w[2], w[6])):
+            #         PIXEL00_11(rgb_out, pOut, BpL, c)
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_60(rgb_out, pOut, BpL, c)
+            #         PIXEL01_90(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 237 or pattern == 233:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_100(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 175 or pattern == 47:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_100(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 183 or pattern == 151:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_100(rgb_out, pOut, BpL, c)
+            #     PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 245 or pattern == 244:
+            #     PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_100(rgb_out, pOut, BpL, c)
+            # elif pattern == 250:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 123:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 95:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 222:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 252:
+            #     PIXEL00_21(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_100(rgb_out, pOut, BpL, c)
+            # elif pattern == 249:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 235:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_100(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 111:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_100(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_22(rgb_out, pOut, BpL, c)
+            # elif pattern == 63:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_21(rgb_out, pOut, BpL, c)
+            # elif pattern == 159:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_100(rgb_out, pOut, BpL, c)
+            #     PIXEL10_22(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 215:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_100(rgb_out, pOut, BpL, c)
+            #     PIXEL10_21(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 246:
+            #     PIXEL00_22(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_100(rgb_out, pOut, BpL, c)
+            # elif pattern == 254:
+            #     PIXEL00_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_100(rgb_out, pOut, BpL, c)
+            # elif pattern == 253:
+            #     PIXEL00_12(rgb_out, pOut, BpL, c)
+            #     PIXEL01_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_100(rgb_out, pOut, BpL, c)
+            # elif pattern == 251:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     PIXEL01_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 239:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_100(rgb_out, pOut, BpL, c)
+            #     PIXEL01_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_100(rgb_out, pOut, BpL, c)
+            #     PIXEL11_11(rgb_out, pOut, BpL, c)
+            # elif pattern == 127:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_20(rgb_out, pOut, BpL, c)
+            #     PIXEL11_10(rgb_out, pOut, BpL, c)
+            # elif pattern == 191:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_100(rgb_out, pOut, BpL, c)
+            #     PIXEL10_11(rgb_out, pOut, BpL, c)
+            #     PIXEL11_12(rgb_out, pOut, BpL, c)
+            # elif pattern == 223:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_20(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_100(rgb_out, pOut, BpL, c)
+            #     PIXEL10_10(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_20(rgb_out, pOut, BpL, c)
+            # elif pattern == 247:
+            #     PIXEL00_11(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_100(rgb_out, pOut, BpL, c)
+            #     PIXEL10_12(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_100(rgb_out, pOut, BpL, c)
+            # elif pattern == 255:
+            #     if (diff(w[4], w[2])):
+            #         PIXEL00_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL00_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[2], w[6])):
+            #         PIXEL01_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL01_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[8], w[4])):
+            #         PIXEL10_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL10_100(rgb_out, pOut, BpL, c)
+            #     if (diff(w[6], w[8])):
+            #         PIXEL11_0(rgb_out, pOut, BpL, c)
+            #     else:
+            #         PIXEL11_100(rgb_out, pOut, BpL, c)
     return rgb_out
 
 

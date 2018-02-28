@@ -175,6 +175,10 @@ class UnionType(TypeWrapper):
         :return:
         """
         for elem in list_:
+            if element is types.NoneType:
+                if elem is types.NoneType:
+                    return True
+
             if type(element) is invokation.type_rules.type_groups.type_groups.DynamicType and type(elem) is \
                     invokation.type_rules.type_groups.type_groups.DynamicType:
                 return True
@@ -326,6 +330,18 @@ class UnionType(TypeWrapper):
 
         return False
 
+    mergeable_types = [int, float, long, str, complex]
+
+    @staticmethod
+    def __only_mergeable_types(obj):
+        vals = obj.__dict__.values()
+
+        for v in vals:
+            if type(v) not in UnionType.mergeable_types:
+                return False
+
+        return True
+
 
     @staticmethod
     def add(type1, type2):
@@ -379,6 +395,10 @@ class UnionType(TypeWrapper):
         # Numpy ndarrays have a different treatment
         if type(type1).__name__ == 'ndarray' and type(type2).__name__ == 'ndarray':
             if type1.tolist() == type2.tolist():
+                return type1
+
+        if type(type1) == type(type2) and not (inspect.ismethod(type1) or inspect.isfunction(type1) or inspect.isbuiltin(type1)):
+            if UnionType.__only_mergeable_types(type1) and (len(type1.__dict__) == len(type2.__dict__)):
                 return type1
 
         if UnionType.can_be_mergued(type1, type2):
@@ -702,9 +722,6 @@ class UnionType(TypeWrapper):
 
         if call_utilities.is_numpy_array(type1) and call_utilities.is_numpy_array(type2):
             return type(type1.contained_types) == type(type2.contained_types)
-# Perhaps this condition but only base type atts?
-        # if type(type1) == type(type2) and not inspect.ismethod(type1) and not inspect.isfunction(type1) and not inspect.isbuiltin(type1):
-        #     return dir(type1) == dir(type2)
 
         return False
 
