@@ -96,7 +96,7 @@ Main features of the new 0.2 release include:
 - [23/02/2018] Fixed incorrectly reporting type warnings as type errors when calling members from a variable that has a union type inside a SSA branch. 48/52 shedskin programs processed.
 - [26/02/2018] Fixed type inference problems with random.choice and random.seed functions. Stypy can now limit the amount of reported type errors and warnings to a maximum configurable value if the user decides to do so. It has been fixed to 200 each by default. If the limit is hit, the program warns the user about the incomplete type error reporting. Solved problems when returning type errors when using == with objects of different types. Fixed type inference with defaultdict types. Provided more information when dealing with invalid loop variables.
 - [28/02/2018] Improved the algorithm that merges object of the same type into a single instance when dealing with union types to include more cases. This also increased the performance of stypy significantly. Union types no longer accept multiple NoneTypes. 51/52 shedskin programs are now operational.
-
+- [01/03/2018] Fixed type rules for map functions when passing a numeric type as the first parameter. 52/52 shedskin programs correctly processed
 
 
 

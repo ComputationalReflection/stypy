@@ -155,7 +155,6 @@ class UnionType(TypeWrapper):
         """
         self.types.append(type_)
 
-
     @staticmethod
     def __is_same_base_type(a, b):
         base_types = [int, long, float, str]
@@ -318,8 +317,6 @@ class UnionType(TypeWrapper):
                     if len(t1.contained_types) != len(t2.contained_types):
                         return False
 
-
-
                     for t in t1.contained_types:
                         # If a type in the first tuple is not contained in the second one, they are not considered equal
                         if not UnionType.tuple_contains_type(t2.contained_types, t):
@@ -333,7 +330,7 @@ class UnionType(TypeWrapper):
     mergeable_types = [int, float, long, str, complex]
 
     @staticmethod
-    def __only_mergeable_types(obj):
+    def __mergeable_type(obj):
         vals = obj.__dict__.values()
 
         for v in vals:
@@ -342,6 +339,25 @@ class UnionType(TypeWrapper):
 
         return True
 
+    @staticmethod
+    def __structurally_compatible_types(obj1, obj2):
+        keys1 = obj1.__dict__.keys()
+        keys2 = obj2.__dict__.keys()
+        vals1 = map(lambda o: type(o), obj1.__dict__.values())
+        vals2 = map(lambda o: type(o), obj2.__dict__.values())
+
+        lenKey1 = len(keys1)
+        setVals1 = set(vals1)
+        lenValue1 = len(setVals1)
+
+        if lenKey1 != len(keys2):
+            return False
+        if len(set(keys1) & set(keys2)) != lenKey1:
+            return False
+        if (setVals1 & set(vals2)) != setVals1:
+            return False
+
+        return True
 
     @staticmethod
     def add(type1, type2):
@@ -397,8 +413,9 @@ class UnionType(TypeWrapper):
             if type1.tolist() == type2.tolist():
                 return type1
 
-        if type(type1) == type(type2) and not (inspect.ismethod(type1) or inspect.isfunction(type1) or inspect.isbuiltin(type1)):
-            if UnionType.__only_mergeable_types(type1) and (len(type1.__dict__) == len(type2.__dict__)):
+        if type(type1) == type(type2) and not (
+                inspect.ismethod(type1) or inspect.isfunction(type1) or inspect.isbuiltin(type1)):
+            if UnionType.__mergeable_type(type1) and UnionType.__structurally_compatible_types(type1, type2):
                 return type1
 
         if UnionType.can_be_mergued(type1, type2):
@@ -604,7 +621,8 @@ class UnionType(TypeWrapper):
 
         for type_ in self.types:
             if type_ is UndefinedType:
-                result.append(StypyTypeError(localization.get_current(), "Trying to perform a call over an undefined type"))
+                result.append(
+                    StypyTypeError(localization.get_current(), "Trying to perform a call over an undefined type"))
                 continue
             # Invoke all types
             temp = type_inference_programs.stypy_interface.invoke(localization, type_, *args, **kwargs)

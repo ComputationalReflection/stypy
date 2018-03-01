@@ -310,7 +310,6 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-
     def test_mastermind2(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/mastermind2.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)

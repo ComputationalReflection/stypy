@@ -859,6 +859,11 @@ class TypeModifiers:
     @staticmethod
     def map(localization, proxy_obj, arguments):
         ret_type = get_builtin_python_type_instance(localization, 'list')
+
+        if type_group_generator.Number == arguments[0]:
+            set_contained_elements_type(ret_type, arguments[0]())
+            return ret_type
+
         if is_function(arguments[0]) or is_method(arguments[0]):
             func = arguments[0]
         else:

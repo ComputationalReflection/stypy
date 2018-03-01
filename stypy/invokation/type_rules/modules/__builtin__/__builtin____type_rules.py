@@ -348,6 +348,7 @@ type_rules_of_members = {
         ((Has__call__, Str, IterableObject, Str), list),
         ((Has__call__, Str, Str, Str), list),
         ((Has__call__, IterableObject, VarArgs), list),
+        ((AnyType, IterableObject), DynamicType),
     ],
 
     'zip': [
