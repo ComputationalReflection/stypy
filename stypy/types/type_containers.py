@@ -56,7 +56,7 @@ def format_type(obj):
         return type(obj).__name__
 
 
-def get_contained_elements_type(proxy_obj):
+def get_contained_elements_type(proxy_obj, multi_assign_arity=-1, multi_assign_index=-1):
     """
     Get the type of the contained elements of the passed type
     :param proxy_obj:
@@ -84,7 +84,7 @@ def get_contained_elements_type(proxy_obj):
                     return proxy_obj.wrapped_type[0]
                 except:
                     return undefined_type.UndefinedType
-            return proxy_obj.get_contained_type()
+            return proxy_obj.get_contained_type(multi_assign_arity, multi_assign_index)
 
     else:
         if type(proxy_obj) is str:

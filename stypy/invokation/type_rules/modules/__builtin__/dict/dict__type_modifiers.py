@@ -44,8 +44,13 @@ class TypeModifiers:
                 else:
                     keys = [keys]
 
-                for key in keys:
-                    set_contained_elements_type_for_key(ret, key, values)
+                if len(keys) == 2:
+                    # Special case in which we use a two-element tuple to initialize a dict. We assume that the first
+                    # element is the key and the second the value
+                    set_contained_elements_type_for_key(ret, keys[0], keys[1])
+                else:
+                    for key in keys:
+                        set_contained_elements_type_for_key(ret, key, values)
 
                 return ret
 

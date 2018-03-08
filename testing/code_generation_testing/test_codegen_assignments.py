@@ -51,3 +51,9 @@ class TestNoClassCodeGenAssignments(TestCommon):
         result = self.run_stypy_with_program(file_path)
 
         self.assertEqual(result, 0)
+
+    def test_multiple_assigments2(self):
+        file_path = self.file_path + "/without_classes/assignments/multiple_assignments2.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)

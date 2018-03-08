@@ -6,6 +6,7 @@ from stypy.visitor.type_inference.visitor_utils import core_language, stypy_func
 
 
 def multiple_value_call_assignment_handler(target, value, assign_stmts, node, id_str):
+    #print("multiple_value_call_assignment_handler")
     """
     Handles code that uses a multiple assignment with a call to a function in the right part of the assignment. The
     code var1, var2 = original_call(...) is transformed into:
@@ -28,7 +29,11 @@ def multiple_value_call_assignment_handler(target, value, assign_stmts, node, id
                                                                  "{0}_assignment".format(id_str))
     assign_stmts.append(target_stmts)
 
-    value_var_to_load = copy.deepcopy(value_var)
+    #value_var_to_load = copy.deepcopy(value_var)
+    value_var_to_load = ast.Name()
+    value_var_to_load.col_offset = value_var.col_offset
+    value_var_to_load.lineno = value_var.lineno
+    value_var_to_load.id = value_var.id
     value_var_to_load.ctx = ast.Load()
 
     for i in xrange(len(target.elts)):
@@ -56,6 +61,7 @@ def multiple_value_call_assignment_handler(target, value, assign_stmts, node, id
 
 
 def multiple_value_assignment_handler(target, value, assign_stmts, node, id_str):
+    #print("multiple_value_assignment_handler")
     """
     Code to handle assignments like a, b = c, d. This code is converted to:
     a = c
@@ -108,6 +114,7 @@ def multiple_value_assignment_handler(target, value, assign_stmts, node, id_str)
 
 
 def multiple_value_assignment_handler_from_var(target, value, assign_stmts, node, id_str):
+    #print("multiple_value_assignment_handler_from_var")
     """
     Covers cases like a,b,c = tuple_var, transforming them in:
     a = tuple_var[0]
@@ -159,6 +166,7 @@ def multiple_value_assignment_handler_from_var(target, value, assign_stmts, node
 
 
 def single_assignment_handler(target, value, assign_stmts, node, id_str):
+    #print("single_assignment_handler")
     """
     Handles single statements for the visitor. No change is produced in the code
     :param target: Variable
@@ -194,35 +202,35 @@ class MultipleAssignmentsDesugaringVisitor(ast.NodeTransformer):
     # Table of functions that determines what assignment handler is going to be executed for an assignment. Each
     # key is a function that, if evaluated to true, execute the associated value function that adds the necessary
     # statements to handle the call
-    __assignment_handlers = {
-        (lambda target, value: isinstance(target, ast.Tuple) and (isinstance(value, ast.Tuple) or
-                                                                  isinstance(value, ast.List))): (
-            "tuple", multiple_value_assignment_handler),
+    __assignment_handlers = [
+        ((lambda target, value: isinstance(target, ast.Tuple) and (isinstance(value, ast.Tuple) or
+                                                                  isinstance(value, ast.List))), (
+            "tuple", multiple_value_assignment_handler)),
 
-        (lambda target, value: isinstance(target, ast.List) and (isinstance(value, ast.Tuple) or
-                                                                 isinstance(value, ast.List))): (
-            "list", multiple_value_assignment_handler),
+        ((lambda target, value: isinstance(target, ast.List) and (isinstance(value, ast.Tuple) or
+                                                                 isinstance(value, ast.List))), (
+            "list", multiple_value_assignment_handler)),
 
-        (lambda target, value: (isinstance(target, ast.List) or isinstance(target, ast.Tuple)) and (
-            isinstance(value, ast.Call))): ("call", multiple_value_call_assignment_handler),
+        ((lambda target, value: (isinstance(target, ast.List) or isinstance(target, ast.Tuple)) and (
+            isinstance(value, ast.Call))), ("call", multiple_value_call_assignment_handler)),
 
-        (lambda target, value: isinstance(target, ast.Tuple) and not (isinstance(value, ast.Tuple) or
-                                                                      isinstance(value, ast.List))): (
-            "tuple_var", multiple_value_assignment_handler_from_var),
+        ((lambda target, value: isinstance(target, ast.Tuple) and not (isinstance(value, ast.Tuple) or
+                                                                      isinstance(value, ast.List))), (
+            "tuple_var", multiple_value_assignment_handler_from_var)),
 
-        (lambda target, value: isinstance(target, ast.List) and not (isinstance(value, ast.Tuple) or
-                                                                     isinstance(value, ast.List))): (
-            "list_var", multiple_value_assignment_handler_from_var),
+        ((lambda target, value: isinstance(target, ast.List) and not (isinstance(value, ast.Tuple) or
+                                                                     isinstance(value, ast.List))), (
+            "list_var", multiple_value_assignment_handler_from_var)),
 
-        lambda target, value: isinstance(target, ast.Name):
-            ("assignment", single_assignment_handler),
+        (lambda target, value: isinstance(target, ast.Name),
+            ("assignment", single_assignment_handler)),
 
-        lambda target, value: isinstance(target, ast.Subscript):
-            ("assignment", single_assignment_handler),
+        (lambda target, value: isinstance(target, ast.Subscript),
+            ("assignment", single_assignment_handler)),
 
-        lambda target, value: isinstance(target, ast.Attribute):
-            ("assignment", single_assignment_handler),
-    }
+        (lambda target, value: isinstance(target, ast.Attribute),
+            ("assignment", single_assignment_handler)),
+    ]
 
     # ######################################### MAIN MODULE #############################################
 
@@ -266,9 +274,9 @@ class MultipleAssignmentsDesugaringVisitor(ast.NodeTransformer):
         for assign_num in xrange(len(reversed_targets)):
             target = reversed_targets[assign_num]
             # Function guard is true? execute handler
-            for handler_func_guard in self.__assignment_handlers:
-                if handler_func_guard(target, value):
-                    id_str, handler_func = self.__assignment_handlers[handler_func_guard]
+            for handler_func_guard_tuple in self.__assignment_handlers:
+                if handler_func_guard_tuple[0](target, value):
+                    id_str, handler_func = handler_func_guard_tuple[1]
                     self.performed_transformations |= handler_func(target, value, assign_stmts, node, id_str)
                     assign_stmts = stypy_functions.flatten_lists(assign_stmts)
                     value = target

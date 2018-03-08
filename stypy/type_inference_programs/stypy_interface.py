@@ -166,7 +166,7 @@ def add_contained_elements_type(localization, container, elements):
         set_contained_elements_type(localization, container, new)
 
 
-def get_contained_elements_type(localization, container):
+def get_contained_elements_type(localization, container, multi_assign_arity=-1, multi_assign_index=-1):
     """
     Gets the type stored in a certain container
     :param localization:
@@ -176,7 +176,7 @@ def get_contained_elements_type(localization, container):
     if is_error_type(container):
         return container
 
-    return type_containers.get_contained_elements_type(container)
+    return type_containers.get_contained_elements_type(container, multi_assign_arity, multi_assign_index)
 
 
 def set_contained_elements_type(localization, container, elements):

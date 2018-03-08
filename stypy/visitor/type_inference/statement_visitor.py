@@ -690,15 +690,17 @@ class StatementVisitor(ast.NodeVisitor):
                                                                               node.col_offset, "for_loop_var")
         for_stmt_body.append(target_assign)
 
-
         if isinstance(node.target, ast.Tuple):
             get_elements_call = core_language.create_Name("get_contained_elements_type")
             assign_target_type = []
+            cont = 0
             for elt in node.target.elts:
                 if isinstance(elt, ast.Name):
                     call_to_elements = functions.create_call(get_elements_call,
                                                              [localization, core_language.create_Name(
-                                                                 target_assign_var.id)])
+                                                                 target_assign_var.id),
+                                                              core_language.create_num(len(node.target.elts)),
+                                                              core_language.create_num(cont)])
                     type_set = stypy_functions.create_set_type_of(elt.id, call_to_elements, node.lineno,
                                                                   node.col_offset)
                     assign_target_type.append(type_set)
@@ -707,10 +709,13 @@ class StatementVisitor(ast.NodeVisitor):
                     for name in names:
                         call_to_elements = functions.create_call(get_elements_call,
                                                                  [localization, core_language.create_Name(
-                                                                     target_assign_var.id)])
+                                                                     target_assign_var.id),
+                                                              core_language.create_num(len(node.target.elts)),
+                                                              core_language.create_num(cont)])
                         type_set = stypy_functions.create_set_type_of(name, call_to_elements, node.lineno,
                                                                       node.col_offset)
                         assign_target_type.append(type_set)
+                cont+=1
         else:
             if type(node.target) is ast.Name:
                 assign_target_type = stypy_functions.create_set_type_of(node.target.id, target_assign_var, node.lineno,

@@ -56,12 +56,21 @@ class TypeWrapper(object):
         """
         return isinstance(self.wrapped_type, dict)
 
-    def get_contained_type(self):
+    def get_contained_type(self, multi_assign_arity=-1, multi_assign_index=-1):
         """
         Gets the types contained by the wrapped type
         :return:
         """
         if hasattr(self, 'contained_types'):
+            if type(self.wrapped_type) is tuple:
+                # Tuples in certain multiple assignments return individual components instead of the whole tuple
+                try:
+                    if isinstance(self.contained_types, TypeWrapper):
+                        if len(self.contained_types.types) == multi_assign_arity:
+                            return self.contained_types.types[multi_assign_index]
+                except:
+                    pass
+
             return self.contained_types
         else:
             return UndefinedType

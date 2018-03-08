@@ -222,7 +222,8 @@ class TestShedSkin(TestCommon):
 
     def test_mwmatching(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/mwmatching.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False, expected_errors=2)
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False,
+                                             expected_errors=2)
 
         self.assertEqual(result, 0)
 
@@ -294,7 +295,8 @@ class TestShedSkin(TestCommon):
 
     def test_plcfrs(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/plcfrs.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False, expected_errors=4)
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False,
+                                             expected_errors=4)
 
         self.assertEqual(result, 0)
 
@@ -318,7 +320,8 @@ class TestShedSkin(TestCommon):
 
     def test_minilight_main(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/minilight_main.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False, expected_errors=1)
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False,
+                                             expected_errors=1)
 
         self.assertEqual(result, 0)
 
