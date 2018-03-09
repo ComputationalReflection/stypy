@@ -100,5 +100,6 @@ Main features of the new 0.2 release include:
 - [05/03/2018] Multiple assignments in a for loop condition now correctly assign individual types over iterating variables if the type of the condition is a tuple. This improves type inference in multiple cases.
 - [07/03/2018] Improved the type inference of dictionaries when constructed from tuples with two elements.
 - [08/03/2018] Fixed a performance problem when desugaring multiple assignments with a function source.
+- [09/03/2018] Improved type inference when returning multiple elements from a function. Improved the type inference code when returning tuples from functions. Fixed a type inference problem when comparing numbers and lists.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

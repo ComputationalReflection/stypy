@@ -3,7 +3,7 @@
 import statement_visitor
 from stypy.type_inference_programs.aux_functions import *
 from stypy.visitor.type_inference.visitor_utils import core_language, functions, stypy_functions, data_structures
-
+import value_visitor_utilities
 
 class ValueVisitor(ast.NodeVisitor):
     """
@@ -469,6 +469,9 @@ class ValueVisitor(ast.NodeVisitor):
         :param context:
         :return:
         """
+
+        if value_visitor_utilities.is_direct_call_to_stypy_interface(node):
+            return value_visitor_utilities.call_to_stypy_interface(self, node, context)
 
         context.append(node)
         # Localization of the function call

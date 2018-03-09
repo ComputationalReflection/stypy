@@ -174,6 +174,8 @@ type_rules_of_members = {
         ((complex, complex), StypyTypeError(None, "Complex numbers do not accept sorting", False)),
         ((Number, Number), bool),
         ((IterableDataStructure, IterableDataStructure), bool),
+        ((IterableDataStructure, Number), bool),
+        ((Number, IterableDataStructure), bool),
         ((Overloads__ge__, AnyType), DynamicType),
         ((Overloads__cmp__, AnyType), DynamicType),
         ((DontHaveMember(["__ge__", "__cmp__"], 1), AnyType), bool)
@@ -195,6 +197,8 @@ type_rules_of_members = {
         ((complex, complex), StypyTypeError(None, "Complex numbers do not accept sorting", False)),
         ((Number, Number), bool),
         ((IterableDataStructure, IterableDataStructure), bool),
+        ((IterableDataStructure, Number), bool),
+        ((Number, IterableDataStructure), bool),
         ((Overloads__gt__, AnyType), DynamicType),
         ((Overloads__cmp__, AnyType), DynamicType),
         ((DontHaveMember(["__gt__", "__cmp__"], 1), AnyType), bool)
@@ -449,6 +453,8 @@ type_rules_of_members = {
         ((complex, complex), StypyTypeError(None, "Complex numbers do not accept sorting", False)),
         ((Number, Number), bool),
         ((IterableDataStructure, IterableDataStructure), bool),
+        ((IterableDataStructure, Number), bool),
+        ((Number, IterableDataStructure), bool),
         ((Overloads__le__, AnyType), DynamicType),
         ((Overloads__cmp__, AnyType), DynamicType),
         ((DontHaveMember(["__le__", "__cmp__"], 1), AnyType), bool)
@@ -472,6 +478,8 @@ type_rules_of_members = {
         ((complex, complex), StypyTypeError(None, "Complex numbers do not accept sorting", False)),
         ((Number, Number), bool),
         ((IterableDataStructure, IterableDataStructure), bool),
+        ((IterableDataStructure, Number), bool),
+        ((Number, IterableDataStructure), bool),
         ((Overloads__lt__, AnyType), DynamicType),
         ((Overloads__cmp__, AnyType), DynamicType),
         ((DontHaveMember(["__lt__", "__cmp__"], 1), AnyType), bool)
@@ -672,7 +680,7 @@ type_rules_of_members = {
         ((float, RealNumber), float),
         ((float, complex), complex),
         ((numpy.ndarray, numpy.ndarray), TypeOfParam(1)),
-        ((IterableObject, IterableObject), set),
+        ((set, set), TypeOfParam(1)),
         ((Overloads__sub__, AnyType), DynamicType),
         ((Overloads__isub__, AnyType), DynamicType),
         ((AnyType, Overloads__rsub__), DynamicType)

@@ -20,7 +20,7 @@ from stypy.types import type_intercession
 from stypy.types import undefined_type
 from stypy.types import union_type
 from stypy.types.known_python_types import get_sample_instance_for_type, needs_unique_instance, get_unique_instance
-from stypy.types.standard_wrapper import wrap_contained_type
+from stypy.types.standard_wrapper import wrap_contained_type, StandardWrapper
 from stypy.invokation import handlers
 
 builtins_module = sys.modules['__builtin__']
@@ -962,3 +962,21 @@ def remove_not_member_provider_from_union(union_type_obj, member):
     :return:
     """
     return aux_functions.remove_not_member_provider_from_union(union_type_obj, member)
+
+
+def stypy_get_value_from_tuple(tuple_, total_length, position):
+    try:
+        if isinstance(tuple_, StandardWrapper):
+            if isinstance(tuple_.wrapped_type, tuple):
+                if hasattr(tuple_.contained_types, 'types'):
+                    if len(tuple_.contained_types.types) == total_length:
+                        return tuple_.contained_types.types[position]
+                    else:
+                        if len(tuple_.contained_types.types) == 1:
+                            return tuple_.contained_types.types[0]
+                if hasattr(tuple_.contained_types, 'wrapped_type'):
+                    if isinstance(tuple_.contained_types.wrapped_type, list):
+                        return tuple_.contained_types
+    except:
+        return tuple_
+    return tuple_

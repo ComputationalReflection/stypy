@@ -38,10 +38,20 @@ def multiple_value_call_assignment_handler(target, value, assign_stmts, node, id
 
     for i in xrange(len(target.elts)):
         # Assign values to each element.
-        getitem_att = core_language.create_attribute(value_var_to_load, '__getitem__', context=ast.Load(),
-                                                     line=node.lineno,
-                                                     column=node.col_offset)
-        item_call = functions.create_call(getitem_att, [core_language.create_num(i, node.lineno, node.col_offset)])
+        # getitem_att = core_language.create_attribute(value_var_to_load, '__getitem__', context=ast.Load(),
+        #                                              line=node.lineno,
+        #                                              column=node.col_offset)
+        # item_call = functions.create_call(getitem_att, [core_language.create_num(i, node.lineno, node.col_offset)])
+        # temp_stmts, temp_value = stypy_functions.create_temp_Assign(item_call, node.lineno, node.col_offset,
+        #                                                             "{0}_assignment".format(id_str))
+        stypy_interface = core_language.create_Name('stypy_interface')
+        get_tuple_call = core_language.create_attribute(stypy_interface, 'stypy_get_value_from_tuple', context=ast.Load(),
+                                                                                                   line=node.lineno,
+                                                                                                   column=node.col_offset)
+
+        item_call = functions.create_call(get_tuple_call, [value_var_to_load,
+                                                           core_language.create_num(len(target.elts), node.lineno, node.col_offset),
+                                                           core_language.create_num(i, node.lineno, node.col_offset)])
         temp_stmts, temp_value = stypy_functions.create_temp_Assign(item_call, node.lineno, node.col_offset,
                                                                     "{0}_assignment".format(id_str))
         if hasattr(node, 'lineno'):
