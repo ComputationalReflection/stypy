@@ -23,6 +23,13 @@ class TypeModifiers:
         return None # Type rule results
 
     @staticmethod
+    def ne(localization, proxy_obj, arguments):
+        if call_utilities.is_numpy_array(arguments[0]) and call_utilities.is_numpy_array(arguments[1]):
+            return call_utilities.create_numpy_array_n_dimensions(bool(), call_utilities.get_dimensions(localization,
+                                                                                                        arguments[0]))
+        return None  # Type rule results
+
+    @staticmethod
     def __and__(localization, proxy_obj, arguments):
         if call_utilities.is_numpy_array(arguments[0]) or call_utilities.is_numpy_array(arguments[1]):
             return numpy__type_modifiers.TypeModifiers.bitwise_and(localization, proxy_obj, arguments)

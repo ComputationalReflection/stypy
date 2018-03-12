@@ -64,7 +64,7 @@ class UnionType(TypeWrapper):
             if stypy_types.type_containers.can_store_keypairs(t):
                 return True
 
-    def get_contained_type(self):
+    def get_contained_type(self, multi_assign_arity=-1, multi_assign_index=-1):
         """
         Get the contained types of all the types in the union
         :return:
@@ -331,33 +331,39 @@ class UnionType(TypeWrapper):
 
     @staticmethod
     def __mergeable_type(obj):
-        vals = obj.__dict__.values()
+        try:
+            vals = obj.__dict__.values()
 
-        for v in vals:
-            if type(v) not in UnionType.mergeable_types:
-                return False
+            for v in vals:
+                if type(v) not in UnionType.mergeable_types:
+                    return False
 
-        return True
+            return True
+        except:
+            return False
 
     @staticmethod
     def __structurally_compatible_types(obj1, obj2):
-        keys1 = obj1.__dict__.keys()
-        keys2 = obj2.__dict__.keys()
-        vals1 = map(lambda o: type(o), obj1.__dict__.values())
-        vals2 = map(lambda o: type(o), obj2.__dict__.values())
+        try:
+            keys1 = obj1.__dict__.keys()
+            keys2 = obj2.__dict__.keys()
+            vals1 = map(lambda o: type(o), obj1.__dict__.values())
+            vals2 = map(lambda o: type(o), obj2.__dict__.values())
 
-        lenKey1 = len(keys1)
-        setVals1 = set(vals1)
-        lenValue1 = len(setVals1)
+            lenKey1 = len(keys1)
+            setVals1 = set(vals1)
+            lenValue1 = len(setVals1)
 
-        if lenKey1 != len(keys2):
-            return False
-        if len(set(keys1) & set(keys2)) != lenKey1:
-            return False
-        if (setVals1 & set(vals2)) != setVals1:
-            return False
+            if lenKey1 != len(keys2):
+                return False
+            if len(set(keys1) & set(keys2)) != lenKey1:
+                return False
+            if (setVals1 & set(vals2)) != setVals1:
+                return False
 
-        return True
+            return True
+        except:
+            return False
 
     @staticmethod
     def add(type1, type2):

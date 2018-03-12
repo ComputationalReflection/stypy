@@ -18,19 +18,19 @@ class TestShedSkin(TestCommon):
 
     def test_amaze(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/amaze.py"
-        result = self.run_stypy_with_program(file_path, output_results=True)
+        result = self.run_stypy_with_program(file_path)
 
         self.assertEqual(result, 0)
 
     def test_ant(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/ant.py"
-        result = self.run_stypy_with_program(file_path, output_results=True)
+        result = self.run_stypy_with_program(file_path)
 
         self.assertEqual(result, 0)
 
     def test_bh(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/bh.py"
-        result = self.run_stypy_with_program(file_path, output_results=True)
+        result = self.run_stypy_with_program(file_path)
 
         self.assertEqual(result, 0)
 

@@ -240,10 +240,10 @@ def get_member_from_object(localization, obj, name):
     if isinstance(obj, contexts.context.Context):
         return obj.get_type_of(localization, name)
 
-    if isinstance(obj, TypeWrapper) and obj.is_declared_member(name):
+    if isinstance(obj, TypeWrapper) and (obj.is_declared_member(name) or name == '__getitem__'):
         try:
             return obj.get_type_of_member(name)
-        except:
+        except Exception as ex:
             return StypyTypeError.member_not_defined_error(localization, obj, name)
 
     if has_attr(obj, name):

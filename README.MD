@@ -101,5 +101,6 @@ Main features of the new 0.2 release include:
 - [07/03/2018] Improved the type inference of dictionaries when constructed from tuples with two elements.
 - [08/03/2018] Fixed a performance problem when desugaring multiple assignments with a function source.
 - [09/03/2018] Improved type inference when returning multiple elements from a function. Improved the type inference code when returning tuples from functions. Fixed a type inference problem when comparing numbers and lists.
+- [12/03/2018] Fixed a regression bug when obtaining contained types from a union type and when determining of two types are mergeable (only when both types were methods). Fixed type inference errors with the != operator.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]
