@@ -7,7 +7,7 @@ from stypy.module_imports.python_library_modules import is_python_library_module
 from stypy.type_inference_programs.aux_functions import *
 from stypy.visitor.type_inference.visitor_utils import core_language, functions, stypy_functions, data_structures, \
     conditional_statements, idioms
-
+import statement_visitor_utilities
 
 class StatementVisitor(ast.NodeVisitor):
     prepend_statements = []
@@ -826,16 +826,17 @@ class StatementVisitor(ast.NodeVisitor):
 
         if_node_iteration.orelse = []
 
-
-        # Process the body of the while statement
-        while_stmt_body.append(stypy_functions.create_src_comment("SSA begins for while statement", node.lineno))
-        clone_stmt1, type_store_var1 = stypy_functions.create_open_ssa_context("while loop")
-        while_stmt_body.append(clone_stmt1)
+        is_true_test = statement_visitor_utilities.is_true_constant_in_loop_test(node)
+        if not is_true_test:
+            # Process the body of the while statement
+            while_stmt_body.append(stypy_functions.create_src_comment("SSA begins for while statement", node.lineno))
+            clone_stmt1, type_store_var1 = stypy_functions.create_open_ssa_context("while loop")
+            while_stmt_body.append(clone_stmt1)
 
         # While body
         while_stmt_body.extend(self.__visit_instruction_body(node.body, context))
 
-        if len(node.orelse) > 0:
+        if len(node.orelse) > 0 and not is_true_test:
             # Else part of the while statements
             while_stmt_orelse.append(
                 stypy_functions.create_src_comment("SSA branch for the else part of a while statement",
@@ -859,11 +860,12 @@ class StatementVisitor(ast.NodeVisitor):
         else:
             all_while_stmts = while_stmt_body
 
-        # Join type stores and finish while
-        all_while_stmts.append(stypy_functions.create_src_comment("SSA join for while statement", node.lineno))
+        if not is_true_test:
+            # Join type stores and finish while
+            all_while_stmts.append(stypy_functions.create_src_comment("SSA join for while statement", node.lineno))
 
-        join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
-        all_while_stmts.append(join_stmt)
+            join_stmt, final_type_store = stypy_functions.create_join_ssa_context()
+            all_while_stmts.append(join_stmt)
 
         if_node_iteration.body = [all_while_stmts]
         if_node_iteration.orelse = else_inst

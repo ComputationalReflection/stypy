@@ -6582,8 +6582,6 @@ class Tree:
             is_suitable_condition(stypy.reporting.localization.Localization(__file__, 514, 12), True_1092)
 
             if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 514, 12), True_1092):
-                # SSA begins for while statement (line 514)
-                module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
                 
                 # Assigning a Call to a Name (line 515):
                 
@@ -6674,8 +6672,6 @@ class Tree:
                     module_type_store = module_type_store.join_ssa_context()
                     
 
-                # SSA join for while statement (line 514)
-                module_type_store = module_type_store.join_ssa_context()
 
             
             
@@ -6744,8 +6740,6 @@ class Tree:
             is_suitable_condition(stypy.reporting.localization.Localization(__file__, 522, 12), True_1140)
 
             if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 522, 12), True_1140):
-                # SSA begins for while statement (line 522)
-                module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
                 
                 
                 # Call to xrange(...): (line 523)
@@ -6842,8 +6836,6 @@ class Tree:
                     module_type_store = module_type_store.join_ssa_context()
                     
 
-                # SSA join for while statement (line 522)
-                module_type_store = module_type_store.join_ssa_context()
 
             
             

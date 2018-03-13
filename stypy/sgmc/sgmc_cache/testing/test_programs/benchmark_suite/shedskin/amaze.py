@@ -7648,8 +7648,6 @@ class FilebasedMazeGame(MazeGame_1154, ):
         is_suitable_condition(stypy.reporting.localization.Localization(__file__, 460, 8), True_1165)
 
         if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 460, 8), True_1165):
-            # SSA begins for while statement (line 460)
-            module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
             
             
             # SSA begins for try-except statement (line 461)
@@ -7778,8 +7776,6 @@ class FilebasedMazeGame(MazeGame_1154, ):
             # SSA join for try-except statement (line 461)
             module_type_store = module_type_store.join_ssa_context()
             
-            # SSA join for while statement (line 460)
-            module_type_store = module_type_store.join_ssa_context()
 
         
         
@@ -7792,8 +7788,6 @@ class FilebasedMazeGame(MazeGame_1154, ):
         is_suitable_condition(stypy.reporting.localization.Localization(__file__, 471, 8), True_1193)
 
         if will_iterate_loop(stypy.reporting.localization.Localization(__file__, 471, 8), True_1193):
-            # SSA begins for while statement (line 471)
-            module_type_store = SSAContext.create_ssa_context(module_type_store, 'while loop')
             
             
             # SSA begins for try-except statement (line 472)
@@ -7922,8 +7916,6 @@ class FilebasedMazeGame(MazeGame_1154, ):
             # SSA join for try-except statement (line 472)
             module_type_store = module_type_store.join_ssa_context()
             
-            # SSA join for while statement (line 471)
-            module_type_store = module_type_store.join_ssa_context()
 
         
         
