@@ -201,6 +201,10 @@ def __set_type_implementation(if_test, type_, lineno, col_offset):
     return []
 
 
+def remove_type_from_union_implementation(if_test, type_, lineno, col_offset):
+    return __remove_type_from_union_implementation(if_test, type_, lineno, col_offset)
+
+
 def __remove_type_from_union_implementation(if_test, type_, lineno, col_offset):
     """
     Implements the call to remove_type_from_union when the idiom is recognized

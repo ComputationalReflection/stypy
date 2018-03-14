@@ -614,11 +614,26 @@ class StatementVisitor(ast.NodeVisitor):
 
         end_if_comment = stypy_functions.create_blank_line()
 
+        remove_none = []
+        if idiom_name == 'is_none' and statement_visitor_utilities.has_a_return_or_a_raise(node.body):
+            try:
+                var_stmts, var_name = stypy_functions.create_get_type_of(node.test.left.id, node.lineno, node.col_offset)
+                f_name = core_language.create_Name('remove_type_from_union')
+                none = core_language.create_attribute('types', 'NoneType')
+                call_remove = functions.create_call(f_name, [var_name, none], line=node.lineno,
+                                                                                             column=node.col_offset)
+                set_type = stypy_functions.create_set_type_of(node.test.left.id, call_remove, node.lineno,
+                                                                                                node.col_offset)
+                remove_none = stypy_functions.flatten_lists(var_stmts, set_type
+                                                            )
+            except:
+                pass
+
         if ev_none_test_condition is None:
             return stypy_functions.flatten_lists(begin_if_comment,
                                              condition_stmt,
                                              if_stmt,
-                                             end_if_comment)
+                                             end_if_comment, remove_none)
         else:
             # This if controls a runtime idiom when an if only executes its else part if its condition dynamically
             # evaluates to None
@@ -632,7 +647,7 @@ class StatementVisitor(ast.NodeVisitor):
 
             if_none.orelse = stypy_functions.flatten_lists(begin_if_comment,
                                              if_stmt,
-                                             end_if_comment)
+                                             end_if_comment, remove_none)
 
             return stypy_functions.flatten_lists(condition_stmt, [ev_none_condition_comment, if_none])
 

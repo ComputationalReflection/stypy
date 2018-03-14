@@ -623,7 +623,8 @@ def remove_type_from_union(union_type_obj, type_to_remove):
             if type_ is not types.NoneType:
                 result = union_type_obj.add(result, type_)
             if type(type_) is not types.NoneType:
-                result = union_type_obj.add(result, type_)
+                if type_ is not types.NoneType:
+                   result = union_type_obj.add(result, type_)
         else:
             if not type(type_) == type_to_remove:
                 result = union_type_obj.add(result, type_)

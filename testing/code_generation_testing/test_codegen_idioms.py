@@ -79,3 +79,9 @@ class TestCodeGenerationIdioms(TestCommon):
         result = self.run_stypy_with_program(file_path)
 
         self.assertEqual(result, 0)
+
+    def test_idiom_if_none_break_or_return(self):
+        file_path = self.file_path + "/without_classes/idioms/idiom_if_none_break_or_return.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)

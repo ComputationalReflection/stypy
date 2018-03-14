@@ -974,9 +974,13 @@ def stypy_get_value_from_tuple(tuple_, total_length, position):
                     else:
                         if len(tuple_.contained_types.types) == 1:
                             return tuple_.contained_types.types[0]
-                if hasattr(tuple_.contained_types, 'wrapped_type'):
-                    if isinstance(tuple_.contained_types.wrapped_type, list):
-                        return tuple_.contained_types
+                else:
+                    if hasattr(tuple_.contained_types, 'wrapped_type'):
+                        if isinstance(tuple_.contained_types.wrapped_type, list):
+                            return tuple_.contained_types
+                    else:
+                        if type_group_generator.Number == type(tuple_.contained_types):
+                            return tuple_.contained_types
     except:
         return tuple_
     return tuple_
