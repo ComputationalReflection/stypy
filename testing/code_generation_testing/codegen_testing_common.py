@@ -119,6 +119,10 @@ class TestCommon(unittest.TestCase):
                 print ("MAXIMUM LIMIT OF REPORTED ERRORS REACHED: NOT ALL TYPE ERRORS WERE CAPTURED")
 
             self.print_output("\n*************** Warnings *************** ", file_)
+            # Pack warnings
+            TypeWarning.pack_warnings()
+            stypy.analyzed_program_warnings = TypeWarning.get_warning_msgs()
+
             warnings = stypy.get_analyzed_program_warnings()
             if len(warnings) > 0:
                 self.print_output("{0} warnings detected:\n".format(len(warnings)), file_)

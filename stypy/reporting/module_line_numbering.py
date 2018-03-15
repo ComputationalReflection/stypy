@@ -134,7 +134,7 @@ class ModuleLineNumbering(object):
         return None
 
     @staticmethod
-    def get_column_from_module_code(file_name, line_number, col_offset):
+    def get_column_from_module_code(file_name, line_number, col_offset, more_offsets = []):
         """
         Calculates the position of col_offset inside the line_number of the file file_name, so we can physically locate
          the column within the file to report meaningful errors. This is used then reporting type error, when we also
@@ -151,7 +151,20 @@ class ModuleLineNumbering(object):
         if line is None:
             return None
 
-        blank_line = " " * col_offset + "^"
+        blank_line = ""
+        if len(more_offsets) > 0:
+            more_offsets.append(col_offset)
+            more_offsets = sorted(more_offsets)
+            base_offset = min(more_offsets)
+            for offset in more_offsets:
+                if offset == base_offset:
+                    blank_line += " " * (offset) + "^"
+                else:
+                    blank_line += " " * (offset - base_offset) + "^"
+        else:
+            blank_line = " " * col_offset + "^"
+
+
 
         return blank_line
 

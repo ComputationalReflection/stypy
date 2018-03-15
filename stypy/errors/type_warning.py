@@ -5,6 +5,7 @@ from stypy import errors
 from stypy import stypy_parameters
 from stypy.reporting.localization import Localization
 from stypy.reporting.module_line_numbering import ModuleLineNumbering
+import copy
 
 
 class TypeWarning(object):
@@ -39,7 +40,7 @@ class TypeWarning(object):
         :param prints_msg: As TypeErrors, TypeWarnings can also be silent if reporting them is not activated
         :return:
         """
-
+        self.packed = False
         self.message = msg
         if localization is None:
             localization = Localization(__file__, 1, 0)
@@ -106,8 +107,17 @@ class TypeWarning(object):
         file_name = self.__format_file_name()
 
         source_code = ModuleLineNumbering.get_line_from_module_code(self.localization.file_name, self.localization.line)
-        col_offset = ModuleLineNumbering.get_column_from_module_code(self.localization.file_name,
-                                                                     self.localization.line, self.localization.column)
+
+        if hasattr(self.localization, 'column_offsets_for_packed_warnings'):
+            col_offset = ModuleLineNumbering.get_column_from_module_code(self.localization.file_name,
+                                                                         self.localization.line,
+                                                                         self.localization.column,
+                                                                         self.localization.column_offsets_for_packed_warnings)
+        else:
+            col_offset = ModuleLineNumbering.get_column_from_module_code(self.localization.file_name,
+                                                                         self.localization.line,
+                                                                         self.localization.column)
+
         if source_code is not None:
             return "Type warning in file '%s' (line %s, column %s):\n%s\n%s\n\t%s.\n\n%s" % \
                    (file_name, self.localization.line, self.localization.column,
@@ -192,6 +202,83 @@ class TypeWarning(object):
                 TypeWarning.warnings.remove(error_obj)
             except:
                 pass
+
+    @staticmethod
+    def __is_packable_warning(warn):
+        return "Potential undefined types found" in warn.message and not warn.packed
+
+    @staticmethod
+    def __can_be_packed(warn1, warn2):
+        if warn2.packed or warn1.packed:
+            return False
+
+        if warn1.localization.line != warn2.localization.line:
+            return False
+
+        if str(warn1.stack_trace_snapshot) != str(warn2.stack_trace_snapshot):
+            return False
+
+        return True
+
+
+    @staticmethod
+    def __pack(warn1, warn2):
+        if warn1 is None:
+            return warn2
+
+        packed_warning = copy.copy(warn1)
+        packed_warning.message = "Potential multiple undefined types found in this line"
+        if hasattr(packed_warning.localization, 'column_offsets_for_packed_warnings'):
+            packed_warning.localization.column_offsets_for_packed_warnings.append(warn2.localization.column)
+        else:
+            packed_warning.localization.column_offsets_for_packed_warnings = [warn2.localization.column]
+
+        packed_warning.warn_msg = packed_warning.__msg()
+        warn1.packed = True
+        warn2.packed = True
+
+        return packed_warning
+
+    @staticmethod
+    def pack_warnings():
+        """This method consolidates multiple warnings into one provided the following conditions are met:
+        1) Belong to the same line
+        2) Has a message that refer to potential undefined types
+        3) Has the same call stack.
+
+        In that case, a single warning is produced, and multiple columns are stored to indicate all the places in the
+        line that may present this warning. This greatly helps to lower the amount of reported warnings produced when
+        multiple arithmetic operations deal with operands with potential UndefinedType values.
+        """
+        packables = filter(lambda w: TypeWarning.__is_packable_warning(w), TypeWarning.warnings)
+        non_packables = filter(lambda w: not TypeWarning.__is_packable_warning(w), TypeWarning.warnings)
+        packeds_temp = []
+        packeds = []
+
+        for pw in packables:
+            if pw.packed:
+                continue
+            packed_warning = pw
+            for w in TypeWarning.warnings:
+                if pw == w:
+                    continue
+                if w.packed:
+                    continue
+                if TypeWarning.__is_packable_warning(w):
+                    # Can we pack these warnings
+                    if TypeWarning.__can_be_packed(pw, w):
+                        packeds_temp.append(w)
+
+            # Pack all warnings into one
+            for p in packeds_temp:
+                packed_warning = TypeWarning.__pack(packed_warning, p)
+
+            packeds_temp = []
+            if not packed_warning in packeds:
+                packeds.append(packed_warning)
+
+        TypeWarning.warnings = non_packables + packeds
+
 
     # ######################################## PREDEFINED WARNINGS ########################################
 
