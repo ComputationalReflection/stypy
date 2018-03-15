@@ -4,10 +4,12 @@
 import inspect
 
 from stypy.type_inference_programs.stypy_interface import process_argument_values, is_error_type
+from stypy.errors.type_warning import TypeWarning
 
 
 class RecursionType(object):
-    pass
+    def __init__(self):
+        TypeWarning.enable_usage_of_recursion_warning()
 
 
 def norecursion(f):

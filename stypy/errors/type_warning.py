@@ -25,6 +25,10 @@ class TypeWarning(object):
 
     dynamic_warning = None
 
+    recursion_warning_included = False
+
+    recursion_warning = None
+
     type_warning_limit_hit = False
 
     def __init__(self, localization, msg, prints_msg=True, snap=None):
@@ -199,6 +203,13 @@ class TypeWarning(object):
                                       "accurate")
             TypeWarning.dynamic_type_warning_included = True
             TypeWarning.dynamic_warning = t
+
+    @staticmethod
+    def enable_usage_of_recursion_warning(fname=""):
+        if not TypeWarning.recursion_warning_included:
+            t = TypeWarning(None, "This program uses recursion. Type inference might not be accurate")
+            TypeWarning.recursion_warning_included = True
+            TypeWarning.recursion_warning = t
 
 
 class UnreferencedLocalVariableTypeWarning(TypeWarning):
