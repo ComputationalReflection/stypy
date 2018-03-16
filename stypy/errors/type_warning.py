@@ -5,7 +5,7 @@ from stypy import errors
 from stypy import stypy_parameters
 from stypy.reporting.localization import Localization
 from stypy.reporting.module_line_numbering import ModuleLineNumbering
-import copy
+import type_warning_postprocessing
 
 
 class TypeWarning(object):
@@ -97,6 +97,9 @@ class TypeWarning(object):
 
         return file_name
 
+    def rebuild_message(self):
+        self.warn_msg = self.__msg()
+
     def __msg(self):
         """
         Composes the full warning message, using the message, the localization, current file name and
@@ -113,20 +116,24 @@ class TypeWarning(object):
                                                                          self.localization.line,
                                                                          self.localization.column,
                                                                          self.localization.column_offsets_for_packed_warnings)
+            col_numbers = ModuleLineNumbering.get_column_number_str(self.localization.column,
+                                                                    self.localization.column_offsets_for_packed_warnings)
+
         else:
             col_offset = ModuleLineNumbering.get_column_from_module_code(self.localization.file_name,
                                                                          self.localization.line,
                                                                          self.localization.column)
+            col_numbers = "column %s" % str(self.localization.column)
 
         if source_code is not None:
-            return "Type warning in file '%s' (line %s, column %s):\n%s\n%s\n\t%s.\n\n%s" % \
-                   (file_name, self.localization.line, self.localization.column,
+            return "Type warning in file '%s' (line %s, %s):\n%s\n%s\n\t%s.\n\n%s" % \
+                   (file_name, self.localization.line, col_numbers,
                     source_code, "" + col_offset,
-                    self.message.strip(), self.stack_trace_snapshot)  # self.localization.stack_trace)
+                    self.message.strip(), self.stack_trace_snapshot)
 
-        return "Type warning in file '%s' (line %s, column %s):\n%s.\n\n%s" % \
-               (file_name, self.localization.line, self.localization.column,
-                self.message, self.stack_trace_snapshot)  # self.localization.stack_trace)
+        return "Type warning in file '%s' (line %s, %s):\n%s.\n\n%s" % \
+               (file_name, self.localization.line, col_numbers,
+                self.message, self.stack_trace_snapshot)
 
     @staticmethod
     def print_warning_msgs():
@@ -180,7 +187,7 @@ class TypeWarning(object):
             other_file_name, other_line, other_column, other_function_name, other_declared_arguments, other_arguments = \
                 other.stack_trace_snapshot.stack[i]
             if my_file_name != other_file_name or my_line != other_line or my_column != other_column or \
-                            my_function_name != other_function_name:
+                    my_function_name != other_function_name:
                 return False
         return True
 
@@ -204,42 +211,6 @@ class TypeWarning(object):
                 pass
 
     @staticmethod
-    def __is_packable_warning(warn):
-        return "Potential undefined types found" in warn.message and not warn.packed
-
-    @staticmethod
-    def __can_be_packed(warn1, warn2):
-        if warn2.packed or warn1.packed:
-            return False
-
-        if warn1.localization.line != warn2.localization.line:
-            return False
-
-        if str(warn1.stack_trace_snapshot) != str(warn2.stack_trace_snapshot):
-            return False
-
-        return True
-
-
-    @staticmethod
-    def __pack(warn1, warn2):
-        if warn1 is None:
-            return warn2
-
-        packed_warning = copy.copy(warn1)
-        packed_warning.message = "Potential multiple undefined types found in this line"
-        if hasattr(packed_warning.localization, 'column_offsets_for_packed_warnings'):
-            packed_warning.localization.column_offsets_for_packed_warnings.append(warn2.localization.column)
-        else:
-            packed_warning.localization.column_offsets_for_packed_warnings = [warn2.localization.column]
-
-        packed_warning.warn_msg = packed_warning.__msg()
-        warn1.packed = True
-        warn2.packed = True
-
-        return packed_warning
-
-    @staticmethod
     def pack_warnings():
         """This method consolidates multiple warnings into one provided the following conditions are met:
         1) Belong to the same line
@@ -250,44 +221,18 @@ class TypeWarning(object):
         line that may present this warning. This greatly helps to lower the amount of reported warnings produced when
         multiple arithmetic operations deal with operands with potential UndefinedType values.
         """
-        packables = filter(lambda w: TypeWarning.__is_packable_warning(w), TypeWarning.warnings)
-        non_packables = filter(lambda w: not TypeWarning.__is_packable_warning(w), TypeWarning.warnings)
-        packeds_temp = []
-        packeds = []
-
-        for pw in packables:
-            if pw.packed:
-                continue
-            packed_warning = pw
-            for w in TypeWarning.warnings:
-                if pw == w:
-                    continue
-                if w.packed:
-                    continue
-                if TypeWarning.__is_packable_warning(w):
-                    # Can we pack these warnings
-                    if TypeWarning.__can_be_packed(pw, w):
-                        packeds_temp.append(w)
-
-            # Pack all warnings into one
-            for p in packeds_temp:
-                packed_warning = TypeWarning.__pack(packed_warning, p)
-
-            packeds_temp = []
-            if not packed_warning in packeds:
-                packeds.append(packed_warning)
-
-        TypeWarning.warnings = non_packables + packeds
-
+        type_warning_postprocessing.pack_undefined_warnings(TypeWarning)
+        type_warning_postprocessing.pack_warnings_with_the_same_line_and_stack_trace(TypeWarning)
 
     # ######################################## PREDEFINED WARNINGS ########################################
 
     @staticmethod
     def enable_usage_of_dynamic_types_warning(localization, fname=""):
         if not TypeWarning.dynamic_type_warning_included:
-            t = TypeWarning(localization, "Usage of Python functions that dynamically evaluates Python code. This Python "
-                                      "feature is not yet supported. Errors reported from this line on may not be "
-                                      "accurate")
+            t = TypeWarning(localization,
+                            "Usage of Python functions that dynamically evaluates Python code. This Python "
+                            "feature is not yet supported. Errors reported from this line on may not be "
+                            "accurate")
             TypeWarning.dynamic_type_warning_included = True
             TypeWarning.dynamic_warning = t
 

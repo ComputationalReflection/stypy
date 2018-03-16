@@ -98,7 +98,7 @@ class ModuleLineNumbering(object):
             for file_ in ModuleLineNumbering.file_numbered_code_cache.keys():
                 if file_ in normalized_file_name:
                     return ModuleLineNumbering.file_numbered_code_cache[file_]
-        except:
+        except Exception as ex:
             return None
 
     @staticmethod
@@ -118,7 +118,7 @@ class ModuleLineNumbering(object):
         if linenumbers is not None:
             try:
                 return linenumbers[line_number]
-            except:
+            except Exception as ex:
                 return None
         else:
             try:
@@ -127,14 +127,37 @@ class ModuleLineNumbering(object):
                 if linenumbers is not None:
                     try:
                         return linenumbers[line_number]
-                    except:
+                    except Exception as ex:
                         return None
-            except:
+            except Exception as ex:
                 return None
         return None
 
     @staticmethod
-    def get_column_from_module_code(file_name, line_number, col_offset, more_offsets = []):
+    def get_column_number_str(col_offset, more_offsets=[]):
+        if col_offset not in more_offsets:
+            more_offsets.append(col_offset)
+        more_offsets = set(more_offsets) # Remove identical offsets
+        more_offsets = list(more_offsets)
+        if len(more_offsets) == 1:
+            return "column " + str(more_offsets[0])
+
+        blank_line = "columns "
+        offset_pos = 0
+
+        more_offsets = sorted(more_offsets)
+        for offset in more_offsets:
+            if offset_pos != (len(more_offsets) - 1):
+                blank_line += str(offset) + ", "
+            else:
+                blank_line = blank_line[:-2]
+                blank_line += " and " + str(offset)
+            offset_pos += 1
+
+        return blank_line
+
+    @staticmethod
+    def get_column_from_module_code(file_name, line_number, col_offset, more_offsets=[]):
         """
         Calculates the position of col_offset inside the line_number of the file file_name, so we can physically locate
          the column within the file to report meaningful errors. This is used then reporting type error, when we also
@@ -151,38 +174,37 @@ class ModuleLineNumbering(object):
         if line is None:
             return None
 
-        blank_line = ""
+        blank_line = " "
         if len(more_offsets) > 0:
             more_offsets.append(col_offset)
-            more_offsets = sorted(more_offsets)
-            base_offset = min(more_offsets)
-            for offset in more_offsets:
-                if offset == base_offset:
-                    blank_line += " " * (offset) + "^"
-                else:
-                    blank_line += " " * (offset - base_offset) + "^"
+            more_offsets = set(more_offsets)  # Delete repeated offsets
+            more_offsets = list(more_offsets)
+            more_offsets = sorted(more_offsets, key=int)
+
+            base_offset = more_offsets[0]
+            blank_line += " " * base_offset + "^"
+
+            for offset in more_offsets[1:]:
+                blank_line += " " * (offset - base_offset - 1) + "^"
+                base_offset = offset
         else:
             blank_line = " " * col_offset + "^"
 
-
-
         return blank_line
-
 
     @staticmethod
     def __populate_cache_with_source_code(n_file_name):
         if "sgmc/" not in n_file_name:
             return None
 
-        f = open(
-            n_file_name,                "r")
+        f = open(n_file_name, "r")
         txt = ""
         reading_src = False
         while True:
             line = f.readline()
             if line == "\"\"\"\n":
                 reading_src = not reading_src
-                if reading_src == False:
+                if not reading_src:
                     break
                 continue
             if reading_src:
@@ -194,40 +216,16 @@ class ModuleLineNumbering(object):
             try:
                 if "ORIGINAL PROGRAM SOURCE CODE" in l:
                     continue
-                num, txt = l.split(':')
+                tup = l.split(':')
+                txt = ""
+                for t in tup[1:]:
+                    txt += t
+
                 if len(txt) == 0:
                     continue
 
-                d[int(num.strip())] = txt[1:]
-            except:
+                d[int(tup[0].strip())] = txt
+            except Exception as ex:
                 pass
 
         ModuleLineNumbering.file_numbered_code_cache[n_file_name] = d
-
-
-# if __name__ == '__main__':
-#     f = open("C:/Users/redon/PycharmProjects/stypyV2/stypy/sgmc/sgmc_cache/testing//test_programs/without_classes/operators/error_basic_arithmetic_operators.py", "r")
-#     txt = ""
-#     reading_src = False
-#     while True:
-#         line = f.readline()
-#         if line == "\"\"\"\n":
-#             reading_src = not reading_src
-#             if reading_src == False:
-#                 break
-#             continue
-#         if reading_src:
-#             txt += line
-#
-#     #print txt
-#     d = dict()
-#     for l in txt.split('\n'):
-#         try:
-#             if "ORIGINAL PROGRAM SOURCE CODE" in l:
-#                 continue
-#             num, txt = l.split(':')
-#             d[int(num.strip())] = txt
-#         except:
-#             pass
-#
-#     print d

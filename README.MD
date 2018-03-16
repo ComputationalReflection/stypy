@@ -105,6 +105,7 @@ Main features of the new 0.2 release include:
 - [13/03/2018] Implemented the detection of the While True: idiom, when the body of a while loop do not generate a SSA branch as it always enters the loop.
 - [14/03/2018] Incorporated a new type of idiom that identifies if branches with a variable that is tested to be None. None value is removed from the variable possible values in the code that follows the if, provided the if clause includes a raise or a return in its body. This decreases the amount of warnings reported by stypy in certain cases. Improved type inference when assigning multiple values to variables.
 - [15/03/2018] Added a warning when a program uses recursive types, indicating that type inference may not be accurate when using recursion. Similar warnings in the same line referring to potential undefined types are now packed into a single one to improve readability
+- [16/03/2018] Error and warning reporting have been much improven: Warnings are now grouped by line when causes are similar. A bug with source code lines shown in errors have been solved, so now almost every error shows its origin source code line.
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

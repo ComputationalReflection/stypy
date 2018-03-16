@@ -303,13 +303,13 @@ class TypeRulesHandler(DataInFilesHandler):
         # No rule was found that potentially matches this call
         if matches_found == 0:
             usage_hint = format_arguments(get_name(callable_), applicable_rules, passed_params, len(passed_params))
-            return StypyTypeError(localization, "Call to '{0}({2})' is invalid.\n\t{1}".format(get_name(callable_),
+            return StypyTypeError(localization, "Call to '{0}({2})' is invalid:\n\t    {1}".format(get_name(callable_),
                                                                                           usage_hint, passed_params_types))
 
         reported_errors = filter(lambda err: err.origins_in(localization), StypyTypeError.errors)
         if len(reported_errors) == 0:
             usage_hint = format_arguments(get_name(callable_), applicable_rules, passed_params, len(passed_params))
-            return StypyTypeError(localization, "Call to '{0}({2})' is invalid.\n\t{1}".format(get_name(callable_),
+            return StypyTypeError(localization, "Call to '{0}({2})' is invalid:\n\t    {1}".format(get_name(callable_),
                                                                                           usage_hint, passed_params_types))
         else:
             return reported_errors[-1]  # Return last reported error in the call
