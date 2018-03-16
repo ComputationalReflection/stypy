@@ -13,7 +13,7 @@ test_types = {
         'clearCastlingOpportunities': list,
         'copy': types.FunctionType,
         'evaluate': types.FunctionType,
-        'i': union_type.UnionType.create_from_type_list([int, tuple]),
+        'i': int,
         'iFalse': int,
         'iNone': int,
         'iTrue': int,
@@ -42,6 +42,6 @@ test_types = {
         'speedTest': types.FunctionType,
         'squares': tuple,
         'toString': types.FunctionType,
-        'v':  union_type.UnionType.create_from_type_list([int, tuple]),
+        'v':  tuple,
     },
 }

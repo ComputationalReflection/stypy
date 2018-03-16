@@ -41,7 +41,9 @@ class TypeWarning(object):
         :return:
         """
         self.packed = False
+        self.display_message = ""
         self.message = msg
+        self.other_stack_traces = []
         if localization is None:
             localization = Localization(__file__, 1, 0)
 
@@ -100,6 +102,9 @@ class TypeWarning(object):
     def rebuild_message(self):
         self.warn_msg = self.__msg()
 
+    def get_display_message(self):
+        return self.display_message
+
     def __msg(self):
         """
         Composes the full warning message, using the message, the localization, current file name and
@@ -126,14 +131,18 @@ class TypeWarning(object):
             col_numbers = "column %s" % str(self.localization.column)
 
         if source_code is not None:
-            return "Type warning in file '%s' (line %s, %s):\n%s\n%s\n\t%s.\n\n%s" % \
-                   (file_name, self.localization.line, col_numbers,
-                    source_code, "" + col_offset,
-                    self.message.strip(), self.stack_trace_snapshot)
+            self.display_message = "Type warning in file '%s' (line %s, %s):\n%s\n%s\n\t%s.\n\n" % \
+                                   (file_name, self.localization.line, col_numbers,
+                                    source_code, "" + col_offset,
+                                    self.message.strip())
 
-        return "Type warning in file '%s' (line %s, %s):\n%s.\n\n%s" % \
-               (file_name, self.localization.line, col_numbers,
-                self.message, self.stack_trace_snapshot)
+        else:
+            self.display_message = "Type warning in file '%s' (line %s, %s):\n%s.\n\n" % \
+                                   (file_name, self.localization.line, col_numbers,
+                                    self.message)
+
+        return self.display_message + type_warning_postprocessing.get_call_stack_str(self.stack_trace_snapshot,
+                                                                                     self.other_stack_traces)
 
     @staticmethod
     def print_warning_msgs():
@@ -223,6 +232,7 @@ class TypeWarning(object):
         """
         type_warning_postprocessing.pack_undefined_warnings(TypeWarning)
         type_warning_postprocessing.pack_warnings_with_the_same_line_and_stack_trace(TypeWarning)
+        type_warning_postprocessing.pack_warnings_with_the_same_line_and_message_but_different_stack_trace(TypeWarning)
 
     # ######################################## PREDEFINED WARNINGS ########################################
 
