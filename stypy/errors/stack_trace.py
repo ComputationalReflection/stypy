@@ -4,6 +4,7 @@ import types
 
 import stypy
 from stypy import stypy_parameters
+from stypy.reporting.module_line_numbering import ModuleLineNumbering
 
 
 class StackTrace(object):
@@ -16,6 +17,11 @@ class StackTrace(object):
     """
 
     instance_obj = None
+
+    """
+    When source lines are displayed as part of the stack traces, they are cut by default to this length
+    """
+    source_lines_max_length = 40
 
     @staticmethod
     def instance():
@@ -163,11 +169,21 @@ class StackTrace(object):
         for i in xrange(len(self.stack) - 1, -1, -1):
             file_name, line, column, function_name, declared_arguments, arguments = self.stack[i]
 
+            source = ModuleLineNumbering.get_line_from_module_code(file_name, line)
+            source = ModuleLineNumbering.cut_source_line(source, StackTrace.source_lines_max_length)
+
             file_name = self.__format_file_name(file_name)
 
-            s += " - File '%s' (line %s, column %s)\n   Invocation to '%s(%s%s%s)'\n" % \
-                 (file_name, line, column, function_name, self.__pretty_string_params(declared_arguments, arguments[0]),
-                  self.__pretty_string_vargargs(arguments[1]), self.__pretty_string_kwargs(arguments[2]))
+            if source is not None or source != "":
+                s += " - File '%s' (line %s, column %s) [%s] \n Invocation to '%s(%s%s%s)'\n" % \
+                     (file_name, line, column, source, function_name,
+                      self.__pretty_string_params(declared_arguments, arguments[0]),
+                      self.__pretty_string_vargargs(arguments[1]), self.__pretty_string_kwargs(arguments[2]))
+            else:
+                s += " - File '%s' (line %s, column %s)\n Invocation to '%s(%s%s%s)'\n" % \
+                     (file_name, line, column, function_name,
+                      self.__pretty_string_params(declared_arguments, arguments[0]),
+                      self.__pretty_string_vargargs(arguments[1]), self.__pretty_string_kwargs(arguments[2]))
         s += "]"
         return s
 
@@ -184,6 +200,6 @@ class StackTrace(object):
             other_arguments = other.stack[i]
 
             if my_file_name != other_file_name or my_line != other_line or my_column != other_column or \
-                            my_function_name != other_function_name:
+                    my_function_name != other_function_name:
                 return False
         return True

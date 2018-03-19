@@ -544,7 +544,7 @@ type_rules_of_members = {
         ((int, tuple), tuple),
         ((float, RealNumber), float),
         ((float, complex), complex),
-        ((tuple, Integer), tuple),
+        ((tuple, Integer), TypeOfParam(1)),
         ((Overloads__mul__, AnyType), DynamicType),
         ((Overloads__imul__, AnyType), DynamicType),
         ((AnyType, Overloads__rmul__), DynamicType),

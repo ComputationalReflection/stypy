@@ -102,6 +102,22 @@ class ModuleLineNumbering(object):
             return None
 
     @staticmethod
+    def cut_source_line(line, length):
+        """
+        Cuts the provided line to the specified length, adding ... at the end. This is just for formatting purposes
+        :param line:
+        :param length:
+        :return:
+        """
+        if line is None or line is "":
+            return line
+
+        line = line.strip()
+        if len(line) <= length:
+            return line
+        return line[:length] + "..."
+
+    @staticmethod
     def get_line_from_module_code(file_name, line_number):
         """
         Get the source code line line_number from the source code of file_name. This is used to report type errors,
