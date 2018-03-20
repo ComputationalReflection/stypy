@@ -234,9 +234,9 @@ type_rules_of_members = {
         ((bytearray, ByteSequence), bytearray),
         ((unicode, buffer), unicode),
         ((unicode, Str), unicode),
-        ((Overloads__iadd__, AnyType), DynamicType),
         ((list, tuple), DynamicType),
         ((Number, Number), TypeOfParam(1)),
+        ((Overloads__iadd__, AnyType), DynamicType),
     ],
 
     '__iand__': [

@@ -107,7 +107,7 @@ Main features of the new 0.2 release include:
 - [15/03/2018] Added a warning when a program uses recursive types, indicating that type inference may not be accurate when using recursion. Similar warnings in the same line referring to potential undefined types are now packed into a single one to improve readability
 - [16/03/2018] Error and warning reporting have been much improved: Warnings are now grouped by line when causes are similar. A bug with source code lines shown in errors have been solved, so now almost every error shows its origin source code line.
 - [19/03/2018] Stack traces of errors and warnings now show the exact line when the function is invoked to provide additional information. These lines are cut to a maximum length to facilitate reading the errors. Fixed a type inference error that infers a tuple with an undefined type when performing a product of a tuple with an integer.
-
+- [20/03/2018] Added support for the heapq module. Fixed a rare problem when inferring types when adding tuples to lists.
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]
