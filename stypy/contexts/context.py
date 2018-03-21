@@ -708,6 +708,8 @@ class FunctionContext(Context):
         ssa_call = self.__exist_ssa_context_in_context_stack()
         if ssa_call:
             for key, value in self.types_of.items():
+                if auto_var_name in key:
+                    continue
                 if isinstance(value, StypyTypeError):
                     value.turn_to_warning()
 
