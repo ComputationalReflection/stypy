@@ -134,6 +134,7 @@ type_rules_of_members = {
     ],
 
     'filter': [
+        ((types.NoneType, Str), str),
         ((Has__call__, IterableObject), DynamicType),
         ((Has__call__, Str), DynamicType),
     ],

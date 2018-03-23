@@ -110,6 +110,7 @@ Main features of the new 0.2 release include:
 - [20/03/2018] Added support for the heapq module. Fixed a rare problem when inferring types when adding tuples to lists.
 - [21/03/2018] Removed some errors that were reported incorrectly due to temporal variables created by stypy within function contexts.
 - [22/03/2018] Improved type inference for the collections.defaultdict class
+- [23/03/2018] Improved the algorithm to call type inference code methods when dealing with unbound method calls. Fixed a type inference problem when calling the filter functions with NoneType, str.
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

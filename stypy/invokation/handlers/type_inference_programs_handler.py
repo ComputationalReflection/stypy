@@ -123,8 +123,25 @@ class TypeInferenceProgramsHandler(AbstractCallHandler):
                 except TypeError as ex:
                     if "argument" in ex.message:
                         call_result = callable_python_entity(*arguments, **keyword_arguments)
+                        if type(call_result) is StypyTypeError:
+                            if "Insufficient number of arguments" in call_result.error_msg:
+                                if type(callable_python_entity) is types.UnboundMethodType:
+                                    try:
+                                        error_call_result = call_result
+                                        call_result = callable_python_entity(arguments[0], localization, *arguments[:1],
+                                                                             **keyword_arguments)
+                                        StypyTypeError.remove_error_msg(error_call_result)
+
+                                    except:
+                                        raise
                     else:
-                        raise
+                        if type(callable_python_entity) is types.UnboundMethodType:
+                            try:
+                                call_result = callable_python_entity(arguments[0], localization, *arguments[:1], **keyword_arguments)
+                            except:
+                                raise
+                        else:
+                            raise
             return call_result
         except Exception as ex:
             return StypyTypeError(localization,

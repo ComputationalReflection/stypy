@@ -383,6 +383,9 @@ class TypeModifiers:
 
     @staticmethod
     def filter(localization, proxy_obj, arguments):
+        if arguments[0] is types.NoneType:
+            return str()
+
         if is_function(arguments[0]) or is_method(arguments[0]):
             func = arguments[0]
         else:

@@ -330,14 +330,22 @@ class UnionType(TypeWrapper):
     mergeable_types = [int, float, long, str, complex]
 
     @staticmethod
-    def __mergeable_type(obj):
+    def __mergeable_type(obj, obj2=None):
         try:
-            vals = obj.__dict__.values()
+            vals = obj.__dict__.items()
 
-            for v in vals:
+            for k, v in vals:
                 if type(v) not in UnionType.mergeable_types:
-                    return False
-
+                    try:
+                        if obj2 is None or obj.__class__ != obj2.__class__:
+                            return False
+                        else:
+                            if not hasattr(obj2, k):
+                                return False
+                            else:
+                                return v == obj2.__dict__[k]
+                    except:
+                        return False
             return True
         except:
             return False
@@ -421,7 +429,7 @@ class UnionType(TypeWrapper):
 
         if type(type1) == type(type2) and not (
                 inspect.ismethod(type1) or inspect.isfunction(type1) or inspect.isbuiltin(type1)):
-            if UnionType.__mergeable_type(type1) and UnionType.__structurally_compatible_types(type1, type2):
+            if UnionType.__mergeable_type(type1, type2) and UnionType.__structurally_compatible_types(type1, type2):
                 return type1
 
         if UnionType.can_be_mergued(type1, type2):

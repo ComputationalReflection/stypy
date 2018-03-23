@@ -964,23 +964,44 @@ def remove_not_member_provider_from_union(union_type_obj, member):
     return aux_functions.remove_not_member_provider_from_union(union_type_obj, member)
 
 
+def __istuple(tuple_):
+    return isinstance(tuple_, StandardWrapper) and isinstance(tuple_.wrapped_type, tuple)
+
+
+def __stypy_get_value_from_tuple(tuple_, total_length, position):
+    try:
+        if hasattr(tuple_.contained_types, 'types'):
+            if len(tuple_.contained_types.types) == total_length:
+                return tuple_.contained_types.types[position]
+            else:
+                if len(tuple_.contained_types.types) == 1:
+                    return tuple_.contained_types.types[0]
+        else:
+            if hasattr(tuple_.contained_types, 'wrapped_type'):
+                if isinstance(tuple_.contained_types.wrapped_type, list):
+                    return tuple_.contained_types
+            else:
+                if type_group_generator.Number == type(tuple_.contained_types):
+                    return tuple_.contained_types
+    except:
+        return tuple_
+    return tuple_
+
+
 def stypy_get_value_from_tuple(tuple_, total_length, position):
     try:
-        if isinstance(tuple_, StandardWrapper):
-            if isinstance(tuple_.wrapped_type, tuple):
-                if hasattr(tuple_.contained_types, 'types'):
-                    if len(tuple_.contained_types.types) == total_length:
-                        return tuple_.contained_types.types[position]
-                    else:
-                        if len(tuple_.contained_types.types) == 1:
-                            return tuple_.contained_types.types[0]
+        if __istuple(tuple_):
+            return __stypy_get_value_from_tuple(tuple_, total_length, position)
+        if isinstance(tuple_, union_type.UnionType):
+            typs = tuple_.types
+            u = None
+            for t in typs:
+                if not __istuple(t):
+                    return tuple_
                 else:
-                    if hasattr(tuple_.contained_types, 'wrapped_type'):
-                        if isinstance(tuple_.contained_types.wrapped_type, list):
-                            return tuple_.contained_types
-                    else:
-                        if type_group_generator.Number == type(tuple_.contained_types):
-                            return tuple_.contained_types
+                    u = union_type.UnionType.add(u, __stypy_get_value_from_tuple(t, total_length, position))
+
+            return u
     except:
         return tuple_
     return tuple_

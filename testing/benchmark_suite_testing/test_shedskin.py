@@ -220,7 +220,7 @@ class TestShedSkin(TestCommon):
 
         self.assertEqual(result, 0)
 
-    def test_mwmatching(self):
+    def test_mwmatching(self): ### HERE
         file_path = self.file_path + "/benchmark_suite/shedskin/mwmatching.py"
         result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False,
                                              expected_errors=2)
