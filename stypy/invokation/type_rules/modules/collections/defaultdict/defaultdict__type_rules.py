@@ -35,6 +35,9 @@ type_rules_of_members = {
         ((types.DictProxyType,), types.NoneType),
         ((IterableDataStructure,), types.NoneType),
         ((AnyType,), types.NoneType),
+        ((AnyType, IterableDataStructure), types.NoneType),
+        ((types.NoneType, IterableDataStructure), types.NoneType),
+        ((AnyType, collections.defaultdict), types.NoneType)
     ],
     #
     # 'viewitems': [
@@ -84,9 +87,9 @@ type_rules_of_members = {
     #     ((AnyType,), types.NotImplementedType),
     # ],
     #
-    # '__getitem__': [
-    #     ((AnyType,), DynamicType),
-    # ],
+    '__getitem__': [
+        ((AnyType,), DynamicType),
+    ],
     #
     # 'get': [
     #     ((AnyType,), DynamicType),

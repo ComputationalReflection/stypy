@@ -109,6 +109,7 @@ Main features of the new 0.2 release include:
 - [19/03/2018] Stack traces of errors and warnings now show the exact line when the function is invoked to provide additional information. These lines are cut to a maximum length to facilitate reading the errors. Fixed a type inference error that infers a tuple with an undefined type when performing a product of a tuple with an integer.
 - [20/03/2018] Added support for the heapq module. Fixed a rare problem when inferring types when adding tuples to lists.
 - [21/03/2018] Removed some errors that were reported incorrectly due to temporal variables created by stypy within function contexts.
+- [22/03/2018] Improved type inference for the collections.defaultdict class
 
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]
