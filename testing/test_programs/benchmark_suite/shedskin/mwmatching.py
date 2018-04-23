@@ -29,7 +29,7 @@ def debug(s):
 
 
 DEBUG = debug
-DEBUG = None
+# DEBUG = None
 
 # Check delta2/delta3 computation after every substage;
 # only works on integer weights, slows down the algorithm to O(n^4).

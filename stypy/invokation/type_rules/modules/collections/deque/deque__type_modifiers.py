@@ -174,6 +174,16 @@ class TypeModifiers:
             new_type = union_type.UnionType.add(existing_type, arguments[0])
         set_contained_elements_type(self_instance, new_type)
         return types.NoneType
+
+    @staticmethod
+    def pop(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        return get_contained_elements_type(self_instance)
+
+    @staticmethod
+    def popleft(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        return get_contained_elements_type(self_instance)
     #
     # @staticmethod
     # def __setitem__(localization, callable_, arguments):

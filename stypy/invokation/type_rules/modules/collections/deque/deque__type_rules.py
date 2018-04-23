@@ -19,11 +19,13 @@ type_rules_of_members = {
         ((AnyType,), types.NoneType)
     ],
 
-    # 'pop': [
-    #     ((), DynamicType),
-    #     ((Integer,), DynamicType),
-    #     ((Overloads__trunc__,), DynamicType)
-    # ],
+    'pop': [
+        ((), DynamicType),
+    ],
+
+    'popleft': [
+        ((), DynamicType),
+    ],
     #
     # 'remove': [
     #     ((AnyType,), types.NoneType)
@@ -111,13 +113,13 @@ type_rules_of_members = {
     #     ((AnyType,), types.NotImplementedType)
     # ],
     #
-    # 'reverse': [
-    #     ((), types.NoneType),
-    # ],
+    'reverse': [
+        ((), types.NoneType),
+    ],
     #
-    # 'count': [
-    #     ((AnyType,), int)
-    # ],
+    'count': [
+        ((AnyType,), int)
+    ],
     #
     # '__delitem__': [
     #     ((slice,), types.NoneType),

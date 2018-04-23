@@ -5,7 +5,8 @@ import inspect
 
 from stypy.type_inference_programs.stypy_interface import process_argument_values, is_error_type
 from stypy.errors.type_warning import TypeWarning
-
+from stypy.visitor.type_inference.visitor_utils.stypy_functions import default_function_ret_var_name
+from stypy.types.union_type import UnionType
 
 class RecursionType(object):
     def __init__(self):
@@ -44,7 +45,15 @@ def norecursion(f):
                         return arguments
                 except:
                     pass
-                return RecursionType()
+                try:
+                    # Return the most up-to-date calculated return type in a recursive call. Pair it with a
+                    # RecursionType() to indicate it may be composed by more types.
+                    context = call.stypy_type_store.get_current_active_context()
+                    if default_function_ret_var_name in context:
+                        return UnionType.add(context.get_type_of(call.stypy_localization, default_function_ret_var_name), RecursionType())
+                    return RecursionType()
+                except:
+                    return RecursionType()
             frame = frame.f_back
             if frame is None:
                 break
