@@ -9,7 +9,7 @@ from stypy.types import undefined_type
 from stypy.types import union_type
 from stypy.types.standard_wrapper import StandardWrapper
 from stypy.types.type_containers import get_contained_elements_type, \
-    set_contained_elements_type, can_store_elements
+    set_contained_elements_type
 from stypy.types.type_inspection import is_method, is_function, is_class, get_self, is_str, compare_type
 
 
@@ -30,3 +30,24 @@ class TypeModifiers:
         set_contained_elements_type(ret_type, typ)
 
         return ret_type
+
+    @staticmethod
+    def add(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        existing_type = get_contained_elements_type(self_instance)
+        if existing_type is undefined_type.UndefinedType:
+            new_type = arguments[0]
+        else:
+            new_type = union_type.UnionType.add(existing_type, arguments[0])
+        set_contained_elements_type(self_instance, new_type)
+        return types.NoneType
+
+    @staticmethod
+    def __getitem__(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        return get_contained_elements_type(self_instance)
+
+    @staticmethod
+    def pop(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        return get_contained_elements_type(self_instance)

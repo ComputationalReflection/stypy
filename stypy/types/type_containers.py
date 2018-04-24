@@ -17,7 +17,7 @@ This file contains functions that deal with types that may contain other types
 """
 These container types store its content types inside them
 """
-types_that_store_contents_directly = [list, bytearray]#, numpy.ndarray]
+types_that_store_contents_directly = [list, bytearray, set]#, numpy.ndarray]
 
 
 def is_slice(obj):

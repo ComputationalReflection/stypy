@@ -280,3 +280,7 @@ class TypeModifiers:
                 t2 = ret_type
 
         return t2
+
+    @staticmethod
+    def pop(localization, proxy_obj, arguments):
+        return get_value_types(get_self(proxy_obj))

@@ -305,3 +305,21 @@ class SSAContext(Context):
             self.parent_context.aliases[key] = value
 
         return self.parent_context
+
+    def get_current_values_or_var(self, var_name):
+        """
+        Get a list with the currently inferred values for var_name in the moment of the call, traversing the
+        current branch and also the other branches already created.
+        :return:
+        """
+        values = []
+
+        if var_name in self.types_of:
+           values.append(self.types_of[var_name])
+
+        for i in xrange(0, len(self.ssa_branches)):
+            types_of_branch = self.ssa_branches[i][1]
+            if var_name in types_of_branch:
+                values.append(types_of_branch[var_name])
+
+        return values

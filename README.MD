@@ -112,5 +112,6 @@ Main features of the new 0.2 release include:
 - [22/03/2018] Improved type inference for the collections.defaultdict class
 - [23/03/2018] Improved the algorithm to call type inference code methods when dealing with unbound method calls. Fixed a type inference problem when calling the filter functions with NoneType, str.
 - [23/04/2018] Improved the support of collection.deque. Improved the algorithm that calculates a potential return type in recursive calls.
+- [24/04/2018] Improved type inference for the set data type. Fixed a type inference problem with the dict.pop operation.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

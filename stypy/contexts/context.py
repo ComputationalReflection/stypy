@@ -591,6 +591,21 @@ class Context(object):
     def __str__(self):
         return self.__repr__()
 
+    def get_current_values_or_var(self, var_name):
+        """
+        Get a list with the currently inferred values for var_name in the moment of the call.
+        :return:
+        """
+        values = []
+
+        if var_name in self.types_of:
+           values.append(self.types_of[var_name])
+        #
+        # if self.__has_parent_context():
+        #     type_ = self.parent_context.get_type_of(localization, name)
+
+        return values
+
 
 class FunctionContext(Context):
     """

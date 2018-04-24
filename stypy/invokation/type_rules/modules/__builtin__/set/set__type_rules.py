@@ -7,4 +7,16 @@ type_rules_of_members = {
     'difference': [
         ((set,), DynamicType),
     ],
+    'add': [
+        ((AnyType, ), DynamicType),
+    ],
+
+    '__getitem__': [
+        ((Integer,), DynamicType),
+        ((slice,), DynamicType),
+    ],
+
+    'pop': [
+        ((), DynamicType),
+    ],
 }
