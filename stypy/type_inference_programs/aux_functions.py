@@ -13,6 +13,7 @@ from stypy.reporting.print_utils import format_function_name
 from stypy.stypy_parameters import ENABLE_CODING_ADVICES
 from stypy.types import type_intercession
 from stypy.types import union_type
+from stypy.types.no_recursion import RecursionType
 from stypy.types import undefined_type
 from stypy.types.standard_wrapper import wrap_contained_type
 from stypy.types.type_containers import get_contained_elements_type, can_store_elements, \
@@ -410,6 +411,9 @@ def is_suitable_for_loop_condition(localization, condition_type):
     if is_error_type(condition_type):
         return False
 
+    if type(condition_type) is RecursionType:
+        return False
+
     if type(condition_type) is file:
         return True
 
@@ -457,6 +461,9 @@ def get_type_of_for_loop_variable(localization, condition_type):
     :param condition_type: Type of the condition
     :return:
     """
+
+    if type(condition_type) is RecursionType:
+        return condition_type
 
     if type(condition_type) is StypyTypeError:
         return condition_type

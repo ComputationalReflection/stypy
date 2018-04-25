@@ -968,6 +968,10 @@ def __istuple(tuple_):
     return isinstance(tuple_, StandardWrapper) and isinstance(tuple_.wrapped_type, tuple)
 
 
+def __islist(obj):
+    return isinstance(obj, StandardWrapper) and isinstance(obj.wrapped_type, list)
+
+
 def __stypy_get_value_from_tuple(tuple_, total_length, position):
     try:
         if hasattr(tuple_.contained_types, 'types'):
@@ -988,10 +992,24 @@ def __stypy_get_value_from_tuple(tuple_, total_length, position):
     return tuple_
 
 
+def __stypy_get_value_from_list(list_, total_length, position):
+    try:
+        t = list_.get_contained_type()
+        if isinstance(t, union_type.UnionType):
+            return list_
+        else:
+            return list_.wrapped_type[0]
+    except:
+        return list_
+
+
+
 def stypy_get_value_from_tuple(tuple_, total_length, position):
     try:
         if __istuple(tuple_):
             return __stypy_get_value_from_tuple(tuple_, total_length, position)
+        if __islist(tuple_):
+            return __stypy_get_value_from_list(tuple_, total_length, position)
         if isinstance(tuple_, union_type.UnionType):
             typs = tuple_.types
             u = None
