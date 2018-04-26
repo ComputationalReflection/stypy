@@ -4,6 +4,9 @@ from stypy.invokation.type_rules.type_groups.type_group_generator import *
 from stypy.types.known_python_types import ExtraTypeDefinitions
 
 type_rules_of_members = {
+    'set': [
+        ((IterableDataStructure,), DynamicType),
+    ],
     'difference': [
         ((set,), DynamicType),
     ],

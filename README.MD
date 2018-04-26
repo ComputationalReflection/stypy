@@ -114,5 +114,6 @@ Main features of the new 0.2 release include:
 - [23/04/2018] Improved the support of collection.deque. Improved the algorithm that calculates a potential return type in recursive calls.
 - [24/04/2018] Improved type inference for the set data type. Fixed a type inference problem with the dict.pop operation.
 - [25/04/2018] Improved the algorithm that infers types from multiple assigments when using lists as the rvalue of the operator. Loops that use recursive calls as part of their conditions no longer return unnecessary warnings.
+- [26/04/2018] Fixed bugs when calculating differences between sets and when constructing sets from lists.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

@@ -17,7 +17,7 @@ This file contains functions that deal with types that may contain other types
 """
 These container types store its content types inside them
 """
-types_that_store_contents_directly = [list, bytearray, set]#, numpy.ndarray]
+types_that_store_contents_directly = [list, bytearray]#, numpy.ndarray]
 
 
 def is_slice(obj):
@@ -134,6 +134,8 @@ def set_contained_elements_type(proxy_obj, new_type):
                 else:
                     if hasattr(proxy_obj.wrapped_type, 'append'):
                         return proxy_obj.wrapped_type.append(new_type)
+                    if isinstance(proxy_obj.wrapped_type, set):
+                        proxy_obj.wrapped_type.add(new_type)
             except:
                 pass
 

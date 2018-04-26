@@ -14,14 +14,20 @@ from stypy.types.type_inspection import is_method, is_function, is_class, get_se
 
 
 class TypeModifiers:
-    # ###################### LIST TYPE MODIFIERS #######################
+    # ###################### SET TYPE MODIFIERS #######################
+
+    @staticmethod
+    def set(localization, callable_, arguments):
+        self_instance = wrap_contained_type(set())
+        set_contained_elements_type(self_instance, get_contained_elements_type(arguments[0]))
+        return self_instance
 
     @staticmethod  # Constructor  (__init__)
     def difference(localization, proxy_obj, arguments):
         ret_type = get_builtin_python_type_instance(localization, 'set')
         ret_type = wrap_contained_type(ret_type)
 
-        my_type = StandardWrapper.get_wrapper_of(proxy_obj)
+        my_type = StandardWrapper.get_wrapper_of(proxy_obj.__self__)
         my_contained_type = get_contained_elements_type(my_type)
         other_contained_type = get_contained_elements_type(arguments[0])
 
