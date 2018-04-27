@@ -53,6 +53,8 @@ type_rules_of_members = {
     ],
 
     'log': [
+        ((RealNumber,), float),
+        ((CastsToFloat,), float),
         ((RealNumber, RealNumber), float),
         ((RealNumber, CastsToFloat,), float),
         ((CastsToFloat, RealNumber), float),

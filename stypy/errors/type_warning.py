@@ -234,6 +234,10 @@ class TypeWarning(object):
         type_warning_postprocessing.pack_warnings_with_the_same_line_and_stack_trace(TypeWarning)
         type_warning_postprocessing.pack_warnings_with_the_same_line_and_message_but_different_stack_trace(TypeWarning)
 
+        # If the only warning left is the recursion one, remove it.
+        if len(TypeWarning.warnings) == 1 and TypeWarning.recursion_warning_included:
+            TypeWarning.warnings = []
+
     # ######################################## PREDEFINED WARNINGS ########################################
 
     @staticmethod

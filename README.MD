@@ -115,5 +115,6 @@ Main features of the new 0.2 release include:
 - [24/04/2018] Improved type inference for the set data type. Fixed a type inference problem with the dict.pop operation.
 - [25/04/2018] Improved the algorithm that infers types from multiple assigments when using lists as the rvalue of the operator. Loops that use recursive calls as part of their conditions no longer return unnecessary warnings.
 - [26/04/2018] Fixed bugs when calculating differences between sets and when constructing sets from lists.
+- [27/04/2018] Removed recursion usage derived warnings when they are not necessary. Improved type inference with the set data type. Corrected type inference with the log funcition when passing only one argument.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

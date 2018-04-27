@@ -49,6 +49,54 @@ class TypeModifiers:
         return types.NoneType
 
     @staticmethod
+    def update(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        existing_type = get_contained_elements_type(self_instance)
+        if existing_type is undefined_type.UndefinedType:
+            new_type = arguments[0]
+        else:
+            new_type = union_type.UnionType.add(existing_type, arguments[0])
+        set_contained_elements_type(self_instance, new_type)
+        return self_instance
+
+    @staticmethod
+    def intersection_update(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        return self_instance
+
+    @staticmethod
+    def difference_update(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        return self_instance
+
+    @staticmethod
+    def symmetric_difference_update(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        existing_type = get_contained_elements_type(self_instance)
+        if existing_type is undefined_type.UndefinedType:
+            new_type = arguments[0]
+        else:
+            new_type = union_type.UnionType.add(existing_type, arguments[0])
+        set_contained_elements_type(self_instance, new_type)
+        return self_instance
+
+    @staticmethod
+    def remove(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        return self_instance
+
+    @staticmethod
+    def discard(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        return self_instance
+
+    @staticmethod
+    def clear(localization, callable_, arguments):
+        self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
+        set_contained_elements_type(self_instance, undefined_type.UndefinedType)
+        return types.NoneType
+
+    @staticmethod
     def __getitem__(localization, callable_, arguments):
         self_instance = StandardWrapper.get_wrapper_of(callable_.__self__)
         return get_contained_elements_type(self_instance)

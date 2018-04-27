@@ -244,15 +244,16 @@ def __set_contained_elements_type(localization, container, elements):
                         # Ellipsis
                         if not (type_inspection.compare_type(elements[0], slice) and (type_inspection.compare_type(
                                 elements[1], slice) or type_inspection.compare_type(
-                                elements[1], list))):
+                            elements[1], list))):
                             return StypyTypeError(localization,
                                                   "Indexes of indexable containers must be Integers or instances that "
                                                   "implement the __index__ method")
                     else:
                         index_getter = getattr(container, '__index__')
                         if index_getter is not None:
-                            if hasattr(index_getter, '__objclass__') and not index_getter.__objclass__.__name__ == "ndarray":
-                                #res = invoke(localization, container, '__index__')
+                            if hasattr(index_getter,
+                                       '__objclass__') and not index_getter.__objclass__.__name__ == "ndarray":
+                                # res = invoke(localization, container, '__index__')
                                 res = invoke(localization, index_getter)
                                 if not type_group_generator.Integer == type(res):
                                     return StypyTypeError(localization,
@@ -270,7 +271,9 @@ def __set_contained_elements_type(localization, container, elements):
 
             if type_containers.is_slice(elements[0]):
                 if type_containers.can_store_elements(elements[1]):
-                    return type_containers.set_contained_elements_type(container, type_containers.get_contained_elements_type(elements[1]))
+                    return type_containers.set_contained_elements_type(container,
+                                                                       type_containers.get_contained_elements_type(
+                                                                           elements[1]))
                 else:
                     return type_containers.set_contained_elements_type(container, elements[1])
             else:
@@ -716,7 +719,8 @@ def __slice_bounds_checking(bound):
     right_types = []
     wrong_types = []
     for type_ in types_to_check:
-        if type_group_generator.Integer == type(type_) or type_groups.CastsToIndex == type_ or handlers.call_utilities.is_numpy_array(type_):
+        if type_group_generator.Integer == type(
+                type_) or type_groups.CastsToIndex == type_ or handlers.call_utilities.is_numpy_array(type_):
             right_types.append(type_)
         else:
             wrong_types.append(type_)
@@ -807,13 +811,13 @@ def is_suitable_for_loop_condition(localization, cond_type):
 
 
 def will_iterate_loop(localization, cond_type):
-        """
-        Checks if a loop condition is going to iterate. Empty lists or tuples do not iterate
-        :param localization:
-        :param cond_type:
-        :return:
-        """
-        return aux_functions.will_iterate_loop(localization, cond_type)
+    """
+    Checks if a loop condition is going to iterate. Empty lists or tuples do not iterate
+    :param localization:
+    :param cond_type:
+    :return:
+    """
+    return aux_functions.will_iterate_loop(localization, cond_type)
 
 
 def get_type_of_for_loop_variable(localization, cond_type):
@@ -980,13 +984,15 @@ def __stypy_get_value_from_tuple(tuple_, total_length, position):
             else:
                 if len(tuple_.contained_types.types) == 1:
                     return tuple_.contained_types.types[0]
+                else:
+                    return tuple_.contained_types
         else:
             if hasattr(tuple_.contained_types, 'wrapped_type'):
                 if isinstance(tuple_.contained_types.wrapped_type, list):
                     return tuple_.contained_types
             else:
-                if type_group_generator.Number == type(tuple_.contained_types):
-                    return tuple_.contained_types
+                #if type_group_generator.Number == type(tuple_.contained_types):
+                return tuple_.contained_types
     except:
         return tuple_
     return tuple_
@@ -1003,7 +1009,6 @@ def __stypy_get_value_from_list(list_, total_length, position):
         return list_
 
 
-
 def stypy_get_value_from_tuple(tuple_, total_length, position):
     try:
         if __istuple(tuple_):
@@ -1013,6 +1018,8 @@ def stypy_get_value_from_tuple(tuple_, total_length, position):
         if isinstance(tuple_, union_type.UnionType):
             typs = tuple_.types
             u = None
+            # if len(typs) == total_length:
+            #     return typs[position]
             for t in typs:
                 if not __istuple(t):
                     return tuple_
