@@ -442,6 +442,7 @@ def will_iterate_loop(localization, condition_type):
     if (can_store_elements(condition_type) or (
             can_represent_type(IterableObject, condition_type)) or call_utilities.is_iterable(condition_type)):
         try:
+            Localization.set_current(localization)
             t = get_contained_elements_type(condition_type)
             if type(t) is undefined_type.UndefinedType or t is undefined_type.UndefinedType:
                 return False
@@ -476,6 +477,7 @@ def get_type_of_for_loop_variable(localization, condition_type):
 
     # If the type of the condition can store elements, return the type of stored elements
     if can_store_elements(condition_type):
+        Localization.set_current(localization)
         return wrap_contained_type(get_contained_elements_type(condition_type))
 
     # If the type of the condition is some kind of string, return the type of string

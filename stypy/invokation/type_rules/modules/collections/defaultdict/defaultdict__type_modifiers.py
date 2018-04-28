@@ -79,7 +79,12 @@ class TypeModifiers:
                     return values[count]
             count+=1
 
-        return d[arguments[0].wrapped_type]
+        try:
+            if hasattr(arguments[0], 'wrapped_type'):
+                return d[arguments[0].wrapped_type]
+            return d[arguments[0]]
+        except KeyError:
+            return StypyTypeError(localization, "There is no key that match the value " + str(arguments[0]))
 
     # @staticmethod
     # def clear(localization, proxy_obj, arguments):
