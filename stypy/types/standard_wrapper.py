@@ -253,4 +253,5 @@ contains a list of members of the wrapper so member get and set operations may h
 if StandardWrapper.declared_members is None:
     StandardWrapper.declared_members = [item for item in dir(StandardWrapper) if item not in dir(object)] + \
                                        ["wrapped_type", "__hash__", "__cmp__", "__get_wrapped_type_member",
-                                        "__name__", "contained_types", "__repr__", "__class__", "overriden_members"]
+                                        "__name__", "contained_types", "__repr__", "__class__", "overriden_members",
+                                        "stypy_default_value"]

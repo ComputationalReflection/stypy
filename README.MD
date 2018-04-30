@@ -117,5 +117,7 @@ Main features of the new 0.2 release include:
 - [26/04/2018] Fixed bugs when calculating differences between sets and when constructing sets from lists.
 - [27/04/2018] Removed recursion usage derived warnings when they are not necessary. Improved type inference with the set data type. Corrected type inference with the log funcition when passing only one argument.
 - [28/04/2018] Fixed a bug when reporting errors that happen in for loops that place the error in a wrong source line. Fixed a problem when dealing with defaultdict.__getitem__ with items that are not present in the dict.
+- [30/04/2018] Looping to an Undefined type now do not report extra warnings. Support for the defaultdict type has been greatly improved.
+
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

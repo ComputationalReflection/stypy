@@ -294,8 +294,7 @@ class TestShedSkin(TestCommon):
 
     def test_plcfrs(self):
         file_path = self.file_path + "/benchmark_suite/shedskin/plcfrs.py"
-        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False,
-                                             expected_errors=4)
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.assertEqual(result, 0)
 

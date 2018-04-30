@@ -417,6 +417,9 @@ def is_suitable_for_loop_condition(localization, condition_type):
     if type(condition_type) is file:
         return True
 
+    if condition_type is undefined_type.UndefinedType:
+        return False
+
     if not (can_store_elements(condition_type) or can_represent_type(Str, condition_type) or (
             can_represent_type(IterableObject, condition_type)) or call_utilities.is_iterable(condition_type)):
         StypyTypeError(localization, "The type of this for loop condition is erroneous")
@@ -438,6 +441,9 @@ def will_iterate_loop(localization, condition_type):
 
     if type(condition_type) is file:
         return True
+
+    if condition_type is undefined_type.UndefinedType:
+        return False
 
     if (can_store_elements(condition_type) or (
             can_represent_type(IterableObject, condition_type)) or call_utilities.is_iterable(condition_type)):
@@ -471,6 +477,9 @@ def get_type_of_for_loop_variable(localization, condition_type):
 
     if type(condition_type) is types.FileType:
         return str()
+
+    if condition_type is undefined_type.UndefinedType:
+        return condition_type
 
     if can_store_keypairs(condition_type):
         return wrap_contained_type(get_key_types(condition_type))

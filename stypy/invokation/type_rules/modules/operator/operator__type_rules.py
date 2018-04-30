@@ -101,7 +101,7 @@ type_rules_of_members = {
     '__contains__': [
         ((Str, Str), bool),
         ((IterableObject, AnyType), bool),
-        ((Has__contains__, AnyType), DynamicType),
+        ((Has__contains__, AnyType), bool),
     ],
 
     '__delitem__': [
