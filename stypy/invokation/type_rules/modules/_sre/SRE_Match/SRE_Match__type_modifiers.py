@@ -20,6 +20,7 @@ class TypeModifiers:
     def groups(localization, proxy_obj, arguments):
         t = UnionType.add(undefined_type.UndefinedType, str())
         t = UnionType.add(t, 0)
+        t = UnionType.add(t, types.NoneType)
         tup = call_utilities.wrap_contained_type(tuple())
         tup.set_contained_type(t)
 

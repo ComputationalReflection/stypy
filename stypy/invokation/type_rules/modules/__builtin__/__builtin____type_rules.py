@@ -412,6 +412,7 @@ type_rules_of_members = {
     ],
 
     'len': [
+        ((dict,), int),
         ((IterableObject,), int),
         ((Str,), int),
         ((Has__len__,), int),

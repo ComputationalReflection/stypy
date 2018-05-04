@@ -1440,6 +1440,11 @@ class TypeModifiers:
     @staticmethod
     def len(localization, proxy_obj, arguments):
         if isinstance(arguments[0], StandardWrapper):
+            if isinstance(arguments[0].get_wrapped_type(), dict):
+                return int()
+            if isinstance(arguments[0].get_wrapped_type(), list):
+                return int()
+
             # wrapped = arguments[0].get_wrapped_type()
             if has_member(localization, arguments[0].get_wrapped_type(), '__len__'):
                 return int()
