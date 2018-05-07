@@ -119,5 +119,6 @@ Main features of the new 0.2 release include:
 - [28/04/2018] Fixed a bug when reporting errors that happen in for loops that place the error in a wrong source line. Fixed a problem when dealing with defaultdict.__getitem__ with items that are not present in the dict.
 - [30/04/2018] Looping to an Undefined type now do not report extra warnings. Support for the defaultdict type has been greatly improved.
 - [04/05/2018] Fixed a problem with len and dict types.
+- [07/05/2018] Added the bottle test program. Fixed a code generation problem that occurs when a class inherits from another specified as an attribute.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

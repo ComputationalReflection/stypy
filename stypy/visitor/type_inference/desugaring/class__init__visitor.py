@@ -23,8 +23,9 @@ class ClassInitVisitor(ast.NodeTransformer):
 
         # If the class has a parent class and no constructors,, do not add an empty __init__ method
         if len(node.bases) > 0:
-            if node.bases[0].id != 'object':
-                return node
+            if hasattr(node.bases[0], 'id'):
+                if node.bases[0].id != 'object':
+                    return node
 
         # If no __init__ method is declared, declare an empty one
         function_def_arguments = ast.arguments()

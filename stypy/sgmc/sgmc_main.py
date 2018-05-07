@@ -132,12 +132,15 @@ class SGMC(object):
         :param module_path:
         :return:
         """
-        original_files, sgmc_routes = SGMC.__get_sgmc_routes_for_module(localization, module_path)
-        files_to_generate = map(lambda element: (element[0], element[1]),
-                                filter(lambda tuple_: SGMC.__file_needs_to_be_updated(tuple_[0], tuple_[1]),
-                                       zip(original_files, sgmc_routes)))
+        try:
+            original_files, sgmc_routes = SGMC.__get_sgmc_routes_for_module(localization, module_path)
+            files_to_generate = map(lambda element: (element[0], element[1]),
+                                    filter(lambda tuple_: SGMC.__file_needs_to_be_updated(tuple_[0], tuple_[1]),
+                                           zip(original_files, sgmc_routes)))
 
-        return files_to_generate
+            return files_to_generate
+        except:
+            return SGMC.__get_sgmc_routes_for_module(localization, module_path)
 
     @staticmethod
     def __file_needs_to_be_updated(original_file, stypy_file):

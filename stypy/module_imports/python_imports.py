@@ -204,8 +204,15 @@ def generate_type_inference_code_for_module(localization, module_name):
         if module_file.endswith(special_site_package_module):
             routes = [(module_file, SGMC.sgmc_cache_absolute_path + SGMC.get_sgmc_route(module_file))]
         else:
-            # Load the routes of the .py files to be generated using the standard method
-            routes = SGMC.import_module(localization, os.path.dirname(module_file))
+            try:
+                # Load the routes of the .py files to be generated using the standard method
+                routes = SGMC.import_module(localization, os.path.dirname(module_file))
+                if routes is StypyTypeError:
+                    return routes
+
+            except Exception as e:
+                print "CRITICAL ERROR: STYPY COULDN'T IMPORT MODULE FILE " + module_file
+                raise
 
         # Generate each type inference .py
         for route in routes:
