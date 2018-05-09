@@ -405,14 +405,11 @@ class cube(object):
             needCols = (upCol, FRONT[FRONT, 0])
             if FRONT[(FRONT, 2)] == upCol and self.cornerHasColsTR(FRONT, needCols):  # Algo 4 # XXX
                 # print "Using Algo 4"
-                self.turn(FRONT)
-                self.turn(DOWN)
-                self.turn(FRONT, False)
-                self.turn(DOWN)
-                self.turn(DOWN)
-                self.turn(RIGHT, False)
-                self.turn(DOWN)
-                self.turn(RIGHT)
+                faces = [FRONT, DOWN, FRONT, DOWN, DOWN, RIGHT, DOWN, RIGHT]
+                bools = [True, True, False, True, True, False, True, True]
+                for i in range(len(faces)):
+                    self.turn(faces[i], bools[i])
+
                 if self.stepOneCompleteFace(FRONT, upCol):  # XXX
                     completedFaces.append(FRONT)
                 else:
@@ -420,13 +417,11 @@ class cube(object):
                     FRONT, BACK, LEFT, RIGHT, UP, DOWN = self.getFaces(RIGHT)
             elif RIGHT[(FRONT, 0)] == upCol and self.cornerHasColsTR(FRONT, needCols):  # Algo 5 # XXX
                 # print "Using Algo 5"
-                self.turn(RIGHT, False)
-                self.turn(DOWN, False)
-                self.turn(RIGHT)
-                self.turn(DOWN)
-                self.turn(RIGHT, False)
-                self.turn(DOWN, False)
-                self.turn(RIGHT)
+                faces = [RIGHT, DOWN, RIGHT, DOWN, RIGHT, DOWN, RIGHT]
+                bools = [False, False, True, True, False, False, True]
+                for i in range(len(faces)):
+                    self.turn(faces[i], bools[i])
+
                 if self.stepOneCompleteFace(FRONT, upCol):  # XXX
                     completedFaces.append(FRONT)
                 else:
@@ -453,10 +448,11 @@ class cube(object):
                         FRONT, BACK, LEFT, RIGHT, UP, DOWN = self.getFaces(RIGHT)
                 elif foundCorner and FRONT[(FRONT, 8)] == upCol:  # Algo 2
                     # print "Using Algo 2"
-                    self.turn(DOWN, False)
-                    self.turn(RIGHT, False)
-                    self.turn(DOWN)
-                    self.turn(RIGHT)
+                    faces = [DOWN, RIGHT, DOWN, RIGHT]
+                    bools = [False, False, True, True]
+                    for i in range(len(faces)):
+                        self.turn(faces[i], bools[i])
+
                     if self.stepOneCompleteFace(FRONT, upCol):  # XXX
                         completedFaces.append(FRONT)
                     else:
@@ -464,14 +460,11 @@ class cube(object):
                         FRONT, BACK, LEFT, RIGHT, UP, DOWN = self.getFaces(RIGHT)
                 elif foundCorner and DOWN[(FRONT, 2)] == upCol:  # Algo 3
                     # print "Using Algo 3"
-                    self.turn(RIGHT, False)
-                    self.turn(DOWN)
-                    self.turn(RIGHT)
-                    self.turn(DOWN)
-                    self.turn(DOWN)
-                    self.turn(RIGHT, False)
-                    self.turn(DOWN, False)
-                    self.turn(RIGHT)
+                    faces = [RIGHT, DOWN, RIGHT, DOWN,  DOWN, RIGHT, DOWN, RIGHT]
+                    bools = [False, True, True, True, True, False, False, True]
+                    for i in range(len(faces)):
+                        self.turn(faces[i], bools[i])
+
                     if self.stepOneCompleteFace(FRONT, upCol):  # XXX
                         completedFaces.append(FRONT)
                     else:
@@ -604,24 +597,18 @@ class cube(object):
             dCol = DOWN[(FRONT, 1)]
             if tCol == faceCol:
                 if dCol == leftCol:
-                    self.turn(DOWN)
-                    self.turn(LEFT)
-                    self.turn(DOWN, False)
-                    self.turn(LEFT, False)
-                    self.turn(DOWN, False)
-                    self.turn(FRONT, False)
-                    self.turn(DOWN)
-                    self.turn(FRONT)
+                    faces = [DOWN, LEFT, DOWN, LEFT, DOWN, FRONT, DOWN, FRONT]
+                    bools = [True, True, False, False, False, False, True, True]
+                    for i in range(len(faces)):
+                        self.turn(faces[i], bools[i])
+
                     perf = True
                 elif dCol == rightCol:
-                    self.turn(DOWN, False)
-                    self.turn(RIGHT, False)
-                    self.turn(DOWN)
-                    self.turn(RIGHT)
-                    self.turn(DOWN)
-                    self.turn(FRONT)
-                    self.turn(DOWN, False)
-                    self.turn(FRONT, False)
+                    faces = [DOWN, RIGHT, DOWN, RIGHT, DOWN, FRONT, DOWN, FRONT]
+                    bools = [False, False, True, True, True, True, False, False]
+                    for i in range(len(faces)):
+                        self.turn(faces[i], bools[i])
+
                     perf = True
             FRONT, BACK, LEFT, RIGHT, UP, DOWN = self.getFaces(RIGHT)
             i += 1
@@ -632,25 +619,19 @@ class cube(object):
                     for k in xrange(4):
                         if F[(F, 3)] != F[(F, 4)] or \
                                 L[(F, 5)] != L[(F, 4)]:
-                            self.turn(D)
-                            self.turn(L)
-                            self.turn(D, False)
-                            self.turn(L, False)
-                            self.turn(D, False)
-                            self.turn(F, False)
-                            self.turn(D)
-                            self.turn(F)
+                            faces = [D, L, D, L, D, F, D, F]
+                            bools = [True, True, False, False, False, False, True, True]
+                            for i in range(len(faces)):
+                                self.turn(faces[i], bools[i])
+
                             break
                         elif F[(F, 5)] != F[(F, 4)] or \
                                 R[(F, 3)] != R[(F, 4)]:
-                            self.turn(D, False)
-                            self.turn(R, False)
-                            self.turn(D)
-                            self.turn(R)
-                            self.turn(D)
-                            self.turn(F)
-                            self.turn(D, False)
-                            self.turn(F, False)
+                            faces = [D, R, D, R, D, F, D, F]
+                            bools = [False, False, True, True, True, True, False, False]
+                            for i in range(len(faces)):
+                                self.turn(faces[i], bools[i])
+
                             break
                         F, B, L, R, U, D = self.getFaces(R)
                 else:
@@ -660,31 +641,17 @@ class cube(object):
 
     def switch1and2(self, frontFace):
         F, B, L, R, U, D = self.getFaces(frontFace)
-        self.turn(L, False)
-        self.turn(U, False)
-        self.turn(L)
-        self.turn(F)
-        self.turn(U)
-        self.turn(F, False)
-        self.turn(L, False)
-        self.turn(U)
-        self.turn(L)
-        self.turn(U)
-        self.turn(U)
+        faces = [L, U, L, F, U, F, L, U, L, U, U]
+        bools = [False, False, True, True, True, False, False, True, True, True, True]
+        for i in range(len(faces)):
+            self.turn(faces[i], bools[i])
 
     def switch1and3(self, frontFace):
         F, B, L, R, U, D = self.getFaces(frontFace)
-        self.turn(U)
-        self.turn(L, False)
-        self.turn(U, False)
-        self.turn(L)
-        self.turn(F)
-        self.turn(U)
-        self.turn(F, False)
-        self.turn(L, False)
-        self.turn(U)
-        self.turn(L)
-        self.turn(U)
+        faces = [U, L, U, L, F, U, F, L, U, L, U]
+        bools = [True, False, False, True, True, True, False, False, True, True, True]
+        for i in range(len(faces)):
+            self.turn(faces[i], bools[i])
 
     def colorPos1(self, frontFace):
         F, B, L, R, U, D = self.getFaces(frontFace)
@@ -779,16 +746,10 @@ class cube(object):
 
     def stepFiveAlgo(self, frontFace):
         FRONT, BACK, LEFT, RIGHT, UP, DOWN = self.getFaces(frontFace)
-        self.turn(LEFT, False)
-        self.turn(UP, False)
-        self.turn(LEFT)
-        self.turn(UP, False)
-        self.turn(LEFT, False)
-        self.turn(UP, False)
-        self.turn(UP, False)
-        self.turn(LEFT)
-        self.turn(UP, False)
-        self.turn(UP, False)
+        faces = [LEFT, UP, LEFT, UP, LEFT, UP, UP, LEFT, UP, UP]
+        bools = [False, False, True, False, False, False, False, True, False, False]
+        for i in range(len(faces)):
+            self.turn(faces[i], bools[i])
 
     def upCornersDone(self, frontFace):
         FRONT, BACK, LEFT, RIGHT, UP, DOWN = self.getFaces(frontFace)
@@ -917,6 +878,7 @@ class cube(object):
 
     def dedmoreH(self, frontFace):
         FRONT, BACK, LEFT, RIGHT, UP, DOWN = self.getFaces(frontFace)
+
         self.turn(RIGHT, False)
         self.turnMiddle(UP)
         self.turn(RIGHT, False)

@@ -120,5 +120,7 @@ Main features of the new 0.2 release include:
 - [30/04/2018] Looping to an Undefined type now do not report extra warnings. Support for the defaultdict type has been greatly improved.
 - [04/05/2018] Fixed a problem with len and dict types.
 - [07/05/2018] Added the bottle test program. Fixed a code generation problem that occurs when a class inherits from another specified as an attribute.
+- [09/05/2018] Fixed a type inference inconsistency when a defaultdict have None as a value for a key. Fixed a type inference problem when building sets with no parameters. Fixed rare code generation bug when certain comparison nodes with a Call in the left part lose their lineno attribute.
+
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

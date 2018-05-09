@@ -27,6 +27,7 @@ type_rules_of_members = {
     ],
     'set': [
         ((IterableDataStructure,), DynamicType),
+        ((), set),
     ],
     'difference': [
         ((set,), DynamicType),

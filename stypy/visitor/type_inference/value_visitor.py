@@ -417,6 +417,9 @@ class ValueVisitor(ast.NodeVisitor):
         final_op_result = None
 
         # Evaluate left part
+        if not hasattr(node.left, 'lineno'):
+            node.left.lineno = node.lineno
+
         left_stmts, left_op = self.visit(node.left, context)
         if type(left_op) is ast.Tuple:
             left_op = left_op.elts[0]
@@ -469,13 +472,14 @@ class ValueVisitor(ast.NodeVisitor):
         :param context:
         :return:
         """
-
         if value_visitor_utilities.is_direct_call_to_stypy_interface(node):
             return value_visitor_utilities.call_to_stypy_interface(self, node, context)
 
         context.append(node)
+
         # Localization of the function call
         localization = stypy_functions.create_localization(node.lineno, node.col_offset)
+
         call_stmts = []
         arguments = []
         keyword_arguments = {}
@@ -486,6 +490,8 @@ class ValueVisitor(ast.NodeVisitor):
         call_stmts.append(stypy_functions.create_src_comment("Call to {0}(...):".format(name_to_call), node.lineno))
         context.append(node)
 
+
+        ##
         get_type_of_stmts, function_to_call = self.visit(node.func, context)
         context.remove(node)
 
@@ -498,11 +504,14 @@ class ValueVisitor(ast.NodeVisitor):
             call_stmts.append(stmts)
             arguments.append(temp)
 
+
+
         # Evaluate arguments of the call
-        if not node.starargs is None:
+        if node.starargs is not None:
             stmts, temp = self.visit(node.starargs, context)
             call_stmts.append(stmts)
             arguments.append(temp)
+
 
         call_stmts.append(stypy_functions.create_src_comment("Processing the call keyword arguments", node.lineno))
         # Second call parameters are built from the keywords and keyword args (keywords + kwargs)

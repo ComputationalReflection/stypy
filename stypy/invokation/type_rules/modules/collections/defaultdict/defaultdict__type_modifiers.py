@@ -103,6 +103,8 @@ class TypeModifiers:
                 return union_ret
 
         ret = get_contained_elements_type_for_key(get_self(proxy_obj), arguments[0])
+        if ret is None:
+            return types.NoneType
         if ret is UndefinedType:
             obj = StandardWrapper.get_wrapper_of(get_self(proxy_obj))
             return obj.stypy_default_value

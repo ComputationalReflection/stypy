@@ -54,7 +54,7 @@ def solve(X, Y, solution):
             for solution in solve(X, Y, solution):
                 yield solution
             deselect(X, Y, r, cols)
-            solution.pop()
+            v = solution.pop()
 
 
 def select(X, Y, r):

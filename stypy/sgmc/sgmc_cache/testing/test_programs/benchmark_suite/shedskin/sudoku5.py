@@ -59,7 +59,7 @@ ORIGINAL PROGRAM SOURCE CODE:
 54:             for solution in solve(X, Y, solution):
 55:                 yield solution
 56:             deselect(X, Y, r, cols)
-57:             solution.pop()
+57:             v = solution.pop()
 58: 
 59: 
 60: def select(X, Y, r):
@@ -1420,16 +1420,22 @@ def solve(localization, *varargs, **kwargs):
             deselect_call_result_294 = invoke(stypy.reporting.localization.Localization(__file__, 56, 12), deselect_288, *[X_289, Y_290, r_291, cols_292], **kwargs_293)
             
             
+            # Assigning a Call to a Name (line 57):
+            
+            # Assigning a Call to a Name (line 57):
+            
             # Call to pop(...): (line 57)
             # Processing the call keyword arguments (line 57)
             kwargs_297 = {}
             # Getting the type of 'solution' (line 57)
-            solution_295 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 57, 12), 'solution', False)
+            solution_295 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 57, 16), 'solution', False)
             # Obtaining the member 'pop' of a type (line 57)
-            pop_296 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 57, 12), solution_295, 'pop')
+            pop_296 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 57, 16), solution_295, 'pop')
             # Calling pop(args, kwargs) (line 57)
-            pop_call_result_298 = invoke(stypy.reporting.localization.Localization(__file__, 57, 12), pop_296, *[], **kwargs_297)
+            pop_call_result_298 = invoke(stypy.reporting.localization.Localization(__file__, 57, 16), pop_296, *[], **kwargs_297)
             
+            # Assigning a type to the variable 'v' (line 57)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 57, 12), 'v', pop_call_result_298)
             # SSA join for a for statement
             module_type_store = module_type_store.join_ssa_context()
 
@@ -1655,16 +1661,22 @@ def solve(localization, *varargs, **kwargs):
             deselect_call_result_294 = invoke(stypy.reporting.localization.Localization(__file__, 56, 12), deselect_288, *[X_289, Y_290, r_291, cols_292], **kwargs_293)
             
             
+            # Assigning a Call to a Name (line 57):
+            
+            # Assigning a Call to a Name (line 57):
+            
             # Call to pop(...): (line 57)
             # Processing the call keyword arguments (line 57)
             kwargs_297 = {}
             # Getting the type of 'solution' (line 57)
-            solution_295 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 57, 12), 'solution', False)
+            solution_295 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 57, 16), 'solution', False)
             # Obtaining the member 'pop' of a type (line 57)
-            pop_296 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 57, 12), solution_295, 'pop')
+            pop_296 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 57, 16), solution_295, 'pop')
             # Calling pop(args, kwargs) (line 57)
-            pop_call_result_298 = invoke(stypy.reporting.localization.Localization(__file__, 57, 12), pop_296, *[], **kwargs_297)
+            pop_call_result_298 = invoke(stypy.reporting.localization.Localization(__file__, 57, 16), pop_296, *[], **kwargs_297)
             
+            # Assigning a type to the variable 'v' (line 57)
+            module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 57, 12), 'v', pop_call_result_298)
             # SSA join for a for statement
             module_type_store = module_type_store.join_ssa_context()
 

@@ -19,7 +19,8 @@ class TypeModifiers:
     @staticmethod
     def set(localization, callable_, arguments):
         self_instance = wrap_contained_type(set())
-        set_contained_elements_type(self_instance, get_contained_elements_type(arguments[0]))
+        if len(arguments) > 0:
+            set_contained_elements_type(self_instance, get_contained_elements_type(arguments[0]))
         return self_instance
 
     @staticmethod  # Constructor  (__init__)
