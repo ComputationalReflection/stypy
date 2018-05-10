@@ -17,6 +17,6 @@ ROOT_PATH = go_to_parent_folder(1, os.path.realpath(__file__)).replace("\\", "/"
 LOG_PATH = ROOT_PATH + "/stypy/logfiles"
 MODEL_TESTING_PROGRAMS_PATH = ROOT_PATH + "/model_testing"
 CODE_GENERATION_TESTING_PROGRAMS_PATH = ROOT_PATH + "/"
-STYPY_OVER_STYPY_PROGRAMS_PATH = ROOT_PATH + "/stypy_over_stypy_testing"
+STYPY_OVER_STYPY_PROGRAMS_PATH = ROOT_PATH + "/test_programs/stypy_code_copy"
 
 PYTHON_EXE = "C:/Python27/python.exe"

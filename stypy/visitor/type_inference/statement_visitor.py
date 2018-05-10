@@ -78,15 +78,13 @@ class StatementVisitor(ast.NodeVisitor):
         """
         v_visitor = value_visitor.ValueVisitor(self.file_name)
 
-        try:
-            result, temp = v_visitor.visit(node, context)
-        except Exception as ex:
-            import traceback
-
-            traceback.print_exc()
-
-            print node
-            print context
+#        try:
+        result, temp = v_visitor.visit(node, context)
+        # except Exception as ex:
+        #
+        #     print node
+        #     result, temp = v_visitor.visit(node, context)
+        #     print context
 
         return result, temp
 

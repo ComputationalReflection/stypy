@@ -8,12 +8,13 @@ from testing.testing_parameters import *
 
 class TestCodeGeneration(TestCommon):
     def test_stypy(self):
-        file_path = STYPY_OVER_STYPY_PROGRAMS_PATH + "/stypy_code_copy/stypy_copy.py"
-        sys.path = [STYPY_OVER_STYPY_PROGRAMS_PATH + "/stypy_code_copy"] + sys.path
-        result = self.run_stypy_with_program(file_path, generate_type_data_file=False, output_results=False,
+        #file_path = STYPY_OVER_STYPY_PROGRAMS_PATH + "/stypy_code_copy/stypy_copy.py"
+        #sys.path = [STYPY_OVER_STYPY_PROGRAMS_PATH + "/stypy_code_copy"] + sys.path
+        file_path = self.file_path + "/stypy_code_copy/stypy_run_copy.py"
+        result = self.run_stypy_with_program(file_path, output_results=True,
                                              force_type_data_file=False)
 
-        # self.print_errors()
+        self.print_errors()
         # self.print_stypy_modules_cache()
         self.assertEqual(result, 0)
 
@@ -29,7 +30,7 @@ class TestCodeGeneration(TestCommon):
     def test_stypy_parameters(self):
         sys.path = [STYPY_OVER_STYPY_PROGRAMS_PATH + "/stypy_code_copy"] + sys.path
         file_path = STYPY_OVER_STYPY_PROGRAMS_PATH + "/individual_file_tests/stypy_parameters_test.py"
-        result = self.run_stypy_with_program(file_path, output_results=True)
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         # self.print_errors()
         self.assertEqual(result, 0)
@@ -44,7 +45,7 @@ class TestCodeGeneration(TestCommon):
     def test_type_warning(self):
         sys.path = [STYPY_OVER_STYPY_PROGRAMS_PATH + "/stypy_code_copy"] + sys.path
         file_path = STYPY_OVER_STYPY_PROGRAMS_PATH + "/individual_file_tests/errors/type_warning_test.py"
-        result = self.run_stypy_with_program(file_path, output_results=True)
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.print_errors()
         self.assertEqual(result, 0)
@@ -52,7 +53,7 @@ class TestCodeGeneration(TestCommon):
     def test_known_python_types(self):
         sys.path = [STYPY_OVER_STYPY_PROGRAMS_PATH + "/stypy_code_copy"] + sys.path
         file_path = STYPY_OVER_STYPY_PROGRAMS_PATH + "/individual_file_tests/python_lib/python_types/instantiation/known_python_types_test.py"
-        result = self.run_stypy_with_program(file_path, output_results=True)
+        result = self.run_stypy_with_program(file_path, output_results=True, force_type_data_file=False)
 
         self.print_errors()
         self.assertEqual(result, 0)

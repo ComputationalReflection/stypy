@@ -490,8 +490,6 @@ class ValueVisitor(ast.NodeVisitor):
         call_stmts.append(stypy_functions.create_src_comment("Call to {0}(...):".format(name_to_call), node.lineno))
         context.append(node)
 
-
-        ##
         get_type_of_stmts, function_to_call = self.visit(node.func, context)
         context.remove(node)
 

@@ -308,8 +308,15 @@ def __remove_not_subtype_from_union_implementation(if_test, type_, lineno, col_o
 
         return stypy_functions.flatten_lists(set_type)  # obj_type, set_type)
     if type(param) is ast.Attribute:
+        # try:
         # Get the owner of the attribute
-        obj_type_stmts, obj_var = stypy_functions.create_get_type_of(param.value.id, lineno, col_offset)
+        if type(param.value) is ast.Name:
+            obj_type_stmts, obj_var = stypy_functions.create_get_type_of(param.value.id, lineno, col_offset)
+        else:
+            obj_type_stmts, obj_var = stypy_functions.create_get_type_of_member(param.value, param.value.attr, lineno, col_offset)
+        # except Exception as ex:
+        #     print ex
+
         # Get the current type of the owner of the attribute
         att_type_stmts, att_var = stypy_functions.create_get_type_of_member(obj_var, param.attr, lineno, col_offset)
         remove_type_call = functions.create_call(core_language.create_Name("remove_not_subtype_from_union"),
