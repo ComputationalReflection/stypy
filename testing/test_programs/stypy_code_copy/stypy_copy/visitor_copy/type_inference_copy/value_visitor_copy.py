@@ -1,5 +1,5 @@
-from stypy_copy.code_generation_copy.type_inference_programs_copy.aux_functions_copy import *
-from stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy import core_language_copy, functions_copy, stypy_functions_copy, data_structures_copy
+from ...code_generation_copy.type_inference_programs_copy.aux_functions_copy import *
+from ...visitor_copy.type_inference_copy.visitor_utils_copy import core_language_copy, functions_copy, stypy_functions_copy, data_structures_copy
 
 import statement_visitor_copy
 import ast

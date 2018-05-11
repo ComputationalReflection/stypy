@@ -1,10 +1,10 @@
 import ast
 import collections
 
-from stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy import stypy_functions_copy
-from stypy_copy.reporting_copy import print_utils_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
-from stypy_copy.type_store_copy.type_annotation_record_copy import TypeAnnotationRecord
+from ...visitor_copy.type_inference_copy.visitor_utils_copy import stypy_functions_copy
+from ...reporting_copy import print_utils_copy
+from ...python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
+from ...type_store_copy.type_annotation_record_copy import TypeAnnotationRecord
 
 
 class TypeAnnotationVisitor(ast.NodeVisitor):

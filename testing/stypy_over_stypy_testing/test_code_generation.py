@@ -14,7 +14,7 @@ class TestCodeGeneration(TestCommon):
         result = self.run_stypy_with_program(file_path, output_results=True,
                                              force_type_data_file=False)
 
-        self.print_errors()
+        # self.print_errors()
         # self.print_stypy_modules_cache()
         self.assertEqual(result, 0)
 

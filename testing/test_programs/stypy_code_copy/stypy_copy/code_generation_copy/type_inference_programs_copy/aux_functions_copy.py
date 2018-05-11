@@ -1,12 +1,12 @@
 import ast
 
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.errors_copy.type_warning_copy import TypeWarning
-from stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy import core_language_copy, data_structures_copy
-import stypy_copy
-from stypy_copy.stypy_parameters_copy import ENABLE_CODING_ADVICES
-from stypy_copy.reporting_copy.print_utils_copy import format_function_name
-from stypy_copy.python_lib_copy.type_rules_copy.type_groups_copy.type_group_generator_copy import Str, IterableObject
+from ...errors_copy.type_error_copy import TypeError
+from ...errors_copy.type_warning_copy import TypeWarning
+from ...visitor_copy.type_inference_copy.visitor_utils_copy import core_language_copy, data_structures_copy
+from .... import stypy_copy
+from ...stypy_parameters_copy import ENABLE_CODING_ADVICES
+from ...reporting_copy.print_utils_copy import format_function_name
+from ...python_lib_copy.type_rules_copy.type_groups_copy.type_group_generator_copy import Str, IterableObject
 
 """
 This file holds functions that are invoked by the generated source code of type inference programs. This code

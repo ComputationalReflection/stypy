@@ -1,13 +1,13 @@
 import types
 import collections
 
-from stypy_copy.python_lib_copy.python_types_copy.instantiation_copy.known_python_types_copy import ExtraTypeDefinitions
+from ....python_lib_copy.python_types_copy.instantiation_copy.known_python_types_copy import ExtraTypeDefinitions
 from type_group_copy import TypeGroup
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
-from stypy_copy.errors_copy.type_warning_copy import TypeWarning
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import type_inference_proxy_management_copy
+from ....errors_copy.type_error_copy import TypeError
+from ....python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
+from ....python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
+from ....errors_copy.type_warning_copy import TypeWarning
+from ....python_lib_copy.python_types_copy.type_inference_copy import type_inference_proxy_management_copy
 
 """
 File to define all type groups available to form type rules

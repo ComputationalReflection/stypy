@@ -1,11 +1,11 @@
 import inspect
 
-from stypy_copy.errors_copy.type_error_copy import TypeError
+from ....errors_copy.type_error_copy import TypeError
 from call_handler_copy import CallHandler
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import no_recursion_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.type_inference_proxy_management_copy import is_user_defined_class, \
+from ....python_lib_copy.python_types_copy.type_inference_copy import no_recursion_copy
+from ....python_lib_copy.python_types_copy.type_inference_copy.type_inference_proxy_management_copy import is_user_defined_class, \
     is_user_defined_module
-from stypy_copy.python_lib_copy.python_types_copy import type_inference_copy
+from ....python_lib_copy.python_types_copy import type_inference_copy
 
 
 class UserCallablesCallHandler(CallHandler):

@@ -3,10 +3,10 @@ import types
 import inspect
 import os
 
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import type_inference_proxy_copy
-from stypy_copy.errors_copy.type_error_copy import TypeError
+from ...python_lib_copy.python_types_copy.type_inference_copy import type_inference_proxy_copy
+from ...errors_copy.type_error_copy import TypeError
 import python_library_modules_copy
-from stypy_copy import stypy_main_copy, stypy_parameters_copy
+from ... import stypy_main_copy, stypy_parameters_copy
 
 """
 Helper functions to deal with imports on type inference generated code. These were moved here for improving the

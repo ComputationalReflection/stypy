@@ -1,6 +1,6 @@
-from stypy_copy.type_store_copy.typestore_copy import TypeStore
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
+from ..type_store_copy.typestore_copy import TypeStore
+from ..python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
+from ..python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
 
 """
 Implementation of the SSA algorithm to calculate types of variables when dealing with branches in source code (ifs,

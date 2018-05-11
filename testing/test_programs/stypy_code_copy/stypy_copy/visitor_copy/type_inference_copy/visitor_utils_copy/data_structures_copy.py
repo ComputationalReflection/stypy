@@ -32,7 +32,7 @@ def create_keyword_dict(keywords):
 
     if keywords is not None:
         for elem in keywords:
-            dict_node.keys.append(core_language.create_str(elem))
+            dict_node.keys.append(core_language_copy.create_str(elem))
             dict_node.values.append(keywords[elem])
 
     return dict_node

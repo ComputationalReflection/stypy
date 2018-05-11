@@ -1,7 +1,7 @@
 from stypy_copy import stypy_main_copy
 from stypy_copy import stypy_parameters_copy
-# from stypy_copy.errors_copy.type_error_copy import TypeError
-# from stypy_copy.errors_copy.type_warning_copy import TypeWarning
+from stypy_copy.errors_copy.type_error_copy import TypeError
+from stypy_copy.errors_copy.type_warning_copy import TypeWarning
 import sys, os
 
 

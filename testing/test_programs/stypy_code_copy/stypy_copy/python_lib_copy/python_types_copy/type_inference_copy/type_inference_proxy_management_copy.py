@@ -4,7 +4,7 @@ import imp
 import copy
 import types
 
-from stypy_copy import stypy_parameters_copy
+from .....stypy_copy import stypy_parameters_copy
 
 """
 File that contains helper functions to implement the type_inference_proxy.py functionality, grouped here to improve

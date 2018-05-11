@@ -2,8 +2,8 @@ import os
 import sys
 import inspect
 
-from stypy_copy.python_lib_copy.member_call_copy.handlers_copy.call_handler_copy import CallHandler
-from stypy_copy import stypy_parameters_copy
+from ....python_lib_copy.member_call_copy.handlers_copy.call_handler_copy import CallHandler
+from .... import stypy_parameters_copy
 
 
 class FileTypeModifier(CallHandler):
@@ -31,12 +31,12 @@ class FileTypeModifier(CallHandler):
         :param entity_name: Callable entity (function/method) name
         :return: A tuple of (name of the rule file of the parent, name of the type rule of the entity)
         """
-        parent_modifier_file = stypy_parameters.ROOT_PATH + stypy_parameters.RULE_FILE_PATH + parent_name + "/" \
-                               + parent_name + stypy_parameters.type_modifier_file_postfix + ".py"
+        parent_modifier_file = stypy_parameters_copy.ROOT_PATH + stypy_parameters_copy.RULE_FILE_PATH + parent_name + "/" \
+                               + parent_name + stypy_parameters_copy.type_modifier_file_postfix + ".py"
 
-        own_modifier_file = stypy_parameters.ROOT_PATH + stypy_parameters.RULE_FILE_PATH + parent_name + "/" \
+        own_modifier_file = stypy_parameters_copy.ROOT_PATH + stypy_parameters_copy.RULE_FILE_PATH + parent_name + "/" \
                             + entity_name.split('.')[-1] + "/" + entity_name.split('.')[
-                                -1] + stypy_parameters.type_modifier_file_postfix + ".py"
+                                -1] + stypy_parameters_copy.type_modifier_file_postfix + ".py"
 
         return parent_modifier_file, own_modifier_file
 

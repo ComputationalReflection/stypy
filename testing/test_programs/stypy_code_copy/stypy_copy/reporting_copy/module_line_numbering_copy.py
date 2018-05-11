@@ -1,4 +1,4 @@
-from stypy_copy import stypy_parameters_copy
+from ...stypy_copy import stypy_parameters_copy
 
 
 class ModuleLineNumbering:

@@ -1,7 +1,7 @@
 import copy
-from stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
-from stypy_copy.reporting_copy import print_utils_copy
-from stypy_copy.errors_copy.type_error_copy import TypeError
+from ...stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
+from ...stypy_copy.reporting_copy import print_utils_copy
+from ...stypy_copy.errors_copy.type_error_copy import TypeError
 
 class FunctionContext:
     """
@@ -84,7 +84,7 @@ class FunctionContext:
 
             arg_str += str_kwargs
 
-        txt += str(self.function_name) + "(" + arg_str + ") -> " + print_utils.get_type_str(self.return_type)
+        txt += str(self.function_name) + "(" + arg_str + ") -> " + print_utils_copy.get_type_str(self.return_type)
 
         return txt
 

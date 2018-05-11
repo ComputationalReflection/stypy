@@ -6,13 +6,13 @@ import copy
 import inspect
 import types
 
-import stypy_copy.python_lib_copy.python_types_copy.type_introspection_copy.runtime_type_inspection_copy
+from ..... import stypy_copy
 import undefined_type_copy
-from stypy_copy.python_lib_copy.python_types_copy.non_python_type_copy import NonPythonType
-from stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.python_lib_copy.python_types_copy import type_inference_copy
-from stypy_copy.reporting_copy.print_utils_copy import format_function_name
+from ..non_python_type_copy import NonPythonType
+from ...python_types_copy.type_copy import Type
+from ....errors_copy.type_error_copy import TypeError
+from ...python_types_copy import type_inference_copy
+from ....reporting_copy.print_utils_copy import format_function_name
 
 
 class UnionType(NonPythonType):

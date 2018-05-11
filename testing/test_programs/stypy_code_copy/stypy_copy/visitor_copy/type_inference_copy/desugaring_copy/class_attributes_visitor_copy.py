@@ -1,5 +1,5 @@
-from stypy_copy.code_generation_copy.type_inference_programs_copy.aux_functions_copy import *
-from stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy import core_language_copy, stypy_functions_copy
+from ....code_generation_copy.type_inference_programs_copy.aux_functions_copy import *
+from ....visitor_copy.type_inference_copy.visitor_utils_copy import core_language_copy, stypy_functions_copy
 import ast
 
 class ClassAttributesVisitor(ast.NodeTransformer):

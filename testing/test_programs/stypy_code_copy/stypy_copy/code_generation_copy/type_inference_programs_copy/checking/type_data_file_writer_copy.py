@@ -1,7 +1,7 @@
 import os
 
-from stypy_copy.python_lib_copy.python_types_copy.instantiation_copy.known_python_types_management_copy import get_type_name
-from stypy_copy import stypy_parameters_copy
+from ....python_lib_copy.python_types_copy.instantiation_copy.known_python_types_management_copy import get_type_name
+from .... import stypy_parameters_copy
 
 
 class TypeDataFileWriter:

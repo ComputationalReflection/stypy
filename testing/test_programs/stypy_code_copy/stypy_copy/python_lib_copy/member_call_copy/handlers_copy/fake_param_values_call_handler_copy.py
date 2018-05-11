@@ -1,11 +1,11 @@
 import inspect
 import types
 
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.python_lib_copy.python_types_copy.instantiation_copy.type_instantiation_copy import get_type_sample_value
-from stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
+from ....errors_copy.type_error_copy import TypeError
+from ....python_lib_copy.python_types_copy.instantiation_copy.type_instantiation_copy import get_type_sample_value
+from ....python_lib_copy.python_types_copy.type_copy import Type
 from call_handler_copy import CallHandler
-from stypy_copy.python_lib_copy.member_call_copy.call_handlers_helper_methods_copy import format_call
+from ....python_lib_copy.member_call_copy.call_handlers_helper_methods_copy import format_call
 
 
 class FakeParamValuesCallHandler(CallHandler):

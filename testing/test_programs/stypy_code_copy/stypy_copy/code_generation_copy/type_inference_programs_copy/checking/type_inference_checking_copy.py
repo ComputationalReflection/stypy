@@ -3,12 +3,12 @@ import sys
 import inspect
 import types
 
-from stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.union_type_copy import UnionType
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
-from stypy_copy.stypy_parameters_copy import type_inference_file_directory_name, type_data_file_postfix
-from stypy_copy.errors_copy.type_error import TypeError
-from stypy_copy.type_store_copy import typestore_copy
+from ....python_lib_copy.python_types_copy.type_copy import Type
+from ....python_lib_copy.python_types_copy.type_inference_copy.union_type_copy import UnionType
+from ....python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
+from ....stypy_parameters_copy import type_inference_file_directory_name, type_data_file_postfix
+from ....errors_copy.type_error_copy import TypeError
+from ....type_store_copy import typestore_copy
 
 """
 File with functions that are used when unit testing the generated type inference code checking the type inference code

@@ -1,6 +1,6 @@
 import ast
 
-from stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy import stypy_functions_copy
+from ...visitor_copy.type_inference_copy.visitor_utils_copy import stypy_functions_copy
 import statement_visitor_copy
 
 

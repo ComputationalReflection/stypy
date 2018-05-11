@@ -3,10 +3,10 @@ import sys
 import inspect
 
 from call_handler_copy import CallHandler
-from stypy_copy.python_lib_copy.python_types_copy import type_inference_copy
-from stypy_copy import stypy_parameters_copy
-from stypy_copy.python_lib_copy.type_rules_copy.type_groups_copy.type_groups_copy import *
-from stypy_copy.python_lib_copy.type_rules_copy.type_groups_copy.type_group_copy import BaseTypeGroup
+from ....python_lib_copy.python_types_copy import type_inference_copy
+from .... import stypy_parameters_copy
+from ....python_lib_copy.type_rules_copy.type_groups_copy.type_groups_copy import *
+from ....python_lib_copy.type_rules_copy.type_groups_copy.type_group_copy import BaseTypeGroup
 
 
 class TypeRuleCallHandler(CallHandler):

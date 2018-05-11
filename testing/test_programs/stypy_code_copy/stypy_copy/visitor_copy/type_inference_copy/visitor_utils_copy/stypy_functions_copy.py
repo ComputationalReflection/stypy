@@ -3,9 +3,9 @@ import ast
 import core_language_copy
 import functions_copy
 import operators_copy
-from stypy_copy.code_generation_copy.type_inference_programs_copy.python_operators_copy import operator_name_to_symbol
-from stypy_copy.stypy_parameters_copy import ENABLE_CODING_ADVICES
-from stypy_copy.reporting_copy.module_line_numbering_copy import ModuleLineNumbering
+from ....code_generation_copy.type_inference_programs_copy.python_operators_copy import operator_name_to_symbol
+from ....stypy_parameters_copy import ENABLE_CODING_ADVICES
+from ....reporting_copy.module_line_numbering_copy import ModuleLineNumbering
 
 """
 This file contains helper functions_copy to generate type inference code. These functions_copy refer to common language elements

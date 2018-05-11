@@ -122,6 +122,6 @@ Main features of the new 0.2 release include:
 - [07/05/2018] Added the bottle test program. Fixed a code generation problem that occurs when a class inherits from another specified as an attribute.
 - [09/05/2018] Fixed a type inference inconsistency when a defaultdict have None as a value for a key. Fixed a type inference problem when building sets with no parameters. Fixed rare code generation bug when certain comparison nodes with a Call in the left part lose their lineno attribute.
 - [10/05/2018] Fixed some rare code generation bugs.
-
+- [11/05/2018] Added type inference support for the os.makedirs function. Using with keyword with a file no longer throws a type error.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

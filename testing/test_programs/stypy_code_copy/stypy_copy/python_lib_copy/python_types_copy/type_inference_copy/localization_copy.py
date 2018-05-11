@@ -1,4 +1,4 @@
-from stypy_copy.errors_copy.stack_trace_copy import StackTrace
+from ....errors_copy.stack_trace_copy import StackTrace
 
 
 class Localization:

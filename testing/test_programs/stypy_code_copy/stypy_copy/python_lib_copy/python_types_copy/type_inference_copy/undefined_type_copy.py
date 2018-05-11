@@ -1,4 +1,4 @@
-from stypy_copy.python_lib_copy.python_types_copy.non_python_type_copy import NonPythonType
+from ...python_types_copy.non_python_type_copy import NonPythonType
 
 
 class UndefinedType(NonPythonType):

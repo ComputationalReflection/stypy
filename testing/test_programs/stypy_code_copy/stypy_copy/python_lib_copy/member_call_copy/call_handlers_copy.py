@@ -1,9 +1,9 @@
 import inspect
 
-from stypy_copy.python_lib_copy.member_call_copy.handlers_copy import type_rule_call_handler_copy
-from stypy_copy.python_lib_copy.member_call_copy.handlers_copy import fake_param_values_call_handler_copy
-from stypy_copy.python_lib_copy.member_call_copy.handlers_copy import user_callables_call_handler_copy
-from stypy_copy.python_lib_copy.member_call_copy.type_modifiers_copy import file_type_modifier_copy
+from ...python_lib_copy.member_call_copy.handlers_copy import type_rule_call_handler_copy
+from ...python_lib_copy.member_call_copy.handlers_copy import fake_param_values_call_handler_copy
+from ...python_lib_copy.member_call_copy.handlers_copy import user_callables_call_handler_copy
+from ...python_lib_copy.member_call_copy.type_modifiers_copy import file_type_modifier_copy
 from arguments_unfolding_copy import *
 from call_handlers_helper_methods_copy import *
 

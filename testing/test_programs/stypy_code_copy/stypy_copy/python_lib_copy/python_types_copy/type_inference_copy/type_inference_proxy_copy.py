@@ -2,17 +2,17 @@ import inspect
 import types
 
 import type_inference_proxy_management_copy
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.errors_copy.type_warning_copy import TypeWarning
-from stypy_copy.python_lib_copy.member_call_copy import call_handlers_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
-from stypy_copy.python_lib_copy.python_types_copy.type_introspection_copy import type_equivalence_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import undefined_type_copy
-from stypy_copy.python_lib_copy.python_types_copy.instantiation_copy.known_python_types_copy import simple_python_types
-from stypy_copy.type_store_copy.type_annotation_record_copy import TypeAnnotationRecord
-from stypy_copy import type_store_copy
-from stypy_copy import stypy_parameters_copy
+from ....errors_copy.type_error_copy import TypeError
+from ....errors_copy.type_warning_copy import TypeWarning
+from ....python_lib_copy.member_call_copy import call_handlers_copy
+from ....python_lib_copy.python_types_copy.type_copy import Type
+from ....python_lib_copy.python_types_copy.type_introspection_copy import type_equivalence_copy
+from ....python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
+from ....python_lib_copy.python_types_copy.type_inference_copy import undefined_type_copy
+from ....python_lib_copy.python_types_copy.instantiation_copy.known_python_types_copy import simple_python_types
+from ....type_store_copy.type_annotation_record_copy import TypeAnnotationRecord
+from .....stypy_copy import type_store_copy
+from .....stypy_copy import stypy_parameters_copy
 
 
 class TypeInferenceProxy(Type):

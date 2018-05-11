@@ -1,4 +1,4 @@
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
+from ..python_types_copy.type_inference_copy import union_type_copy
 #
 
 # TODO: Remove?

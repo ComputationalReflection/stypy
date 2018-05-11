@@ -3,21 +3,21 @@ import time
 import imp
 import ast
 
-# from visitor_copy.type_inference_copy import type_inference_visitor_copy
-# from stypy_copy.visitor_copy.python_src_generation_copy.python_src_generator_visitor_copy import PythonSrcGeneratorVisitor
-# from stypy_copy.visitor_copy.python_type_data_autogeneration_copy.python_type_data_autogeneration_visitor_copy import *
-# from stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy.stypy_functions_copy import default_module_type_store_var_name, \
-#      default_type_error_var_name, default_type_warning_var_name
-# from stypy_copy.visitor_copy.python_src_print_copy.python_src_print_visitor_copy import dump_ast
+from visitor_copy.type_inference_copy import type_inference_visitor_copy
+from visitor_copy.python_src_generation_copy.python_src_generator_visitor_copy import PythonSrcGeneratorVisitor
+from visitor_copy.python_type_data_autogeneration_copy.python_type_data_autogeneration_visitor_copy import *
+from visitor_copy.type_inference_copy.visitor_utils_copy.stypy_functions_copy import default_module_type_store_var_name, \
+      default_type_error_var_name, default_type_warning_var_name
+from visitor_copy.python_src_print_copy.python_src_print_visitor_copy import dump_ast
 from stypy_parameters_copy import *
-# from stypy_copy.visitor_copy.type_inference_copy.desugaring_copy import multiple_assignments_visitor_copy
-# from stypy_copy.visitor_copy.type_inference_copy.desugaring_copy import class_attributes_visitor_copy
-# from stypy_copy.visitor_copy.type_inference_copy.desugaring_copy import class__init__visitor_copy
-# from stypy_copy.visitor_copy.type_annotation_copy.type_annotation_visitor_copy import TypeAnnotationVisitor
-# from stypy_copy import type_store_copy
-# from stypy_copy.python_lib_copy.python_types_copy import type_inference_copy
+from visitor_copy.type_inference_copy.desugaring_copy import multiple_assignments_visitor_copy
+from visitor_copy.type_inference_copy.desugaring_copy import class_attributes_visitor_copy
+from visitor_copy.type_inference_copy.desugaring_copy import class__init__visitor_copy
+from visitor_copy.type_annotation_copy.type_annotation_visitor_copy import TypeAnnotationVisitor
+import type_store_copy
+from python_lib_copy.python_types_copy import type_inference_copy
 from log_copy import logging_console_copy
-# from code_generation_copy.source_code_writer_copy import write_python_source_code
+from code_generation_copy.source_code_writer_copy import write_python_source_code
 
 
 """

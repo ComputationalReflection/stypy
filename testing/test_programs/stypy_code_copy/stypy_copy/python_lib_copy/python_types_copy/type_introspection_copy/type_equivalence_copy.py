@@ -1,4 +1,4 @@
-from stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
+from ....python_lib_copy.python_types_copy.type_copy import Type
 
 """
 This file implements an algorithm to compare types by its structure

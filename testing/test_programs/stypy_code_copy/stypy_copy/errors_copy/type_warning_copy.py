@@ -1,6 +1,6 @@
-from stypy_copy.reporting_copy.module_line_numbering_copy import ModuleLineNumbering
-from stypy_copy import errors_copy
-from stypy_copy import stypy_parameters_copy
+from ...stypy_copy.reporting_copy.module_line_numbering_copy import ModuleLineNumbering
+from ...stypy_copy import errors_copy
+from ...stypy_copy import stypy_parameters_copy
 
 
 class TypeWarning:

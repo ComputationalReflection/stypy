@@ -1,8 +1,8 @@
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.errors_copy.type_warning_copy import TypeWarning
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
-from stypy_copy.reporting_copy import print_utils_copy, module_line_numbering_copy
+from ...errors_copy.type_error_copy import TypeError
+from ...errors_copy.type_warning_copy import TypeWarning
+from ...python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
+from ...python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
+from ...reporting_copy import print_utils_copy, module_line_numbering_copy
 
 """
 Several functions that help call handler management in various ways. Moved here to limit the size of Python files.

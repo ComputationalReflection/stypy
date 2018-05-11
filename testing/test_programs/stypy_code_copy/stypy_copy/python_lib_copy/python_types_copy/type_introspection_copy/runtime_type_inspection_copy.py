@@ -1,10 +1,10 @@
 import inspect
 ## AQUI: INCLUIR UNION_TYPE_COPY CUELGA POR RECURSION PROBLEM
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.no_recursion_copy import RecursionType
+from ....errors_copy.type_error_copy import TypeError
+from ....python_lib_copy.python_types_copy.type_inference_copy.no_recursion_copy import RecursionType
 import type_equivalence_copy
-import stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.union_type_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
+from ....python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
+from ....python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
 
 
 """
@@ -45,7 +45,7 @@ def is_union_type(the_type):
     :param the_type: Type to test
     :return: bool
     """
-    return isinstance(the_type, stypy_copy.python_lib.python_types.type_inference.union_type.UnionType)
+    return isinstance(the_type, union_type_copy.UnionType)
 
 
 def is_undefined_type(the_type):

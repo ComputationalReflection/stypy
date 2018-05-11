@@ -1,6 +1,6 @@
-from stypy_copy import type_store_copy
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy.stypy_functions_copy import default_lambda_var_name
+from ...stypy_copy import type_store_copy
+from ...stypy_copy.errors_copy.type_error_copy import TypeError
+from ...stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy.stypy_functions_copy import default_lambda_var_name
 
 """
 Several functions to help printing elements with a readable style on error reports
@@ -45,7 +45,7 @@ def get_type_str(type_):
         return "TypeError"
 
     # Is this a type store? Then it is a non-python library module
-    if type(type_) == type_store.typestore.TypeStore:
+    if type(type_) == type_store_copy.typestore.TypeStore:
         return "External module '" + type_.program_name + "'"
     return str(type_)
 

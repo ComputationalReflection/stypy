@@ -1,8 +1,8 @@
-from stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
+from ...stypy_copy.python_lib_copy.python_types_copy.type_copy import Type
 import type_warning_copy
-from stypy_copy.reporting_copy.module_line_numbering_copy import ModuleLineNumbering
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.localization_copy import Localization
-from stypy_copy import stypy_parameters_copy
+from ...stypy_copy.reporting_copy.module_line_numbering_copy import ModuleLineNumbering
+from ..python_lib_copy.python_types_copy.type_inference_copy.localization_copy import Localization
+from ...stypy_copy import stypy_parameters_copy
 
 
 class TypeError(Type):

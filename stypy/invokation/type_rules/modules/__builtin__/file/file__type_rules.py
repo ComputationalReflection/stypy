@@ -26,4 +26,8 @@ type_rules_of_members = {
     'readlines': [
         ((), DynamicType),
     ],
+
+    '__enter__': [
+        ((), types.NoneType),
+    ],
 }

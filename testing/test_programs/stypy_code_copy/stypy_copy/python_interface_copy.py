@@ -1,14 +1,14 @@
 import sys
 
-from stypy_copy.errors_copy.type_error_copy import TypeError
-from stypy_copy.errors_copy.type_warning_copy import TypeWarning
-from stypy_copy.errors_copy.unsupported_features_copy import create_unsupported_python_feature_message
-from stypy_copy.code_generation_copy.type_inference_programs_copy.python_operators_copy import *
-from stypy_copy.python_lib_copy.module_imports_copy import python_imports_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
-from stypy_copy.python_lib_copy.python_types_copy.instantiation_copy.known_python_types_copy import ExtraTypeDefinitions
-from stypy_copy.python_lib_copy.type_rules_copy.type_groups_copy import type_group_generator_copy, type_groups_copy
-from stypy_copy.python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
+from errors_copy.type_error_copy import TypeError
+from errors_copy.type_warning_copy import TypeWarning
+from errors_copy.unsupported_features_copy import create_unsupported_python_feature_message
+from code_generation_copy.type_inference_programs_copy.python_operators_copy import *
+from python_lib_copy.module_imports_copy import python_imports_copy
+from python_lib_copy.python_types_copy.type_inference_copy.undefined_type_copy import UndefinedType
+from python_lib_copy.python_types_copy.instantiation_copy.known_python_types_copy import ExtraTypeDefinitions
+from python_lib_copy.type_rules_copy.type_groups_copy import type_group_generator_copy, type_groups_copy
+from python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
 
 """
 This file contains the stypy API that can be called inside the type inference generated programs source code.

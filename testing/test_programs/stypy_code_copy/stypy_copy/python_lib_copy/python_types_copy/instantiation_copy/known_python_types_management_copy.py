@@ -1,4 +1,4 @@
-from stypy_copy.python_lib_copy.python_types_copy.instantiation_copy.known_python_types_copy import *
+from ....python_lib_copy.python_types_copy.instantiation_copy.known_python_types_copy import *
 import types
 
 """
