@@ -11,4 +11,5 @@ from code_generation_copy.type_inference_programs_copy.aux_functions_copy import
 from python_lib_copy.python_types_copy.type_inference_copy import union_type_copy
 from ssa_copy.ssa_copy import *
 
+import stypy_parameters_copy
 from python_interface_copy import *

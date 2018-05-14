@@ -123,5 +123,6 @@ Main features of the new 0.2 release include:
 - [09/05/2018] Fixed a type inference inconsistency when a defaultdict have None as a value for a key. Fixed a type inference problem when building sets with no parameters. Fixed rare code generation bug when certain comparison nodes with a Call in the left part lose their lineno attribute.
 - [10/05/2018] Fixed some rare code generation bugs.
 - [11/05/2018] Added type inference support for the os.makedirs function. Using with keyword with a file no longer throws a type error.
+- [14/05/2018] Fixed multiple problems when importing modules using relative paths. Now stypy is able to properly find imported modules.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

@@ -336,21 +336,38 @@ def get_module_member(localization, module_name, origin_type_store, member_name)
             if member_to_search in sys.modules:
                 member_is_a_module = sys.modules[member_to_search]
             else:
-                force_path = False
-                forced_path = ""
-                split_path = os.path.dirname(origin_type_store.context_name).split('\\')
-                if len(split_path) > 1:
-                    force_path = (module_name == split_path[-1])
+                if "stypy.sgmc.sgmc_cache."+module_name + "." + member_to_search in sys.modules:
+                    member_is_a_module = sys.modules["stypy.sgmc.sgmc_cache."+module_name + "." + member_to_search]
+                else:
+                    sgmc_route = SGMC.get_sgmc_full_module_name(origin_type_store.context_name)
+                    if sgmc_route[0] == ".":
+                        sgmc_route = sgmc_route[1:]
+                    if sgmc_route + "." + member_to_search in sys.modules:
+                        member_is_a_module = sys.modules["stypy.sgmc.sgmc_cache." + module_name + "." + member_to_search]
+                    else:
+                        force_path = False
+                        forced_path = ""
+                        split_path = os.path.dirname(origin_type_store.context_name).split('\\')
+                        if len(split_path) > 1:
+                            force_path = (module_name == split_path[-1])
 
-                if force_path:
-                    forced_path = os.path.dirname(os.path.dirname(origin_type_store.context_name))
-                    sys.path.insert(0, forced_path)
+                        if force_path:
+                            forced_path = os.path.dirname(os.path.dirname(origin_type_store.context_name))
+                            sys.path.insert(0, forced_path)
 
-                exec ("from " + module_name + " import " + member_to_search.split('.')[-1])
-                member_is_a_module = eval(member_to_search)
+                        try:
+                            exec ("from " + module_name + " import " + member_to_search.split('.')[-1])
+                            member_is_a_module = eval(member_to_search)
+                        except:
+                            try:
+                                exec ("from stypy.sgmc.sgmc_cache." + module_name + " import " + member_to_search.split('.')[-1])
+                                member_is_a_module = eval(member_to_search)
+                            except:
+                                exec ("from " + sgmc_route + " import " + member_to_search)
+                                member_is_a_module = eval(member_to_search)
 
-                if force_path:
-                    sys.path.remove(forced_path)
+                        if force_path:
+                            sys.path.remove(forced_path)
 
                 # If this module is not in the SGMC, we need to load the SGMC equivalent of the module.
             StypyTypeError.remove_error_msg(module_member)

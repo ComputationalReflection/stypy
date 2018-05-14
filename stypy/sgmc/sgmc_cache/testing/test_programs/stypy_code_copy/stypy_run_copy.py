@@ -3,8 +3,8 @@
 
 """
 ORIGINAL PROGRAM SOURCE CODE:
-1: from stypy_copy import stypy_main_copy
-2: from stypy_copy import stypy_parameters_copy
+1: from stypy_copy import stypy_parameters_copy
+2: from stypy_copy import stypy_main_copy
 3: from stypy_copy.errors_copy.type_error_copy import TypeError
 4: from stypy_copy.errors_copy.type_warning_copy import TypeWarning
 5: import sys, os
@@ -135,7 +135,7 @@ module_type_store = Context(None, __file__)
 
 stypy.reporting.localization.Localization.set_current(stypy.reporting.localization.Localization(__file__, 1, 0))
 
-# 'from stypy_copy import stypy_main_copy' statement (line 1)
+# 'from stypy_copy import stypy_parameters_copy' statement (line 1)
 update_path_to_current_file_folder('C:/Users/redon/PycharmProjects/stypyV2/testing//test_programs/stypy_code_copy/')
 import_4 = generate_type_inference_code_for_module(stypy.reporting.localization.Localization(__file__, 1, 0), 'stypy_copy')
 
@@ -144,12 +144,12 @@ if (type(import_4) is not StypyTypeError):
     if (import_4 != 'pyd_module'):
         __import__(import_4)
         sys_modules_5 = sys.modules[import_4]
-        import_from_module(stypy.reporting.localization.Localization(__file__, 1, 0), 'stypy_copy', sys_modules_5.module_type_store, module_type_store, ['stypy_main_copy'])
+        import_from_module(stypy.reporting.localization.Localization(__file__, 1, 0), 'stypy_copy', sys_modules_5.module_type_store, module_type_store, ['stypy_parameters_copy'])
         nest_module(stypy.reporting.localization.Localization(__file__, 1, 0), __file__, sys_modules_5, sys_modules_5.module_type_store, module_type_store)
     else:
-        from stypy_copy import stypy_main_copy
+        from stypy_copy import stypy_parameters_copy
 
-        import_from_module(stypy.reporting.localization.Localization(__file__, 1, 0), 'stypy_copy', None, module_type_store, ['stypy_main_copy'], [stypy_main_copy])
+        import_from_module(stypy.reporting.localization.Localization(__file__, 1, 0), 'stypy_copy', None, module_type_store, ['stypy_parameters_copy'], [stypy_parameters_copy])
 
 else:
     # Assigning a type to the variable 'stypy_copy' (line 1)
@@ -159,7 +159,7 @@ remove_current_file_folder_from_path('C:/Users/redon/PycharmProjects/stypyV2/tes
 
 stypy.reporting.localization.Localization.set_current(stypy.reporting.localization.Localization(__file__, 2, 0))
 
-# 'from stypy_copy import stypy_parameters_copy' statement (line 2)
+# 'from stypy_copy import stypy_main_copy' statement (line 2)
 update_path_to_current_file_folder('C:/Users/redon/PycharmProjects/stypyV2/testing//test_programs/stypy_code_copy/')
 import_6 = generate_type_inference_code_for_module(stypy.reporting.localization.Localization(__file__, 2, 0), 'stypy_copy')
 
@@ -168,12 +168,12 @@ if (type(import_6) is not StypyTypeError):
     if (import_6 != 'pyd_module'):
         __import__(import_6)
         sys_modules_7 = sys.modules[import_6]
-        import_from_module(stypy.reporting.localization.Localization(__file__, 2, 0), 'stypy_copy', sys_modules_7.module_type_store, module_type_store, ['stypy_parameters_copy'])
+        import_from_module(stypy.reporting.localization.Localization(__file__, 2, 0), 'stypy_copy', sys_modules_7.module_type_store, module_type_store, ['stypy_main_copy'])
         nest_module(stypy.reporting.localization.Localization(__file__, 2, 0), __file__, sys_modules_7, sys_modules_7.module_type_store, module_type_store)
     else:
-        from stypy_copy import stypy_parameters_copy
+        from stypy_copy import stypy_main_copy
 
-        import_from_module(stypy.reporting.localization.Localization(__file__, 2, 0), 'stypy_copy', None, module_type_store, ['stypy_parameters_copy'], [stypy_parameters_copy])
+        import_from_module(stypy.reporting.localization.Localization(__file__, 2, 0), 'stypy_copy', None, module_type_store, ['stypy_main_copy'], [stypy_main_copy])
 
 else:
     # Assigning a type to the variable 'stypy_copy' (line 2)
