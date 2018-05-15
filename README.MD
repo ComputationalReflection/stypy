@@ -124,5 +124,6 @@ Main features of the new 0.2 release include:
 - [10/05/2018] Fixed some rare code generation bugs.
 - [11/05/2018] Added type inference support for the os.makedirs function. Using with keyword with a file no longer throws a type error.
 - [14/05/2018] Fixed multiple problems when importing modules using relative paths. Now stypy is able to properly find imported modules.
+- [15/05/2018] Fixed additional problem with relative imports.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

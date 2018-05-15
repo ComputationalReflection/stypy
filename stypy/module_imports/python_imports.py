@@ -343,7 +343,7 @@ def get_module_member(localization, module_name, origin_type_store, member_name)
                     if sgmc_route[0] == ".":
                         sgmc_route = sgmc_route[1:]
                     if sgmc_route + "." + member_to_search in sys.modules:
-                        member_is_a_module = sys.modules["stypy.sgmc.sgmc_cache." + module_name + "." + member_to_search]
+                        member_is_a_module = sys.modules[sgmc_route + "." + member_to_search]
                     else:
                         force_path = False
                         forced_path = ""

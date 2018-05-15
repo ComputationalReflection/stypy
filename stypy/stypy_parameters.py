@@ -125,5 +125,5 @@ ENABLE_CODING_ADVICES = False
 """
 Maximum amount of type errors or type warnings to report (-1 means unlimited)
 """
-MAX_TYPE_ERRORS = 200
-MAX_TYPE_WARNINGS = 200
+MAX_TYPE_ERRORS = 100
+MAX_TYPE_WARNINGS = 100
