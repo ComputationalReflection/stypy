@@ -121,3 +121,9 @@ class TestCodeGenClass(TestCommon):
         result = self.run_stypy_with_program(file_path)
 
         self.assertEqual(result, 0)
+
+    def test_class_dict_att(self):
+        file_path = self.file_path + "/with_classes/class_assignments/class_dict_att.py"
+        result = self.run_stypy_with_program(file_path, output_results=True)
+
+        self.assertEqual(result, 0)

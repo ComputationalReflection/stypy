@@ -105,6 +105,10 @@ def __type_error_str(arg):
     else:
         if isinstance(arg, types.union_type.UnionType):
             return str(arg)
+        if isinstance(arg, types.standard_wrapper.StandardWrapper):
+            return str(arg)
+        if arg is types.undefined_type.UndefinedType:
+            return "UndefinedType"
         try:
             return type(arg).__name__
         except:

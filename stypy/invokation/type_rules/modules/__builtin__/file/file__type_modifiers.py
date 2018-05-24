@@ -24,3 +24,6 @@ class TypeModifiers:
 
         return ret_type
 
+    @staticmethod
+    def __enter__(localization, proxy_obj, arguments):
+        return get_self(proxy_obj)

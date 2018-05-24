@@ -158,7 +158,11 @@ class StatementVisitor(ast.NodeVisitor):
         # Generate code from setting a new context in the type store
         function_def.body.append(stypy_functions.create_src_comment
                                  ("Create a new context for function '{0}'".format(node.name)))
-        context_set = functions.create_context_set(node.name, node.lineno,
+        if statement_visitor_utilities.is_nested_function(context):
+            context_set = functions.create_context_set(node.name, node.lineno,
+                                                       node.col_offset, True)
+        else:
+            context_set = functions.create_context_set(node.name, node.lineno,
                                                    node.col_offset, False)
         function_def.body.append(context_set)
 

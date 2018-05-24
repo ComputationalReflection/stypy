@@ -15,6 +15,7 @@ from visitor_copy.type_inference_copy.desugaring_copy import class_attributes_vi
 from visitor_copy.type_inference_copy.desugaring_copy import class__init__visitor_copy
 from visitor_copy.type_annotation_copy.type_annotation_visitor_copy import TypeAnnotationVisitor
 import type_store_copy
+from type_store_copy.typestore_copy import TypeStore
 from python_lib_copy.python_types_copy import type_inference_copy
 from log_copy import logging_console_copy
 from code_generation_copy.source_code_writer_copy import write_python_source_code
@@ -465,7 +466,7 @@ class Stypy:
         if self.verbose:
             info("Parsing file '" + self.source_file_path + "'\n")
 
-        existing_ts = type_store_copy.typestore.TypeStore.get_type_store_of_module(self.source_file_path)
+        existing_ts = TypeStore.get_type_store_of_module(self.source_file_path)
         if existing_ts is not None:
             self.analyzed_program_type_store = existing_ts
             return existing_ts

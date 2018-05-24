@@ -1404,8 +1404,12 @@ class TypeModifiers:
     def __import__(localization, proxy_obj, arguments):
         if arguments is "":
             TypeWarning.enable_usage_of_dynamic_types_warning(localization, "__import__")
-            return types.ModuleType
+            return type_group_generator.DynamicType
         name = arguments[0]
+        if name is "":
+            TypeWarning.enable_usage_of_dynamic_types_warning(localization, "__import__")
+            return type_group_generator.DynamicType
+
         name_list = []
         for arg in arguments[1:]:
             if isinstance(arg, list):
@@ -1433,7 +1437,7 @@ class TypeModifiers:
                         return sys.modules[name]
 
                 TypeWarning.enable_usage_of_dynamic_types_warning(localization, "__import__")
-                return types.ModuleType
+                return type_group_generator.DynamicType
             except Exception as e:
                 return StypyTypeError(localization, "Cannot import module {0}: {1}".format(name, str(e)))
 

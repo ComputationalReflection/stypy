@@ -36,6 +36,20 @@ class PythonSrcGeneratorVisitor(ast.NodeVisitor):
     is disregarded.
     """
 
+    def interleave(self, inter, f, seq):
+        """
+        Call f on each item in seq, calling inter() in between.
+        """
+        seq = iter(seq)
+        try:
+            f(next(seq))
+        except StopIteration:
+            pass
+        else:
+            for x in seq:
+                inter()
+                f(x)
+
     def __init__(self, tree, verbose=False):
         self.output = StringIO()
         self.future_imports = []
@@ -447,7 +461,7 @@ class PythonSrcGeneratorVisitor(ast.NodeVisitor):
             self.write(": ")
             self.visit(v)
 
-        interleave(lambda: self.write(", "), write_pair, zip(t.keys, t.values))
+        self.interleave(lambda: self.write(", "), write_pair, zip(t.keys, t.values))
         self.write("}")
 
     def visit_Tuple(self, t):

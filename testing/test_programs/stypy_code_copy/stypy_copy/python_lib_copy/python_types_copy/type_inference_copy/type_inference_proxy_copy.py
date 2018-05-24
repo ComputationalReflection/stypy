@@ -1064,22 +1064,22 @@ class TypeInferenceProxy(Type):
         """
         return dir(self.python_entity)
 
-    def dict(self, localization):
-        """
-        Equivalent to call __dict__ over the stored Python instance
-        :param localization:
-        :return:
-        """
-        members = self.dir()
-        ret_dict = TypeInferenceProxy.instance(dict)
-        ret_dict.set_type_instance(True)
-        for member in members:
-            str_instance = TypeInferenceProxy.instance(str, value=member)
-
-            value = self.get_type_of_member(localization, member)
-            ret_dict.add_key_and_value_type(localization, (str_instance, value), False)
-
-        return ret_dict
+    # def dict(self, localization):
+    #     """
+    #     Equivalent to call __dict__ over the stored Python instance
+    #     :param localization:
+    #     :return:
+    #     """
+    #     members = self.dir()
+    #     ret_dict = TypeInferenceProxy.instance(dict)
+    #     ret_dict.set_type_instance(True)
+    #     for member in members:
+    #         str_instance = TypeInferenceProxy.instance(str, value=member)
+    #
+    #         value = self.get_type_of_member(localization, member)
+    #         ret_dict.add_key_and_value_type(localization, (str_instance, value), False)
+    #
+    #     return ret_dict
 
     def is_user_defined_class(self):
         """

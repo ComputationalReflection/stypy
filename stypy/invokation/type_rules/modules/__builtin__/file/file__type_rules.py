@@ -28,6 +28,6 @@ type_rules_of_members = {
     ],
 
     '__enter__': [
-        ((), types.NoneType),
+        ((), DynamicType),
     ],
 }

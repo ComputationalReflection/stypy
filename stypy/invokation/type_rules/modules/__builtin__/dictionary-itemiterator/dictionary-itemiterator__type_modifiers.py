@@ -12,3 +12,4 @@ class TypeModifiers:
         self_object = get_self(proxy_obj)
 
         return get_contained_elements_type(TypeWrapper.get_wrapper_of(self_object))
+

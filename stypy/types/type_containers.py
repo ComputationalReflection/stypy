@@ -9,6 +9,7 @@ from stypy.errors.type_error import StypyTypeError
 from stypy.reporting.localization import Localization
 from stypy.types import undefined_type, union_type
 from stypy.types.type_wrapper import TypeWrapper
+from stypy.invokation.type_rules import type_groups
 
 """
 This file contains functions that deal with types that may contain other types
@@ -66,6 +67,9 @@ def get_contained_elements_type(proxy_obj, multi_assign_arity=-1, multi_assign_i
     if type(proxy_obj) is file:
         return str()
 
+    if type(proxy_obj) is type_groups.type_groups.DynamicType:
+        return proxy_obj
+
     # Direct containers
     if type(proxy_obj) in types_that_store_contents_directly:
         try:
@@ -114,6 +118,9 @@ def set_contained_elements_type(proxy_obj, new_type):
     :param new_type:
     :return:
     """
+
+    if type(proxy_obj) is type_groups.type_groups.DynamicType:
+        return
 
     # Direct containers
     if type(proxy_obj) in types_that_store_contents_directly:
@@ -270,6 +277,9 @@ def get_key_types(obj):
     :param obj:
     :return:
     """
+    if isinstance(obj, union_type.UnionType):
+        return obj.get_contained_type()
+
     keys = obj.keys()
     return union_type.UnionType.create_from_type_list(keys)
 

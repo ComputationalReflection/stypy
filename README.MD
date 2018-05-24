@@ -125,5 +125,8 @@ Main features of the new 0.2 release include:
 - [11/05/2018] Added type inference support for the os.makedirs function. Using with keyword with a file no longer throws a type error.
 - [14/05/2018] Fixed multiple problems when importing modules using relative paths. Now stypy is able to properly find imported modules.
 - [15/05/2018] Fixed additional problem with relative imports.
+- [17/05/2018] Fixed type inference error when using the with keyword with a file object. Added suppor for the imp.load_source function call. Error messages involving call with undefined parameters are now more clear.
+- [23/05/2018] When trying to use container operations over a container whose type is DynamicType, no type error is produced.
+- [24/05/2018] When printing containers in errors, now the correct type of container (and its contained elements) is displayed. Solved type inference problem when obtaining the loop variable type when the type is a union type of two dicts.
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]

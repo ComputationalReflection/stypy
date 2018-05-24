@@ -502,6 +502,8 @@ class TypeObjectOfParam(TypeGroup, DependentType):
 
     def __call__(self, localization, *call_args, **call_kwargs):
         param = call_args[0][self.param_number - 1]
+        if isinstance(param, UndefinedType):
+            return param
         if not isinstance(param, TypeWrapper):
             ret = type(param)
         else:
