@@ -25,7 +25,7 @@ class TypeInferenceGeneratorVisitor(ast.NodeVisitor):
         self.file_name = file_name
         self.original_code = original_code
 
-    @classmethod
+    @staticmethod
     def get_postfix_src_code(cls):
         """
         All generated type inference programs has this code at the end, to capture generated TypeErrors and TypeWarnings

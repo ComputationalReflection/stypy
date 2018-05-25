@@ -17,7 +17,7 @@ from stypy.types.type_containers import get_contained_elements_type, set_contain
     set_contained_elements_type_for_key, can_store_keypairs, can_store_elements, get_key_types
 from stypy.types.type_inspection import is_error, is_str, is_function, is_method, dir_object, is_undefined, compare_type
 from stypy.types.type_intercession import get_member, set_member, has_member, del_member
-
+from stypy.reporting.localization import Localization
 
 class TypeModifiers:
     @staticmethod
@@ -839,6 +839,8 @@ class TypeModifiers:
             atts = dir_object(arguments[0])
             ret = None
             for att in atts:
+                if isinstance(att, Localization):
+                    continue
                 ret = union_type.UnionType.add(ret, get_member(localization, arguments[0], att))
 
             return ret

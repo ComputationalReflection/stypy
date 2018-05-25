@@ -30,7 +30,7 @@ ORIGINAL PROGRAM SOURCE CODE:
 25:         self.file_name = file_name
 26:         self.original_code = original_code
 27: 
-28:     @classmethod
+28:     @staticmethod
 29:     def get_postfix_src_code(cls):
 30:         '''
 31:         All generated type inference programs has this code at the end, to capture generated TypeErrors and TypeWarnings
@@ -87,15 +87,15 @@ stypy.reporting.localization.Localization.set_current(stypy.reporting.localizati
 
 # 'from testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy import stypy_functions_copy' statement (line 3)
 update_path_to_current_file_folder('C:/Users/redon/PycharmProjects/stypyV2/testing/test_programs/stypy_code_copy/stypy_copy/visitor_copy/type_inference_copy/')
-import_25862 = generate_type_inference_code_for_module(stypy.reporting.localization.Localization(__file__, 3, 0), 'testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy')
+import_1 = generate_type_inference_code_for_module(stypy.reporting.localization.Localization(__file__, 3, 0), 'testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy')
 
-if (type(import_25862) is not StypyTypeError):
+if (type(import_1) is not StypyTypeError):
 
-    if (import_25862 != 'pyd_module'):
-        __import__(import_25862)
-        sys_modules_25863 = sys.modules[import_25862]
-        import_from_module(stypy.reporting.localization.Localization(__file__, 3, 0), 'testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy', sys_modules_25863.module_type_store, module_type_store, ['stypy_functions_copy'])
-        nest_module(stypy.reporting.localization.Localization(__file__, 3, 0), __file__, sys_modules_25863, sys_modules_25863.module_type_store, module_type_store)
+    if (import_1 != 'pyd_module'):
+        __import__(import_1)
+        sys_modules_2 = sys.modules[import_1]
+        import_from_module(stypy.reporting.localization.Localization(__file__, 3, 0), 'testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy', sys_modules_2.module_type_store, module_type_store, ['stypy_functions_copy'])
+        nest_module(stypy.reporting.localization.Localization(__file__, 3, 0), __file__, sys_modules_2, sys_modules_2.module_type_store, module_type_store)
     else:
         from testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy import stypy_functions_copy
 
@@ -103,7 +103,7 @@ if (type(import_25862) is not StypyTypeError):
 
 else:
     # Assigning a type to the variable 'testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy' (line 3)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 3, 0), 'testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy', import_25862)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 3, 0), 'testing.test_programs.stypy_code_copy.stypy_copy.visitor_copy.type_inference_copy.visitor_utils_copy', import_1)
 
 remove_current_file_folder_from_path('C:/Users/redon/PycharmProjects/stypyV2/testing/test_programs/stypy_code_copy/stypy_copy/visitor_copy/type_inference_copy/')
 
@@ -111,14 +111,14 @@ stypy.reporting.localization.Localization.set_current(stypy.reporting.localizati
 
 # 'import statement_visitor_copy' statement (line 4)
 update_path_to_current_file_folder('C:/Users/redon/PycharmProjects/stypyV2/testing/test_programs/stypy_code_copy/stypy_copy/visitor_copy/type_inference_copy/')
-import_25864 = generate_type_inference_code_for_module(stypy.reporting.localization.Localization(__file__, 4, 0), 'statement_visitor_copy')
+import_3 = generate_type_inference_code_for_module(stypy.reporting.localization.Localization(__file__, 4, 0), 'statement_visitor_copy')
 
-if (type(import_25864) is not StypyTypeError):
+if (type(import_3) is not StypyTypeError):
 
-    if (import_25864 != 'pyd_module'):
-        __import__(import_25864)
-        sys_modules_25865 = sys.modules[import_25864]
-        import_module(stypy.reporting.localization.Localization(__file__, 4, 0), 'statement_visitor_copy', sys_modules_25865.module_type_store, module_type_store)
+    if (import_3 != 'pyd_module'):
+        __import__(import_3)
+        sys_modules_4 = sys.modules[import_3]
+        import_module(stypy.reporting.localization.Localization(__file__, 4, 0), 'statement_visitor_copy', sys_modules_4.module_type_store, module_type_store)
     else:
         import statement_visitor_copy
 
@@ -126,26 +126,26 @@ if (type(import_25864) is not StypyTypeError):
 
 else:
     # Assigning a type to the variable 'statement_visitor_copy' (line 4)
-    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 4, 0), 'statement_visitor_copy', import_25864)
+    module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 4, 0), 'statement_visitor_copy', import_3)
 
 remove_current_file_folder_from_path('C:/Users/redon/PycharmProjects/stypyV2/testing/test_programs/stypy_code_copy/stypy_copy/visitor_copy/type_inference_copy/')
 
 # Declaration of the 'TypeInferenceGeneratorVisitor' class
 # Getting the type of 'ast' (line 8)
-ast_25866 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 8, 36), 'ast')
+ast_5 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 8, 36), 'ast')
 # Obtaining the member 'NodeVisitor' of a type (line 8)
-NodeVisitor_25867 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 8, 36), ast_25866, 'NodeVisitor')
+NodeVisitor_6 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 8, 36), ast_5, 'NodeVisitor')
 
-class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
-    str_25868 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 14, (-1)), 'str', '\n    This visitor is responsible of generating type inference code AST Tree from standard Pyhon code contained in a\n    .py file. It just process the Module node, generating a fixed prefix code nodes, creating and running a\n    StatementVisitor object and appending a fixed postfix code at the end to form the full AST tree of the type\n    inference program created from a Python source code file.\n    ')
+class TypeInferenceGeneratorVisitor(NodeVisitor_6, ):
+    str_7 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 14, (-1)), 'str', '\n    This visitor is responsible of generating type inference code AST Tree from standard Pyhon code contained in a\n    .py file. It just process the Module node, generating a fixed prefix code nodes, creating and running a\n    StatementVisitor object and appending a fixed postfix code at the end to form the full AST tree of the type\n    inference program created from a Python source code file.\n    ')
 
     @norecursion
     def __init__(type_of_self, localization, *varargs, **kwargs):
         global module_type_store
         # Assign values to the parameters with defaults
         # Getting the type of 'None' (line 16)
-        None_25869 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 16, 48), 'None')
-        defaults = [None_25869]
+        None_8 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 16, 48), 'None')
+        defaults = [None_8]
         # Create a new context for function '__init__'
         module_type_store = module_type_store.open_function_context('__init__', 16, 4, False)
         # Assigning a type to the variable 'self' (line 17)
@@ -169,40 +169,40 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # ################# Begin of '__init__(...)' code ##################
 
-        str_25870 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 23, (-1)), 'str', '\n        Initialices the visitor.\n        :param file_name: File name of the source code whose ast will be parsed. This is needed for localization,\n        needed to report errors precisely.\n        :param original_code: If present, it includes the original file source code as a comment at the beggining of\n        the file. This can be useful for debugging purposes.\n        ')
+        str_9 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 23, (-1)), 'str', '\n        Initialices the visitor.\n        :param file_name: File name of the source code whose ast will be parsed. This is needed for localization,\n        needed to report errors precisely.\n        :param original_code: If present, it includes the original file source code as a comment at the beggining of\n        the file. This can be useful for debugging purposes.\n        ')
         
         # Assigning a Call to a Attribute (line 24):
         
         # Call to Module(...): (line 24)
         # Processing the call keyword arguments (line 24)
-        kwargs_25873 = {}
+        kwargs_12 = {}
         # Getting the type of 'ast' (line 24)
-        ast_25871 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 24, 34), 'ast', False)
+        ast_10 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 24, 34), 'ast', False)
         # Obtaining the member 'Module' of a type (line 24)
-        Module_25872 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 24, 34), ast_25871, 'Module')
+        Module_11 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 24, 34), ast_10, 'Module')
         # Calling Module(args, kwargs) (line 24)
-        Module_call_result_25874 = invoke(stypy.reporting.localization.Localization(__file__, 24, 34), Module_25872, *[], **kwargs_25873)
+        Module_call_result_13 = invoke(stypy.reporting.localization.Localization(__file__, 24, 34), Module_11, *[], **kwargs_12)
         
         # Getting the type of 'self' (line 24)
-        self_25875 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 24, 8), 'self')
+        self_14 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 24, 8), 'self')
         # Setting the type of the member 'type_inference_ast' of a type (line 24)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 24, 8), self_25875, 'type_inference_ast', Module_call_result_25874)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 24, 8), self_14, 'type_inference_ast', Module_call_result_13)
         
         # Assigning a Name to a Attribute (line 25):
         # Getting the type of 'file_name' (line 25)
-        file_name_25876 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 25, 25), 'file_name')
+        file_name_15 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 25, 25), 'file_name')
         # Getting the type of 'self' (line 25)
-        self_25877 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 25, 8), 'self')
+        self_16 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 25, 8), 'self')
         # Setting the type of the member 'file_name' of a type (line 25)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 25, 8), self_25877, 'file_name', file_name_25876)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 25, 8), self_16, 'file_name', file_name_15)
         
         # Assigning a Name to a Attribute (line 26):
         # Getting the type of 'original_code' (line 26)
-        original_code_25878 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 26, 29), 'original_code')
+        original_code_17 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 26, 29), 'original_code')
         # Getting the type of 'self' (line 26)
-        self_25879 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 26, 8), 'self')
+        self_18 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 26, 8), 'self')
         # Setting the type of the member 'original_code' of a type (line 26)
-        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 26, 8), self_25879, 'original_code', original_code_25878)
+        module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 26, 8), self_18, 'original_code', original_code_17)
         
         # ################# End of '__init__(...)' code ##################
 
@@ -212,29 +212,28 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         module_type_store = module_type_store.close_function_context()
 
 
+    @staticmethod
     @norecursion
-    def get_postfix_src_code(type_of_self, localization, *varargs, **kwargs):
+    def get_postfix_src_code(localization, *varargs, **kwargs):
         global module_type_store
         # Assign values to the parameters with defaults
         defaults = []
         # Create a new context for function 'get_postfix_src_code'
         module_type_store = module_type_store.open_function_context('get_postfix_src_code', 28, 4, False)
-        # Assigning a type to the variable 'self' (line 29)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 29, 4), 'self', type_of_self)
         
         # Passed parameters checking function
         TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_localization', localization)
-        TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_type_of_self', type_of_self)
+        TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_type_of_self', None)
         TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_type_store', module_type_store)
-        TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_function_name', 'TypeInferenceGeneratorVisitor.get_postfix_src_code')
-        TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_param_names_list', [])
+        TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_function_name', 'get_postfix_src_code')
+        TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_param_names_list', ['cls'])
         TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_varargs_param_name', None)
         TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_kwargs_param_name', None)
         TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_call_defaults', defaults)
         TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_call_varargs', varargs)
         TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_call_kwargs', kwargs)
         TypeInferenceGeneratorVisitor.get_postfix_src_code.__dict__.__setitem__('stypy_declared_arg_number', 1)
-        arguments = process_argument_values(localization, type_of_self, module_type_store, 'TypeInferenceGeneratorVisitor.get_postfix_src_code', [], None, None, defaults, varargs, kwargs)
+        arguments = process_argument_values(localization, None, module_type_store, 'get_postfix_src_code', ['cls'], None, None, defaults, varargs, kwargs)
 
         if is_error_type(arguments):
             # Destroy the current context
@@ -251,28 +250,28 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # ################# Begin of 'get_postfix_src_code(...)' code ##################
 
-        str_25880 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 34, (-1)), 'str', '\n        All generated type inference programs has this code at the end, to capture generated TypeErrors and TypeWarnings\n        in known variables\n        :return:\n        ')
+        str_19 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 34, (-1)), 'str', '\n        All generated type inference programs has this code at the end, to capture generated TypeErrors and TypeWarnings\n        in known variables\n        :return:\n        ')
         
         # Call to format(...): (line 35)
         # Processing the call arguments (line 35)
         # Getting the type of 'stypy_functions_copy' (line 36)
-        stypy_functions_copy_25883 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 36, 20), 'stypy_functions_copy', False)
+        stypy_functions_copy_22 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 36, 20), 'stypy_functions_copy', False)
         # Obtaining the member 'default_type_error_var_name' of a type (line 36)
-        default_type_error_var_name_25884 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 36, 20), stypy_functions_copy_25883, 'default_type_error_var_name')
+        default_type_error_var_name_23 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 36, 20), stypy_functions_copy_22, 'default_type_error_var_name')
         # Getting the type of 'stypy_functions_copy' (line 36)
-        stypy_functions_copy_25885 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 36, 70), 'stypy_functions_copy', False)
+        stypy_functions_copy_24 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 36, 70), 'stypy_functions_copy', False)
         # Obtaining the member 'default_type_warning_var_name' of a type (line 36)
-        default_type_warning_var_name_25886 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 36, 70), stypy_functions_copy_25885, 'default_type_warning_var_name')
+        default_type_warning_var_name_25 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 36, 70), stypy_functions_copy_24, 'default_type_warning_var_name')
         # Processing the call keyword arguments (line 35)
-        kwargs_25887 = {}
-        str_25881 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 35, 15), 'str', '\n{0} = stypy.errors.type_error.TypeError.get_error_msgs()\n{1} = stypy.errors.type_warning.TypeWarning.get_warning_msgs()\n')
+        kwargs_26 = {}
+        str_20 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 35, 15), 'str', '\n{0} = stypy.errors.type_error.TypeError.get_error_msgs()\n{1} = stypy.errors.type_warning.TypeWarning.get_warning_msgs()\n')
         # Obtaining the member 'format' of a type (line 35)
-        format_25882 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 35, 15), str_25881, 'format')
+        format_21 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 35, 15), str_20, 'format')
         # Calling format(args, kwargs) (line 35)
-        format_call_result_25888 = invoke(stypy.reporting.localization.Localization(__file__, 35, 15), format_25882, *[default_type_error_var_name_25884, default_type_warning_var_name_25886], **kwargs_25887)
+        format_call_result_27 = invoke(stypy.reporting.localization.Localization(__file__, 35, 15), format_21, *[default_type_error_var_name_23, default_type_warning_var_name_25], **kwargs_26)
         
         # Assigning a type to the variable 'stypy_return_type' (line 35)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 35, 8), 'stypy_return_type', format_call_result_25888)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 35, 8), 'stypy_return_type', format_call_result_27)
         
         # ################# End of 'get_postfix_src_code(...)' code ##################
 
@@ -281,14 +280,14 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Storing the return type of function 'get_postfix_src_code' in the type store
         # Getting the type of 'stypy_return_type' (line 28)
-        stypy_return_type_25889 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 28, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_25889)
+        stypy_return_type_28 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 28, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_28)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function 'get_postfix_src_code'
-        return stypy_return_type_25889
+        return stypy_return_type_28
 
 
     @norecursion
@@ -335,14 +334,14 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Call to list(...): (line 39)
         # Processing the call keyword arguments (line 39)
-        kwargs_25891 = {}
+        kwargs_30 = {}
         # Getting the type of 'list' (line 39)
-        list_25890 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 39, 20), 'list', False)
+        list_29 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 39, 20), 'list', False)
         # Calling list(args, kwargs) (line 39)
-        list_call_result_25892 = invoke(stypy.reporting.localization.Localization(__file__, 39, 20), list_25890, *[], **kwargs_25891)
+        list_call_result_31 = invoke(stypy.reporting.localization.Localization(__file__, 39, 20), list_29, *[], **kwargs_30)
         
         # Assigning a type to the variable 'new_stmts' (line 39)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 39, 8), 'new_stmts', list_call_result_25892)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 39, 8), 'new_stmts', list_call_result_31)
         
         # Call to append(...): (line 43)
         # Processing the call arguments (line 43)
@@ -350,30 +349,30 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         # Call to create_original_code_comment(...): (line 43)
         # Processing the call arguments (line 43)
         # Getting the type of 'self' (line 43)
-        self_25897 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 43, 75), 'self', False)
+        self_36 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 43, 75), 'self', False)
         # Obtaining the member 'file_name' of a type (line 43)
-        file_name_25898 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 43, 75), self_25897, 'file_name')
+        file_name_37 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 43, 75), self_36, 'file_name')
         # Getting the type of 'self' (line 43)
-        self_25899 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 43, 91), 'self', False)
+        self_38 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 43, 91), 'self', False)
         # Obtaining the member 'original_code' of a type (line 43)
-        original_code_25900 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 43, 91), self_25899, 'original_code')
+        original_code_39 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 43, 91), self_38, 'original_code')
         # Processing the call keyword arguments (line 43)
-        kwargs_25901 = {}
+        kwargs_40 = {}
         # Getting the type of 'stypy_functions_copy' (line 43)
-        stypy_functions_copy_25895 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 43, 25), 'stypy_functions_copy', False)
+        stypy_functions_copy_34 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 43, 25), 'stypy_functions_copy', False)
         # Obtaining the member 'create_original_code_comment' of a type (line 43)
-        create_original_code_comment_25896 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 43, 25), stypy_functions_copy_25895, 'create_original_code_comment')
+        create_original_code_comment_35 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 43, 25), stypy_functions_copy_34, 'create_original_code_comment')
         # Calling create_original_code_comment(args, kwargs) (line 43)
-        create_original_code_comment_call_result_25902 = invoke(stypy.reporting.localization.Localization(__file__, 43, 25), create_original_code_comment_25896, *[file_name_25898, original_code_25900], **kwargs_25901)
+        create_original_code_comment_call_result_41 = invoke(stypy.reporting.localization.Localization(__file__, 43, 25), create_original_code_comment_35, *[file_name_37, original_code_39], **kwargs_40)
         
         # Processing the call keyword arguments (line 43)
-        kwargs_25903 = {}
+        kwargs_42 = {}
         # Getting the type of 'new_stmts' (line 43)
-        new_stmts_25893 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 43, 8), 'new_stmts', False)
+        new_stmts_32 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 43, 8), 'new_stmts', False)
         # Obtaining the member 'append' of a type (line 43)
-        append_25894 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 43, 8), new_stmts_25893, 'append')
+        append_33 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 43, 8), new_stmts_32, 'append')
         # Calling append(args, kwargs) (line 43)
-        append_call_result_25904 = invoke(stypy.reporting.localization.Localization(__file__, 43, 8), append_25894, *[create_original_code_comment_call_result_25902], **kwargs_25903)
+        append_call_result_43 = invoke(stypy.reporting.localization.Localization(__file__, 43, 8), append_33, *[create_original_code_comment_call_result_41], **kwargs_42)
         
         
         # Call to append(...): (line 46)
@@ -381,24 +380,24 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Call to create_src_comment(...): (line 46)
         # Processing the call arguments (line 46)
-        str_25909 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 46, 65), 'str', 'Import the stypy library')
+        str_48 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 46, 65), 'str', 'Import the stypy library')
         # Processing the call keyword arguments (line 46)
-        kwargs_25910 = {}
+        kwargs_49 = {}
         # Getting the type of 'stypy_functions_copy' (line 46)
-        stypy_functions_copy_25907 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 46, 25), 'stypy_functions_copy', False)
+        stypy_functions_copy_46 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 46, 25), 'stypy_functions_copy', False)
         # Obtaining the member 'create_src_comment' of a type (line 46)
-        create_src_comment_25908 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 46, 25), stypy_functions_copy_25907, 'create_src_comment')
+        create_src_comment_47 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 46, 25), stypy_functions_copy_46, 'create_src_comment')
         # Calling create_src_comment(args, kwargs) (line 46)
-        create_src_comment_call_result_25911 = invoke(stypy.reporting.localization.Localization(__file__, 46, 25), create_src_comment_25908, *[str_25909], **kwargs_25910)
+        create_src_comment_call_result_50 = invoke(stypy.reporting.localization.Localization(__file__, 46, 25), create_src_comment_47, *[str_48], **kwargs_49)
         
         # Processing the call keyword arguments (line 46)
-        kwargs_25912 = {}
+        kwargs_51 = {}
         # Getting the type of 'new_stmts' (line 46)
-        new_stmts_25905 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 46, 8), 'new_stmts', False)
+        new_stmts_44 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 46, 8), 'new_stmts', False)
         # Obtaining the member 'append' of a type (line 46)
-        append_25906 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 46, 8), new_stmts_25905, 'append')
+        append_45 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 46, 8), new_stmts_44, 'append')
         # Calling append(args, kwargs) (line 46)
-        append_call_result_25913 = invoke(stypy.reporting.localization.Localization(__file__, 46, 8), append_25906, *[create_src_comment_call_result_25911], **kwargs_25912)
+        append_call_result_52 = invoke(stypy.reporting.localization.Localization(__file__, 46, 8), append_45, *[create_src_comment_call_result_50], **kwargs_51)
         
         
         # Call to append(...): (line 47)
@@ -406,22 +405,22 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Call to create_import_stypy(...): (line 47)
         # Processing the call keyword arguments (line 47)
-        kwargs_25918 = {}
+        kwargs_57 = {}
         # Getting the type of 'stypy_functions_copy' (line 47)
-        stypy_functions_copy_25916 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 47, 25), 'stypy_functions_copy', False)
+        stypy_functions_copy_55 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 47, 25), 'stypy_functions_copy', False)
         # Obtaining the member 'create_import_stypy' of a type (line 47)
-        create_import_stypy_25917 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 47, 25), stypy_functions_copy_25916, 'create_import_stypy')
+        create_import_stypy_56 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 47, 25), stypy_functions_copy_55, 'create_import_stypy')
         # Calling create_import_stypy(args, kwargs) (line 47)
-        create_import_stypy_call_result_25919 = invoke(stypy.reporting.localization.Localization(__file__, 47, 25), create_import_stypy_25917, *[], **kwargs_25918)
+        create_import_stypy_call_result_58 = invoke(stypy.reporting.localization.Localization(__file__, 47, 25), create_import_stypy_56, *[], **kwargs_57)
         
         # Processing the call keyword arguments (line 47)
-        kwargs_25920 = {}
+        kwargs_59 = {}
         # Getting the type of 'new_stmts' (line 47)
-        new_stmts_25914 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 47, 8), 'new_stmts', False)
+        new_stmts_53 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 47, 8), 'new_stmts', False)
         # Obtaining the member 'append' of a type (line 47)
-        append_25915 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 47, 8), new_stmts_25914, 'append')
+        append_54 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 47, 8), new_stmts_53, 'append')
         # Calling append(args, kwargs) (line 47)
-        append_call_result_25921 = invoke(stypy.reporting.localization.Localization(__file__, 47, 8), append_25915, *[create_import_stypy_call_result_25919], **kwargs_25920)
+        append_call_result_60 = invoke(stypy.reporting.localization.Localization(__file__, 47, 8), append_54, *[create_import_stypy_call_result_58], **kwargs_59)
         
         
         # Call to append(...): (line 50)
@@ -429,24 +428,24 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Call to create_src_comment(...): (line 50)
         # Processing the call arguments (line 50)
-        str_25926 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 50, 65), 'str', 'Create the module type store')
+        str_65 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 50, 65), 'str', 'Create the module type store')
         # Processing the call keyword arguments (line 50)
-        kwargs_25927 = {}
+        kwargs_66 = {}
         # Getting the type of 'stypy_functions_copy' (line 50)
-        stypy_functions_copy_25924 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 50, 25), 'stypy_functions_copy', False)
+        stypy_functions_copy_63 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 50, 25), 'stypy_functions_copy', False)
         # Obtaining the member 'create_src_comment' of a type (line 50)
-        create_src_comment_25925 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 50, 25), stypy_functions_copy_25924, 'create_src_comment')
+        create_src_comment_64 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 50, 25), stypy_functions_copy_63, 'create_src_comment')
         # Calling create_src_comment(args, kwargs) (line 50)
-        create_src_comment_call_result_25928 = invoke(stypy.reporting.localization.Localization(__file__, 50, 25), create_src_comment_25925, *[str_25926], **kwargs_25927)
+        create_src_comment_call_result_67 = invoke(stypy.reporting.localization.Localization(__file__, 50, 25), create_src_comment_64, *[str_65], **kwargs_66)
         
         # Processing the call keyword arguments (line 50)
-        kwargs_25929 = {}
+        kwargs_68 = {}
         # Getting the type of 'new_stmts' (line 50)
-        new_stmts_25922 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 50, 8), 'new_stmts', False)
+        new_stmts_61 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 50, 8), 'new_stmts', False)
         # Obtaining the member 'append' of a type (line 50)
-        append_25923 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 50, 8), new_stmts_25922, 'append')
+        append_62 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 50, 8), new_stmts_61, 'append')
         # Calling append(args, kwargs) (line 50)
-        append_call_result_25930 = invoke(stypy.reporting.localization.Localization(__file__, 50, 8), append_25923, *[create_src_comment_call_result_25928], **kwargs_25929)
+        append_call_result_69 = invoke(stypy.reporting.localization.Localization(__file__, 50, 8), append_62, *[create_src_comment_call_result_67], **kwargs_68)
         
         
         # Call to append(...): (line 51)
@@ -454,22 +453,22 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Call to create_type_store(...): (line 51)
         # Processing the call keyword arguments (line 51)
-        kwargs_25935 = {}
+        kwargs_74 = {}
         # Getting the type of 'stypy_functions_copy' (line 51)
-        stypy_functions_copy_25933 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 51, 25), 'stypy_functions_copy', False)
+        stypy_functions_copy_72 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 51, 25), 'stypy_functions_copy', False)
         # Obtaining the member 'create_type_store' of a type (line 51)
-        create_type_store_25934 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 51, 25), stypy_functions_copy_25933, 'create_type_store')
+        create_type_store_73 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 51, 25), stypy_functions_copy_72, 'create_type_store')
         # Calling create_type_store(args, kwargs) (line 51)
-        create_type_store_call_result_25936 = invoke(stypy.reporting.localization.Localization(__file__, 51, 25), create_type_store_25934, *[], **kwargs_25935)
+        create_type_store_call_result_75 = invoke(stypy.reporting.localization.Localization(__file__, 51, 25), create_type_store_73, *[], **kwargs_74)
         
         # Processing the call keyword arguments (line 51)
-        kwargs_25937 = {}
+        kwargs_76 = {}
         # Getting the type of 'new_stmts' (line 51)
-        new_stmts_25931 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 51, 8), 'new_stmts', False)
+        new_stmts_70 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 51, 8), 'new_stmts', False)
         # Obtaining the member 'append' of a type (line 51)
-        append_25932 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 51, 8), new_stmts_25931, 'append')
+        append_71 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 51, 8), new_stmts_70, 'append')
         # Calling append(args, kwargs) (line 51)
-        append_call_result_25938 = invoke(stypy.reporting.localization.Localization(__file__, 51, 8), append_25932, *[create_type_store_call_result_25936], **kwargs_25937)
+        append_call_result_77 = invoke(stypy.reporting.localization.Localization(__file__, 51, 8), append_71, *[create_type_store_call_result_75], **kwargs_76)
         
         
         # Call to append(...): (line 53)
@@ -477,24 +476,24 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Call to create_program_section_src_comment(...): (line 53)
         # Processing the call arguments (line 53)
-        str_25943 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 53, 81), 'str', 'Begin of the type inference program')
+        str_82 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 53, 81), 'str', 'Begin of the type inference program')
         # Processing the call keyword arguments (line 53)
-        kwargs_25944 = {}
+        kwargs_83 = {}
         # Getting the type of 'stypy_functions_copy' (line 53)
-        stypy_functions_copy_25941 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 53, 25), 'stypy_functions_copy', False)
+        stypy_functions_copy_80 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 53, 25), 'stypy_functions_copy', False)
         # Obtaining the member 'create_program_section_src_comment' of a type (line 53)
-        create_program_section_src_comment_25942 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 53, 25), stypy_functions_copy_25941, 'create_program_section_src_comment')
+        create_program_section_src_comment_81 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 53, 25), stypy_functions_copy_80, 'create_program_section_src_comment')
         # Calling create_program_section_src_comment(args, kwargs) (line 53)
-        create_program_section_src_comment_call_result_25945 = invoke(stypy.reporting.localization.Localization(__file__, 53, 25), create_program_section_src_comment_25942, *[str_25943], **kwargs_25944)
+        create_program_section_src_comment_call_result_84 = invoke(stypy.reporting.localization.Localization(__file__, 53, 25), create_program_section_src_comment_81, *[str_82], **kwargs_83)
         
         # Processing the call keyword arguments (line 53)
-        kwargs_25946 = {}
+        kwargs_85 = {}
         # Getting the type of 'new_stmts' (line 53)
-        new_stmts_25939 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 53, 8), 'new_stmts', False)
+        new_stmts_78 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 53, 8), 'new_stmts', False)
         # Obtaining the member 'append' of a type (line 53)
-        append_25940 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 53, 8), new_stmts_25939, 'append')
+        append_79 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 53, 8), new_stmts_78, 'append')
         # Calling append(args, kwargs) (line 53)
-        append_call_result_25947 = invoke(stypy.reporting.localization.Localization(__file__, 53, 8), append_25940, *[create_program_section_src_comment_call_result_25945], **kwargs_25946)
+        append_call_result_86 = invoke(stypy.reporting.localization.Localization(__file__, 53, 8), append_79, *[create_program_section_src_comment_call_result_84], **kwargs_85)
         
         
         # Assigning a Call to a Name (line 56):
@@ -502,20 +501,20 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         # Call to StatementVisitor(...): (line 56)
         # Processing the call arguments (line 56)
         # Getting the type of 'self' (line 56)
-        self_25950 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 56, 69), 'self', False)
+        self_89 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 56, 69), 'self', False)
         # Obtaining the member 'file_name' of a type (line 56)
-        file_name_25951 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 56, 69), self_25950, 'file_name')
+        file_name_90 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 56, 69), self_89, 'file_name')
         # Processing the call keyword arguments (line 56)
-        kwargs_25952 = {}
+        kwargs_91 = {}
         # Getting the type of 'statement_visitor_copy' (line 56)
-        statement_visitor_copy_25948 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 56, 29), 'statement_visitor_copy', False)
+        statement_visitor_copy_87 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 56, 29), 'statement_visitor_copy', False)
         # Obtaining the member 'StatementVisitor' of a type (line 56)
-        StatementVisitor_25949 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 56, 29), statement_visitor_copy_25948, 'StatementVisitor')
+        StatementVisitor_88 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 56, 29), statement_visitor_copy_87, 'StatementVisitor')
         # Calling StatementVisitor(args, kwargs) (line 56)
-        StatementVisitor_call_result_25953 = invoke(stypy.reporting.localization.Localization(__file__, 56, 29), StatementVisitor_25949, *[file_name_25951], **kwargs_25952)
+        StatementVisitor_call_result_92 = invoke(stypy.reporting.localization.Localization(__file__, 56, 29), StatementVisitor_88, *[file_name_90], **kwargs_91)
         
         # Assigning a type to the variable 'statements_visitor' (line 56)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 56, 8), 'statements_visitor', StatementVisitor_call_result_25953)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 56, 8), 'statements_visitor', StatementVisitor_call_result_92)
         
         # Call to extend(...): (line 58)
         # Processing the call arguments (line 58)
@@ -523,29 +522,29 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         # Call to visit(...): (line 58)
         # Processing the call arguments (line 58)
         # Getting the type of 'node' (line 58)
-        node_25958 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 58, 50), 'node', False)
+        node_97 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 58, 50), 'node', False)
         
         # Obtaining an instance of the builtin type 'list' (line 58)
-        list_25959 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 58, 56), 'list')
+        list_98 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 58, 56), 'list')
         # Adding type elements to the builtin type 'list' instance (line 58)
         
         # Processing the call keyword arguments (line 58)
-        kwargs_25960 = {}
+        kwargs_99 = {}
         # Getting the type of 'statements_visitor' (line 58)
-        statements_visitor_25956 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 58, 25), 'statements_visitor', False)
+        statements_visitor_95 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 58, 25), 'statements_visitor', False)
         # Obtaining the member 'visit' of a type (line 58)
-        visit_25957 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 58, 25), statements_visitor_25956, 'visit')
+        visit_96 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 58, 25), statements_visitor_95, 'visit')
         # Calling visit(args, kwargs) (line 58)
-        visit_call_result_25961 = invoke(stypy.reporting.localization.Localization(__file__, 58, 25), visit_25957, *[node_25958, list_25959], **kwargs_25960)
+        visit_call_result_100 = invoke(stypy.reporting.localization.Localization(__file__, 58, 25), visit_96, *[node_97, list_98], **kwargs_99)
         
         # Processing the call keyword arguments (line 58)
-        kwargs_25962 = {}
+        kwargs_101 = {}
         # Getting the type of 'new_stmts' (line 58)
-        new_stmts_25954 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 58, 8), 'new_stmts', False)
+        new_stmts_93 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 58, 8), 'new_stmts', False)
         # Obtaining the member 'extend' of a type (line 58)
-        extend_25955 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 58, 8), new_stmts_25954, 'extend')
+        extend_94 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 58, 8), new_stmts_93, 'extend')
         # Calling extend(args, kwargs) (line 58)
-        extend_call_result_25963 = invoke(stypy.reporting.localization.Localization(__file__, 58, 8), extend_25955, *[visit_call_result_25961], **kwargs_25962)
+        extend_call_result_102 = invoke(stypy.reporting.localization.Localization(__file__, 58, 8), extend_94, *[visit_call_result_100], **kwargs_101)
         
         
         # Call to append(...): (line 60)
@@ -553,41 +552,41 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Call to create_program_section_src_comment(...): (line 60)
         # Processing the call arguments (line 60)
-        str_25968 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 60, 81), 'str', 'End of the type inference program')
+        str_107 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 60, 81), 'str', 'End of the type inference program')
         # Processing the call keyword arguments (line 60)
-        kwargs_25969 = {}
+        kwargs_108 = {}
         # Getting the type of 'stypy_functions_copy' (line 60)
-        stypy_functions_copy_25966 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 60, 25), 'stypy_functions_copy', False)
+        stypy_functions_copy_105 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 60, 25), 'stypy_functions_copy', False)
         # Obtaining the member 'create_program_section_src_comment' of a type (line 60)
-        create_program_section_src_comment_25967 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 60, 25), stypy_functions_copy_25966, 'create_program_section_src_comment')
+        create_program_section_src_comment_106 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 60, 25), stypy_functions_copy_105, 'create_program_section_src_comment')
         # Calling create_program_section_src_comment(args, kwargs) (line 60)
-        create_program_section_src_comment_call_result_25970 = invoke(stypy.reporting.localization.Localization(__file__, 60, 25), create_program_section_src_comment_25967, *[str_25968], **kwargs_25969)
+        create_program_section_src_comment_call_result_109 = invoke(stypy.reporting.localization.Localization(__file__, 60, 25), create_program_section_src_comment_106, *[str_107], **kwargs_108)
         
         # Processing the call keyword arguments (line 60)
-        kwargs_25971 = {}
+        kwargs_110 = {}
         # Getting the type of 'new_stmts' (line 60)
-        new_stmts_25964 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 60, 8), 'new_stmts', False)
+        new_stmts_103 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 60, 8), 'new_stmts', False)
         # Obtaining the member 'append' of a type (line 60)
-        append_25965 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 60, 8), new_stmts_25964, 'append')
+        append_104 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 60, 8), new_stmts_103, 'append')
         # Calling append(args, kwargs) (line 60)
-        append_call_result_25972 = invoke(stypy.reporting.localization.Localization(__file__, 60, 8), append_25965, *[create_program_section_src_comment_call_result_25970], **kwargs_25971)
+        append_call_result_111 = invoke(stypy.reporting.localization.Localization(__file__, 60, 8), append_104, *[create_program_section_src_comment_call_result_109], **kwargs_110)
         
         
         # Call to Module(...): (line 61)
         # Processing the call arguments (line 61)
         # Getting the type of 'new_stmts' (line 61)
-        new_stmts_25975 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 61, 26), 'new_stmts', False)
+        new_stmts_114 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 61, 26), 'new_stmts', False)
         # Processing the call keyword arguments (line 61)
-        kwargs_25976 = {}
+        kwargs_115 = {}
         # Getting the type of 'ast' (line 61)
-        ast_25973 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 61, 15), 'ast', False)
+        ast_112 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 61, 15), 'ast', False)
         # Obtaining the member 'Module' of a type (line 61)
-        Module_25974 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 61, 15), ast_25973, 'Module')
+        Module_113 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 61, 15), ast_112, 'Module')
         # Calling Module(args, kwargs) (line 61)
-        Module_call_result_25977 = invoke(stypy.reporting.localization.Localization(__file__, 61, 15), Module_25974, *[new_stmts_25975], **kwargs_25976)
+        Module_call_result_116 = invoke(stypy.reporting.localization.Localization(__file__, 61, 15), Module_113, *[new_stmts_114], **kwargs_115)
         
         # Assigning a type to the variable 'stypy_return_type' (line 61)
-        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 61, 8), 'stypy_return_type', Module_call_result_25977)
+        module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 61, 8), 'stypy_return_type', Module_call_result_116)
         
         # ################# End of 'generic_visit(...)' code ##################
 
@@ -596,14 +595,14 @@ class TypeInferenceGeneratorVisitor(NodeVisitor_25867, ):
         
         # Storing the return type of function 'generic_visit' in the type store
         # Getting the type of 'stypy_return_type' (line 38)
-        stypy_return_type_25978 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 38, 4), 'stypy_return_type')
-        module_type_store.store_return_type_of_current_context(stypy_return_type_25978)
+        stypy_return_type_117 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 38, 4), 'stypy_return_type')
+        module_type_store.store_return_type_of_current_context(stypy_return_type_117)
         
         # Destroy the current context
         module_type_store = module_type_store.close_function_context()
         
         # Return type of the function 'generic_visit'
-        return stypy_return_type_25978
+        return stypy_return_type_117
 
 
 # Assigning a type to the variable 'TypeInferenceGeneratorVisitor' (line 8)

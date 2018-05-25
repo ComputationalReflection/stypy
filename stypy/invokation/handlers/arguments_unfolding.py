@@ -89,9 +89,12 @@ def __unfold_union_types_from_args(argument_list, possible_argument_combinations
     """
     if not __has_union_types(argument_list):
         #if argument_list not in possible_argument_combinations_list:
-        if not __list_in_list(argument_list, possible_argument_combinations_list):
-            possible_argument_combinations_list.append(argument_list)
-        return
+        try:
+            if not __list_in_list(argument_list, possible_argument_combinations_list):
+                possible_argument_combinations_list.append(argument_list)
+            return
+        except:
+            pass
     for cont in xrange(len(argument_list)):
         arg = argument_list[cont]
         # For each union type, make type checks using each of their contained types
