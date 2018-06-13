@@ -285,6 +285,7 @@ def get_member(localization, obj, member):
         else:
             return get_member_from_object(localization, obj, member)
 
+reserved_members = ['__dict__', '__name__', '__bases__']
 
 def set_member_to_object(localization, obj, name, value):
     """
@@ -305,6 +306,13 @@ def set_member_to_object(localization, obj, name, value):
         if isinstance(obj, TypeWrapper) and obj.is_declared_member(name):
             return obj.set_type_of_member(name, value)
 
+        if name in reserved_members:
+            try:
+                set_attr(obj, name, value)
+                return
+            except:
+                set_attr(obj, '__stypy'+ name, value)
+                return
         set_attr(obj, name, value)
     except Exception as exc:
         return StypyTypeError.member_cannot_be_set_error(localization, obj, name, value, str(exc))

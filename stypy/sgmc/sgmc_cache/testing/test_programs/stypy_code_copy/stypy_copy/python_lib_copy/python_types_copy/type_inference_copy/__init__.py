@@ -20,38 +20,38 @@ module_type_store = Context(None, __file__)
 
 
 # Assigning a Str to a Name (line 1):
-str_14232 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 1, 13), 'str', 'Usuario')
+str_8 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 1, 13), 'str', 'Usuario')
 # Assigning a type to the variable '__author__' (line 1)
-module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 1, 0), '__author__', str_14232)
+module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 1, 0), '__author__', str_8)
 
 # Assigning a List to a Name (line 2):
 __all__ = ['localization_copy', 'no_recursion_copy', 'type_inference_proxy_copy', 'type_inference_proxy_management_copy', 'undefined_type_copy', 'union_type_copy']
 module_type_store.set_exportable_members(['localization_copy', 'no_recursion_copy', 'type_inference_proxy_copy', 'type_inference_proxy_management_copy', 'undefined_type_copy', 'union_type_copy'])
 
 # Obtaining an instance of the builtin type 'list' (line 2)
-list_14233 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 10), 'list')
+list_9 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 10), 'list')
 # Adding type elements to the builtin type 'list' instance (line 2)
 # Adding element type (line 2)
-str_14234 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 11), 'str', 'localization_copy')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_14233, str_14234)
+str_10 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 11), 'str', 'localization_copy')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_9, str_10)
 # Adding element type (line 2)
-str_14235 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 32), 'str', 'no_recursion_copy')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_14233, str_14235)
+str_11 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 32), 'str', 'no_recursion_copy')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_9, str_11)
 # Adding element type (line 2)
-str_14236 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 53), 'str', 'type_inference_proxy_copy')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_14233, str_14236)
+str_12 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 53), 'str', 'type_inference_proxy_copy')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_9, str_12)
 # Adding element type (line 2)
-str_14237 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 82), 'str', 'type_inference_proxy_management_copy')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_14233, str_14237)
+str_13 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 2, 82), 'str', 'type_inference_proxy_management_copy')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_9, str_13)
 # Adding element type (line 2)
-str_14238 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 3, 11), 'str', 'undefined_type_copy')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_14233, str_14238)
+str_14 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 3, 11), 'str', 'undefined_type_copy')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_9, str_14)
 # Adding element type (line 2)
-str_14239 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 3, 34), 'str', 'union_type_copy')
-add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_14233, str_14239)
+str_15 = get_builtin_python_type_instance(stypy.reporting.localization.Localization(__file__, 3, 34), 'str', 'union_type_copy')
+add_contained_elements_type(stypy.reporting.localization.Localization(__file__, 2, 10), list_9, str_15)
 
 # Assigning a type to the variable '__all__' (line 2)
-module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 2, 0), '__all__', list_14233)
+module_type_store.set_type_of(stypy.reporting.localization.Localization(__file__, 2, 0), '__all__', list_9)
 
 # ################# End of the type inference program ##################
 

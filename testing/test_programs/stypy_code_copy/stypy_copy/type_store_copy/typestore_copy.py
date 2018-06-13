@@ -11,7 +11,7 @@ from type_annotation_record_copy import TypeAnnotationRecord
 from ...stypy_copy import stypy_parameters_copy
 
 
-class TypeStore(non_python_type_copy.NonPythonType):
+class TypeStore:#(non_python_type_copy.NonPythonType):
     """
     A TypeStore contains all the registered variable, function names and types within a particular file (module).
     It functions like a central storage of type information for the file, and allows any program to perform type

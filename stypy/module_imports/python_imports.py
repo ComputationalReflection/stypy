@@ -363,8 +363,13 @@ def get_module_member(localization, module_name, origin_type_store, member_name)
                                 exec ("from stypy.sgmc.sgmc_cache." + module_name + " import " + member_to_search.split('.')[-1])
                                 member_is_a_module = eval(member_to_search)
                             except:
-                                exec ("from " + sgmc_route + " import " + member_to_search)
-                                member_is_a_module = eval(member_to_search)
+                                try:
+                                    exec ("from " + sgmc_route + " import " + member_to_search)
+                                    member_is_a_module = eval(member_to_search)
+                                except:
+                                    __import__(sgmc_route)
+                                    module = sys.modules[sgmc_route]
+                                    member_is_a_module = module.module_type_store[member_to_search]
 
                         if force_path:
                             sys.path.remove(forced_path)

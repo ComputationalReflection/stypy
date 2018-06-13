@@ -300,7 +300,7 @@ class StypyTypeError(TypeError):
     def member_cannot_be_set_error(localization, obj, member_name, type_, reason):
         return StypyTypeError(localization,
                               "The member '{0}' of object '{1}' cannot be set to the value '{2}' due to the following"
-                              "reasons: '{3}'".format(
+                              " reasons: '{3}'".format(
                                   member_name, StypyTypeError.__format_type(obj), StypyTypeError.__format_type(type_),
                                   str(reason)))
 
@@ -308,7 +308,7 @@ class StypyTypeError(TypeError):
     def member_cannot_be_deleted_error(localization, obj, member_name, reason):
         return StypyTypeError(localization,
                               "The member '{0}' of object '{1}' cannot be deleted due to the following"
-                              "reasons: '{2}'".format(
+                              " reasons: '{2}'".format(
                                   member_name, StypyTypeError.__format_type(obj), str(reason)))
 
     @staticmethod
