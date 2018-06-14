@@ -203,8 +203,8 @@ ORIGINAL PROGRAM SOURCE CODE:
 198: 
 199:         # Configure all FunctionContext and TypeInferenceProxy objects to use type annotation, that will be later used
 200:         # to create type annotated source files
-201:         type_store_copy.function_context_copy.FunctionContext.annotate_types = generate_type_annotated_program
-202:         type_inference_copy.type_inference_proxy_copy.TypeInferenceProxy.annotate_types = generate_type_annotated_program
+201:         type_store_copy.funcion_context_copy.FunctionContext.annotate_types = generate_type_annotated_program
+202:         type_inference_copy.type_inerence_proxy_copy.TypeInferenceProxy.annotate_types = generate_type_annotated_program
 203: 
 204:         # Output configuration
 205:         self.verbose = verbose
@@ -2073,25 +2073,25 @@ class Stypy:
         
         # Assigning a Name to a Attribute (line 201):
         # Getting the type of 'generate_type_annotated_program' (line 201)
-        generate_type_annotated_program_217 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 201, 79), 'generate_type_annotated_program')
+        generate_type_annotated_program_217 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 201, 78), 'generate_type_annotated_program')
         # Getting the type of 'type_store_copy' (line 201)
         type_store_copy_218 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 201, 8), 'type_store_copy')
-        # Obtaining the member 'function_context_copy' of a type (line 201)
-        function_context_copy_219 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 201, 8), type_store_copy_218, 'function_context_copy')
+        # Obtaining the member 'funcion_context_copy' of a type (line 201)
+        funcion_context_copy_219 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 201, 8), type_store_copy_218, 'funcion_context_copy')
         # Obtaining the member 'FunctionContext' of a type (line 201)
-        FunctionContext_220 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 201, 8), function_context_copy_219, 'FunctionContext')
+        FunctionContext_220 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 201, 8), funcion_context_copy_219, 'FunctionContext')
         # Setting the type of the member 'annotate_types' of a type (line 201)
         module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 201, 8), FunctionContext_220, 'annotate_types', generate_type_annotated_program_217)
         
         # Assigning a Name to a Attribute (line 202):
         # Getting the type of 'generate_type_annotated_program' (line 202)
-        generate_type_annotated_program_221 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 202, 90), 'generate_type_annotated_program')
+        generate_type_annotated_program_221 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 202, 89), 'generate_type_annotated_program')
         # Getting the type of 'type_inference_copy' (line 202)
         type_inference_copy_222 = module_type_store.get_type_of(stypy.reporting.localization.Localization(__file__, 202, 8), 'type_inference_copy')
-        # Obtaining the member 'type_inference_proxy_copy' of a type (line 202)
-        type_inference_proxy_copy_223 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 202, 8), type_inference_copy_222, 'type_inference_proxy_copy')
+        # Obtaining the member 'type_inerence_proxy_copy' of a type (line 202)
+        type_inerence_proxy_copy_223 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 202, 8), type_inference_copy_222, 'type_inerence_proxy_copy')
         # Obtaining the member 'TypeInferenceProxy' of a type (line 202)
-        TypeInferenceProxy_224 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 202, 8), type_inference_proxy_copy_223, 'TypeInferenceProxy')
+        TypeInferenceProxy_224 = module_type_store.get_type_of_member(stypy.reporting.localization.Localization(__file__, 202, 8), type_inerence_proxy_copy_223, 'TypeInferenceProxy')
         # Setting the type of the member 'annotate_types' of a type (line 202)
         module_type_store.set_type_of_member(stypy.reporting.localization.Localization(__file__, 202, 8), TypeInferenceProxy_224, 'annotate_types', generate_type_annotated_program_221)
         

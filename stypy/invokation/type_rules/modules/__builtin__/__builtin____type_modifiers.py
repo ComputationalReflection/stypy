@@ -836,14 +836,15 @@ class TypeModifiers:
         if not arguments[1] == "":
             return get_member(localization, arguments[0], arguments[1])
         else:
-            atts = dir_object(arguments[0])
-            ret = None
-            for att in atts:
-                if isinstance(att, Localization):
-                    continue
-                ret = union_type.UnionType.add(ret, get_member(localization, arguments[0], att))
-
-            return ret
+            return type_group_generator.DynamicType
+            # atts = dir_object(arguments[0])
+            # ret = None
+            # for att in atts:
+            #     if isinstance(att, Localization):
+            #         continue
+            #     ret = union_type.UnionType.add(ret, get_member(localization, arguments[0], att))
+            #
+            # return ret
 
     @staticmethod
     def oct(localization, proxy_obj, arguments):

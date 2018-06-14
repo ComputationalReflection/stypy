@@ -12,7 +12,7 @@ class TestCodeGeneration(TestCommon):
         #sys.path = [STYPY_OVER_STYPY_PROGRAMS_PATH + "/stypy_code_copy"] + sys.path
         file_path = self.file_path + "/stypy_code_copy/stypy_run_copy.py"
         result = self.run_stypy_with_program(file_path, output_results=True,
-                                             force_type_data_file=False)
+                                             force_type_data_file=False, expected_errors=9)
 
         # self.print_errors()
         # self.print_stypy_modules_cache()

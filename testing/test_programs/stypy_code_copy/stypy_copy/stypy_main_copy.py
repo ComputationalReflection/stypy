@@ -198,8 +198,8 @@ class Stypy:
 
         # Configure all FunctionContext and TypeInferenceProxy objects to use type annotation, that will be later used
         # to create type annotated source files
-        type_store_copy.function_context_copy.FunctionContext.annotate_types = generate_type_annotated_program
-        type_inference_copy.type_inference_proxy_copy.TypeInferenceProxy.annotate_types = generate_type_annotated_program
+        type_store_copy.funcion_context_copy.FunctionContext.annotate_types = generate_type_annotated_program
+        type_inference_copy.type_inerence_proxy_copy.TypeInferenceProxy.annotate_types = generate_type_annotated_program
 
         # Output configuration
         self.verbose = verbose

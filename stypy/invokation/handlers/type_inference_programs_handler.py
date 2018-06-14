@@ -121,6 +121,8 @@ class TypeInferenceProgramsHandler(AbstractCallHandler):
                 try:
                     call_result = callable_python_entity(localization, *arguments, **keyword_arguments)
                 except TypeError as ex:
+                    import traceback
+                    traceback.print_exc()
                     if "argument" in ex.message:
                         call_result = callable_python_entity(*arguments, **keyword_arguments)
                         if type(call_result) is StypyTypeError:

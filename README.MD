@@ -129,6 +129,7 @@ Main features of the new 0.2 release include:
 - [23/05/2018] When trying to use container operations over a container whose type is DynamicType, no type error is produced.
 - [24/05/2018] When printing containers in errors, now the correct type of container (and its contained elements) is displayed. Solved type inference problem when obtaining the loop variable type when the type is a union type of two dicts.
 - [25/05/2018] Fixed rare error when dealing with large UnionTypes that contains Localization objects.
-- [16/06/2018] There were some type errors when trying to assign certain UnionTypes to reserved members like __name__, __dict__ and __bases__. This has been fixed.
+- [13/06/2018] There were some type errors when trying to assign certain UnionTypes to reserved members like __name__, __dict__ and __bases__. This has been fixed.
+- [14/06/2018] Fixed crash when calling to getattr over a very large object
 
 Copyright (c) [2016-2018] [Francisco Ortín Soler, José Manuel Redondo López, Baltasar García Pérez-Schofield]
